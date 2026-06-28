@@ -1,20 +1,143 @@
 /* Hero */
 
 .hero {
-  padding: 90px 32px 0;
+  position: relative;
+  width: calc(100% - 64px);
+  height: calc(100vh - 124px);
+  min-height: 760px;
+  max-height: 1040px;
+  margin: 92px 32px 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  font-family: "Schibsted Grotesk", sans-serif;
 }
 
-.hero-video {
+.hero-palette {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #d9d9d9;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.palette-bar {
+  flex: 1 1 0;
+  min-height: 0;
+  position: relative;
+  padding: 32px;
+  background: var(--color);
+    transition: flex 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hero-palette:hover .palette-bar {
+  flex: 0.35 1 0;
+}
+
+.hero-palette .palette-bar:hover {
+  flex: 5 1 0;
+}
+
+.palette-bar span {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 700;
+  color: #fff;
+}
+
+.palette-bar span small {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0.72;
+  transition: opacity 0.35s ease;
+}
+
+.palette-bar:hover span small {
+  opacity: 1;
+}
+
+.hero-panel {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  width: 404px;
+  height: calc(100% - 48px);
+  max-height: 980px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  z-index: 5;
+}
+
+.panel-content {
+  height: 100%;
+  padding: 56px 44px 36px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.sun-icon {
+  font-size: 52px;
+  line-height: 1;
+  margin-bottom: 28px;
+}
+
+.panel-group {
+  margin: 0;
+}
+
+.label {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+}
+
+.value {
+  margin: 0;
+  font-size: 44px;
+  line-height: 54px;
+  font-weight: 700;
+  color: #000;
+}
+
+.divider {
+  width: 100%;
+  max-width: 304px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 28px 0;
+}
+
+.palette-list p:not(.label) {
+  margin: 0 0 9px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+}
+
+.caption {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
 }
 
 /* Sections */
@@ -132,17 +255,103 @@
   line-height: 17px;
 }
 
-/* List Responsive */
+/* Tablet */
 
 @media (max-width: 1024px) {
+  .hero {
+    width: calc(100% - 40px);
+    height: auto;
+    min-height: 920px;
+    margin: 84px 20px 24px;
+  }
+
+  .hero-panel {
+    top: 24px;
+    right: 24px;
+    width: min(404px, calc(100% - 48px));
+    height: auto;
+    min-height: 720px;
+  }
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Mobile */
+
 @media (max-width: 768px) {
   .hero {
-    padding: 72px 16px 0;
+    width: calc(100% - 32px);
+    height: auto;
+    min-height: 860px;
+    margin: 84px 16px 24px;
+  }
+
+  .palette-bar {
+    padding: 24px;
+  }
+
+  .palette-bar span {
+    left: 24px;
+    bottom: 24px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .palette-bar span small {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .palette-bar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%),
+        rgba(255, 255, 255, 0.22),
+        rgba(255, 255, 255, 0) 42%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .palette-bar:hover::after {
+    opacity: 1;
+  }
+
+  .hero-panel {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+    height: auto;
+    min-height: 640px;
+  }
+
+  .panel-content {
+    padding: 40px 28px 32px;
+  }
+
+  .sun-icon {
+    font-size: 44px;
+    margin-bottom: 24px;
+  }
+
+  .value {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .label,
+  .palette-list p:not(.label) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .divider {
+    width: 100%;
+    margin: 24px 0;
   }
 
   .section {
