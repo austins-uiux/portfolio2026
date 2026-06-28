@@ -1,0 +1,175 @@
+/* Hero */
+
+.hero {
+  padding: 90px 32px 0;
+}
+
+.hero-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Sections */
+
+.section {
+  padding: 80px 32px;
+}
+
+.thinking {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.section h2 {
+  margin: 0 0 40px;
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px 20px;
+}
+
+/* Cards */
+
+.card {
+  min-width: 0;
+  cursor: pointer;
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 450 / 460;
+  background: #d9d9d9;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: transform 0.45s ease;
+}
+
+.card:hover .thumb {
+  transform: scale(1.015);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.card:hover h3 {
+  transform: none;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.card p,
+.card span {
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 500;
+  color: #666;
+}
+
+.thinking .card h3 {
+  margin-top: 6px;
+}
+
+/* 2 Depth List Page */
+
+.list-page {
+  padding: 90px 32px 120px;
+}
+
+.list-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 20px;
+}
+
+.list-grid .thumb {
+  aspect-ratio: 900 / 700;
+  margin-bottom: 20px;
+}
+
+.list-grid .card-meta {
+  align-items: flex-end;
+}
+
+.list-grid .card h3 {
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.list-grid .card p,
+.list-grid .card span {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* List Responsive */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 72px 16px 0;
+  }
+
+  .section {
+    padding: 60px 16px;
+  }
+
+  .thinking {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .card-meta {
+    display: block;
+  }
+
+  .card p {
+    margin-top: 4px;
+  }
+
+  .list-page {
+    padding: 72px 16px 80px;
+  }
+
+  .list-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .list-grid .card h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

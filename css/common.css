@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: #000;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 90px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.menu-toggle {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 101;
+}
+
+.menu-toggle span {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transition: transform 0.35s ease, top 0.35s ease;
+}
+
+.menu-toggle span:first-child {
+  top: 7px;
+}
+
+.menu-toggle span:last-child {
+  top: 15px;
+}
+
+.header.open .menu-toggle span:first-child {
+  top: 11px;
+  transform: rotate(45deg);
+}
+
+.header.open .menu-toggle span:last-child {
+  top: 11px;
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  top: 160px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.menu a {
+  font-size: 50px;
+  line-height: 62px;
+  font-weight: 500;
+  opacity: 0;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+
+/* Footer */
+
+.footer {
+  background: #ededed;
+}
+
+.footer-inner {
+  padding: 40px 32px 30px;
+}
+
+.footer-logo {
+  display: inline-block;
+}
+
+.footer-copy {
+  margin: 100px 0 0;
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 400;
+  color: #6d6d6d;
+}
+
+.footer-copy strong {
+  font-weight: 600;
+  color: #000;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 100px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-bottom a {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.copyright {
+  padding: 10px 32px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+}
+
+/* Common Responsive */
+
+@media (max-width: 1024px) {
+  .menu a {
+    font-size: 42px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 72px;
+    padding: 24px 16px;
+  }
+
+  .menu {
+    top: 96px;
+    right: 16px;
+  }
+
+  .menu a {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .logo {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .footer-inner {
+    padding: 48px 16px 30px;
+  }
+
+  .footer-copy {
+    margin: 100px 0 0;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px;
+  }
+
+  .footer-links {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    padding: 10px 16px;
+    gap: 12px;
+    flex-direction: column;
+  }
+}
+
+/* Lenis Smooth Scroll */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}

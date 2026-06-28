@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap");
+
+/* Detail Common */
+
+.detail-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #d9d9d9;
+  border-radius: 10px;
+}
+
+.detail-image.full {
+  width: 100%;
+}
+
+/* Project Detail */
+
+.project-detail {
+  padding: 90px 32px 200px;
+}
+
+.project-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 450px) 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.project-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.project-sidebar h1 {
+  margin: 0 0 56px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 80px;
+  line-height: 100px;
+  font-weight: 700;
+  color: #000;
+}
+
+.project-description {
+  margin: 0 0 56px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #000;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info div{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:22px 0;
+    border-bottom:1px solid #ABABAB;
+}
+
+.project-info div:first-child {
+  border-top: 1px solid #ababab;
+}
+
+.project-info span {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #737373;
+}
+
+.project-info p {
+  margin: 0;
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #000;
+  text-align: right;
+
+  white-space: nowrap;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.project-content .detail-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.detail-text {
+  max-width: 100%;
+}
+
+.detail-text h2,
+.article-section h2 {
+  margin: 0 0 24px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #000;
+}
+
+.detail-text p,
+.article-section p {
+  margin: 0;
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Thinking Detail */
+
+.thinking-detail {
+  padding: 90px 32px 200px;
+}
+
+.thinking-article {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article-header {
+  max-width: 900px;
+  margin: 80px auto 100px;
+}
+
+.article-header h1 {
+  margin: 0 0 20px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 700;
+  color: #000;
+}
+
+.article-meta {
+  display: flex;
+  gap: 16px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.article-meta span {
+  color: #737373;
+}
+
+.article-meta strong {
+  color: #000;
+  font-weight: 500;
+}
+
+.article-section {
+  max-width: 900px;
+  margin: 80px auto;
+}
+
+.article-image {
+  max-width: 900px;
+  margin: 80px auto;
+}
+
+/* Detail Responsive */
+
+@media (max-width: 768px) {
+  .project-detail,
+  .thinking-detail {
+    padding: 72px 16px 120px;
+  }
+
+  .project-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .project-sidebar {
+    position: static;
+  }
+
+  .project-sidebar h1 {
+    font-size: 40px;
+    line-height: 56px;
+    margin-bottom: 32px;
+  }
+
+  .project-description {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+
+  .project-info div {
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+  }
+
+  .project-info p {
+    text-align: right;
+  }
+
+  .project-content {
+    gap: 60px;
+  }
+
+  .detail-text h2,
+  .article-section h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .detail-text p,
+  .article-section p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .thinking-article {
+    width: 100%;
+  }
+
+  .article-header {
+    margin: 40px auto 60px;
+  }
+
+  .article-header h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .article-meta {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .article-section,
+  .article-image {
+    margin: 60px auto;
+  }
+}

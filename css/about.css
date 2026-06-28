@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Pretendard:wght@400;500;700&display=swap");
+
+.about {
+  padding: 160px 32px 132px;
+}
+
+.about h1,
+.about h2,
+.about h3,
+.about p,
+.about ul {
+  margin: 0;
+  padding: 0;
+}
+
+.about ul {
+  list-style: none;
+}
+
+/* Hero */
+
+.about-hero h1 {
+  max-width: 760px;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 400;
+  color: #6d6d6d;
+}
+
+.about-hero strong {
+  display: block;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Section */
+
+.about-section {
+  margin-top: 200px;
+}
+
+.about-section h2 {
+  margin-bottom: 200px;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Numbers */
+
+.number-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.number-list strong {
+  display: block;
+  font-size: 70px;
+  line-height: 86px;
+  font-weight: 600;
+}
+
+.number-list span {
+  display: block;
+  margin-top: 8px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #666;
+}
+
+.number-list div {
+  cursor: pointer;
+}
+
+.number-list div strong,
+.number-list div span {
+  transition: color 0.2s ease;
+}
+
+.number-list div:hover strong,
+.number-list div:hover span {
+  color: #007bff;
+}
+
+.number-item strong {
+    white-space: nowrap;
+}
+
+.number-item strong .counter {
+    display: inline;
+    font: inherit;
+    color: inherit;
+}
+
+/* Tools */
+
+.tool-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0 68px;
+}
+
+.tool-item {
+  min-height: 210px;
+  padding-left: 68px;
+  border-left: 1px solid #ababab;
+}
+
+.tool-item:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.tool-item h3 {
+  margin: 0 0 26px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #000;
+}
+
+.tool-item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-item li {
+  margin: 0;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 700;
+  color: #000;
+}
+
+
+/* Process */
+
+.process-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+  padding: 0 52px;
+}
+
+.process-item h3 {
+  margin: 0 0 64px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000;
+}
+
+.process-item p {
+  margin: 0;
+  padding-top: 32px;
+  border-top: 1px solid #ababab;
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #000;
+  word-break: keep-all;
+}
+
+/* Values */
+
+.value-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.value-card {
+  width: 100%;
+  height: 601px;
+  padding: 28px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  overflow: hidden;
+}
+
+.value-image{
+    width:100%;
+    aspect-ratio:1 / 1;
+    overflow:hidden;
+    margin-bottom:28px;
+    border-radius:4px;
+    background:#D9D9D9;
+}
+
+.value-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.value-card h3 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.value-card p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+}
+
+.value-card.blue {
+  background: #007aff;
+  color: #fff;
+  border: 0;
+}
+
+.value-card.black {
+  background: #000;
+  color: #fff;
+  border: 0;
+}
+
+.value-card.dark {
+  background: #3f3f3f;
+  color: #fff;
+  border: 0;
+}
+
+.value-card.gray {
+  background: #e0e0e0;
+  color: #000;
+  border: 0;
+}
+
+@media (max-width: 1440px) {
+  .value-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .value-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .value-card {
+    height: 560px;
+  }
+
+  .value-image {
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .value-list {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    height: auto;
+    min-height: 520px;
+  }
+
+  .value-image {
+    height: 240px;
+  }
+}
