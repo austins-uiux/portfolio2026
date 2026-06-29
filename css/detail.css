@@ -93,7 +93,15 @@
 
 .project-content .detail-image {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+.project-content .detail-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .detail-text {
@@ -216,11 +224,7 @@
   max-width: 900px;
   height: 1px;
   margin: 72px auto;
-  background-image: linear-gradient(
-    to right,
-    #d0d0d0 40%,
-    transparent 0%
-  );
+  background-image: linear-gradient(to right, #d0d0d0 40%, transparent 0%);
   background-size: 8px 1px;
   background-repeat: repeat-x;
 }
