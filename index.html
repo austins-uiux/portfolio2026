@@ -37,85 +37,82 @@
 
         <!-- Hero -->
 
-        <section class="hero">
+        <section class="hero sky-hero" id="skyHero">
 
-            <div class="hero-palette" id="heroPalette">
+            <div class="sky-stage">
 
-                <div class="palette-bar" style="--color:#69AFF7;">
-                    <span>
-                        #69AFF7
-                        <small>RGB(105,175,247)</small>
-                    </span>
+                <div class="sky-bars" id="skyBars">
+                    <div class="sky-bar"></div>
+                    <div class="sky-bar"></div>
+                    <div class="sky-bar"></div>
+                    <div class="sky-divider"></div>
+                    <div class="sky-bar"></div>
+                    <div class="sky-bar"></div>
+                    <div class="sky-bar"></div>
                 </div>
 
-                <div class="palette-bar" style="--color:#2C8BF1;">
-                    <span>
-                        #2C8BF1
-                        <small>RGB(44,139,241)</small>
-                    </span>
+                <div class="sun-graph" id="sunGraph">
+                    <svg class="sun-svg" viewBox="0 0 1858 552" preserveAspectRatio="xMidYMid meet">
+
+                        <path class="sun-path-base" d="M0 552 C150 552 330 520 469 276" />
+
+                        <path class="sun-path-base" d="M469 276 C560 80 710 0 929 0" />
+                        <path class="sun-path-active" id="sunPathMorning" d="M469 276 C560 80 710 0 929 0" />
+
+                        <path class="sun-path-base" d="M929 0 C1148 0 1298 80 1389 276" />
+                        <path class="sun-path-active" id="sunPathAfternoon" d="M929 0 C1148 0 1298 80 1389 276" />
+
+                        <path class="sun-path-base" d="M1389 276 C1528 520 1708 552 1858 552" />
+
+                    </svg>
+
+                    <div class="sun-dot" id="sunDot"></div>
                 </div>
 
-                <div class="palette-bar" style="--color:#064D98;">
-                    <span>
-                        #064D98
-                        <small>RGB(6,77,152)</small>
-                    </span>
-                </div>
-
-                <div class="palette-bar" style="--color:#B1DF57;">
-                    <span>
-                        #B1DF57
-                        <small>RGB(177,223,87)</small>
-                    </span>
-                </div>
-
-                <div class="palette-bar" style="--color:#2F782F;">
-                    <span>
-                        #2F782F
-                        <small>RGB(47,120,47)</small>
-                    </span>
+                <div class="time-axis">
+                    <span>0</span>
+                    <span>6</span>
+                    <span>12</span>
+                    <span>18</span>
+                    <span>0</span>
                 </div>
 
             </div>
 
-
-            <aside class="hero-panel">
+            <div class="hero-panel">
                 <div class="panel-content">
-                    <div class="sun-icon">☀️</div>
+                    <div class="sun-icon" id="skyIcon">☀️</div>
 
                     <div class="panel-group">
                         <p class="label" id="greetingText">Good Morning</p>
-                        <h1 class="value" id="timeText">AM 10:00</h1>
+                        <h1 class="value" id="timeText">AM 10:00:00</h1>
                     </div>
 
                     <div class="divider"></div>
 
-                    <div class="panel-group">
-                        <p class="label">Seoul, KR</p>
-                        <h2 class="value" id="tempText">24°C</h2>
-                    </div>
-
-                    <div class="divider"></div>
-
-                    <div class="panel-group">
+                    <div class="panel-row">
                         <p class="label" id="dateText">2026.06.29</p>
-                        <h2 class="value" id="dayText">Saturday</h2>
+                        <p class="label">Seoul, KR</p>
                     </div>
+
+                    <h2 class="value" id="dayText">Saturday</h2>
 
                     <div class="divider"></div>
 
-                    <div class="panel-group palette-list">
-                        <p class="label">Today’s Palette</p>
-                        <p>#69AFF7</p>
-                        <p>#2C8BF1</p>
-                        <p>#064D98</p>
-                        <p>#B1DF57</p>
-                        <p>#2F782F</p>
+                    <div class="sun-info">
+                        <div>
+                            <p class="label">Sunrise</p>
+                            <strong id="sunriseText">06:18</strong>
+                        </div>
+                        <div>
+                            <p class="label">Sunset</p>
+                            <strong id="sunsetText">19:57</strong>
+                        </div>
                     </div>
 
-                    <p class="caption">Palette generated from current time.</p>
+                    <p class="caption">Sky colors generated from current time.</p>
                 </div>
-            </aside>
+            </div>    
 
         </section>
 

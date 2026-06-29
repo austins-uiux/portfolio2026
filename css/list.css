@@ -3,74 +3,168 @@
 .hero {
   position: relative;
   width: calc(100% - 64px);
-  height: calc(100vh - 124px);
-  min-height: 760px;
-  max-height: 1040px;
+  height: clamp(760px, calc(100vh - 124px), 1040px);
   margin: 92px 32px 32px;
   overflow: hidden;
   border-radius: 10px;
   font-family: "Schibsted Grotesk", sans-serif;
+  background: #050b1c;
 }
 
-.hero-palette {
+.sky-stage {
   position: relative;
-  z-index: 1;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
 }
 
-.palette-bar {
-  flex: 1 1 0;
-  min-height: 0;
-  position: relative;
-  padding: 32px;
-  background: var(--color);
-    transition: flex 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-}
+/* Sky Bars */
 
-.hero-palette:hover .palette-bar {
-  flex: 0.35 1 0;
-}
-
-.hero-palette .palette-bar:hover {
-  flex: 5 1 0;
-}
-
-.palette-bar span {
+.sky-bars {
   position: absolute;
-  left: 32px;
-  bottom: 32px;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 700;
-  color: #fff;
+  z-index: 1;
 }
 
-.palette-bar span small {
+.sky-bar {
+  flex: 1 1 0;
+  min-height: 0;
+  background: var(--bar-color);
+  transition: background 0.8s ease;
+}
+
+.sky-divider {
+  flex: 0 0 2px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  z-index: 2;
+}
+
+/* Sun Graph */
+
+.sun-graph {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  aspect-ratio: 1858 / 552;
+  height: auto;
+  transform: translateY(-50%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.sun-svg {
+  width: 100%;
+  height: 100%;
   display: block;
+  overflow: visible;
+}
+
+.sun-path-base,
+.sun-path-active {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.sun-path-base {
+  stroke-opacity: 0.4;
+  stroke-dasharray: 0.5 10;
+}
+
+.sun-path-active {
+  stroke-opacity: 1;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.sun-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 5;
+}
+
+.sun-dot::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: radarPulse 1.8s ease-out infinite;
+}
+
+@keyframes radarPulse {
+
+  0% {
+    width: 16px;
+    height: 16px;
+    opacity: .9;
+  }
+
+  100% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+
+}
+
+/* Time Axis */
+
+.time-axis {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  height: 24px;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+  box-sizing: border-box;
+  z-index: 4;
+}
+
+.time-axis span {
   font-size: 12px;
   line-height: 16px;
-  font-weight: 700;
+  font-weight: 400;
   color: #fff;
-  opacity: 0.72;
-  transition: opacity 0.35s ease;
 }
 
-.palette-bar:hover span small {
-  opacity: 1;
+.time-axis span:nth-child(1),
+.time-axis span:nth-child(2),
+.time-axis span:nth-child(3),
+.time-axis span:nth-child(4) {
+  justify-self: start;
 }
+
+.time-axis span:nth-child(5) {
+  justify-self: end;
+  color: #050b1c;
+}
+
+/* hero-panel */
 
 .hero-panel {
   position: absolute;
   top: 24px;
   right: 32px;
-  width: 404px;
+  width: 350px;
   height: calc(100% - 48px);
   max-height: 980px;
   border-radius: 6px;
@@ -78,56 +172,73 @@
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  z-index: 5;
+  z-index: 10;
 }
 
 .panel-content {
   height: 100%;
-  padding: 56px 44px 36px;
+  padding: 44px 36px 32px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
 
 .sun-icon {
-  font-size: 52px;
-  line-height: 1;
+  width: 64px;
+  height: 64px;
+  font-size: 48px;
+  line-height: 64px;
   margin-bottom: 28px;
 }
 
-.panel-group {
-  margin: 0;
-}
-
 .label {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-size: 20px;
   line-height: 26px;
-  font-weight: 700;
+  font-weight: 500;
   color: #000;
 }
 
 .value {
   margin: 0;
-  font-size: 44px;
-  line-height: 54px;
-  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
   color: #000;
+}
+
+.panel-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .divider {
   width: 100%;
-  max-width: 304px;
   height: 1px;
   background: rgba(255, 255, 255, 0.9);
   margin: 28px 0;
 }
 
+.sun-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.sun-info strong {
+  display: block;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #000;
+}
+
 .palette-list p:not(.label) {
-  margin: 0 0 9px;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
   color: #000;
 }
 
@@ -136,7 +247,7 @@
   margin-bottom: 0;
   font-size: 12px;
   line-height: 16px;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
 }
 
@@ -260,17 +371,17 @@
 @media (max-width: 1024px) {
   .hero {
     width: calc(100% - 40px);
-    height: auto;
-    min-height: 920px;
+    height: 920px;
     margin: 84px 20px 24px;
   }
 
-  .hero-panel {
-    top: 24px;
-    right: 24px;
-    width: min(404px, calc(100% - 48px));
-    height: auto;
-    min-height: 720px;
+  .sun-graph {
+    top: 52%;
+  }
+
+  .time-axis {
+    bottom: 32px;
+    padding: 0 24px;
   }
 
   .grid {
@@ -283,75 +394,27 @@
 @media (max-width: 768px) {
   .hero {
     width: calc(100% - 32px);
-    height: auto;
-    min-height: 860px;
+    height: 860px;
     margin: 84px 16px 24px;
   }
 
-  .palette-bar {
-    padding: 24px;
+  .sun-graph {
+    top: 52%;
   }
 
-  .palette-bar span {
-    left: 24px;
-    bottom: 24px;
+  .sun-path-base,
+  .sun-path-active {
+    stroke-width: 3;
+  }
+
+  .time-axis {
+    bottom: 32px;
+    padding: 0 24px;
+  }
+
+  .time-axis span {
     font-size: 12px;
     line-height: 16px;
-  }
-
-  .palette-bar span small {
-    font-size: 10px;
-    line-height: 14px;
-  }
-
-  .palette-bar::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%),
-        rgba(255, 255, 255, 0.22),
-        rgba(255, 255, 255, 0) 42%);
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    pointer-events: none;
-  }
-
-  .palette-bar:hover::after {
-    opacity: 1;
-  }
-
-  .hero-panel {
-    top: 16px;
-    right: 16px;
-    left: 16px;
-    width: auto;
-    height: auto;
-    min-height: 640px;
-  }
-
-  .panel-content {
-    padding: 40px 28px 32px;
-  }
-
-  .sun-icon {
-    font-size: 44px;
-    margin-bottom: 24px;
-  }
-
-  .value {
-    font-size: 38px;
-    line-height: 46px;
-  }
-
-  .label,
-  .palette-list p:not(.label) {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .divider {
-    width: 100%;
-    margin: 24px 0;
   }
 
   .section {
