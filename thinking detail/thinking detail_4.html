@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Thinking Detail - AUSTIN.</title>
+    <meta name="description" content="Austin Lee Design Thinking Article" />
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <a href="../index.html" class="logo">AUSTIN.</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu">
+            <a href="../about.html">ABOUT</a>
+            <a href="../projects.html">PROJECTS</a>
+            <a href="../thinking.html">DESIGN THINKING</a>
+        </nav>
+    </header>
+
+    <main class="thinking-detail">
+        <article class="thinking-article">
+            <article class="thinking-article">
+                <div class="article-header">
+                    <h1>디자인 시스템은 컴포넌트 모음이 아니다.</h1>
+
+                    <div class="article-meta">
+                        <span>Product Designer</span>
+                        <strong>Austin Sanghun Lee</strong>
+                    </div>
+                </div>
+
+                <div class="article-image">
+                <div class="detail-image">
+                    <img src="../images/thinking detail/thinking detail_4.png" alt="thinking detail hero">
+                </div>
+            </div>
+
+
+                <section class="article-section">
+                    <h2>우리는 왜 디자인 시스템을 만들기 시작했을까?</h2>
+                    <p>
+                        디자인 시스템은 처음부터 디자이너를 위한 도구는 아니었다.<br><br>
+
+                        조직이 성장하면서 발생하는 문제를 해결하기 위한 방법이었다.<br><br>
+
+                        제품이 커질수록 같은 버튼이 조금씩 달라지기 시작한다.<br><br>
+
+                        어떤 화면은 Radius가 8px이고,<br>
+                        어떤 화면은 12px이며,<br>
+                        같은 Primary Button인데도 색상이 조금씩 다르다.<br><br>
+
+                        처음에는 작은 차이처럼 보인다.<br><br>
+
+                        하지만 제품이 성장할수록 그 작은 차이는 유지보수 비용이 되고,<br>
+                        사용자 경험의 일관성을 무너뜨린다.<br><br>
+
+                        그래서 디자인 시스템이 등장했다.<br><br>
+
+                        컴포넌트를 재사용하고,<br>
+                        디자인 품질을 일정하게 유지하며,<br>
+                        더 빠르게 제품을 만들기 위해서다.<br><br>
+
+                        하지만 시간이 지나면서 우리는 디자인 시스템을 조금 단순하게 이해하기 시작했다.<br><br>
+
+                        Button.<br>
+                        Input.<br>
+                        Card.<br>
+                        Modal.<br><br>
+
+                        디자인 시스템을 컴포넌트 라이브러리와 같은 의미로 사용하기 시작한 것이다.<br><br>
+
+                        하지만 컴포넌트는 결과다.<br><br>
+
+                        디자인 시스템의 본질은 <strong>좋은 의사결정을 반복하기 위한 기준</strong>이다.
+                    </p>
+                </section>
+
+                <div class="section-divider"></div>
+
+                <section class="article-section">
+                    <h2>대부분의 디자인 시스템은 왜 오래가지 못할까?</h2>
+                    <p>
+                        많은 회사들이 디자인 시스템을 만든다.<br><br>
+
+                        하지만 몇 년이 지나면 대부분 비슷한 문제를 겪는다.<br><br>
+
+                        새로운 컴포넌트는 계속 추가되고,<br>
+                        예외 상황은 점점 늘어나며,<br>
+                        결국 "이번 화면만 조금 다르게 갑시다."라는 말이 반복된다.<br><br>
+
+                        왜 이런 일이 생길까?<br><br>
+
+                        나는 이유가 하나라고 생각한다.<br><br>
+
+                        우리는 컴포넌트는 관리했지만,<br>
+                        <strong>의도(Intent)는 관리하지 않았기 때문이다.</strong><br><br>
+
+                        Button은 정의되어 있다.<br><br>
+
+                        하지만 왜 Radius가 12px인지,<br>
+                        왜 이 색상을 사용하는지,<br>
+                        왜 여백을 이렇게 유지하는지,<br>
+                        왜 이 타이포그래피를 선택했는지는 기록되지 않는다.<br><br>
+
+                        결국 사람은 규칙보다 화면을 따라 하기 시작한다.<br><br>
+
+                        좋은 디자인 시스템은 컴포넌트를 복사하는 시스템이 아니라,<br>
+                        <strong>의사결정의 이유를 공유하는 시스템</strong>이어야 한다.
+                    </p>
+                </section>
+
+                <div class="section-divider"></div>
+
+                <section class="article-section">
+                    <h2>AI는 Figma를 이해하지 않는다. 의도를 이해한다.</h2>
+                    <p>
+                        최근 포트폴리오 웹사이트를 AI와 함께 만들면서 흥미로운 경험을 했다.<br><br>
+
+                        처음에는 Figma 파일만 전달하면 충분할 것이라고 생각했다.<br><br>
+
+                        하지만 결과는 기대와 달랐다.<br><br>
+
+                        AI는 화면을 비슷하게 만들 수는 있었지만,<br>
+                        디자인이 가진 미묘한 리듬과 계층 구조는 제대로 이해하지 못했다.<br><br>
+
+                        그래서 방식을 바꿨다.<br><br>
+
+                        컴포넌트를 설명하는 대신,<br>
+                        디자인의 의도를 문서로 정리하기 시작했다.<br><br>
+
+                        예를 들면 이런 방식이다.<br><br>
+
+                        About Screen Prompt<br><br>
+
+                        Headline<br>
+                        Schibsted Grotesk Regular<br>
+                        48 / 60<br>
+                        #6D6D6D<br><br>
+
+                        Headline Accent<br>
+                        Schibsted Grotesk Semibold<br>
+                        48 / 60<br>
+                        #000000<br><br>
+
+                        Section Title<br>
+                        Schibsted Grotesk Semibold<br>
+                        28 / 30<br><br>
+
+                        Statistics<br>
+                        Schibsted Grotesk Semibold<br>
+                        70 / 86<br><br>
+
+                        Grid<br>
+                        Padding 28<br>
+                        Radius 10<br>
+                        Divider 1px<br><br>
+
+                        Article<br>
+                        Pretendard Medium<br>
+                        16 / 28<br><br>
+
+                        Rules<br><br>
+
+                        Maintain generous whitespace.<br>
+                        Keep visual rhythm.<br>
+                        Never reduce hierarchy.<br><br>
+
+                        흥미로운 점은 여기에 Button도 없고,<br>
+                        Card도 없으며,<br>
+                        Component 이름도 없다는 것이다.<br><br>
+
+                        대신 디자인을 구성하는 <strong>기준과 원칙</strong>만 존재한다.<br><br>
+
+                        AI는 이 문서를 읽고 Figma와 거의 동일한 분위기의 결과물을 만들어냈다.<br><br>
+
+                        그 순간 깨달았다.<br><br>
+
+                        AI는 디자인을 보는 것이 아니라,<br>
+                        <strong>디자인의 의도를 읽고 있었던 것이다.</strong>
+                    </p>
+                </section>
+
+                <div class="section-divider"></div>
+
+                <section class="article-section">
+                    <h2>AI 시대의 디자인 시스템은 번역 계층이 된다.</h2>
+                    <p>
+                        예전에는 디자이너와 개발자가 같은 화면을 보며 작업했다.<br><br>
+
+                        Figma<br>
+                        ↓<br>
+                        Developer<br>
+                        ↓<br>
+                        Product<br><br>
+
+                        하지만 AI가 개발 과정에 들어오기 시작하면서 새로운 단계가 생겼다.<br><br>
+
+                        Figma<br>
+                        ↓<br>
+                        AI Translation Layer<br>
+                        ↓<br>
+                        AI<br>
+                        ↓<br>
+                        Production<br><br>
+
+                        AI는 픽셀을 해석하지 않는다.<br><br>
+
+                        문장을 해석한다.<br>
+                        규칙을 해석한다.<br>
+                        디자인 원칙을 해석한다.<br><br>
+
+                        그래서 앞으로 중요한 것은 컴포넌트를 얼마나 많이 만들어 두었는지가 아니다.<br><br>
+
+                        <strong>디자인을 AI가 이해할 수 있는 언어로 얼마나 잘 번역했는가</strong>이다.<br><br>
+
+                        나는 이것이 앞으로 디자인 시스템의 새로운 역할이라고 생각한다.
+                    </p>
+                </section>
+
+                <div class="section-divider"></div>
+
+                <section class="article-section">
+                    <h2>디자인 시스템의 Source of Truth도 바뀌고 있다.</h2>
+                    <p>
+                        오랫동안 Figma는 디자인의 Source of Truth였다.<br><br>
+
+                        디자이너는 Figma를 수정했고,<br>
+                        개발자는 Figma를 보며 구현했다.<br><br>
+
+                        하지만 AI Native Workflow에서는 조금 다른 변화가 일어나고 있다.<br><br>
+
+                        디자인 원칙은 문서로 정의되고,<br>
+                        Design Token은 코드에서 관리되며,<br>
+                        AI는 그 규칙을 읽고 화면을 생성한다.<br><br>
+
+                        즉,<br><br>
+
+                        Source of Truth가 화면에서<br>
+                        <strong>디자인 언어</strong>로 이동하고 있는 것이다.<br><br>
+
+                        앞으로 Product Designer의 역할은 컴포넌트를 많이 만드는 사람이 아니라,<br>
+                        사람과 AI 모두가 이해할 수 있는 디자인 언어를 설계하는 사람에 더 가까워질 것이다.
+                    </p>
+                </section>
+
+                <div class="section-divider"></div>
+
+                <section class="article-section">
+                    <h2>디자인 시스템의 본질은 컴포넌트가 아니다.</h2>
+                    <p>
+                        AI는 버튼을 만들 수 있다.<br><br>
+
+                        카드를 만들 수 있다.<br><br>
+
+                        심지어 하나의 화면도 만들 수 있다.<br><br>
+
+                        하지만 어떤 원칙으로 만들어야 하는지는 스스로 결정하지 못한다.<br><br>
+
+                        그 기준을 만드는 것이 디자인 시스템이다.<br><br>
+
+                        그리고 그 기준은 더 이상 Figma 안에만 존재하지 않는다.<br><br>
+
+                        문서가 될 수도 있고,<br>
+                        코드가 될 수도 있으며,<br>
+                        AI가 읽을 수 있는 하나의 언어가 될 수도 있다.<br><br>
+
+                        나는 앞으로 디자인 시스템이 컴포넌트 라이브러리에서<br>
+                        <strong>사람과 AI가 함께 이해하는 공통 언어</strong>로 진화할 것이라고 믿는다.<br><br>
+
+                        좋은 디자인 시스템은 같은 버튼을 반복해서 만드는 것이 아니라,<br>
+                        같은 철학을 반복해서 구현할 수 있도록 만드는 시스템이기 때문이다.
+                    </p>
+                </section>
+            </article>
+        </article>
+    </main>
+
+    <footer class="footer" id="about">
+        <div class="footer-inner">
+            <a href="../index.html" class="logo footer-logo">AUSTIN.</a>
+
+            <p class="footer-copy">
+                BUILDING PRODUCTS,<br />
+                SOLVING PROBLEMS, CREATING<br />
+                <strong>BETTER EXPERIENCES.</strong>
+            </p>
+
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="../projects.html">PROJECTS</a>
+                    <a href="../about.html">ABOUT</a>
+                    <a href="../thinking.html">DESIGN THINKING</a>
+                </div>
+
+                <a href="https://github.com/austins-uiux" target="_blank" rel="noopener noreferrer">
+                    Explore the Code ↗
+                </a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Built With Figma AI + Chat GPT + Cursor</p>
+            <p>©Austin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
