@@ -18,6 +18,79 @@
   overflow: hidden;
 }
 
+/* Hero Polish */
+
+.sky-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,.8) 0 1px, transparent 1px),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,.6) 0 1px, transparent 1px);
+  background-size: 18px 18px, 24px 24px;
+}
+
+.sky-divider {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+.sun-path-base,
+.sun-path-active {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.35));
+}
+
+.sun-dot::before {
+  animation: radarPulse 2s ease-out infinite;
+}
+
+@keyframes radarPulse {
+  0% {
+    width: 16px;
+    height: 16px;
+    opacity: 0.45;
+  }
+
+  100% {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+}
+
+/* Glass Panel Upgrade */
+
+.hero-panel {
+  display: block;
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  width: 350px;
+  height: calc(100% - 48px);
+  max-height: 980px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.62),
+      rgba(255, 255, 255, 0.38)
+    );
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  z-index: 20;
+}
+
+/* Entrance Initial States */
+
+.sky-stage,
+.hero-panel {
+  opacity: 1;
+}
+
 /* Sky Bars */
 
 .sky-bars {

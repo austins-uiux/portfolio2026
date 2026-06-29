@@ -99,6 +99,19 @@ function formatTime(hourFloat) {
   return `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
 }
 
+function initSunGraph() {
+  const morningPath = document.getElementById("sunPathMorning");
+  const afternoonPath = document.getElementById("sunPathAfternoon");
+
+  [morningPath, afternoonPath].forEach((path) => {
+    if (!path) return;
+
+    const length = path.getTotalLength();
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+  });
+}
+
 function resetSunGraph() {
   const morningPath = document.getElementById("sunPathMorning");
   const afternoonPath = document.getElementById("sunPathAfternoon");
@@ -108,12 +121,21 @@ function resetSunGraph() {
     if (!path) return;
 
     const length = path.getTotalLength();
-    path.style.strokeDasharray = length;
-    path.style.strokeDashoffset = length;
+
+    gsap.to(path, {
+      strokeDashoffset: length,
+      duration: 0.8,
+      ease: "power2.out",
+      overwrite: true
+    });
   });
 
   if (sunDot) {
-    sunDot.style.opacity = 0;
+    gsap.to(sunDot, {
+      opacity: 0,
+      duration: 0.3,
+      overwrite: true
+    });
   }
 }
 
@@ -126,9 +148,17 @@ function placeSunDot(activePath, segmentProgress) {
   const pathLength = activePath.getTotalLength();
   const point = activePath.getPointAtLength(pathLength * segmentProgress);
 
-  sunDot.style.left = `${(point.x / 1858) * 100}%`;
-  sunDot.style.top = `${(point.y / 552) * 100}%`;
-  sunDot.style.opacity = 1;
+  const x = (point.x / 1858) * 100;
+  const y = (point.y / 552) * 100;
+
+  gsap.to(sunDot, {
+    left: `${x}%`,
+    top: `${y}%`,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out",
+    overwrite: true
+  });
 }
 
 function updateSunGraph(currentHour) {
@@ -145,23 +175,35 @@ function updateSunGraph(currentHour) {
   let activePath = null;
   let segmentProgress = 0;
 
-  /* 06:00 - 12:00: segment 02 only */
   if (currentHour >= 6 && currentHour < 12) {
     activePath = morningPath;
     segmentProgress = (currentHour - 6) / 6;
 
-    morningPath.style.strokeDashoffset =
-      morningLength * (1 - segmentProgress);
+    gsap.to(morningPath, {
+      strokeDashoffset: morningLength * (1 - segmentProgress),
+      duration: 0.8,
+      ease: "power2.out",
+      overwrite: true
+    });
   }
 
-  /* 12:00 - 18:00: segment 03 only */
   if (currentHour >= 12 && currentHour <= 18) {
     activePath = afternoonPath;
     segmentProgress = (currentHour - 12) / 6;
 
-    morningPath.style.strokeDashoffset = 0;
-    afternoonPath.style.strokeDashoffset =
-      afternoonLength * (1 - segmentProgress);
+    gsap.to(morningPath, {
+      strokeDashoffset: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      overwrite: true
+    });
+
+    gsap.to(afternoonPath, {
+      strokeDashoffset: afternoonLength * (1 - segmentProgress),
+      duration: 0.8,
+      ease: "power2.out",
+      overwrite: true
+    });
   }
 
   if (!activePath) return;
@@ -230,7 +272,11 @@ function updateHeroTime() {
   const palette = skyPalettes[mode];
 
   bars.forEach((bar, index) => {
-    bar.style.setProperty("--bar-color", palette[index]);
+    gsap.to(bar, {
+      "--bar-color": palette[index],
+      duration: 1.2,
+      ease: "power2.out"
+    });
   });
 
   palette.forEach((color, index) => {
@@ -248,9 +294,52 @@ function updateHeroTime() {
   updateSunGraph(currentHour);
 }
 
+initSunGraph();
 updateHeroTime();
 setInterval(updateHeroTime, 1000);
 window.addEventListener("resize", updateHeroTime);
+
+/* Hero Entrance Animation */
+
+if (document.querySelector(".sky-stage")) {
+  gsap.from(".sky-bar", {
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.08,
+    ease: "power2.out"
+  });
+
+  gsap.from(".sky-divider", {
+    scaleX: 0,
+    transformOrigin: "left center",
+    duration: 0.9,
+    ease: "power3.out",
+    delay: 0.25
+  });
+
+  gsap.from(".sun-path-base, .sun-path-active", {
+    opacity: 0,
+    duration: 0.9,
+    ease: "power2.out",
+    delay: 0.35
+  });
+
+  gsap.from(".sun-dot", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.6,
+    ease: "back.out(1.7)",
+    delay: 0.75
+  });
+
+  gsap.from(".hero-panel", {
+    opacity: 0,
+    x: 24,
+    duration: 0.8,
+    ease: "power3.out",
+    delay: 0.85
+  });
+}
 
 /* List Card Animation */
 
