@@ -77,14 +77,50 @@ if (header && menuToggle) {
 /* Hero Time Panel */
 
 const skyPalettes = {
-  sunrise: ["#439BF9", "#EAA663", "#FCD192", "#12306B", "#041442", "#050B1C"],
-  morning: ["#77B7F7", "#2C8BF1", "#0F6BCE", "#12306B", "#041442", "#050B1C"],
-  afternoon: ["#5145C0", "#A142C4", "#F06120", "#12306B", "#041442", "#050B1C"],
-  night: ["#081F54", "#081F54", "#081F54", "#050B1C", "#050B1C", "#050B1C"]
+  sunrise: [
+    "#439BF9",
+    "#EAA663",
+    "#FCD192",
+    "#050B1C",
+    "#050B1C",
+    "#050B1C"
+  ],
+
+  morning: [
+    "#77B7F7",
+    "#2C8BF1",
+    "#0F6BCE",
+    "#050B1C",
+    "#050B1C",
+    "#050B1C"
+  ],
+
+  afternoon: [
+    "#5145C0",
+    "#A142C4",
+    "#F06120",
+    "#050B1C",
+    "#050B1C",
+    "#050B1C"
+  ],
+
+  night: [
+    "#081F54",
+    "#081F54",
+    "#081F54",
+    "#050B1C",
+    "#050B1C",
+    "#050B1C"
+  ]
 };
 
 const SUNRISE_HOUR = 6 + 18 / 60;
 const SUNSET_HOUR = 19 + 57 / 60;
+
+const sunDotState = {
+  progress: 0,
+  pathId: null
+};
 
 function getSkyMode(hours) {
   if (hours >= 6 && hours < 9) return "sunrise";
@@ -115,7 +151,6 @@ function initSunGraph() {
 function resetSunGraph() {
   const morningPath = document.getElementById("sunPathMorning");
   const afternoonPath = document.getElementById("sunPathAfternoon");
-  const sunDot = document.getElementById("sunDot");
 
   [morningPath, afternoonPath].forEach((path) => {
     if (!path) return;
@@ -124,46 +159,53 @@ function resetSunGraph() {
 
     gsap.to(path, {
       strokeDashoffset: length,
-      duration: 0.8,
-      ease: "power2.out",
+      duration: 1.2,
+      ease: "power2.inOut",
       overwrite: true
     });
   });
+}
 
-  if (sunDot) {
-    gsap.to(sunDot, {
-      opacity: 0,
-      duration: 0.3,
-      overwrite: true
-    });
-  }
+function setSunDotPosition(activePath, progress) {
+  const sunDot = document.getElementById("sunDot");
+  if (!sunDot || !activePath) return;
+
+  const pathLength = activePath.getTotalLength();
+  const point = activePath.getPointAtLength(pathLength * progress);
+
+  sunDot.style.left = `${(point.x / 1858) * 100}%`;
+  sunDot.style.top = `${(point.y / 552) * 100}%`;
+  sunDot.style.opacity = 1;
 }
 
 function placeSunDot(activePath, segmentProgress) {
-  const sunDot = document.getElementById("sunDot");
-  const graph = document.getElementById("sunGraph");
+  if (!activePath) return;
 
-  if (!sunDot || !activePath || !graph) return;
+  const pathId = activePath.id;
+  const targetProgress = Math.min(Math.max(segmentProgress, 0), 1);
 
-  const pathLength = activePath.getTotalLength();
-  const point = activePath.getPointAtLength(pathLength * segmentProgress);
+  if (sunDotState.pathId !== pathId) {
+    sunDotState.pathId = pathId;
+    sunDotState.progress = targetProgress;
+    setSunDotPosition(activePath, targetProgress);
+    return;
+  }
 
-  const x = (point.x / 1858) * 100;
-  const y = (point.y / 552) * 100;
-
-  gsap.to(sunDot, {
-    left: `${x}%`,
-    top: `${y}%`,
-    opacity: 1,
-    duration: 0.8,
-    ease: "power2.out",
-    overwrite: true
+  gsap.to(sunDotState, {
+    progress: targetProgress,
+    duration: 1.2,
+    ease: "power2.inOut",
+    overwrite: true,
+    onUpdate() {
+      setSunDotPosition(activePath, sunDotState.progress);
+    }
   });
 }
 
 function updateSunGraph(currentHour) {
   const morningPath = document.getElementById("sunPathMorning");
   const afternoonPath = document.getElementById("sunPathAfternoon");
+  const sunDot = document.getElementById("sunDot");
 
   if (!morningPath || !afternoonPath) return;
 
@@ -181,8 +223,8 @@ function updateSunGraph(currentHour) {
 
     gsap.to(morningPath, {
       strokeDashoffset: morningLength * (1 - segmentProgress),
-      duration: 0.8,
-      ease: "power2.out",
+      duration: 1.2,
+      ease: "power2.inOut",
       overwrite: true
     });
   }
@@ -193,22 +235,25 @@ function updateSunGraph(currentHour) {
 
     gsap.to(morningPath, {
       strokeDashoffset: 0,
-      duration: 0.8,
-      ease: "power2.out",
+      duration: 1.2,
+      ease: "power2.inOut",
       overwrite: true
     });
 
     gsap.to(afternoonPath, {
       strokeDashoffset: afternoonLength * (1 - segmentProgress),
-      duration: 0.8,
-      ease: "power2.out",
+      duration: 1.2,
+      ease: "power2.inOut",
       overwrite: true
     });
   }
 
-  if (!activePath) return;
+  if (!activePath) {
+    if (sunDot) sunDot.style.opacity = 0;
+    sunDotState.pathId = null;
+    return;
+  }
 
-  segmentProgress = Math.min(Math.max(segmentProgress, 0), 1);
   placeSunDot(activePath, segmentProgress);
 }
 
@@ -240,10 +285,10 @@ function updateHeroTime() {
     hours >= 5 && hours < 12
       ? "Good Morning"
       : hours >= 12 && hours < 17
-      ? "Good Afternoon"
-      : hours >= 17 && hours < 21
-      ? "Good Evening"
-      : "Good Night";
+        ? "Good Afternoon"
+        : hours >= 17 && hours < 21
+          ? "Good Evening"
+          : "Good Night";
 
   const days = [
     "Sunday",
@@ -259,10 +304,14 @@ function updateHeroTime() {
   const month = String(now.getMonth() + 1).padStart(2, "0");
   const date = String(now.getDate()).padStart(2, "0");
 
-  timeText.textContent = `${isAM ? "AM" : "PM"} ${String(displayHour).padStart(
-    2,
-    "0"
-  )}:${minutes}:${seconds}`;
+  const ampmText = document.getElementById("ampmText");
+
+  if (ampmText) {
+    ampmText.textContent = isAM ? "AM" : "PM";
+  }
+
+  timeText.textContent =
+    `${String(displayHour).padStart(2, "0")}:${minutes}:${seconds}`;
 
   greetingText.textContent = greeting;
   dateText.textContent = `${year}.${month}.${date}`;
@@ -304,40 +353,42 @@ window.addEventListener("resize", updateHeroTime);
 if (document.querySelector(".sky-stage")) {
   gsap.from(".sky-bar", {
     opacity: 0,
-    duration: 0.8,
-    stagger: 0.08,
+    duration: 0.55,
+    stagger: 0.04,
     ease: "power2.out"
   });
 
   gsap.from(".sky-divider", {
     scaleX: 0,
     transformOrigin: "left center",
-    duration: 0.9,
+    duration: 0.65,
     ease: "power3.out",
-    delay: 0.25
+    delay: 0.12
   });
 
   gsap.from(".sun-path-base, .sun-path-active", {
     opacity: 0,
-    duration: 0.9,
+    duration: 0.65,
     ease: "power2.out",
-    delay: 0.35
+    delay: 0.18
   });
 
   gsap.from(".sun-dot", {
     scale: 0,
     opacity: 0,
-    duration: 0.6,
-    ease: "back.out(1.7)",
-    delay: 0.75
+    duration: 0.55,
+    ease: "back.out(1.4)",
+    delay: 0.35
   });
 
   gsap.from(".hero-panel", {
     opacity: 0,
-    x: 24,
-    duration: 0.8,
-    ease: "power3.out",
-    delay: 0.85
+    x: 36,
+    filter: "blur(16px)",
+    duration: 1.2,
+    delay: 0.25,
+    ease: "expo.out",
+    clearProps: "filter"
   });
 }
 
