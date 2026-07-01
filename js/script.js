@@ -122,10 +122,13 @@ const sunDotState = {
   pathId: null
 };
 
-function getSkyMode(hours) {
-  if (hours >= 6 && hours < 9) return "sunrise";
-  if (hours >= 9 && hours < 12) return "morning";
-  if (hours >= 12 && hours < 18) return "afternoon";
+function getSkyMode(date) {
+  const currentMinute = date.getHours() * 60 + date.getMinutes();
+
+  if (currentMinute >= 361 && currentMinute <= 540) return "sunrise";
+  if (currentMinute >= 541 && currentMinute <= 900) return "morning";
+  if (currentMinute >= 901 && currentMinute <= 1200) return "afternoon";
+
   return "night";
 }
 
@@ -317,7 +320,7 @@ function updateHeroTime() {
   dateText.textContent = `${year}.${month}.${date}`;
   dayText.textContent = days[now.getDay()];
 
-  const mode = getSkyMode(hours);
+  const mode = getSkyMode(now);
   const palette = skyPalettes[mode];
 
   bars.forEach((bar, index) => {
