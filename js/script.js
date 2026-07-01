@@ -79,26 +79,44 @@ if (header && menuToggle) {
 const skyPalettes = {
   sunrise: [
     "#439BF9",
-    "#EAA663",
-    "#FCD192",
+    "#6DB0F7",
+    "#A3CBF6",
+    "#FFDEAD",
+    "#FFBA76",
+    "#F19A1D",
+    "#050B1C",
+    "#050B1C",
+    "#050B1C",
     "#050B1C",
     "#050B1C",
     "#050B1C"
   ],
 
   morning: [
-    "#77B7F7",
-    "#2C8BF1",
-    "#0F6BCE",
+    "#7FBDFB",
+    "#6CADF2",
+    "#53A0F2",
+    "#2887E6",
+    "#0D73E0",
+    "#005CBF",
+    "#050B1C",
+    "#050B1C",
+    "#050B1C",
     "#050B1C",
     "#050B1C",
     "#050B1C"
   ],
 
   afternoon: [
-    "#5145C0",
-    "#A142C4",
+    "#372CA1",
+    "#532DB3",
+    "#7D20CE",
+    "#A320C1",
+    "#D54168",
     "#F06120",
+    "#050B1C",
+    "#050B1C",
+    "#050B1C",
     "#050B1C",
     "#050B1C",
     "#050B1C"
@@ -108,6 +126,12 @@ const skyPalettes = {
     "#081F54",
     "#081F54",
     "#081F54",
+    "#081F54",
+    "#081F54",
+    "#081F54",
+    "#050B1C",
+    "#050B1C",
+    "#050B1C",
     "#050B1C",
     "#050B1C",
     "#050B1C"
@@ -125,16 +149,23 @@ const sunDotState = {
 function getSkyMode(date) {
   const currentMinute = date.getHours() * 60 + date.getMinutes();
 
+  // 06:01 ~ 09:00
   if (currentMinute >= 361 && currentMinute <= 540) return "sunrise";
-  if (currentMinute >= 541 && currentMinute <= 900) return "morning";
-  if (currentMinute >= 901 && currentMinute <= 1200) return "afternoon";
 
+  // 09:01 ~ 16:00
+  if (currentMinute >= 541 && currentMinute <= 960) return "morning";
+
+  // 16:01 ~ 20:00
+  if (currentMinute >= 961 && currentMinute <= 1200) return "afternoon";
+
+  // 20:01 ~ 06:00
   return "night";
 }
 
 function formatTime(hourFloat) {
   const hour = Math.floor(hourFloat);
   const minute = Math.round((hourFloat - hour) * 60);
+
   return `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
 }
 
@@ -325,14 +356,14 @@ function updateHeroTime() {
 
   bars.forEach((bar, index) => {
     gsap.to(bar, {
-      "--bar-color": palette[index],
+      "--bar-color": palette[index] || palette[palette.length - 1],
       duration: 1.2,
       ease: "power2.out"
     });
   });
 
   palette.forEach((color, index) => {
-    const item = document.getElementById(`palette0${index + 1}`);
+    const item = document.getElementById(`palette${String(index + 1).padStart(2, "0")}`);
     if (item) item.textContent = color;
   });
 
