@@ -78,7 +78,7 @@ export function createChatHandler(deps:Dependencies={}) {
       try {
         const result=await transport(`https://generativelanguage.googleapis.com/v1beta/models/${chatModel.id}:generateContent`,{
           method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':key},signal:controller.signal,
-          body:JSON.stringify({systemInstruction:{parts:[{text:buildSystemInstruction(messages)}]},contents:messages.map(m=>({role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]})),generationConfig:{maxOutputTokens:2048,thinkingConfig:{thinkingLevel:'MINIMAL'},responseFormat:{text:{mimeType:'application/json',schema:responseSchema}}}}),
+          body:JSON.stringify({systemInstruction:{parts:[{text:buildSystemInstruction(messages)}]},contents:messages.map(m=>({role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]})),generationConfig:{maxOutputTokens:2048,thinkingConfig:{thinkingLevel:'MINIMAL'},responseFormat:{text:{mimeType:'APPLICATION_JSON',schema:responseSchema}}}}),
         });
         if(!result.ok) {
           // Log only a redacted provider error, never conversation text or credentials.

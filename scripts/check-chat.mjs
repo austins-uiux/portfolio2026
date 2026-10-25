@@ -31,7 +31,7 @@ const verify=configured({fetch:async(url,init)=>{
   assert.equal(init.headers['x-goog-api-key'],'test-key-not-a-real-secret');assert(!url.includes('test-key'));
   const payload=JSON.parse(init.body);assert.equal(payload.contents.at(-1).role,'user');assert.equal(payload.contents[1].role,'model');
   assert(payload.systemInstruction.parts[0].text.includes('실제 사용자 조사'));assert(payload.systemInstruction.parts[0].text.includes('TADA Rider'));
-  assert.equal(payload.generationConfig.maxOutputTokens,2048);assert.equal(payload.generationConfig.responseFormat.text.mimeType,'application/json');
+  assert.equal(payload.generationConfig.maxOutputTokens,2048);assert.equal(payload.generationConfig.responseFormat.text.mimeType,'APPLICATION_JSON');
   return success({text:'공개된 TADA Rider 사례입니다.',entryIds:['tada-rider','archive-1','https://evil.example','tada-rider','unknown']});
 }});
 const good=await verify(request([{role:'user',content:'타다를 알려줘'},{role:'assistant',content:'Rider와 Driver가 있습니다.'},{role:'user',content:'Rider를 설명해줘'}]));
