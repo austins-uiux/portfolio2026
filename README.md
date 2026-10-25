@@ -181,7 +181,7 @@ Supabase Design System의 분류·미리보기·레퍼런스·사용 예시 구�
 - 숨긴 아카이브·자리표시자 본문은 제외합니다. SoMa AI처럼 이미지 위주의 페이지는 이미지 속 수치·역할을 분석하지 않습니다. UX 초안과 UT Lab의 합성 시뮬레이션을 실제 조사 성과로 표현하지 않도록 지침에 명시합니다. 모델이 선택한 관련 항목 ID는 서버와 브라우저에서 실제 공개 항목 목록으로 검증합니다.
 - 방문자의 질문과 최근 최대 12개 대화가 Google Gemini로 전송됩니다. 서버 코드에는 대화 저장·대화 내용 로깅이 없습니다. Google의 데이터 처리 정책은 사용하는 요금제에 따릅니다. 답변 길이는 2,048 출력 토큰, 입력은 질문당 2,000자·전체 16,000자·64KB 본문으로 제한합니다. 자동 재호출이나 다른 유료 모델로의 전환은 하지 않습니다.
 - 분당 IP별 6회, 서버 인스턴스 전체 30회의 메모리 제한과 같은 출처 검사를 적용합니다. 이 제한은 인스턴스 재시작·다중 인스턴스에 걸친 통합 한도나 과금 상한이 아닙니다. 무료 운영은 AI Studio의 Free Tier·프로젝트 할당량으로 관리하며, 필요하면 Vercel Firewall에 통합 요청 제한을 추가하세요.
-- `npm run check:chat`은 실제 API를 호출하지 않고 모의 전송으로 요청 형식·공개 자료·연속 대화·보안 검증·오류·중지·요청 제한을 검사합니다. 실제 키가 없는 상태에서는 Gemini 인증·실제 답변 품질을 검증했다고 간주하지 않습니다.
+- `npm run check:chat`은 실제 API를 호출하지 않고 모의 전송으로 요청 형식·공개 자료·연속 대화·보안 검증·오류·중지·요청 제한을 검사합니다. 이어서 TypeScript 서버 코드를 JavaScript로 컴파일한 임시 폴더에서 API를 직접 실행합니다. `rewriteRelativeImportExtensions`로 `.ts` 참조를 `.js`로 변환해 배포 환경의 모듈 경로 오류를 방지합니다. 실제 키가 없는 상태에서는 Gemini 인증·실제 답변 품질을 검증했다고 간주하지 않습니다.
 - `npm run build:preview`로 만드는 단일 HTML/ZIP은 서버가 없으므로 항상 **미리보기 · 데모 응답**을 표시합니다. 실제 AI는 Vercel 배포본 또는 키가 설정된 `npm run dev`에서 사용합니다.
 
 공식 참고: [모델](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite), [API 키 보관](https://ai.google.dev/gemini-api/docs/generate-content/api-key), [구조화된 응답](https://ai.google.dev/gemini-api/docs/generate-content/structured-output), [가격·Free Tier](https://ai.google.dev/gemini-api/docs/pricing), [Vercel Node.js Functions](https://vercel.com/docs/functions/runtimes/node-js).
