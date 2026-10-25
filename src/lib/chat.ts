@@ -18,7 +18,7 @@ const recommendations: ChatAttachment[] = [
 
 function demoReply(question: string): ChatReply {
   if (/디자인\s*시스템|토큰|컴포넌트/i.test(question)) return { text: '디자인 시스템에서는 컬러, 타이포그래피, 간격, 라운드와 공통 UI 규칙을 살펴볼 수 있어요. 라이트·다크 테마와 컴포넌트 랩에서 쓰는 토큰도 함께 정리했습니다. 이 답변은 미리보기용 데모입니다.', attachments: [{ entryId: 'foundation-1', title: '디자인 시스템', description: 'Color · Typography · Shape · Icons · Components' }] };
-  if (/ux|사용성|voc|개선/i.test(question)) return { text: 'UX 개선 사례에서는 문제 정의, 개선 가설, 검증 방법을 정리할 예정이에요. AI 페르소나 시뮬레이션 결과는 가상 데이터로 구분하며, 실제 사용자 테스트나 성과 수치로 제시하지 않습니다.', attachments: [{ entryId: 'soma-ux', title: 'SOMA AI · UX 개선', description: '문제 정의와 가설 검증 방법' }] };
+  if (/ux|사용성|voc|개선/i.test(question)) return { text: 'UX 개선 사례에서는 문제 정의, 개선 가설, 검증 방법을 정리할 예정이에요. AI 페르소나 시뮬레이션 결과는 가상 데이터로 구분하며, 실제 사용자 테스트나 성과 수치로 제시하지 않습니다.', /* UX 개선 사례 카드 복원 시 첨부도 복원: attachments: [{ entryId: 'soma-ux', title: 'SOMA AI · UX 개선', description: '문제 정의와 가설 검증 방법' }] */ };
   if (/ai|인공지능|워크플로우|기획|배포|개발/i.test(question)) return { text: '아이디어 → 화면 설계, 피그마 디자인 → UX 개선안, 디자인 → 코드의 세 가지 작업 방식을 정리했어요. 각 Chip에서 AI와 협업하는 구체적인 네 단계를 살펴볼 수 있습니다.', attachments: [{ entryId: 'workflow-idea-to-screen', title: '아이디어 → 화면 설계', description: 'PRD부터 Figma 디자인 시스템까지' }, { entryId: 'workflow-design-to-code', title: '디자인 → 코드', description: 'Figma MCP부터 GitHub·Vercel 배포까지' }] };
   if (/프로젝트|경험|tada|op.gg|리테일|대표|자신/i.test(question)) return { text: '대표 프로젝트에서 SoMa AI, TADA Rider, TADA Driver, Monthly Kitchen을 살펴볼 수 있어요. 프로젝트별 화면과 문제 해결 과정을 확인해 보세요.', attachments: recommendations };
   return { text: 'Austin의 프로젝트, UX 개선, AI 워크플로우와 디자인 시스템을 둘러볼 수 있어요. 어떤 작업이 궁금하신가요? 현재 채팅은 화면과 탐색 동작을 확인하는 데모 응답 모드입니다.', attachments: [recommendations[0]] };

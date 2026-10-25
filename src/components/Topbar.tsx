@@ -36,7 +36,7 @@ export function Topbar({ onChatOpen, onMenuOpen, theme, onThemeToggle, locationK
     <div className="topbar-utilities">
       <IconButton label={theme === 'light' ? '다크 모드로 전환' : '라이트 모드로 전환'} onClick={onThemeToggle} aria-pressed={theme === 'dark'}><Icon name="sun" /></IconButton>
       <a className="icon-button" href={site.github} target="_blank" rel="noreferrer" aria-label="Austin의 GitHub 새 창에서 열기" title="GitHub"><Icon name="github" /></a>
-      <IconButton label="AI Chat 열기" onClick={onChatOpen} aria-haspopup="dialog" aria-controls="ai-chat"><Icon name="spark" /></IconButton>
+      <IconButton className="chat-open-button" label="AI Chat 열기" onClick={onChatOpen} aria-haspopup="dialog" aria-controls="ai-chat"><Icon name="spark" /></IconButton>
     </div>
     <PageScrollProgress key={locationKey} />
   </header>;

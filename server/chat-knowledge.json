@@ -32,22 +32,6 @@
     "draft": false
   },
   {
-    "id": "soma-ux",
-    "title": "SOMA AI",
-    "category": "UX 개선 사례",
-    "meta": "UI/UX · B2B SaaS · 2026",
-    "text": "현재 공개된 본문은 이미지 위주입니다. 이미지 속 수치·역할·성과를 텍스트만으로 확인할 수 없습니다.",
-    "draft": true
-  },
-  {
-    "id": "tada-ux",
-    "title": "TADA Rider",
-    "category": "UX 개선 사례",
-    "meta": "UI/UX · B2C Mobility · 2025",
-    "text": "현재 공개된 본문은 이미지 위주입니다. 이미지 속 수치·역할·성과를 텍스트만으로 확인할 수 없습니다.",
-    "draft": true
-  },
-  {
     "id": "workflow-idea-to-screen",
     "title": "아이디어 → 화면 설계",
     "category": "AI 워크플로우",

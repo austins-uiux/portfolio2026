@@ -10,7 +10,7 @@
 .hero p { max-width: 423px; color: var(--color-hero-text); font-size: calc(16px + var(--font-size-offset)); line-height: 26px; text-align: center; font-weight: 400; }
 .hero-aurora-fallback .brand-light { display:none; }
 .hero-aurora-fallback .brand-dark { display:block; }
-.home-overview { padding-block:60px; }
+.home-overview { padding-block:90px; }
 .home-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .home-intro { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .home-intro h2 { font-size: calc(24px + var(--font-size-offset)); font-weight: 700; line-height: 36px; letter-spacing: -.25px; }
@@ -30,6 +30,7 @@
 .page-heading { display: flex; flex-direction: column; gap: 12px; }
 .page-heading h1 { font-size: calc(30px + var(--font-size-offset)); line-height: 30px; font-weight: 700; letter-spacing: -.45px; }
 .page-heading > p { font-size: calc(12px + var(--font-size-offset)); font-weight: 500; line-height: 20px; }
+.ux-coming-soon { min-height: 240px; display: grid; place-items: center; text-align: center; color: var(--color-text-secondary); line-height: 1.8; }
 .project-list { display: grid; gap: 24px; }
 .project-list.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .project-list.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -134,7 +135,7 @@
   .hero { gap:28px; padding-block:147.5px; }
   .hero p { font-size: calc(13px + var(--font-size-offset)); line-height: 24px; }
   .hero p br:nth-child(2) { display: none; }
-  .home-overview { padding-block: 36px 48px; }
+  .home-overview { padding-block: 66px 78px; }
   .home-grid { gap: 16px; }
   .home-intro { padding-bottom: 12px; }
   .home-intro h2 { font-size: calc(24px + var(--font-size-offset)); line-height: 36px; }

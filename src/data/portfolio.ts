@@ -11,7 +11,7 @@ export const site = {
   owner: 'Austin',
   role: 'AI 네이티브 프로덕트 디자이너',
   github: 'https://github.com/austins-uiux',
-  credits: 'Built with ChatGPT + Codex + Figma AI + React +Typescript + Astryx + GitHub + Vercel',
+  credits: 'Built with ChatGPT + Gemini + Codex + Figma AI + React +Typescript + shadcn/ui + GitHub + Vercel',
 };
 
 export const categories: Category[] = [
@@ -38,8 +38,9 @@ function entry(id: string, category: CategoryId, title: string, meta = 'UI/UX ·
 /** Migrated content shares the same routes and templates as the original draft. */
 export const entries: PortfolioEntry[] = [
   ...(importedContent as PortfolioEntry[]).filter(item => item.category === 'featured'),
-  entry('soma-ux', 'ux', 'SOMA AI'),
-  entry('tada-ux', 'ux', 'TADA Rider', 'UI/UX · B2C Mobility · 2025'),
+  // UX 개선 사례 임시 보관 — 아래 두 줄의 주석을 해제하면 카드를 복원합니다.
+  // entry('soma-ux', 'ux', 'SOMA AI'),
+  // entry('tada-ux', 'ux', 'TADA Rider', 'UI/UX · B2C Mobility · 2025'),
   ...workflows.map(flow => ({ ...entry(`workflow-${flow.id}`, 'ai-workflow', flow.label, flow.title), summary: flow.description, sections: flow.steps.map(step => ({ heading: step.title, body: step.body })) })),
   ...labComponents.map(item => ({ ...entry(`component-${item.id}`, 'component-lab', item.name, `shadcn/ui · ${item.group}`), sections: [{ heading: item.name, body: item.description }] })),
   ...interactionComponents.map(item => ({ ...entry(`interaction-${item.id}`, 'interaction-lab', item.name, `Magic UI · ${item.group}`), sections: [{ heading: item.name, body: item.description }] })),
