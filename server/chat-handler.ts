@@ -81,7 +81,12 @@ export function createChatHandler(deps:Dependencies={}) {
           body:JSON.stringify({systemInstruction:{parts:[{text:buildSystemInstruction(messages)}]},contents:messages.map(m=>({role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]})),generationConfig:{maxOutputTokens:2048,thinkingConfig:{thinkingLevel:'MINIMAL'},responseFormat:{text:{mimeType:'application/json',schema:responseSchema}}}}),
         });
         if(!result.ok) {
-          // Do not return or log upstream bodies: they can contain credential/request details.
+          // Log only a redacted provider error, never conversation text or credentials.
+          const diagnostic = await result.json().catch(() => null);
+          const reason = typeof diagnostic?.error?.message === 'string'
+            ? diagnostic.error.message.split(key).join('[REDACTED]').replace(/AIza[\w-]+/g,'[REDACTED]').replace(/https?:\/\/\S+/g,'[URL]').slice(0,600)
+            : 'No JSON error detail';
+          console.warn('[gemini-provider]', JSON.stringify({ status: result.status, code: diagnostic?.error?.status, reason }));
           if(result.status===429) throw new ChatFailure(429,'QUOTA_EXCEEDED','AI 사용 한도에 도달했어요. 잠시 후 다시 시도해 주세요.',60);
           if([400,401,403,404].includes(result.status)) throw new ChatFailure(503,'PROVIDER_CONFIGURATION','AI 연결 설정을 확인 중이에요. 잠시 후 다시 방문해 주세요.');
           throw new ChatFailure(502,'PROVIDER_UNAVAILABLE','AI 응답이 지연되고 있어요. 잠시 후 다시 시도해 주세요.');
