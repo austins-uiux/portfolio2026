@@ -1,0 +1,56 @@
+.chat-backdrop { position: fixed; z-index: 59; inset: 0; background: transparent; cursor: default; }
+.chat-panel { position: fixed; z-index: 60; inset-block: 0; right: 0; width: min(var(--chat-width), 100%); height: 100dvh; display: flex; flex-direction: column; gap: 16px; padding: 14px 12px 12px; border: 1px solid var(--color-border); background: var(--color-surface); transform: translateX(100%); visibility: hidden; transition: transform var(--duration-slide) var(--ease-slide), visibility 0s var(--duration-slide); }
+.chat-panel.is-open { transform: translateX(0); visibility: visible; transition: transform var(--duration-slide) var(--ease-slide), visibility 0s; }
+.chat-header { display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; min-height: 16px; gap: 8px; }
+.chat-header .icon-button { width: 16px; height: 16px; }
+.chat-mode { min-width: 0; line-height: 16px; font-size: calc(8px + var(--font-size-offset)); color: var(--color-text-secondary); }
+.chat-welcome { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; min-height: 0; gap: 12px; padding-inline: 10px; }
+.chat-welcome p { width: 100%; color: var(--color-text-secondary); font-size: calc(10px + var(--font-size-offset)); font-weight: 400; line-height: 16px; text-align: center; }
+.chat-thread { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: stretch; gap: 13px; overflow-y: auto; scrollbar-width: thin; overscroll-behavior: contain; padding-bottom: 2px; }
+.chat-message { display: flex; align-items: flex-start; gap: 8px; flex-shrink: 0; }
+.chat-message--user { justify-content: flex-end; }
+.message-bubble { min-width: 0; background: var(--color-surface-muted); padding: 11px; border-radius: var(--radius-bubble); display: flex; flex-direction: column; gap: 8px; }
+.message-bubble > p { font-size: calc(10px + var(--font-size-offset)); line-height: 16px; font-weight: 400; white-space: pre-wrap; overflow-wrap: anywhere; }
+.chat-message--user .message-bubble { max-width: 92%; padding: 11px 13px; background: var(--color-chat-prompt); color: var(--color-accent); }
+.chat-message--assistant .message-bubble { flex: 1; }
+.agent-mark { flex: 0 0 20px; width: 20px; height: 20px; }
+.chat-attachments { display: flex; flex-direction: column; gap: 5px; }
+.chat-attachment { display: flex; align-items: center; gap: 10px; padding: 6px 12px 6px 6px; border-radius: 7px; background: var(--color-surface); min-width: 0; }
+.chat-attachment:hover { box-shadow: inset 0 0 0 1px var(--color-accent); }
+.attachment-thumbnail { width: 42px; height: 28px; flex: 0 0 42px; object-fit: cover; }
+.chat-attachment > div { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 1px; line-height: 1.45; }
+.chat-attachment strong { font-size: calc(9px + var(--font-size-offset)); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chat-attachment span { color: var(--color-text-secondary); font-size: calc(8.5px + var(--font-size-offset)); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chat-composer { display: flex; flex-direction: column; gap: 8px; flex-shrink: 0; }
+.chat-privacy { font-size:10px; line-height:15px; color:var(--color-text-secondary); }
+.suggested-topics { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; padding: 1px 0; }
+.suggested-topics button { border: 1px solid var(--color-border); padding: 5px 7px; border-radius: var(--radius-pill); font-size: calc(8px + var(--font-size-offset)); line-height: 14px; white-space: nowrap; color: var(--color-text-supporting); }
+.suggested-topics button:hover:not(:disabled) { color: var(--color-accent); border-color: var(--color-accent); }
+.suggested-topics button:disabled { opacity: .5; }
+.message-input { display: flex; flex-direction: column; justify-content: space-between; min-height: 70px; padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-bubble); }
+.message-input:focus-within { border-color: var(--color-accent); }
+.message-input textarea { border: 0; background: transparent; width: 100%; padding: 0; height: auto; min-height: 16px; max-height: 100px; font-size: calc(10px + var(--font-size-offset)); line-height: 16px; outline: 0; field-sizing: content; }
+.message-input textarea::placeholder { color: var(--color-text-placeholder); opacity: 1; }
+.message-input-actions { display: flex; justify-content: flex-end; padding-top: 3px; }
+.send-button { width: 25px; height: 25px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-pill); background: var(--color-accent); }
+.send-button:disabled { opacity: .65; }
+.typing-indicator { align-items: center; flex-direction: row; min-height: 36px; gap: 4px; }
+.typing-indicator span { width: 4px; height: 4px; border-radius: 50%; background: var(--color-text-secondary); animation: pulse 1s ease-in-out infinite; }
+.typing-indicator span:nth-child(2) { animation-delay: 120ms; }
+.typing-indicator span:nth-child(3) { animation-delay: 240ms; }
+.chat-error { border: 1px solid var(--color-border-strong); border-radius: 10px; padding: 12px; font-size: calc(10px + var(--font-size-offset)); }
+.chat-error button { color: var(--color-accent); text-decoration: underline; padding-top: 8px; }
+@keyframes pulse { 0%, 70%, 100% { opacity: .35; transform: translateY(0); } 35% { opacity: 1; transform: translateY(-3px); } }
+@media (max-width: 760px) {
+  .chat-panel { padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+}
+@media (max-width: 480px) {
+  .chat-panel { width: 100%; }
+  .chat-header { min-height: 28px; }
+  .chat-header .icon-button { width: 32px; height: 32px; }
+  .chat-mode { font-size: calc(10px + var(--font-size-offset)); }
+  .chat-welcome p { font-size: calc(12px + var(--font-size-offset)); line-height: 20px; }
+  .message-bubble > p { font-size: calc(12px + var(--font-size-offset)); line-height: 20px; }
+  .message-input textarea { font-size: calc(16px + var(--font-size-offset)); line-height: 24px; min-height: 24px; }
+  .suggested-topics button { padding: 7px 9px; font-size: calc(10px + var(--font-size-offset)); }
+}

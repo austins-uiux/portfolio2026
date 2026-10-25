@@ -1,0 +1,373 @@
+{
+  "source": "https://magicui.design/docs/components",
+  "registry": "https://magicui.design/r/",
+  "retrievedAt": "2026-10-25T11:21:54.331279+00:00",
+  "components": 73,
+  "files": [
+    {
+      "item": "pointer",
+      "upstreamPath": "registry/magicui/pointer.tsx",
+      "localPath": "src/components/magic-ui/pointer.tsx"
+    },
+    {
+      "item": "code-comparison",
+      "upstreamPath": "registry/magicui/code-comparison.tsx",
+      "localPath": "src/components/magic-ui/code-comparison.tsx"
+    },
+    {
+      "item": "blur-fade",
+      "upstreamPath": "registry/magicui/blur-fade.tsx",
+      "localPath": "src/components/magic-ui/blur-fade.tsx"
+    },
+    {
+      "item": "flickering-grid",
+      "upstreamPath": "registry/magicui/flickering-grid.tsx",
+      "localPath": "src/components/magic-ui/flickering-grid.tsx"
+    },
+    {
+      "item": "text-reveal",
+      "upstreamPath": "registry/magicui/text-reveal.tsx",
+      "localPath": "src/components/magic-ui/text-reveal.tsx"
+    },
+    {
+      "item": "retro-grid",
+      "upstreamPath": "registry/magicui/retro-grid.tsx",
+      "localPath": "src/components/magic-ui/retro-grid.tsx"
+    },
+    {
+      "item": "icon-cloud",
+      "upstreamPath": "registry/magicui/icon-cloud.tsx",
+      "localPath": "src/components/magic-ui/icon-cloud.tsx"
+    },
+    {
+      "item": "hexagon-pattern",
+      "upstreamPath": "registry/magicui/hexagon-pattern.tsx",
+      "localPath": "src/components/magic-ui/hexagon-pattern.tsx"
+    },
+    {
+      "item": "floating-3d-particles",
+      "upstreamPath": "registry/magicui/floating-3d-particles.tsx",
+      "localPath": "src/components/magic-ui/floating-3d-particles.tsx"
+    },
+    {
+      "item": "interactive-grid-pattern",
+      "upstreamPath": "registry/magicui/interactive-grid-pattern.tsx",
+      "localPath": "src/components/magic-ui/interactive-grid-pattern.tsx"
+    },
+    {
+      "item": "marquee",
+      "upstreamPath": "registry/magicui/marquee.tsx",
+      "localPath": "src/components/magic-ui/marquee.tsx"
+    },
+    {
+      "item": "sparkles-text",
+      "upstreamPath": "registry/magicui/sparkles-text.tsx",
+      "localPath": "src/components/magic-ui/sparkles-text.tsx"
+    },
+    {
+      "item": "line-shadow-text",
+      "upstreamPath": "registry/magicui/line-shadow-text.tsx",
+      "localPath": "src/components/magic-ui/line-shadow-text.tsx"
+    },
+    {
+      "item": "backlight",
+      "upstreamPath": "registry/magicui/backlight.tsx",
+      "localPath": "src/components/magic-ui/backlight.tsx"
+    },
+    {
+      "item": "text-animate",
+      "upstreamPath": "registry/magicui/text-animate.tsx",
+      "localPath": "src/components/magic-ui/text-animate.tsx"
+    },
+    {
+      "item": "glyph-matrix",
+      "upstreamPath": "registry/magicui/glyph-matrix.tsx",
+      "localPath": "src/components/magic-ui/glyph-matrix.tsx"
+    },
+    {
+      "item": "aurora-text",
+      "upstreamPath": "registry/magicui/aurora-text.tsx",
+      "localPath": "src/components/magic-ui/aurora-text.tsx"
+    },
+    {
+      "item": "border-beam",
+      "upstreamPath": "registry/magicui/border-beam.tsx",
+      "localPath": "src/components/magic-ui/border-beam.tsx"
+    },
+    {
+      "item": "word-rotate",
+      "upstreamPath": "registry/magicui/word-rotate.tsx",
+      "localPath": "src/components/magic-ui/word-rotate.tsx"
+    },
+    {
+      "item": "dot-pattern",
+      "upstreamPath": "registry/magicui/dot-pattern.tsx",
+      "localPath": "src/components/magic-ui/dot-pattern.tsx"
+    },
+    {
+      "item": "light-rays",
+      "upstreamPath": "registry/magicui/light-rays.tsx",
+      "localPath": "src/components/magic-ui/light-rays.tsx"
+    },
+    {
+      "item": "hero-video-dialog",
+      "upstreamPath": "registry/magicui/hero-video-dialog.tsx",
+      "localPath": "src/components/magic-ui/hero-video-dialog.tsx"
+    },
+    {
+      "item": "animated-gradient-text",
+      "upstreamPath": "registry/magicui/animated-gradient-text.tsx",
+      "localPath": "src/components/magic-ui/animated-gradient-text.tsx"
+    },
+    {
+      "item": "spinning-text",
+      "upstreamPath": "registry/magicui/spinning-text.tsx",
+      "localPath": "src/components/magic-ui/spinning-text.tsx"
+    },
+    {
+      "item": "meteors",
+      "upstreamPath": "registry/magicui/meteors.tsx",
+      "localPath": "src/components/magic-ui/meteors.tsx"
+    },
+    {
+      "item": "lens",
+      "upstreamPath": "registry/magicui/lens.tsx",
+      "localPath": "src/components/magic-ui/lens.tsx"
+    },
+    {
+      "item": "pulsating-button",
+      "upstreamPath": "registry/magicui/pulsating-button.tsx",
+      "localPath": "src/components/magic-ui/pulsating-button.tsx"
+    },
+    {
+      "item": "morphing-text",
+      "upstreamPath": "registry/magicui/morphing-text.tsx",
+      "localPath": "src/components/magic-ui/morphing-text.tsx"
+    },
+    {
+      "item": "animated-grid-pattern",
+      "upstreamPath": "registry/magicui/animated-grid-pattern.tsx",
+      "localPath": "src/components/magic-ui/animated-grid-pattern.tsx"
+    },
+    {
+      "item": "video-text",
+      "upstreamPath": "registry/magicui/video-text.tsx",
+      "localPath": "src/components/magic-ui/video-text.tsx"
+    },
+    {
+      "item": "animated-list",
+      "upstreamPath": "registry/magicui/animated-list.tsx",
+      "localPath": "src/components/magic-ui/animated-list.tsx"
+    },
+    {
+      "item": "animated-circular-progress-bar",
+      "upstreamPath": "registry/magicui/animated-circular-progress-bar.tsx",
+      "localPath": "src/components/magic-ui/animated-circular-progress-bar.tsx"
+    },
+    {
+      "item": "shimmer-button",
+      "upstreamPath": "registry/magicui/shimmer-button.tsx",
+      "localPath": "src/components/magic-ui/shimmer-button.tsx"
+    },
+    {
+      "item": "magic-card",
+      "upstreamPath": "registry/magicui/magic-card.tsx",
+      "localPath": "src/components/magic-ui/magic-card.tsx"
+    },
+    {
+      "item": "animated-shiny-text",
+      "upstreamPath": "registry/magicui/animated-shiny-text.tsx",
+      "localPath": "src/components/magic-ui/animated-shiny-text.tsx"
+    },
+    {
+      "item": "dock",
+      "upstreamPath": "registry/magicui/dock.tsx",
+      "localPath": "src/components/magic-ui/dock.tsx"
+    },
+    {
+      "item": "striped-pattern",
+      "upstreamPath": "registry/magicui/striped-pattern.tsx",
+      "localPath": "src/components/magic-ui/striped-pattern.tsx"
+    },
+    {
+      "item": "progressive-blur",
+      "upstreamPath": "registry/magicui/progressive-blur.tsx",
+      "localPath": "src/components/magic-ui/progressive-blur.tsx"
+    },
+    {
+      "item": "text-3d-flip",
+      "upstreamPath": "registry/magicui/text-3d-flip.tsx",
+      "localPath": "src/components/magic-ui/text-3d-flip.tsx"
+    },
+    {
+      "item": "android",
+      "upstreamPath": "registry/magicui/android.tsx",
+      "localPath": "src/components/magic-ui/android.tsx"
+    },
+    {
+      "item": "neon-gradient-card",
+      "upstreamPath": "registry/magicui/neon-gradient-card.tsx",
+      "localPath": "src/components/magic-ui/neon-gradient-card.tsx"
+    },
+    {
+      "item": "kinetic-text",
+      "upstreamPath": "registry/magicui/kinetic-text.tsx",
+      "localPath": "src/components/magic-ui/kinetic-text.tsx"
+    },
+    {
+      "item": "animated-beam",
+      "upstreamPath": "registry/magicui/animated-beam.tsx",
+      "localPath": "src/components/magic-ui/animated-beam.tsx"
+    },
+    {
+      "item": "interactive-hover-button",
+      "upstreamPath": "registry/magicui/interactive-hover-button.tsx",
+      "localPath": "src/components/magic-ui/interactive-hover-button.tsx"
+    },
+    {
+      "item": "noise-texture",
+      "upstreamPath": "registry/magicui/noise-texture.tsx",
+      "localPath": "src/components/magic-ui/noise-texture.tsx"
+    },
+    {
+      "item": "confetti",
+      "upstreamPath": "registry/magicui/confetti.tsx",
+      "localPath": "src/components/magic-ui/confetti.tsx"
+    },
+    {
+      "item": "highlighter",
+      "upstreamPath": "registry/magicui/highlighter.tsx",
+      "localPath": "src/components/magic-ui/highlighter.tsx"
+    },
+    {
+      "item": "animated-theme-toggler",
+      "upstreamPath": "registry/magicui/animated-theme-toggler.tsx",
+      "localPath": "src/components/magic-ui/animated-theme-toggler.tsx"
+    },
+    {
+      "item": "smooth-cursor",
+      "upstreamPath": "registry/magicui/smooth-cursor.tsx",
+      "localPath": "src/components/magic-ui/smooth-cursor.tsx"
+    },
+    {
+      "item": "iphone",
+      "upstreamPath": "registry/magicui/iphone.tsx",
+      "localPath": "src/components/magic-ui/iphone.tsx"
+    },
+    {
+      "item": "shine-border",
+      "upstreamPath": "registry/magicui/shine-border.tsx",
+      "localPath": "src/components/magic-ui/shine-border.tsx"
+    },
+    {
+      "item": "scroll-based-velocity",
+      "upstreamPath": "registry/magicui/scroll-based-velocity.tsx",
+      "localPath": "src/components/magic-ui/scroll-based-velocity.tsx"
+    },
+    {
+      "item": "warp-background",
+      "upstreamPath": "registry/magicui/warp-background.tsx",
+      "localPath": "src/components/magic-ui/warp-background.tsx"
+    },
+    {
+      "item": "tweet-card",
+      "upstreamPath": "registry/magicui/tweet-card.tsx",
+      "localPath": "src/components/magic-ui/tweet-card.tsx"
+    },
+    {
+      "item": "avatar-circles",
+      "upstreamPath": "registry/magicui/avatar-circles.tsx",
+      "localPath": "src/components/magic-ui/avatar-circles.tsx"
+    },
+    {
+      "item": "ripple",
+      "upstreamPath": "registry/magicui/ripple.tsx",
+      "localPath": "src/components/magic-ui/ripple.tsx"
+    },
+    {
+      "item": "particles",
+      "upstreamPath": "registry/magicui/particles.tsx",
+      "localPath": "src/components/magic-ui/particles.tsx"
+    },
+    {
+      "item": "pixel-image",
+      "upstreamPath": "registry/magicui/pixel-image.tsx",
+      "localPath": "src/components/magic-ui/pixel-image.tsx"
+    },
+    {
+      "item": "rainbow-button",
+      "upstreamPath": "registry/magicui/rainbow-button.tsx",
+      "localPath": "src/components/magic-ui/rainbow-button.tsx"
+    },
+    {
+      "item": "typing-animation",
+      "upstreamPath": "registry/magicui/typing-animation.tsx",
+      "localPath": "src/components/magic-ui/typing-animation.tsx"
+    },
+    {
+      "item": "hyper-text",
+      "upstreamPath": "registry/magicui/hyper-text.tsx",
+      "localPath": "src/components/magic-ui/hyper-text.tsx"
+    },
+    {
+      "item": "scroll-progress",
+      "upstreamPath": "registry/magicui/scroll-progress.tsx",
+      "localPath": "src/components/magic-ui/scroll-progress.tsx"
+    },
+    {
+      "item": "file-tree",
+      "upstreamPath": "registry/magicui/file-tree.tsx",
+      "localPath": "src/components/magic-ui/file-tree.tsx"
+    },
+    {
+      "item": "number-ticker",
+      "upstreamPath": "registry/magicui/number-ticker.tsx",
+      "localPath": "src/components/magic-ui/number-ticker.tsx"
+    },
+    {
+      "item": "safari",
+      "upstreamPath": "registry/magicui/safari.tsx",
+      "localPath": "src/components/magic-ui/safari.tsx"
+    },
+    {
+      "item": "grid-pattern",
+      "upstreamPath": "registry/magicui/grid-pattern.tsx",
+      "localPath": "src/components/magic-ui/grid-pattern.tsx"
+    },
+    {
+      "item": "shiny-button",
+      "upstreamPath": "registry/magicui/shiny-button.tsx",
+      "localPath": "src/components/magic-ui/shiny-button.tsx"
+    },
+    {
+      "item": "terminal",
+      "upstreamPath": "registry/magicui/terminal.tsx",
+      "localPath": "src/components/magic-ui/terminal.tsx"
+    },
+    {
+      "item": "ripple-button",
+      "upstreamPath": "registry/magicui/ripple-button.tsx",
+      "localPath": "src/components/magic-ui/ripple-button.tsx"
+    },
+    {
+      "item": "glare-hover",
+      "upstreamPath": "registry/magicui/glare-hover.tsx",
+      "localPath": "src/components/magic-ui/glare-hover.tsx"
+    },
+    {
+      "item": "comic-text",
+      "upstreamPath": "registry/magicui/comic-text.tsx",
+      "localPath": "src/components/magic-ui/comic-text.tsx"
+    },
+    {
+      "item": "dia-text-reveal",
+      "upstreamPath": "registry/magicui/dia-text-reveal.tsx",
+      "localPath": "src/components/magic-ui/dia-text-reveal.tsx"
+    },
+    {
+      "item": "orbiting-circles",
+      "upstreamPath": "registry/magicui/orbiting-circles.tsx",
+      "localPath": "src/components/magic-ui/orbiting-circles.tsx"
+    }
+  ]
+}

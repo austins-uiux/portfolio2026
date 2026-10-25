@@ -1,0 +1,367 @@
+[
+  {
+    "id": "marquee",
+    "name": "Marquee",
+    "docs": "https://magicui.design/docs/components/marquee"
+  },
+  {
+    "id": "terminal",
+    "name": "Terminal",
+    "docs": "https://magicui.design/docs/components/terminal"
+  },
+  {
+    "id": "hero-video-dialog",
+    "name": "Hero Video Dialog",
+    "docs": "https://magicui.design/docs/components/hero-video-dialog"
+  },
+  {
+    "id": "animated-list",
+    "name": "Animated List",
+    "docs": "https://magicui.design/docs/components/animated-list"
+  },
+  {
+    "id": "dock",
+    "name": "Dock",
+    "docs": "https://magicui.design/docs/components/dock"
+  },
+  {
+    "id": "tweet-card",
+    "name": "Tweet Card",
+    "docs": "https://magicui.design/docs/components/tweet-card"
+  },
+  {
+    "id": "orbiting-circles",
+    "name": "Orbiting Circles",
+    "docs": "https://magicui.design/docs/components/orbiting-circles"
+  },
+  {
+    "id": "avatar-circles",
+    "name": "Avatar Circles",
+    "docs": "https://magicui.design/docs/components/avatar-circles"
+  },
+  {
+    "id": "icon-cloud",
+    "name": "Icon Cloud",
+    "docs": "https://magicui.design/docs/components/icon-cloud"
+  },
+  {
+    "id": "lens",
+    "name": "Lens",
+    "docs": "https://magicui.design/docs/components/lens"
+  },
+  {
+    "id": "pointer",
+    "name": "Pointer",
+    "docs": "https://magicui.design/docs/components/pointer"
+  },
+  {
+    "id": "smooth-cursor",
+    "name": "Smooth Cursor",
+    "docs": "https://magicui.design/docs/components/smooth-cursor"
+  },
+  {
+    "id": "progressive-blur",
+    "name": "Progressive Blur",
+    "docs": "https://magicui.design/docs/components/progressive-blur"
+  },
+  {
+    "id": "animated-beam",
+    "name": "Animated Beam",
+    "docs": "https://magicui.design/docs/components/animated-beam"
+  },
+  {
+    "id": "border-beam",
+    "name": "Border Beam",
+    "docs": "https://magicui.design/docs/components/border-beam"
+  },
+  {
+    "id": "shine-border",
+    "name": "Shine Border",
+    "docs": "https://magicui.design/docs/components/shine-border"
+  },
+  {
+    "id": "magic-card",
+    "name": "Magic Card",
+    "docs": "https://magicui.design/docs/components/magic-card"
+  },
+  {
+    "id": "glare-hover",
+    "name": "Glare Hover",
+    "docs": "https://magicui.design/docs/components/glare-hover"
+  },
+  {
+    "id": "meteors",
+    "name": "Meteors",
+    "docs": "https://magicui.design/docs/components/meteors"
+  },
+  {
+    "id": "confetti",
+    "name": "Confetti",
+    "docs": "https://magicui.design/docs/components/confetti"
+  },
+  {
+    "id": "particles",
+    "name": "Particles",
+    "docs": "https://magicui.design/docs/components/particles"
+  },
+  {
+    "id": "animated-theme-toggler",
+    "name": "Theme Toggler",
+    "docs": "https://magicui.design/docs/components/animated-theme-toggler"
+  },
+  {
+    "id": "blur-fade",
+    "name": "Blur Fade",
+    "docs": "https://magicui.design/docs/components/blur-fade"
+  },
+  {
+    "id": "text-animate",
+    "name": "Text Animate",
+    "docs": "https://magicui.design/docs/components/text-animate"
+  },
+  {
+    "id": "typing-animation",
+    "name": "Typing Animation",
+    "docs": "https://magicui.design/docs/components/typing-animation"
+  },
+  {
+    "id": "line-shadow-text",
+    "name": "Line Shadow Text",
+    "docs": "https://magicui.design/docs/components/line-shadow-text"
+  },
+  {
+    "id": "aurora-text",
+    "name": "Aurora Text",
+    "docs": "https://magicui.design/docs/components/aurora-text"
+  },
+  {
+    "id": "video-text",
+    "name": "Video Text",
+    "docs": "https://magicui.design/docs/components/video-text"
+  },
+  {
+    "id": "number-ticker",
+    "name": "Number Ticker",
+    "docs": "https://magicui.design/docs/components/number-ticker"
+  },
+  {
+    "id": "animated-shiny-text",
+    "name": "Animated Shiny Text",
+    "docs": "https://magicui.design/docs/components/animated-shiny-text"
+  },
+  {
+    "id": "animated-gradient-text",
+    "name": "Animated Gradient Text",
+    "docs": "https://magicui.design/docs/components/animated-gradient-text"
+  },
+  {
+    "id": "text-reveal",
+    "name": "Text Reveal",
+    "docs": "https://magicui.design/docs/components/text-reveal"
+  },
+  {
+    "id": "dia-text-reveal",
+    "name": "Dia Text Reveal",
+    "docs": "https://magicui.design/docs/components/dia-text-reveal"
+  },
+  {
+    "id": "hyper-text",
+    "name": "Hyper Text",
+    "docs": "https://magicui.design/docs/components/hyper-text"
+  },
+  {
+    "id": "word-rotate",
+    "name": "Word Rotate",
+    "docs": "https://magicui.design/docs/components/word-rotate"
+  },
+  {
+    "id": "scroll-based-velocity",
+    "name": "Scroll Based Velocity",
+    "docs": "https://magicui.design/docs/components/scroll-based-velocity"
+  },
+  {
+    "id": "sparkles-text",
+    "name": "Sparkles Text",
+    "docs": "https://magicui.design/docs/components/sparkles-text"
+  },
+  {
+    "id": "morphing-text",
+    "name": "Morphing Text",
+    "docs": "https://magicui.design/docs/components/morphing-text"
+  },
+  {
+    "id": "spinning-text",
+    "name": "Spinning Text",
+    "docs": "https://magicui.design/docs/components/spinning-text"
+  },
+  {
+    "id": "highlighter",
+    "name": "Text Highlighter",
+    "docs": "https://magicui.design/docs/components/highlighter"
+  },
+  {
+    "id": "text-3d-flip",
+    "name": "Text 3D Flip",
+    "docs": "https://magicui.design/docs/components/text-3d-flip"
+  },
+  {
+    "id": "safari",
+    "name": "Safari",
+    "docs": "https://magicui.design/docs/components/safari"
+  },
+  {
+    "id": "iphone",
+    "name": "iPhone",
+    "docs": "https://magicui.design/docs/components/iphone"
+  },
+  {
+    "id": "android",
+    "name": "Android",
+    "docs": "https://magicui.design/docs/components/android"
+  },
+  {
+    "id": "rainbow-button",
+    "name": "Rainbow Button",
+    "docs": "https://magicui.design/docs/components/rainbow-button"
+  },
+  {
+    "id": "shimmer-button",
+    "name": "Shimmer Button",
+    "docs": "https://magicui.design/docs/components/shimmer-button"
+  },
+  {
+    "id": "ripple-button",
+    "name": "Ripple Button",
+    "docs": "https://magicui.design/docs/components/ripple-button"
+  },
+  {
+    "id": "flickering-grid",
+    "name": "Flickering Grid",
+    "docs": "https://magicui.design/docs/components/flickering-grid"
+  },
+  {
+    "id": "animated-grid-pattern",
+    "name": "Animated Grid Pattern",
+    "docs": "https://magicui.design/docs/components/animated-grid-pattern"
+  },
+  {
+    "id": "retro-grid",
+    "name": "Retro Grid",
+    "docs": "https://magicui.design/docs/components/retro-grid"
+  },
+  {
+    "id": "ripple",
+    "name": "Ripple",
+    "docs": "https://magicui.design/docs/components/ripple"
+  },
+  {
+    "id": "dot-pattern",
+    "name": "Dot Pattern",
+    "docs": "https://magicui.design/docs/components/dot-pattern"
+  },
+  {
+    "id": "grid-pattern",
+    "name": "Grid Pattern",
+    "docs": "https://magicui.design/docs/components/grid-pattern"
+  },
+  {
+    "id": "hexagon-pattern",
+    "name": "Hexagon Pattern",
+    "docs": "https://magicui.design/docs/components/hexagon-pattern"
+  },
+  {
+    "id": "striped-pattern",
+    "name": "Striped Pattern",
+    "docs": "https://magicui.design/docs/components/striped-pattern"
+  },
+  {
+    "id": "interactive-grid-pattern",
+    "name": "Interactive Grid Pattern",
+    "docs": "https://magicui.design/docs/components/interactive-grid-pattern"
+  },
+  {
+    "id": "light-rays",
+    "name": "Light Rays",
+    "docs": "https://magicui.design/docs/components/light-rays"
+  },
+  {
+    "id": "noise-texture",
+    "name": "Noise Texture",
+    "docs": "https://magicui.design/docs/components/noise-texture"
+  },
+  {
+    "id": "floating-3d-particles",
+    "name": "Floating 3D Particles",
+    "docs": "https://magicui.design/docs/components/floating-3d-particles"
+  },
+  {
+    "id": "shiny-button",
+    "name": "Shiny Button",
+    "docs": "https://magicui.design/docs/components/shiny-button"
+  },
+  {
+    "id": "file-tree",
+    "name": "File Tree",
+    "docs": "https://magicui.design/docs/components/file-tree"
+  },
+  {
+    "id": "code-comparison",
+    "name": "Code Comparison",
+    "docs": "https://magicui.design/docs/components/code-comparison"
+  },
+  {
+    "id": "scroll-progress",
+    "name": "Scroll Progress",
+    "docs": "https://magicui.design/docs/components/scroll-progress"
+  },
+  {
+    "id": "neon-gradient-card",
+    "name": "Neon Gradient Card",
+    "docs": "https://magicui.design/docs/components/neon-gradient-card"
+  },
+  {
+    "id": "comic-text",
+    "name": "Comic Text",
+    "docs": "https://magicui.design/docs/components/comic-text"
+  },
+  {
+    "id": "kinetic-text",
+    "name": "Kinetic Text",
+    "docs": "https://magicui.design/docs/components/kinetic-text"
+  },
+  {
+    "id": "pixel-image",
+    "name": "Pixel Image",
+    "docs": "https://magicui.design/docs/components/pixel-image"
+  },
+  {
+    "id": "pulsating-button",
+    "name": "Pulsating Button",
+    "docs": "https://magicui.design/docs/components/pulsating-button"
+  },
+  {
+    "id": "warp-background",
+    "name": "Warp Background",
+    "docs": "https://magicui.design/docs/components/warp-background"
+  },
+  {
+    "id": "interactive-hover-button",
+    "name": "Interactive Hover Button",
+    "docs": "https://magicui.design/docs/components/interactive-hover-button"
+  },
+  {
+    "id": "animated-circular-progress-bar",
+    "name": "Animated Circular Progress Bar",
+    "docs": "https://magicui.design/docs/components/animated-circular-progress-bar"
+  },
+  {
+    "id": "backlight",
+    "name": "Backlight",
+    "docs": "https://magicui.design/docs/components/backlight"
+  },
+  {
+    "id": "glyph-matrix",
+    "name": "Glyph Matrix",
+    "docs": "https://magicui.design/docs/components/glyph-matrix"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "source": "https://ux-signal-lab-austin.earthysole130.chatgpt.site/",
+  "siteVersion": 2,
+  "sourceCommit": "a8caa231e510b55768543fbe0a6d430ec3e437f4",
+  "integration": "Ported to native React + TypeScript; original snapshots retained for behavior parity checks."
+}

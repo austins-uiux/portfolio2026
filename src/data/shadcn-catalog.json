@@ -1,0 +1,529 @@
+[
+  {
+    "id": "accordion",
+    "name": "Accordion",
+    "docs": "https://ui.shadcn.com/docs/components/radix/accordion",
+    "registryItems": [
+      "accordion"
+    ]
+  },
+  {
+    "id": "alert",
+    "name": "Alert",
+    "docs": "https://ui.shadcn.com/docs/components/radix/alert",
+    "registryItems": [
+      "alert"
+    ]
+  },
+  {
+    "id": "alert-dialog",
+    "name": "Alert Dialog",
+    "docs": "https://ui.shadcn.com/docs/components/radix/alert-dialog",
+    "registryItems": [
+      "alert-dialog"
+    ]
+  },
+  {
+    "id": "aspect-ratio",
+    "name": "Aspect Ratio",
+    "docs": "https://ui.shadcn.com/docs/components/radix/aspect-ratio",
+    "registryItems": [
+      "aspect-ratio"
+    ]
+  },
+  {
+    "id": "attachment",
+    "name": "Attachment",
+    "docs": "https://ui.shadcn.com/docs/components/radix/attachment",
+    "registryItems": [
+      "attachment"
+    ]
+  },
+  {
+    "id": "avatar",
+    "name": "Avatar",
+    "docs": "https://ui.shadcn.com/docs/components/radix/avatar",
+    "registryItems": [
+      "avatar"
+    ]
+  },
+  {
+    "id": "badge",
+    "name": "Badge",
+    "docs": "https://ui.shadcn.com/docs/components/radix/badge",
+    "registryItems": [
+      "badge"
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "name": "Breadcrumb",
+    "docs": "https://ui.shadcn.com/docs/components/radix/breadcrumb",
+    "registryItems": [
+      "breadcrumb"
+    ]
+  },
+  {
+    "id": "bubble",
+    "name": "Bubble",
+    "docs": "https://ui.shadcn.com/docs/components/radix/bubble",
+    "registryItems": [
+      "bubble"
+    ]
+  },
+  {
+    "id": "button",
+    "name": "Button",
+    "docs": "https://ui.shadcn.com/docs/components/radix/button",
+    "registryItems": [
+      "button"
+    ]
+  },
+  {
+    "id": "button-group",
+    "name": "Button Group",
+    "docs": "https://ui.shadcn.com/docs/components/radix/button-group",
+    "registryItems": [
+      "button-group"
+    ]
+  },
+  {
+    "id": "calendar",
+    "name": "Calendar",
+    "docs": "https://ui.shadcn.com/docs/components/radix/calendar",
+    "registryItems": [
+      "calendar"
+    ]
+  },
+  {
+    "id": "card",
+    "name": "Card",
+    "docs": "https://ui.shadcn.com/docs/components/radix/card",
+    "registryItems": [
+      "card"
+    ]
+  },
+  {
+    "id": "carousel",
+    "name": "Carousel",
+    "docs": "https://ui.shadcn.com/docs/components/radix/carousel",
+    "registryItems": [
+      "carousel"
+    ]
+  },
+  {
+    "id": "chart",
+    "name": "Chart",
+    "docs": "https://ui.shadcn.com/docs/components/radix/chart",
+    "registryItems": [
+      "chart"
+    ]
+  },
+  {
+    "id": "checkbox",
+    "name": "Checkbox",
+    "docs": "https://ui.shadcn.com/docs/components/radix/checkbox",
+    "registryItems": [
+      "checkbox"
+    ]
+  },
+  {
+    "id": "code-block",
+    "name": "Code Block",
+    "docs": "https://ui.shadcn.com/docs/components/radix/code-block",
+    "registryItems": [
+      "code-block"
+    ]
+  },
+  {
+    "id": "collapsible",
+    "name": "Collapsible",
+    "docs": "https://ui.shadcn.com/docs/components/radix/collapsible",
+    "registryItems": [
+      "collapsible"
+    ]
+  },
+  {
+    "id": "combobox",
+    "name": "Combobox",
+    "docs": "https://ui.shadcn.com/docs/components/radix/combobox",
+    "registryItems": [
+      "combobox"
+    ]
+  },
+  {
+    "id": "command",
+    "name": "Command",
+    "docs": "https://ui.shadcn.com/docs/components/radix/command",
+    "registryItems": [
+      "command"
+    ]
+  },
+  {
+    "id": "context-menu",
+    "name": "Context Menu",
+    "docs": "https://ui.shadcn.com/docs/components/radix/context-menu",
+    "registryItems": [
+      "context-menu"
+    ]
+  },
+  {
+    "id": "data-table",
+    "name": "Data Table",
+    "docs": "https://ui.shadcn.com/docs/components/radix/data-table",
+    "registryItems": [
+      "table"
+    ]
+  },
+  {
+    "id": "date-picker",
+    "name": "Date Picker",
+    "docs": "https://ui.shadcn.com/docs/components/radix/date-picker",
+    "registryItems": [
+      "calendar",
+      "popover"
+    ]
+  },
+  {
+    "id": "dialog",
+    "name": "Dialog",
+    "docs": "https://ui.shadcn.com/docs/components/radix/dialog",
+    "registryItems": [
+      "dialog"
+    ]
+  },
+  {
+    "id": "direction",
+    "name": "Direction",
+    "docs": "https://ui.shadcn.com/docs/components/radix/direction",
+    "registryItems": [
+      "direction"
+    ]
+  },
+  {
+    "id": "drawer",
+    "name": "Drawer",
+    "docs": "https://ui.shadcn.com/docs/components/radix/drawer",
+    "registryItems": [
+      "drawer"
+    ]
+  },
+  {
+    "id": "dropdown-menu",
+    "name": "Dropdown Menu",
+    "docs": "https://ui.shadcn.com/docs/components/radix/dropdown-menu",
+    "registryItems": [
+      "dropdown-menu"
+    ]
+  },
+  {
+    "id": "empty",
+    "name": "Empty",
+    "docs": "https://ui.shadcn.com/docs/components/radix/empty",
+    "registryItems": [
+      "empty"
+    ]
+  },
+  {
+    "id": "field",
+    "name": "Field",
+    "docs": "https://ui.shadcn.com/docs/components/radix/field",
+    "registryItems": [
+      "field"
+    ]
+  },
+  {
+    "id": "hover-card",
+    "name": "Hover Card",
+    "docs": "https://ui.shadcn.com/docs/components/radix/hover-card",
+    "registryItems": [
+      "hover-card"
+    ]
+  },
+  {
+    "id": "input",
+    "name": "Input",
+    "docs": "https://ui.shadcn.com/docs/components/radix/input",
+    "registryItems": [
+      "input"
+    ]
+  },
+  {
+    "id": "input-group",
+    "name": "Input Group",
+    "docs": "https://ui.shadcn.com/docs/components/radix/input-group",
+    "registryItems": [
+      "input-group"
+    ]
+  },
+  {
+    "id": "input-otp",
+    "name": "Input OTP",
+    "docs": "https://ui.shadcn.com/docs/components/radix/input-otp",
+    "registryItems": [
+      "input-otp"
+    ]
+  },
+  {
+    "id": "item",
+    "name": "Item",
+    "docs": "https://ui.shadcn.com/docs/components/radix/item",
+    "registryItems": [
+      "item"
+    ]
+  },
+  {
+    "id": "kbd",
+    "name": "Kbd",
+    "docs": "https://ui.shadcn.com/docs/components/radix/kbd",
+    "registryItems": [
+      "kbd"
+    ]
+  },
+  {
+    "id": "label",
+    "name": "Label",
+    "docs": "https://ui.shadcn.com/docs/components/radix/label",
+    "registryItems": [
+      "label"
+    ]
+  },
+  {
+    "id": "marker",
+    "name": "Marker",
+    "docs": "https://ui.shadcn.com/docs/components/radix/marker",
+    "registryItems": [
+      "marker"
+    ]
+  },
+  {
+    "id": "menubar",
+    "name": "Menubar",
+    "docs": "https://ui.shadcn.com/docs/components/radix/menubar",
+    "registryItems": [
+      "menubar"
+    ]
+  },
+  {
+    "id": "message",
+    "name": "Message",
+    "docs": "https://ui.shadcn.com/docs/components/radix/message",
+    "registryItems": [
+      "message"
+    ]
+  },
+  {
+    "id": "message-scroller",
+    "name": "Message Scroller",
+    "docs": "https://ui.shadcn.com/docs/components/radix/message-scroller",
+    "registryItems": [
+      "message-scroller"
+    ]
+  },
+  {
+    "id": "native-select",
+    "name": "Native Select",
+    "docs": "https://ui.shadcn.com/docs/components/radix/native-select",
+    "registryItems": [
+      "native-select"
+    ]
+  },
+  {
+    "id": "navigation-menu",
+    "name": "Navigation Menu",
+    "docs": "https://ui.shadcn.com/docs/components/radix/navigation-menu",
+    "registryItems": [
+      "navigation-menu"
+    ]
+  },
+  {
+    "id": "pagination",
+    "name": "Pagination",
+    "docs": "https://ui.shadcn.com/docs/components/radix/pagination",
+    "registryItems": [
+      "pagination"
+    ]
+  },
+  {
+    "id": "popover",
+    "name": "Popover",
+    "docs": "https://ui.shadcn.com/docs/components/radix/popover",
+    "registryItems": [
+      "popover"
+    ]
+  },
+  {
+    "id": "progress",
+    "name": "Progress",
+    "docs": "https://ui.shadcn.com/docs/components/radix/progress",
+    "registryItems": [
+      "progress"
+    ]
+  },
+  {
+    "id": "questionnaire",
+    "name": "Questionnaire",
+    "docs": "https://ui.shadcn.com/docs/components/radix/questionnaire",
+    "registryItems": [
+      "questionnaire"
+    ]
+  },
+  {
+    "id": "radio-group",
+    "name": "Radio Group",
+    "docs": "https://ui.shadcn.com/docs/components/radix/radio-group",
+    "registryItems": [
+      "radio-group"
+    ]
+  },
+  {
+    "id": "resizable",
+    "name": "Resizable",
+    "docs": "https://ui.shadcn.com/docs/components/radix/resizable",
+    "registryItems": [
+      "resizable"
+    ]
+  },
+  {
+    "id": "scroll-area",
+    "name": "Scroll Area",
+    "docs": "https://ui.shadcn.com/docs/components/radix/scroll-area",
+    "registryItems": [
+      "scroll-area"
+    ]
+  },
+  {
+    "id": "select",
+    "name": "Select",
+    "docs": "https://ui.shadcn.com/docs/components/radix/select",
+    "registryItems": [
+      "select"
+    ]
+  },
+  {
+    "id": "separator",
+    "name": "Separator",
+    "docs": "https://ui.shadcn.com/docs/components/radix/separator",
+    "registryItems": [
+      "separator"
+    ]
+  },
+  {
+    "id": "sheet",
+    "name": "Sheet",
+    "docs": "https://ui.shadcn.com/docs/components/radix/sheet",
+    "registryItems": [
+      "sheet"
+    ]
+  },
+  {
+    "id": "sidebar",
+    "name": "Sidebar",
+    "docs": "https://ui.shadcn.com/docs/components/radix/sidebar",
+    "registryItems": [
+      "sidebar"
+    ]
+  },
+  {
+    "id": "skeleton",
+    "name": "Skeleton",
+    "docs": "https://ui.shadcn.com/docs/components/radix/skeleton",
+    "registryItems": [
+      "skeleton"
+    ]
+  },
+  {
+    "id": "slider",
+    "name": "Slider",
+    "docs": "https://ui.shadcn.com/docs/components/radix/slider",
+    "registryItems": [
+      "slider"
+    ]
+  },
+  {
+    "id": "spinner",
+    "name": "Spinner",
+    "docs": "https://ui.shadcn.com/docs/components/radix/spinner",
+    "registryItems": [
+      "spinner"
+    ]
+  },
+  {
+    "id": "switch",
+    "name": "Switch",
+    "docs": "https://ui.shadcn.com/docs/components/radix/switch",
+    "registryItems": [
+      "switch"
+    ]
+  },
+  {
+    "id": "table",
+    "name": "Table",
+    "docs": "https://ui.shadcn.com/docs/components/radix/table",
+    "registryItems": [
+      "table"
+    ]
+  },
+  {
+    "id": "tabs",
+    "name": "Tabs",
+    "docs": "https://ui.shadcn.com/docs/components/radix/tabs",
+    "registryItems": [
+      "tabs"
+    ]
+  },
+  {
+    "id": "textarea",
+    "name": "Textarea",
+    "docs": "https://ui.shadcn.com/docs/components/radix/textarea",
+    "registryItems": [
+      "textarea"
+    ]
+  },
+  {
+    "id": "toast",
+    "name": "Toast",
+    "docs": "https://ui.shadcn.com/docs/components/radix/toast",
+    "registryItems": [
+      "sonner"
+    ]
+  },
+  {
+    "id": "toggle",
+    "name": "Toggle",
+    "docs": "https://ui.shadcn.com/docs/components/radix/toggle",
+    "registryItems": [
+      "toggle"
+    ]
+  },
+  {
+    "id": "toggle-group",
+    "name": "Toggle Group",
+    "docs": "https://ui.shadcn.com/docs/components/radix/toggle-group",
+    "registryItems": [
+      "toggle-group"
+    ]
+  },
+  {
+    "id": "tooltip",
+    "name": "Tooltip",
+    "docs": "https://ui.shadcn.com/docs/components/radix/tooltip",
+    "registryItems": [
+      "tooltip"
+    ]
+  },
+  {
+    "id": "trace",
+    "name": "Trace",
+    "docs": "https://ui.shadcn.com/docs/components/radix/trace",
+    "registryItems": [
+      "trace"
+    ]
+  },
+  {
+    "id": "typography",
+    "name": "Typography",
+    "docs": "https://ui.shadcn.com/docs/components/radix/typography",
+    "registryItems": []
+  }
+]

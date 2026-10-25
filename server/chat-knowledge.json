@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "soma-ai",
+    "title": "SoMa AI",
+    "category": "대표 프로젝트",
+    "meta": "UI/UX · B2B SaaS · 2026",
+    "text": "SoMa AI\nSoMa AI는 피트니스 센터와 강사를 위한 AI 기반 B2B SaaS 플랫폼입니다. 수업 예약부터 회원 관리, 출석, 정산, 리포트까지 센터 운영 전반을 하나의 서비스에서 관리할 수 있도록 설계되었으며, AI를 활용한 운영 자동화를 통해 업무 효율을 높이는 것을 목표로 합니다.\nDesign Lead로 합류하여 서비스의 초기 기획부터 런칭까지 프로덕트 디자인 전반을 리드했습니다. 예약, 회원 관리, 출석, 정산, 포인트, 메시징, 리포트 등 핵심 기능의 UX/UI를 설계하고, 디자인 시스템 구축, 운영 정책 설계, 개발 협업까지 제품 경험 전반을 담당했습니다. 또한 AI 기반 기능과 복잡한 운영 정책을 직관적인 사용자 경험으로 설계하며, 확장성과 일관성을 갖춘 디자인 시스템을 구축했습니다.\nDuration: 2025.08 - 2026.03\nScope: 서비스 기획, UI/UX\nTeam: PM 1, Designer 1, Full-Stack Developer 1\nRole: Product Designer\nContribution: 100%",
+    "draft": false
+  },
+  {
+    "id": "tada-rider",
+    "title": "TADA Rider",
+    "category": "대표 프로젝트",
+    "meta": "UI/UX · Mobility · 2025",
+    "text": "TADA Rider App\nTADA는 싱가포르를 기반으로 동남아시아 여러 국가(태국, 베트남, 캄보디아, 홍콩)에서 서비스되는 글로벌 모빌리티 플랫폼입니다. 사용자에게 안전하고 편리한 이동 경험을 제공하기 위해 다양한 차량 호출 서비스를 운영하고 있습니다. 본 프로젝트에서는 Rider App의 승객-택시 매칭 화면(Pending Screen)을 리디자인하여, 대기 시간을 단순한 기다림이 아닌 신뢰감 있는 사용자 경험으로 개선하는 데 집중했습니다.\nDuration: 2024.11 - 2025.03\nScope: UI/UX, 경쟁 서비스 분석, 모션 그래픽\nTeam: PM 5, Designer 2, iOS/AOS Developer 15\nRole: UI/UX Designer\nContribution: 100%\nDriver Matching Experience Improvement\n운전기사 매칭을 기다리는 시간은 사용자가 가장 불안함을 느끼는 순간입니다. 기존 Pending 화면은 정적인 UI로 구성되어 있었고, 현재 어떤 과정이 진행되고 있는지 충분히 전달하지 못했습니다. 본 프로젝트에서는 드라이버 매칭 과정을 더욱 직관적으로 전달하고, 기다리는 시간을 긍정적인 경험으로 바꾸기 위해 Pending 화면의 UX와 UI를 전면 개선했습니다.\n운전기사 매칭을 기다리는 시간은 사용자가 가장 불안함을 느끼는 순간입니다. 기존 Pending 화면은 정적인 UI로 구성되어 있었고, 현재 어떤 과정이 진행되고 있는지 충분히 전달하지 못했습니다. 본 프로젝트에서는 드라이버 매칭 과정을 더욱 직관적으로 전달하고, 기다리는 시간을 긍정적인 경험으로 바꾸기 위해 Pending 화면의 UX와 UI를 전면 개선했습니다.\nOverview\n기존 Pending 화면을 인터랙션 중심의 경험으로 개선하여 사용자의 불안감을 줄이고, 서비스에 대한 신뢰를 높이는 것을 목표로 진행한 프로젝트입니다. Driver Matching 상태를 보다 명확하게 전달하기 위해 Animation, Status Indicator, Information Message를 새롭게 설계했으며, 운영팀이 직접 콘텐츠를 관리할 수 있는 확장 가능한 구조까지 함께 고려했습니다.\n기존 Pending 화면을 인터랙션 중심의 경험으로 개선하여 사용자의 불안감을 줄이고, 서비스에 대한 신뢰를 높이는 것을 목표로 진행한 프로젝트입니다. Driver Matching 상태를 보다 명확하게 전달하기 위해 Animation, Status Indicator, Information Message를 새롭게 설계했으며, 운영팀이 직접 콘텐츠를 관리할 수 있는 확장 가능한 구조까지 함께 고려했습니다.\nProblem\n사용자 테스트와 경쟁 서비스(Grab, Gojek) 분석을 진행하면서 기존 Pending 화면에는 세 가지 핵심 문제가 있었습니다.\n\n01. 현재 Driver Matching이 어떤 단계까지 진행되었는지 알기 어려웠습니다.\n02. 화면이 지나치게 정적이어서 사용자는 앱이 정상적으로 동작하는지 불안함을 느꼈습니다.\n03. 기다리는 동안 전달할 수 있는 다양한 운영·마케팅 메시지를 노출할 수 있는 구조가 없었습니다.\n사용자 테스트와 경쟁 서비스(Grab, Gojek) 분석을 진행하면서 기존 Pending 화면에는 세 가지 핵심 문제가 있었습니다.\n\n01. 현재 Driver Matching이 어떤 단계까지 진행되었는지 알기 어려웠습니다.\n02. 화면이 지나치게 정적이어서 사용자는 앱이 정상적으로 동작하는지 불안함을 느꼈습니다.\n03. 기다리는 동안 전달할 수 있는 다양한 운영·마케팅 메시지를 노출할 수 있는 구조가 없었습니다.\nSolution\n사용자가 기다리는 시간을 단순한 Waiting이 아닌 Interactive Experience로 전환하는 것을 목표로 UX를 재설계했습니다.\n\n• 기존 Pin과 Radar는 단순한 정적 이미지였습니다. 경쟁 서비스 분석 결과를 바탕으로 Pin Motion과 Radar Expansion Animation을 적용하여 Driver Matching이 진행되고 있다는 느낌을 시각적으로 전달했습니다.\n• 기존 Status는 지도 상단에 분산되어 있어 정보 전달력이 떨어졌습니다. 이를 하단 정보 영역으로 이동시키고 Progress Animation을 적용하여 현재 진행 상태를 한눈에 이해할 수 있도록 개선했습니다.\n• 새롭게 추가한 Information 영역입니다. TADA는 여러 국가에서 운영되는 서비스였기 때문에 운영팀이 국가별 콘텐츠를 자유롭게 관리할 수 있도록 확장성을 고려했습니다. Admin에서 텍스트와 애니메이션을 등록·수정·삭제할 수 있도록 설계했습니다.\n• 애니메이션의 완성도와 앱 성능 사이의 균형도 함께 고려했습니다. Low / High Fidelity Animation을 비교 테스트한 결과, Low Fidelity가 더 적합하다고 판단했습니다. 또한 실제 노출 크기는 80px이지만 제작은 320px 기준으로 진행하여 화면 품질 저하를 최소화했습니다.\n사용자가 기다리는 시간을 단순한 Waiting이 아닌 Interactive Experience로 전환하는 것을 목표로 UX를 재설계했습니다.\n\n• 기존 Pin과 Radar는 단순한 정적 이미지였습니다. 경쟁 서비스 분석 결과를 바탕으로 Pin Motion과 Radar Expansion Animation을 적용하여 Driver Matching이 진행되고 있다는 느낌을 시각적으로 전달했습니다.\n• 기존 Status는 지도 상단에 분산되어 있어 정보 전달력이 떨어졌습니다. 이를 하단 정보 영역으로 이동시키고 Progress Animation을 적용하여 현재 진행 상태를 한눈에 이해할 수 있도록 개선했습니다.\n• 새롭게 추가한 Information 영역입니다. TADA는 여러 국가에서 운영되는 서비스였기 때문에 운영팀이 국가별 콘텐츠를 자유롭게 관리할 수 있도록 확장성을 고려했습니다. Admin에서 텍스트와 애니메이션을 등록·수정·삭제할 수 있도록 설계했습니다.\n• 애니메이션의 완성도와 앱 성능 사이의 균형도 함께 고려했습니다. Low / High Fidelity Animation을 비교 테스트한 결과, Low Fidelity가 더 적합하다고 판단했습니다. 또한 실제 노출 크기는 80px이지만 제작은 320px 기준으로 진행하여 화면 품질 저하를 최소화했습니다.\nOutcome\n• Driver Matching 과정을 더욱 직관적으로 전달\n• Waiting Experience 개선\n• 운영 콘텐츠 노출 영역 확보\n• 국가별 콘텐츠 운영 효율 향상\n• 기존 Design System과 자연스럽게 통합\n• Driver Matching 과정을 더욱 직관적으로 전달\n• Waiting Experience 개선\n• 운영 콘텐츠 노출 영역 확보\n• 국가별 콘텐츠 운영 효율 향상\n• 기존 Design System과 자연스럽게 통합\nWhat I Learned\n이 프로젝트를 위해 싱가포르 오피스를 방문하여 Grab, Gojek 등 주요 경쟁 서비스를 직접 분석하고 사용자 테스트를 진행했습니다. 그 과정에서 작은 인터랙션 하나도 사용자의 심리적 안정감과 서비스 신뢰도에 큰 영향을 준다는 사실을 확인할 수 있었습니다. 또한 좋은 아이디어만으로는 충분하지 않았습니다. 실제 서비스에 적용하기 위해서는 PM, 엔지니어와 지속적으로 논의하며 사용성, 기술적 제약, 운영 효율성까지 함께 고려해야 했습니다. 이 프로젝트를 통해 인터랙션은 단순한 시각 효과가 아니라 사용자의 불확실성을 줄여주는 UX라는 점을 다시 한번 경험할 수 있었습니다.\n이 프로젝트를 위해 싱가포르 오피스를 방문하여 Grab, Gojek 등 주요 경쟁 서비스를 직접 분석하고 사용자 테스트를 진행했습니다. 그 과정에서 작은 인터랙션 하나도 사용자의 심리적 안정감과 서비스 신뢰도에 큰 영향을 준다는 사실을 확인할 수 있었습니다. 또한 좋은 아이디어만으로는 충분하지 않았습니다. 실제 서비스에 적용하기 위해서는 PM, 엔지니어와 지속적으로 논의하며 사용성, 기술적 제약, 운영 효율성까지 함께 고려해야 했습니다. 이 프로젝트를 통해 인터랙션은 단순한 시각 효과가 아니라 사용자의 불확실성을 줄여주는 UX라는 점을 다시 한번 경험할 수 있었습니다.",
+    "draft": false
+  },
+  {
+    "id": "tada-driver",
+    "title": "TADA Driver",
+    "category": "대표 프로젝트",
+    "meta": "UI/UX · Mobility · 2025",
+    "text": "TADA Driver App\n싱가포르 정부의 새로운 플랫폼 노동자(Platform Workers) 정책 시행에 따라, TADA Driver App에 CPF(Central Provident Fund) 정보를 제공하는 신규 기능 화면을 디자인한 프로젝트입니다. 새로운 정책과 복잡한 계산 로직을 운전자들이 쉽게 이해할 수 있도록 정보 구조를 설계하고, CPF 예상 적립금과 관련 정보를 직관적으로 확인할 수 있는 UI/UX를 구축했습니다.\nDuration: 2024.10 - 2025.02\nScope: CPF 정책 분석 및 요구사항 도출, UI/UX\nTeam: PM 5, Designer 2, iOS/AOS Developer 15\nRole: UI/UX Designer\nContribution: 100%\nOverview\n싱가포르의 새로운 플랫폼 노동자 정책에 대응하기 위해 Driver App에 CPF 기능을 새롭게 도입한 프로젝트입니다. 운전자들이 CPF 예상 적립금과 납부 정보를 쉽게 확인할 수 있도록 새로운 Balance 화면과 CPF 전용 화면을 설계했으며, 정책 변경 사항을 서비스 경험 안에서 자연스럽게 전달하는 것을 목표로 했습니다.\n싱가포르의 새로운 플랫폼 노동자 정책에 대응하기 위해 Driver App에 CPF 기능을 새롭게 도입한 프로젝트입니다. 운전자들이 CPF 예상 적립금과 납부 정보를 쉽게 확인할 수 있도록 새로운 Balance 화면과 CPF 전용 화면을 설계했으며, 정책 변경 사항을 서비스 경험 안에서 자연스럽게 전달하는 것을 목표로 했습니다.\nChallenge\n본 프로젝트에서 가장 큰 과제는 복잡한 정책과 계산 로직을 운전자들이 쉽게 이해할 수 있는 경험으로 만드는 것이었습니다. 또한 정책 시행 일정이 매우 촉박했기 때문에 짧은 기간 안에 PM, 개발팀과 긴밀하게 협업하며 UI를 완성해야 했습니다.\n본 프로젝트에서 가장 큰 과제는 복잡한 정책과 계산 로직을 운전자들이 쉽게 이해할 수 있는 경험으로 만드는 것이었습니다. 또한 정책 시행 일정이 매우 촉박했기 때문에 짧은 기간 안에 PM, 개발팀과 긴밀하게 협업하며 UI를 완성해야 했습니다.\nSolution\n초기 단계에서는 여러 가지 레이아웃과 정보 구조를 탐색하며 다양한 디자인 방향을 제안했습니다. Global PM 및 디자인팀과 리뷰를 반복한 끝에 최종 방향성을 선정하고 이후 모든 화면의 기준으로 활용했습니다.\n초기 단계에서는 여러 가지 레이아웃과 정보 구조를 탐색하며 다양한 디자인 방향을 제안했습니다. Global PM 및 디자인팀과 리뷰를 반복한 끝에 최종 방향성을 선정하고 이후 모든 화면의 기준으로 활용했습니다.\n선정된 레이아웃을 기반으로 세부 컴포넌트를 개선했습니다.\n\n• 상단 Summary 영역\n• Tab 구조\n• Status Icon\n• CPF Contribution Screen\n• Tooltip\n• Dropdown Interaction\n\nCPF 예상 적립금을 운전자들이 직관적으로 이해할 수 있도록 Net Earnings 구간별 정보를 Tab 구조로 재설계했습니다. 또한 CPF 핵심 정보를 강조하기 위해 Glassmorphism 스타일과 브랜드 컬러를 활용하여 정보의 우선순위를 명확하게 표현했습니다. 최종 UI는 Driver App의 Balance 기능 안으로 통합되었습니다. 기존 Balance 화면에는 CPF 정보를 함께 제공하고, 별도의 My CPF 화면을 추가하여 운전자들이 자신의 CPF 현황을 한눈에 확인할 수 있도록 구성했습니다.\n선정된 레이아웃을 기반으로 세부 컴포넌트를 개선했습니다.\n\n• 상단 Summary 영역\n• Tab 구조\n• Status Icon\n• CPF Contribution Screen\n• Tooltip\n• Dropdown Interaction\n\nCPF 예상 적립금을 운전자들이 직관적으로 이해할 수 있도록 Net Earnings 구간별 정보를 Tab 구조로 재설계했습니다. 또한 CPF 핵심 정보를 강조하기 위해 Glassmorphism 스타일과 브랜드 컬러를 활용하여 정보의 우선순위를 명확하게 표현했습니다. 최종 UI는 Driver App의 Balance 기능 안으로 통합되었습니다. 기존 Balance 화면에는 CPF 정보를 함께 제공하고, 별도의 My CPF 화면을 추가하여 운전자들이 자신의 CPF 현황을 한눈에 확인할 수 있도록 구성했습니다.\nOutcome\n• 싱가포르 신규 정책 대응 기능 구축\n• Driver App 신규 CPF 화면 설계\n• Balance 화면 정보 구조 개선\n• 복잡한 정책 정보를 이해하기 쉬운 UX로 전환\n• 기존 Design System과 자연스럽게 통합\n• 싱가포르 신규 정책 대응 기능 구축\n• Driver App 신규 CPF 화면 설계\n• Balance 화면 정보 구조 개선\n• 복잡한 정책 정보를 이해하기 쉬운 UX로 전환\n• 기존 Design System과 자연스럽게 통합\nWhat I Learned\nCPF는 처음 접하는 제도였기 때문에 정책 문서와 계산 로직을 먼저 충분히 이해하는 과정이 필요했습니다. 특히 이번 프로젝트에서는 UX 설계뿐 아니라 실제 계산 데이터를 연결하기 위해 Backend 개발자와 직접 협업하며 정책이 서비스 안에서 어떻게 구현되는지 함께 논의했습니다. 복잡한 정책이라도 사용자는 단순하고 직관적으로 이해할 수 있어야 한다는 점을 다시 한번 경험한 프로젝트였습니다. 또한 제한된 일정 속에서도 PM, 디자이너, 개발자와 긴밀하게 협업하며 빠르게 의사결정을 내리는 과정의 중요성을 배울 수 있었습니다.\nCPF는 처음 접하는 제도였기 때문에 정책 문서와 계산 로직을 먼저 충분히 이해하는 과정이 필요했습니다. 특히 이번 프로젝트에서는 UX 설계뿐 아니라 실제 계산 데이터를 연결하기 위해 Backend 개발자와 직접 협업하며 정책이 서비스 안에서 어떻게 구현되는지 함께 논의했습니다. 복잡한 정책이라도 사용자는 단순하고 직관적으로 이해할 수 있어야 한다는 점을 다시 한번 경험한 프로젝트였습니다. 또한 제한된 일정 속에서도 PM, 디자이너, 개발자와 긴밀하게 협업하며 빠르게 의사결정을 내리는 과정의 중요성을 배울 수 있었습니다.",
+    "draft": false
+  },
+  {
+    "id": "monthly-kitchen",
+    "title": "Monthly Kitchen",
+    "category": "대표 프로젝트",
+    "meta": "UI/UX · Commerce · 2024",
+    "text": "MONKi Kiosk\nMONKi(Monthly Kitchen)는 200여 개의 인기 맛집을 한곳에서 주문할 수 있는 O2O 푸드 플랫폼입니다. 점심시간 주문 대기열과 복잡한 키오스크 주문 과정을 개선하기 위해 새로운 키오스크 UX/UI를 설계했으며, 빠르고 직관적인 주문 경험을 제공하는 것을 목표로 했습니다.\nDuration: 2023.09 - 2024.01\nScope: UI/UX, 경쟁 서비스 분석, 모션 그래픽\nTeam: PM 4, Designer 2, AOS Developer 3\nRole: UI/UX Designer\nContribution: 100%\nOverview\n기존 키오스크는 결제까지 5~6단계의 복잡한 주문 과정과 직관적이지 않은 정보 구조로 인해 주문 시간이 길어지고 대기열이 발생하는 문제가 있었습니다. 본 프로젝트에서는 사용자 테스트(UT)와 현장 관찰을 바탕으로 주문 과정을 단순화하고, 색상과 아이콘 기반의 카테고리 시스템, 마이크로 인터랙션, Seamless Flow를 적용하여 주문 시간을 줄이고 사용성을 향상시키는 새로운 키오스크 경험을 설계했습니다. 또한 향후 로드샵 확장까지 고려한 확장 가능한 키오스크 UX를 구축했으며, 프로젝트 적용 이후 MONKi Kiosk의 MAU는 800명에서 2,500명으로 증가했습니다.\n기존 키오스크는 결제까지 5~6단계의 복잡한 주문 과정과 직관적이지 않은 정보 구조로 인해 주문 시간이 길어지고 대기열이 발생하는 문제가 있었습니다. 본 프로젝트에서는 사용자 테스트(UT)와 현장 관찰을 바탕으로 주문 과정을 단순화하고, 색상과 아이콘 기반의 카테고리 시스템, 마이크로 인터랙션, Seamless Flow를 적용하여 주문 시간을 줄이고 사용성을 향상시키는 새로운 키오스크 경험을 설계했습니다. 또한 향후 로드샵 확장까지 고려한 확장 가능한 키오스크 UX를 구축했으며, 프로젝트 적용 이후 MONKi Kiosk의 MAU는 800명에서 2,500명으로 증가했습니다.\nProblem\n기존 키오스크는 결제까지 5~6단계의 복잡한 주문 과정을 거쳐야 했으며, 매장과 메뉴 정보가 직관적으로 구성되어 있지 않아 사용자가 메뉴를 탐색하고 주문을 완료하는 데 많은 시간이 소요되었습니다. 특히 점심시간에는 주문 대기열이 길어지면서 매장 운영 효율과 고객 경험 모두에 부정적인 영향을 주고 있었습니다.\n기존 키오스크는 결제까지 5~6단계의 복잡한 주문 과정을 거쳐야 했으며, 매장과 메뉴 정보가 직관적으로 구성되어 있지 않아 사용자가 메뉴를 탐색하고 주문을 완료하는 데 많은 시간이 소요되었습니다. 특히 점심시간에는 주문 대기열이 길어지면서 매장 운영 효율과 고객 경험 모두에 부정적인 영향을 주고 있었습니다.\nSolution\n주문 과정에서의 사용자 망설임을 최소화하고 빠른 주문 경험을 제공하기 위해 새로운 키오스크 UX를 설계했습니다.\n주문 과정에서의 사용자 망설임을 최소화하고 빠른 주문 경험을 제공하기 위해 새로운 키오스크 UX를 설계했습니다.\nSolution\n• 매장 선택 화면을 한눈에 탐색할 수 있도록 레이아웃을 재구성하고, 색상과 아이콘 기반의 카테고리 시스템을 적용했습니다. 이를 통해 사용자는 매장 이름을 읽지 않아도 원하는 메뉴 카테고리를 빠르게 인식할 수 있었으며, 메뉴 탐색 시간을 크게 줄일 수 있었습니다.\n• 주요 CTA 버튼과 주문 진행 과정에 마이크로 인터랙션을 적용하여 현재 진행 상태를 명확하게 전달했습니다. 사용자의 시선을 자연스럽게 다음 행동으로 유도하고, 주문 과정에서의 혼란을 줄여 더욱 직관적인 사용자 경험을 제공했습니다.\n• 기존 5~6단계로 구성되어 있던 주문 흐름을 하나의 연속적인 경험처럼 느껴질 수 있도록 재설계했습니다. 세로 스크롤 기반의 화면 전환과 간결한 정보 구조를 적용하여 화면 이동 횟수를 줄이고, 주문 과정을 더욱 빠르고 자연스럽게 만들었습니다.\n• 매장 선택 화면을 한눈에 탐색할 수 있도록 레이아웃을 재구성하고, 색상과 아이콘 기반의 카테고리 시스템을 적용했습니다. 이를 통해 사용자는 매장 이름을 읽지 않아도 원하는 메뉴 카테고리를 빠르게 인식할 수 있었으며, 메뉴 탐색 시간을 크게 줄일 수 있었습니다.\n• 주요 CTA 버튼과 주문 진행 과정에 마이크로 인터랙션을 적용하여 현재 진행 상태를 명확하게 전달했습니다. 사용자의 시선을 자연스럽게 다음 행동으로 유도하고, 주문 과정에서의 혼란을 줄여 더욱 직관적인 사용자 경험을 제공했습니다.\n• 기존 5~6단계로 구성되어 있던 주문 흐름을 하나의 연속적인 경험처럼 느껴질 수 있도록 재설계했습니다. 세로 스크롤 기반의 화면 전환과 간결한 정보 구조를 적용하여 화면 이동 횟수를 줄이고, 주문 과정을 더욱 빠르고 자연스럽게 만들었습니다.\nOutcome\n• 키오스크 주문 흐름 단순화\n• 메뉴 탐색 시간 및 주문 대기 시간 개선\n• 색상·아이콘 기반 정보 구조 구축\n• 향후 로드샵 확장을 고려한 확장 가능한 UX 설계\n• MONKi Kiosk MAU 800 → 2,500 증가\n• 키오스크 주문 흐름 단순화\n• 메뉴 탐색 시간 및 주문 대기 시간 개선\n• 색상·아이콘 기반 정보 구조 구축\n• 향후 로드샵 확장을 고려한 확장 가능한 UX 설계\n• MONKi Kiosk MAU 800 → 2,500 증가\nWhat I Learned\n이번 프로젝트에서는 실제 매장을 방문해 사용자 행동을 관찰하고 주문 과정을 분석하며 UX 개선 방향을 도출했습니다. 특히 CEO, Business, Sales, PM, Engineering 등 다양한 조직과 함께 워크숍을 진행하며 비즈니스 목표와 사용자 경험을 함께 고려하는 의사결정 과정을 경험했습니다. 사용자의 작은 망설임 하나가 주문 시간과 운영 효율에 큰 영향을 줄 수 있다는 점을 직접 확인했으며, 이를 해결하기 위해 정보 구조와 인터랙션을 설계하는 과정이 가장 의미 있었던 프로젝트였습니다.\n이번 프로젝트에서는 실제 매장을 방문해 사용자 행동을 관찰하고 주문 과정을 분석하며 UX 개선 방향을 도출했습니다. 특히 CEO, Business, Sales, PM, Engineering 등 다양한 조직과 함께 워크숍을 진행하며 비즈니스 목표와 사용자 경험을 함께 고려하는 의사결정 과정을 경험했습니다. 사용자의 작은 망설임 하나가 주문 시간과 운영 효율에 큰 영향을 줄 수 있다는 점을 직접 확인했으며, 이를 해결하기 위해 정보 구조와 인터랙션을 설계하는 과정이 가장 의미 있었던 프로젝트였습니다.",
+    "draft": false
+  },
+  {
+    "id": "soma-ux",
+    "title": "SOMA AI",
+    "category": "UX 개선 사례",
+    "meta": "UI/UX · B2B SaaS · 2026",
+    "text": "현재 공개된 본문은 이미지 위주입니다. 이미지 속 수치·역할·성과를 텍스트만으로 확인할 수 없습니다.",
+    "draft": true
+  },
+  {
+    "id": "tada-ux",
+    "title": "TADA Rider",
+    "category": "UX 개선 사례",
+    "meta": "UI/UX · B2C Mobility · 2025",
+    "text": "현재 공개된 본문은 이미지 위주입니다. 이미지 속 수치·역할·성과를 텍스트만으로 확인할 수 없습니다.",
+    "draft": true
+  },
+  {
+    "id": "workflow-idea-to-screen",
+    "title": "아이디어 → 화면 설계",
+    "category": "AI 워크플로우",
+    "meta": "자연어로 시작한 아이디어를 구체적인 화면으로",
+    "text": "ChatGPT와 기획·개발·디자인 관점의 논의를 거쳐 요구사항을 정리합니다. 확정한 PRD를 바탕으로 와이어프레임을 반복해서 개선하고, Figma에서 UI 디자인과 디자인 시스템을 구체화합니다.\n아이디어 구체화\n자연어로 아이디어와 문제 상황을 설명하고, 구현 가능성·사용자 흐름·기능 범위를 논의하며 PRD를 확정합니다.\n와이어프레임 설계\nPRD를 바탕으로 HTML·CSS 형태의 와이어프레임 초안을 생성합니다. 화면 구성과 흐름을 확인하며 여러 차례 수정합니다.\nFigma UI 디자인\n확정한 와이어프레임을 바탕으로 Figma에서 UI를 디자인합니다. 디자인 시스템을 고려해 컴포넌트와 시각적 규칙을 적용합니다.\n디자인 시스템 정리\nFigma AI에 프레임 전반의 디자인 토큰을 Variables로 정리하도록 요청하고, 디자인 시스템 문서화에도 활용합니다.",
+    "draft": false
+  },
+  {
+    "id": "workflow-design-to-ux",
+    "title": "피그마 디자인 → UX 개선안",
+    "category": "AI 워크플로우",
+    "meta": "팀의 논의에 AI의 검토를 더해 디자인 개선하기",
+    "text": "Figma에서 여러 디자인 대안을 만들고 팀원들과 논의하며 개선합니다. 이후 Figma MCP로 연결한 ChatGPT의 UX 피드백을 참고해 최종안을 다듬습니다.\n디자인 대안 탐색\n화면 구성과 인터랙션에 대한 여러 디자인 대안을 제작합니다.\n팀 피드백 반영\n팀원들과 사용자 흐름과 사용성을 논의하고, 피드백을 반영해 디자인을 개선합니다.\nAI를 통한 UX 검토\nFigma MCP로 디자인을 연결하고, ChatGPT에 화면의 맥락과 검토할 쟁점을 전달해 추가적인 개선 의견을 받습니다.\n최종안 확정\n팀의 논의와 AI의 제안을 비교하고, 제품의 목적과 제약에 맞는 개선안을 선택해 최종 디자인에 반영합니다.",
+    "draft": false
+  },
+  {
+    "id": "workflow-design-to-code",
+    "title": "디자인 → 코드",
+    "category": "AI 워크플로우",
+    "meta": "디자인을 브라우저에서 동작하는 결과물로",
+    "text": "Figma MCP로 연결한 ChatGPT를 활용해 디자인을 코드로 구현합니다. 자연어로 수정 사항을 전달하며 결과물을 다듬고, GitHub와 Vercel을 통해 배포합니다.\n디자인 맥락 전달\nFigma MCP를 통해 화면과 컴포넌트 정보를 전달하고, 구현할 범위와 동작을 설명합니다.\n코드 생성\n작업 목적에 따라 React·TypeScript 또는 HTML·CSS·JavaScript로 구현합니다.\n반복 수정\n구현 화면을 확인하고, 디자인과의 차이와 동작 개선 사항을 자연어로 전달하며 코드를 수정합니다.\n코드 관리와 배포\n완성한 코드를 GitHub에서 관리하고 Vercel로 배포합니다. 필요에 따라 디자인 시스템을 별도의 웹 문서로 확장할 수 있습니다.",
+    "draft": false
+  },
+  {
+    "id": "component-accordion",
+    "title": "Accordion",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Accordion\n제목을 눌러 필요한 정보만 접고 펼칩니다.",
+    "draft": false
+  },
+  {
+    "id": "component-alert",
+    "title": "Alert",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Alert\n중요한 안내와 변경 사항을 문맥 안에서 전달합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-alert-dialog",
+    "title": "Alert Dialog",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Alert Dialog\n되돌리기 어려운 작업 전 사용자의 결정을 확인합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-aspect-ratio",
+    "title": "Aspect Ratio",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Aspect Ratio\n화면 크기가 달라도 콘텐츠의 비율을 유지합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-attachment",
+    "title": "Attachment",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 대화·AI",
+    "text": "Attachment\n첨부 파일의 유형과 정보를 간결하게 보여줍니다.",
+    "draft": false
+  },
+  {
+    "id": "component-avatar",
+    "title": "Avatar",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Avatar\n사용자와 팀의 정체성을 이미지나 이니셜로 표시합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-badge",
+    "title": "Badge",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Badge\n상태와 분류를 작은 라벨로 구분합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-breadcrumb",
+    "title": "Breadcrumb",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 탐색",
+    "text": "Breadcrumb\n현재 위치와 상위 경로를 안내합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-bubble",
+    "title": "Bubble",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 대화·AI",
+    "text": "Bubble\n대화의 방향과 발화자를 말풍선으로 구분합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-button",
+    "title": "Button",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Button\n중요도에 맞는 크기와 상태로 액션을 표현합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-button-group",
+    "title": "Button Group",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Button Group\n관련된 액션을 하나의 그룹으로 묶습니다.",
+    "draft": false
+  },
+  {
+    "id": "component-calendar",
+    "title": "Calendar",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Calendar\n날짜를 탐색하고 원하는 날을 선택합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-card",
+    "title": "Card",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Card\n관련 정보와 액션을 하나의 영역으로 구성합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-carousel",
+    "title": "Carousel",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Carousel\n연속된 콘텐츠를 좌우로 탐색합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-chart",
+    "title": "Chart",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Chart\n예시 데이터를 막대 차트와 툴팁으로 시각화합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-checkbox",
+    "title": "Checkbox",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Checkbox\n여러 옵션에서 필요한 항목을 선택합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-code-block",
+    "title": "Code Block",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Code Block\n코드를 읽고 복사할 수 있는 블록입니다.",
+    "draft": false
+  },
+  {
+    "id": "component-collapsible",
+    "title": "Collapsible",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Collapsible\n추가 정보를 필요할 때 펼쳐봅니다.",
+    "draft": false
+  },
+  {
+    "id": "component-combobox",
+    "title": "Combobox",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Combobox\n검색과 선택을 하나의 입력 흐름으로 연결합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-command",
+    "title": "Command",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 탐색",
+    "text": "Command\n키보드와 검색으로 명령을 빠르게 실행합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-context-menu",
+    "title": "Context Menu",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 탐색",
+    "text": "Context Menu\n선택한 영역에 맞는 작업 메뉴를 제공합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-data-table",
+    "title": "Data Table",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Data Table\n목록을 필터링하고 이름순으로 정렬합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-date-picker",
+    "title": "Date Picker",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Date Picker\n팝오버 달력에서 날짜를 선택합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-dialog",
+    "title": "Dialog",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Dialog\n현재 작업에 집중할 수 있는 모달 창입니다.",
+    "draft": false
+  },
+  {
+    "id": "component-direction",
+    "title": "Direction",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Direction\n왼쪽·오른쪽 읽기 방향을 전환합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-drawer",
+    "title": "Drawer",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Drawer\n하단에서 열리는 패널로 추가 작업을 제공합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-dropdown-menu",
+    "title": "Dropdown Menu",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 탐색",
+    "text": "Dropdown Menu\n버튼 하나로 관련 액션 목록을 엽니다.",
+    "draft": false
+  },
+  {
+    "id": "component-empty",
+    "title": "Empty",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Empty\n콘텐츠가 없는 이유와 다음 단계를 안내합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-field",
+    "title": "Field",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Field\n라벨·입력·도움말을 한 단위로 구성합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-hover-card",
+    "title": "Hover Card",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Hover Card\n마우스를 올리면 관련 맥락을 미리 보여줍니다.",
+    "draft": false
+  },
+  {
+    "id": "component-input",
+    "title": "Input",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Input\n기본·비활성·오류 상태의 한 줄 입력입니다.",
+    "draft": false
+  },
+  {
+    "id": "component-input-group",
+    "title": "Input Group",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Input Group\n입력창에 아이콘과 보조 기능을 연결합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-input-otp",
+    "title": "Input OTP",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Input OTP\n짧은 인증번호를 칸별로 입력합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-item",
+    "title": "Item",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Item\n아이콘·설명·액션이 있는 목록 항목입니다.",
+    "draft": false
+  },
+  {
+    "id": "component-kbd",
+    "title": "Kbd",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Kbd\n키보드 단축키를 시각적으로 안내합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-label",
+    "title": "Label",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Label\n입력 목적을 명확히 설명하고 입력창과 연결합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-marker",
+    "title": "Marker",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 대화·AI",
+    "text": "Marker\n구분선과 상태 표식으로 흐름을 정리합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-menubar",
+    "title": "Menubar",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 탐색",
+    "text": "Menubar\n데스크톱 앱처럼 메뉴 그룹을 탐색합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-message",
+    "title": "Message",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 대화·AI",
+    "text": "Message\n발화자·본문·시각을 하나의 메시지로 구성합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-message-scroller",
+    "title": "Message Scroller",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 대화·AI",
+    "text": "Message Scroller\n긴 대화를 스크롤하고 최신 메시지로 이동합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-native-select",
+    "title": "Native Select",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Native Select\n운영체제의 기본 선택 UI를 사용합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-navigation-menu",
+    "title": "Navigation Menu",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 탐색",
+    "text": "Navigation Menu\n상위 메뉴에서 하위 콘텐츠로 이동합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-pagination",
+    "title": "Pagination",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 탐색",
+    "text": "Pagination\n페이지 단위로 결과를 탐색합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-popover",
+    "title": "Popover",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Popover\n현재 위치에서 간단한 설정을 조정합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-progress",
+    "title": "Progress",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Progress\n작업이 얼마나 진행됐는지 표시합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-questionnaire",
+    "title": "Questionnaire",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Questionnaire\n질문과 선택지를 통해 응답을 수집합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-radio-group",
+    "title": "Radio Group",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Radio Group\n서로 배타적인 옵션 중 하나를 고릅니다.",
+    "draft": false
+  },
+  {
+    "id": "component-resizable",
+    "title": "Resizable",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Resizable\n구분선을 드래그해 두 영역의 크기를 조절합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-scroll-area",
+    "title": "Scroll Area",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Scroll Area\n제한된 영역 안에서 긴 목록을 스크롤합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-select",
+    "title": "Select",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Select\n드롭다운 목록에서 값을 선택합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-separator",
+    "title": "Separator",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Separator\n정보의 경계를 가로·세로 선으로 구분합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-sheet",
+    "title": "Sheet",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Sheet\n본문 위로 열리는 사이드 패널입니다.",
+    "draft": false
+  },
+  {
+    "id": "component-sidebar",
+    "title": "Sidebar",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Sidebar\n선택 상태가 있는 세로 탐색 메뉴입니다.",
+    "draft": false
+  },
+  {
+    "id": "component-skeleton",
+    "title": "Skeleton",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Skeleton\n로딩 중 콘텐츠 구조를 미리 보여줍니다.",
+    "draft": false
+  },
+  {
+    "id": "component-slider",
+    "title": "Slider",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Slider\n연속된 범위에서 값을 조절합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-spinner",
+    "title": "Spinner",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Spinner\n진행 중인 작업을 회전 아이콘으로 표시합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-switch",
+    "title": "Switch",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Switch\n설정을 즉시 켜고 끕니다.",
+    "draft": false
+  },
+  {
+    "id": "component-table",
+    "title": "Table",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Table\n행과 열로 정형 정보를 비교합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-tabs",
+    "title": "Tabs",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 레이아웃",
+    "text": "Tabs\n같은 공간에서 관련 화면을 전환합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-textarea",
+    "title": "Textarea",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Textarea\n긴 텍스트를 입력하고 글자 수를 확인합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-toast",
+    "title": "Toast",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Toast\n짧은 성공·오류 메시지를 일시적으로 알립니다.",
+    "draft": false
+  },
+  {
+    "id": "component-toggle",
+    "title": "Toggle",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Toggle\n버튼의 선택 상태를 켜고 끕니다.",
+    "draft": false
+  },
+  {
+    "id": "component-toggle-group",
+    "title": "Toggle Group",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 입력",
+    "text": "Toggle Group\n관련 토글 버튼의 선택을 관리합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-tooltip",
+    "title": "Tooltip",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 피드백",
+    "text": "Tooltip\n호버나 키보드 포커스 시 짧은 설명을 제공합니다.",
+    "draft": false
+  },
+  {
+    "id": "component-trace",
+    "title": "Trace",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 대화·AI",
+    "text": "Trace\nAI 작업의 단계와 실행 내역을 보여줍니다.",
+    "draft": false
+  },
+  {
+    "id": "component-typography",
+    "title": "Typography",
+    "category": "컴포넌트 랩",
+    "meta": "shadcn/ui · 표시",
+    "text": "Typography\n제목·본문·인용문으로 정보 위계를 만듭니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-marquee",
+    "title": "Marquee",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "Marquee\n콘텐츠가 끊김 없이 흐르고, 호버하면 멈춥니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-terminal",
+    "title": "Terminal",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "Terminal\n명령어와 결과를 타이핑 순서대로 표시합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-hero-video-dialog",
+    "title": "Hero Video Dialog",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "Hero Video Dialog\n썸네일을 눌러 영상을 모달로 재생합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-animated-list",
+    "title": "Animated List",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "Animated List\n알림이 순서대로 나타나는 목록 애니메이션입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-dock",
+    "title": "Dock",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "Dock\n커서가 가까워지면 아이콘이 확대됩니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-tweet-card",
+    "title": "Tweet Card",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "Tweet Card\n게시글을 카드로 구성합니다. 로컬 샘플 데이터입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-orbiting-circles",
+    "title": "Orbiting Circles",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Orbiting Circles\n중심을 따라 아이콘이 원형으로 공전합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-avatar-circles",
+    "title": "Avatar Circles",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "Avatar Circles\n겹쳐진 프로필 이미지로 참여자를 표시합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-icon-cloud",
+    "title": "Icon Cloud",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Icon Cloud\n아이콘을 회전하는 구름 형태로 표현합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-lens",
+    "title": "Lens",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Lens\n마우스를 올린 영역을 돋보기처럼 확대합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-pointer",
+    "title": "Pointer",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 포인터·스크롤",
+    "text": "Pointer\n영역 안에서 커스텀 포인터를 표시합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-smooth-cursor",
+    "title": "Smooth Cursor",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 포인터·스크롤",
+    "text": "Smooth Cursor\n커서의 이동을 스프링 모션으로 부드럽게 따라갑니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-progressive-blur",
+    "title": "Progressive Blur",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Progressive Blur\n이미지에 점진적인 블러를 적용합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-animated-beam",
+    "title": "Animated Beam",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Animated Beam\n두 요소를 흐르는 빛으로 연결합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-border-beam",
+    "title": "Border Beam",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Border Beam\n카드 테두리를 따라 빛이 이동합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-shine-border",
+    "title": "Shine Border",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Shine Border\n그라디언트 빛이 테두리를 따라 흐릅니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-magic-card",
+    "title": "Magic Card",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Magic Card\n마우스를 따라 조명이 움직이는 카드입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-glare-hover",
+    "title": "Glare Hover",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Glare Hover\n호버할 때 빛이 표면을 가로지릅니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-meteors",
+    "title": "Meteors",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Meteors\n유성이 대각선으로 떨어지는 효과입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-confetti",
+    "title": "Confetti",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Confetti\n버튼을 눌러 색종이 효과를 실행합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-particles",
+    "title": "Particles",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Particles\n마우스에 반응하는 작은 입자를 표시합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-animated-theme-toggler",
+    "title": "Theme Toggler",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Theme Toggler\n원형 전환으로 라이트·다크 테마를 바꿉니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-blur-fade",
+    "title": "Blur Fade",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Blur Fade\n블러와 투명도를 조합해 요소가 나타납니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-text-animate",
+    "title": "Text Animate",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Text Animate\n단어가 순서대로 나타나는 텍스트 모션입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-typing-animation",
+    "title": "Typing Animation",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Typing Animation\n문장을 한 글자씩 타이핑합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-line-shadow-text",
+    "title": "Line Shadow Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Line Shadow Text\n텍스트에 움직이는 줄무늬 그림자를 더합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-aurora-text",
+    "title": "Aurora Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Aurora Text\n텍스트 안에서 오로라 색상이 흐릅니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-video-text",
+    "title": "Video Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Video Text\n영상이 글자 안에 비쳐 보이는 효과입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-number-ticker",
+    "title": "Number Ticker",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Number Ticker\n숫자가 목표 값까지 부드럽게 증가합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-animated-shiny-text",
+    "title": "Animated Shiny Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Animated Shiny Text\n텍스트 위로 밝은 빛이 지나갑니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-animated-gradient-text",
+    "title": "Animated Gradient Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Animated Gradient Text\n그라디언트가 이동하는 텍스트입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-text-reveal",
+    "title": "Text Reveal",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Text Reveal\n영역을 스크롤하면 단어가 선명해집니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-dia-text-reveal",
+    "title": "Dia Text Reveal",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Dia Text Reveal\n색상 띠가 지나가며 문장을 드러냅니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-hyper-text",
+    "title": "Hyper Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Hyper Text\n무작위 글자가 원래 텍스트로 정리됩니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-word-rotate",
+    "title": "Word Rotate",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Word Rotate\n여러 단어를 순서대로 전환합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-scroll-based-velocity",
+    "title": "Scroll Based Velocity",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 포인터·스크롤",
+    "text": "Scroll Based Velocity\n스크롤 속도에 따라 텍스트 흐름이 변합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-sparkles-text",
+    "title": "Sparkles Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Sparkles Text\n반짝이는 별이 텍스트 주위에 나타납니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-morphing-text",
+    "title": "Morphing Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Morphing Text\n글자의 형태가 녹아들듯 변합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-spinning-text",
+    "title": "Spinning Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Spinning Text\n텍스트가 원을 따라 회전합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-highlighter",
+    "title": "Text Highlighter",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Text Highlighter\n손으로 그린 듯한 강조 표시를 만듭니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-text-3d-flip",
+    "title": "Text 3D Flip",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Text 3D Flip\n호버하면 글자가 3D로 뒤집힙니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-safari",
+    "title": "Safari",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 디바이스",
+    "text": "Safari\n브라우저 프레임 안에 화면을 보여줍니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-iphone",
+    "title": "iPhone",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 디바이스",
+    "text": "iPhone\niPhone 목업으로 화면을 소개합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-android",
+    "title": "Android",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 디바이스",
+    "text": "Android\nAndroid 목업으로 화면을 소개합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-rainbow-button",
+    "title": "Rainbow Button",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 버튼",
+    "text": "Rainbow Button\n무지개 테두리와 빛이 흐르는 버튼입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-shimmer-button",
+    "title": "Shimmer Button",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 버튼",
+    "text": "Shimmer Button\n빛이 회전하는 강조 버튼입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-ripple-button",
+    "title": "Ripple Button",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 버튼",
+    "text": "Ripple Button\n누른 위치에서 원형 파장이 퍼집니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-flickering-grid",
+    "title": "Flickering Grid",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Flickering Grid\n작은 사각형이 불규칙하게 깜빡입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-animated-grid-pattern",
+    "title": "Animated Grid Pattern",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Animated Grid Pattern\n격자 안의 사각형이 순차적으로 나타납니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-retro-grid",
+    "title": "Retro Grid",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Retro Grid\n원근감 있는 격자가 뒤로 흘러갑니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-ripple",
+    "title": "Ripple",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Ripple\n동심원이 바깥쪽으로 퍼집니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-dot-pattern",
+    "title": "Dot Pattern",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Dot Pattern\n반복되는 점으로 배경 패턴을 만듭니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-grid-pattern",
+    "title": "Grid Pattern",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Grid Pattern\n격자 패턴으로 화면에 깊이를 더합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-hexagon-pattern",
+    "title": "Hexagon Pattern",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Hexagon Pattern\n육각형을 반복해 배경을 구성합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-striped-pattern",
+    "title": "Striped Pattern",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Striped Pattern\n기울어진 선으로 줄무늬 배경을 만듭니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-interactive-grid-pattern",
+    "title": "Interactive Grid Pattern",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Interactive Grid Pattern\n마우스가 지나간 격자를 강조합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-light-rays",
+    "title": "Light Rays",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Light Rays\n위에서 빛줄기가 내려오는 효과입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-noise-texture",
+    "title": "Noise Texture",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Noise Texture\n미세한 노이즈로 표면 질감을 더합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-floating-3d-particles",
+    "title": "Floating 3D Particles",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Floating 3D Particles\n깊이감 있는 입자가 천천히 떠다닙니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-shiny-button",
+    "title": "Shiny Button",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 버튼",
+    "text": "Shiny Button\n호버할 때 광택이 강조되는 버튼입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-file-tree",
+    "title": "File Tree",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "File Tree\n폴더를 접고 펼칠 수 있는 파일 탐색기입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-code-comparison",
+    "title": "Code Comparison",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "Code Comparison\n코드의 변경 전후를 나란히 비교합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-scroll-progress",
+    "title": "Scroll Progress",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 포인터·스크롤",
+    "text": "Scroll Progress\n영역의 스크롤 진행률을 막대로 표시합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-neon-gradient-card",
+    "title": "Neon Gradient Card",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Neon Gradient Card\n카드 주위로 네온 그라디언트가 흐릅니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-comic-text",
+    "title": "Comic Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Comic Text\n만화 스타일의 그림자와 질감을 표현합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-kinetic-text",
+    "title": "Kinetic Text",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 텍스트",
+    "text": "Kinetic Text\n호버한 글자와 주변 글자의 굵기가 변합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-pixel-image",
+    "title": "Pixel Image",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Pixel Image\n작은 타일이 모여 이미지를 드러냅니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-pulsating-button",
+    "title": "Pulsating Button",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 버튼",
+    "text": "Pulsating Button\n버튼 주위로 맥박처럼 빛이 퍼집니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-warp-background",
+    "title": "Warp Background",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Warp Background\n선과 빛이 공간 안으로 흐르는 배경입니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-interactive-hover-button",
+    "title": "Interactive Hover Button",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 버튼",
+    "text": "Interactive Hover Button\n호버하면 배경과 화살표가 전환됩니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-animated-circular-progress-bar",
+    "title": "Animated Circular Progress Bar",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 컴포넌트",
+    "text": "Animated Circular Progress Bar\n값의 변화를 원형 진행률로 표현합니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-backlight",
+    "title": "Backlight",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 특수효과",
+    "text": "Backlight\n콘텐츠 뒤에서 부드러운 빛이 퍼집니다.",
+    "draft": false
+  },
+  {
+    "id": "interaction-glyph-matrix",
+    "title": "Glyph Matrix",
+    "category": "인터렉션 랩",
+    "meta": "Magic UI · 배경",
+    "text": "Glyph Matrix\n작은 문자가 바뀌며 매트릭스 효과를 만듭니다.",
+    "draft": false
+  },
+  {
+    "id": "foundation-1",
+    "title": "Color",
+    "category": "디자인 시스템",
+    "meta": "컬러 · 파운데이션",
+    "text": "컬러\n브랜드 블루와 화면의 역할을 구분하는 시맨틱 컬러. 색 이름보다 용도를 기준으로 선택합니다. 배경·텍스트·테두리는 같은 변수 이름으로 라이트와 다크에 대응하고, 브랜드 블루는 두 테마에서 유지합니다. --color-surface #ffffff #11151b --color-hero-bg #0a304b #000000 --color-hero-text #ffffff #ffffff --color-header-glass rgb(255 255 255 / 78%) rgb(17 21 27 / 76%) --color-surface-muted #f5f6f8 #1d242d --color-brand-subtle #e2f3ff #152c3e --color-chat-prompt #e3f4ff #17364d --color-placeholder #718097 #526278 --color-text #000000 #edf1f6 --color-text-secondary #718097 #9baabe --color-text-supporting #47556e #b5c1d2 --color-text-placeholder #98a2b3 #8d9aab --color-border #e6ebf2 #28313d --color-border-strong #d9e0eb #374455 --color-accent #148ddf #148ddf --color-icon #171717 #edf1f6",
+    "draft": false
+  },
+  {
+    "id": "foundation-2",
+    "title": "Typography",
+    "category": "디자인 시스템",
+    "meta": "타이포그래피 · 파운데이션",
+    "text": "타이포그래피\nPretendard를 중심으로 한 글자 크기, 굵기와 행간. 제목, 본문, 보조 정보의 위계를 크기와 굵기로 구분합니다. App Shell의 원본 글자 크기에는 2px 보정값이 적용되며, 갤러리의 Tailwind 글자 크기는 별도로 정의됩니다. --font-size-offset 2px 2px --font-family 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans CJK KR', sans-serif 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans CJK KR', sans-serif --font-8 8px 8px --font-10 10px 10px --font-12 12px 12px --font-14 14px 14px --font-16 16px 16px --font-18 18px 18px --font-24 24px 24px --font-30 30px 30px",
+    "draft": false
+  },
+  {
+    "id": "system-spacing",
+    "title": "Spacing",
+    "category": "디자인 시스템",
+    "meta": "스페이싱 · 파운데이션",
+    "text": "스페이싱\n요소 사이 간격과 컨테이너 안쪽 여백의 기준. 8개의 공통 간격 변수를 기준으로 사용합니다. 실제 구현에는 10px, 16px, 32px 등 고정값도 있으므로, 아래에 변수와 사용 중인 값을 함께 기록합니다. --space-4 4px 4px --space-8 8px 8px --space-12 12px 12px --space-20 20px 20px --space-24 24px 24px --space-40 40px 40px --space-50 50px 50px --space-60 60px 60px",
+    "draft": false
+  },
+  {
+    "id": "foundation-3",
+    "title": "Radius",
+    "category": "디자인 시스템",
+    "meta": "라운드 · 파운데이션",
+    "text": "라운드\n작은 썸네일부터 카드와 원형 요소까지의 모서리. 작은 요소에는 작은 라운드를, 콘텐츠 카드에는 14px을 사용합니다. 필터 칩과 아바타는 pill 또는 원형으로 처리합니다. --radius-small 4px 4px --radius-nav 6px 6px --radius-input 10px 10px --radius-bubble 12px 12px --radius-card 14px 14px --radius-pill 100px 100px",
+    "draft": false
+  },
+  {
+    "id": "system-layout",
+    "title": "Layout",
+    "category": "디자인 시스템",
+    "meta": "레이아웃 · 파운데이션",
+    "text": "레이아웃\n사이드바, 헤더, 콘텐츠 너비와 반응형 그리드. 목록 콘텐츠는 최대 840px로 가운데 정렬합니다. 상세는 783px, 카드 간격은 24px입니다. 모바일에서는 좌우 20px 여백을 확보하고 사이드바를 오프캔버스로 전환합니다. --sidebar-width 220px 220px --sidebar-collapsed-width 61px 61px --topbar-height 54px 54px --content-width 840px 840px --chat-width 334px 334px",
+    "draft": false
+  },
+  {
+    "id": "system-surface",
+    "title": "Surface & Elevation",
+    "category": "디자인 시스템",
+    "meta": "표면·깊이 · 파운데이션",
+    "text": "표면·깊이\n테두리, 그림자, 글래스 헤더와 화면의 겹침 순서. 기본 표면은 1px 테두리로 구분합니다. 그림자는 검색 팝오버와 카드 호버에 제한해 사용하고, 헤더에는 반투명 배경과 20px 블러를 적용합니다. --shadow-popover 0 10px 40px rgb(27 45 74 / 10%) 0 10px 40px rgb(27 45 74 / 10%)",
+    "draft": false
+  },
+  {
+    "id": "system-motion",
+    "title": "Motion",
+    "category": "디자인 시스템",
+    "meta": "모션 · 파운데이션",
+    "text": "모션\n패널 전환, 호버 피드백과 모션 줄이기 설정. 패널은 420ms 슬라이드, 빠른 피드백은 160ms를 사용합니다. 시스템의 모션 줄이기 설정에서는 CSS 애니메이션과 전환 시간을 줄입니다. 실험실 개별 효과는 각 상세에서 다룹니다. --ease-slide cubic-bezier(.22, 1, .36, 1) cubic-bezier(.22, 1, .36, 1) --duration-slide 420ms 420ms --duration-fast 160ms 160ms",
+    "draft": false
+  },
+  {
+    "id": "foundation-4",
+    "title": "Icons & Brand",
+    "category": "디자인 시스템",
+    "meta": "아이콘·브랜드 · 공통 UI",
+    "text": "아이콘·브랜드\nFigma에서 내보낸 공통 아이콘과 테마별 로고. 공통 아이콘은 기본 16px, 섹션 심볼은 24px입니다. 아이콘만 있는 버튼에는 접근 가능한 이름을 제공합니다. 로고의 +는 두 테마 모두 #148DDF를 유지합니다.",
+    "draft": false
+  },
+  {
+    "id": "system-avatar",
+    "title": "Avatar",
+    "category": "디자인 시스템",
+    "meta": "아바타 · 공통 UI",
+    "text": "아바타\n사이드바 프로필과 갤러리의 크기·대체 표시. 사이드바의 32px 브랜드 아바타와 shadcn/ui 기반 아바타를 구분합니다. 갤러리 아바타는 24·32·40px을 제공하며, 이미지가 없을 때 이니셜을 표시합니다.",
+    "draft": false
+  },
+  {
+    "id": "system-components",
+    "title": "UI Patterns",
+    "category": "디자인 시스템",
+    "meta": "공통 UI · 공통 UI",
+    "text": "공통 UI\n내비게이션, 검색, 필터 칩과 카드의 조합 규칙. 같은 토큰을 공통 UI에 조합합니다. 선택 상태는 배경 또는 브랜드 컬러로, 입력 포커스는 테두리로 드러냅니다. 전체 shadcn/ui 예시는 컴포넌트 랩에서 확인할 수 있습니다.",
+    "draft": false
+  },
+  {
+    "id": "system-theming",
+    "title": "Theming",
+    "category": "디자인 시스템",
+    "meta": "테마 연결 · 테마",
+    "text": "테마 연결\nA+studio 토큰과 shadcn/ui·Tailwind 사이의 연결. App Shell과 두 갤러리는 A+studio의 배경·텍스트·브랜드 변수를 공유합니다. 시맨틱 변수 → 갤러리 별칭 → Tailwind 유틸리티 순서로 연결됩니다. --radius 10px 10px --background var(--color-surface) var(--color-surface) --foreground var(--color-text) var(--color-text) --card var(--color-surface) var(--color-surface) --card-foreground var(--color-text) var(--color-text) --popover var(--color-surface) var(--color-surface) --popover-foreground var(--color-text) var(--color-text) --primary var(--color-accent) var(--color-accent) --primary-foreground #fff #fff --secondary var(--color-brand-subtle) var(--color-brand-subtle) --secondary-foreground var(--color-text) var(--color-text) --muted var(--color-surface-muted) var(--color-surface-muted) --muted-foreground var(--color-text-secondary) var(--color-text-secondary) --accent var(--color-brand-subtle) var(--color-brand-subtle) --accent-foreground var(--color-text) var(--color-text) --destructive #da3b49 #da3b49 --border var(--color-border) var(--color-border) --input var(--color-border-strong) var(--color-border-strong) --ring var(--color-accent) var(--color-accent) --chart-1 #148ddf #148ddf --chart-2 #27b3a4 #27b3a4 --chart-3 #8d74d6 #8d74d6 --chart-4 #e5a748 #e5a748 --chart-5 #d57aa3 #d57aa3 --color-background var(--background) var(--background) --color-foreground var(--foreground) var(--foreground) --color-card var(--card) var(--card) --color-card-foreground var(--card-foreground) var(--card-foreground) --color-popover var(--popover) var(--popover) --color-popover-foreground var(--popover-foreground) var(--popover-foreground) --color-primary var(--primary) var(--primary) --color-primary-foreground var(--primary-foreground) var(--primary-foreground) --color-secondary var(--secondary) var(--secondary) --color-secondary-foreground var(--secondary-foreground) var(--secondary-foreground) --color-muted var(--muted) var(--muted) --color-muted-foreground var(--muted-foreground) var(--muted-foreground) --color-accent var(--accent) var(--accent) --color-accent-foreground var(--accent-foreground) var(--accent-foreground) --color-destructive var(--destructive) var(--destructive) --color-border var(--border) var(--border) --color-input var(--input) var(--input) --color-ring var(--ring) var(--ring) --color-chart-1 var(--chart-1) var(--chart-1) --color-chart-2 var(--chart-2) var(--chart-2) --color-chart-3 var(--chart-3) var(--chart-3) --color-chart-4 var(--chart-4) var(--chart-4) --color-chart-5 var(--chart-5) var(--chart-5) --color-sidebar var(--background) var(--background) --color-sidebar-foreground var(--foreground) var(--foreground) --color-sidebar-primary var(--primary) var(--primary) --color-sidebar-primary-foreground var(--primary-foreground) var(--primary-foreground) --color-sidebar-accent var(--accent) var(--accent) --color-sidebar-accent-foreground var(--foreground) var(--foreground) --color-sidebar-border var(--border) var(--border) --color-sidebar-ring var(--ring) var(--ring) --radius-sm 4px 4px --radius-md 6px 6px --radius-lg 10px 10px --radius-xl 14px 14px --text-xs 12px 12px --text-sm 14px 14px --text-base 16px 16px --font-sans var(--font-family) var(--font-family)",
+    "draft": false
+  },
+  {
+    "id": "thinking-1",
+    "title": "AI 시대, 디자이너는 무엇을 해야 하는가?",
+    "category": "디자인 생각",
+    "meta": "AI",
+    "text": "AI 시대, 디자이너는 무엇을 해야 하는가?\n디자이너는 정말 AI에게 대체될까?\n불과 2년 전만 해도 디자인 업계에서 AI는 '신기한 장난감' 정도로 여겨졌다. 이미지를 만들어주는 생성형 AI가 등장했고, Figma는 자동으로 UI를 생성하기 시작했다. ChatGPT는 UX Writing를 작성해 주었고, Midjourney는 몇 초 만에 무드보드를 만들었다.\n\n그리고 지금.\n\nCursor, Claude Code 같은 AI 개발 도구는 React 컴포넌트를 만들고, HTML과 CSS를 작성하며, 디자이너가 상상한 화면을 실제 서비스 수준으로 구현하고 있다.\n\n불과 몇 년 사이에 디자인와 개발 사이의 경계는 빠르게 흐려지고 있다.\n\n그래서 자연스럽게 이런 질문이 등장한다.\n\n\"AI 시대에도 디자이너는 필요한가?\"\n\n나 역시 같은 질문을 했다.\n\n하지만 AI와 함께 실제 제품을 만들기 시작하면서 오히려 전혀 다른 결론에 도달했다. AI는 디자이너를 대체하고 있는 것이 아니다. 디자이너라는 직업을 다시 정의하고 있다.\n불과 2년 전만 해도 디자인 업계에서 AI는 '신기한 장난감' 정도로 여겨졌다. 이미지를 만들어주는 생성형 AI가 등장했고, Figma는 자동으로 UI를 생성하기 시작했다. ChatGPT는 UX Writing를 작성해 주었고, Midjourney는 몇 초 만에 무드보드를 만들었다.\n\n그리고 지금.\n\nCursor, Claude Code 같은 AI 개발 도구는 React 컴포넌트를 만들고, HTML과 CSS를 작성하며, 디자이너가 상상한 화면을 실제 서비스 수준으로 구현하고 있다.\n\n불과 몇 년 사이에 디자인와 개발 사이의 경계는 빠르게 흐려지고 있다.\n\n그래서 자연스럽게 이런 질문이 등장한다.\n\n\"AI 시대에도 디자이너는 필요한가?\"\n\n나 역시 같은 질문을 했다.\n\n하지만 AI와 함께 실제 제품을 만들기 시작하면서 오히려 전혀 다른 결론에 도달했다. AI는 디자이너를 대체하고 있는 것이 아니다. 디자이너라는 직업을 다시 정의하고 있다.\n디자인의 경쟁력은 더 이상 화면이 아니다.\n과거에는 디자이너의 경쟁력이 비교적 명확했다.\n\n누가 더 아름다운 화면을 만드는가.\n누가 더 정교한 인터랙션을 설계하는가.\n누가 더 빠르게 시안을 만드는가.\n\n하지만 AI는 이 경쟁을 아주 빠르게 평준화시키고 있다.\n오늘날 누구나 몇 줄의 프롬프트만으로 로그인 화면을 만들 수 있다.\n\n대시보드를 생성할 수 있고,\n랜딩페이지를 만들 수 있으며,\n반응형 코드까지 받을 수 있다.\n\n\"만드는 능력\"은 점점 기본 역량이 되어가고 있다.\n\n그렇다면 앞으로 디자이너의 경쟁력은 어디에서 나올까?\n\n나는 답이 '문제를 정의하는 능력'이라고 생각한다.\n\nAI는 답을 굉장히 잘 만든다.\n하지만 어떤 질문을 해야 하는지는 알려주지 않는다.\n과거에는 디자이너의 경쟁력이 비교적 명확했다.\n\n누가 더 아름다운 화면을 만드는가.\n누가 더 정교한 인터랙션을 설계하는가.\n누가 더 빠르게 시안을 만드는가.\n\n하지만 AI는 이 경쟁을 아주 빠르게 평준화시키고 있다.\n오늘날 누구나 몇 줄의 프롬프트만으로 로그인 화면을 만들 수 있다.\n\n대시보드를 생성할 수 있고,\n랜딩페이지를 만들 수 있으며,\n반응형 코드까지 받을 수 있다.\n\n\"만드는 능력\"은 점점 기본 역량이 되어가고 있다.\n\n그렇다면 앞으로 디자이너의 경쟁력은 어디에서 나올까?\n\n나는 답이 '문제를 정의하는 능력'이라고 생각한다.\n\nAI는 답을 굉장히 잘 만든다.\n하지만 어떤 질문을 해야 하는지는 알려주지 않는다.\n대부분의 프로젝트는 UI 때문에 실패하지 않는다.\n스타트업에서 7년 동안 다양한 제품을 만들면서 흥미로운 사실 하나를 발견했다.\n\n프로젝트는 대부분 UI 때문에 실패하지 않는다.\n실패는 그보다 훨씬 앞에서 시작된다.\n\n사용자의 문제를 잘못 이해했거나,\n비즈니스 목표를 잘못 설정했거나,\n기술적 제약을 고려하지 않았거나,\n\n팀이 해결해야 하는 문제가 서로 달랐던 경우가 훨씬 많았다.\n\n디자인은 결과다.\n문제 정의는 시작점이다.\n프로젝트 초기에 가장 어려운 일은 Figma를 여는 것이 아니다.\n\nPM은 기능을 추가하자고 말한다.\n개발자는 일정이 부족하다고 말한다.\n대표는 경쟁사에도 있는 기능이라고 말한다.\n사용자는 전혀 다른 불편을 이야기한다.\n\n모두가 맞는 이야기를 하지만, 모두가 같은 문제를 이야기하는 것은 아니다.\n\n그 수많은 의견 속에서 지금 우리가 해결해야 하는 진짜 문제를 발견하는 일.\n나는 그것이 앞으로 프로덕트 디자이너의 가장 중요한 역할이라고 생각한다.\n스타트업에서 7년 동안 다양한 제품을 만들면서 흥미로운 사실 하나를 발견했다.\n\n프로젝트는 대부분 UI 때문에 실패하지 않는다.\n실패는 그보다 훨씬 앞에서 시작된다.\n\n사용자의 문제를 잘못 이해했거나,\n비즈니스 목표를 잘못 설정했거나,\n기술적 제약을 고려하지 않았거나,\n\n팀이 해결해야 하는 문제가 서로 달랐던 경우가 훨씬 많았다.\n\n디자인은 결과다.\n문제 정의는 시작점이다.\n프로젝트 초기에 가장 어려운 일은 Figma를 여는 것이 아니다.\n\nPM은 기능을 추가하자고 말한다.\n개발자는 일정이 부족하다고 말한다.\n대표는 경쟁사에도 있는 기능이라고 말한다.\n사용자는 전혀 다른 불편을 이야기한다.\n\n모두가 맞는 이야기를 하지만, 모두가 같은 문제를 이야기하는 것은 아니다.\n\n그 수많은 의견 속에서 지금 우리가 해결해야 하는 진짜 문제를 발견하는 일.\n나는 그것이 앞으로 프로덕트 디자이너의 가장 중요한 역할이라고 생각한다.\n카카오톡 친구 탭은 왜 다시 돌아왔을까?\n최근 카카오톡은 친구 탭을 대대적으로 개편했다.\n기존의 단순한 친구 목록 대신 콘텐츠 중심의 피드가 전면에 배치되었다.\n기업의 입장에서 보면 충분히 이해할 수 있는 전략이었다.\n메신저를 단순한 커뮤니케이션 도구가 아니라 콘텐츠 플랫폼으로 확장하려는 시도였기 때문이다.\n하지만 사용자들은 다른 이야기를 했다.\n\n\"친구를 찾기 어려워졌다.\"\n\"예전이 더 직관적이었다.\"\n\"카카오톡을 켜는 이유는 콘텐츠를 보기 위해서가 아니다.\"\n\n결국 카카오는 사용자 피드백을 반영해 기존 친구 목록을 다시 제공하는 방향으로 수정했다.\n\n흥미로운 점은 이 사례가 UI의 실패가 아니라는 것이다.\n\n디자인 완성도가 낮았던 것도 아니다.\n문제는 해결하려던 대상이었다.\n기업은 체류 시간을 늘리고 싶었다.\n사용자는 친구를 빠르게 찾고 싶었다.\n\n같은 화면이지만 서로 다른 문제를 해결하고 있었던 것이다.\n좋은 디자인은 예쁜 화면에서 시작되지 않는다.\n올바른 문제 정의에서 시작된다.\n최근 카카오톡은 친구 탭을 대대적으로 개편했다.\n기존의 단순한 친구 목록 대신 콘텐츠 중심의 피드가 전면에 배치되었다.\n기업의 입장에서 보면 충분히 이해할 수 있는 전략이었다.\n메신저를 단순한 커뮤니케이션 도구가 아니라 콘텐츠 플랫폼으로 확장하려는 시도였기 때문이다.\n하지만 사용자들은 다른 이야기를 했다.\n\n\"친구를 찾기 어려워졌다.\"\n\"예전이 더 직관적이었다.\"\n\"카카오톡을 켜는 이유는 콘텐츠를 보기 위해서가 아니다.\"\n\n결국 카카오는 사용자 피드백을 반영해 기존 친구 목록을 다시 제공하는 방향으로 수정했다.\n\n흥미로운 점은 이 사례가 UI의 실패가 아니라는 것이다.\n\n디자인 완성도가 낮았던 것도 아니다.\n문제는 해결하려던 대상이었다.\n기업은 체류 시간을 늘리고 싶었다.\n사용자는 친구를 빠르게 찾고 싶었다.\n\n같은 화면이지만 서로 다른 문제를 해결하고 있었던 것이다.\n좋은 디자인은 예쁜 화면에서 시작되지 않는다.\n올바른 문제 정의에서 시작된다.\nAI와 함께 웹사이트를 만들며 깨달은 것\n최근 나는 포트폴리오 웹사이트를 처음부터 다시 만들었다.\n이번에는 조금 다른 방식으로 진행했다.\n\n예전 같았으면 Figma에서 화면을 설계하고,\n컴포넌트를 조합하고,\n개발자에게 전달했을 것이다.\n\n하지만 이번에는 ChatGPT를 적극적으로 활용했다.\n먼저 브랜드 원칙과 디자인 규칙을 하나의 Markdown 문서로 정리했다.\n\n# Design.md\n\nBrand\n\n- Modern\n- Minimal\n- Premium\n\nTypography\n\nHeadline 48/60\nBody 18/30\n\nColor\n\nPrimary #111111\nSecondary #666666\n\nRadius\n\n12\n\nSpacing\n\n8pt Grid\n\nRules\nNever use shadows.\nNever use gradients.\nAlways keep generous whitespace.\nPrefer rounded components.\n\n그리고 AI에게 단 한 문장을 전달했다.\n\nCreate the project detail page.\n\n놀랍게도 AI는 이 문서를 읽고 컴포넌트를 조합해 HTML과 CSS를 생성했다.\n\n버튼은 항상 같은 높이를 유지했고,\n간격은 일관되었으며,\n타이포그래피와 컬러 역시 브랜드 규칙을 그대로 따랐다.\n\n여기서 가장 흥미로웠던 점은 따로 있었다.\n나는 디자인 시스템을 찾아다니지 않았다. AI가 디자인 시스템을 읽고 있었다.\n최근 나는 포트폴리오 웹사이트를 처음부터 다시 만들었다.\n이번에는 조금 다른 방식으로 진행했다.\n\n예전 같았으면 Figma에서 화면을 설계하고,\n컴포넌트를 조합하고,\n개발자에게 전달했을 것이다.\n\n하지만 이번에는 ChatGPT를 적극적으로 활용했다.\n먼저 브랜드 원칙과 디자인 규칙을 하나의 Markdown 문서로 정리했다.\n\n# Design.md\n\nBrand\n\n- Modern\n- Minimal\n- Premium\n\nTypography\n\nHeadline 48/60\nBody 18/30\n\nColor\n\nPrimary #111111\nSecondary #666666\n\nRadius\n\n12\n\nSpacing\n\n8pt Grid\n\nRules\nNever use shadows.\nNever use gradients.\nAlways keep generous whitespace.\nPrefer rounded components.\n\n그리고 AI에게 단 한 문장을 전달했다.\n\nCreate the project detail page.\n\n놀랍게도 AI는 이 문서를 읽고 컴포넌트를 조합해 HTML과 CSS를 생성했다.\n\n버튼은 항상 같은 높이를 유지했고,\n간격은 일관되었으며,\n타이포그래피와 컬러 역시 브랜드 규칙을 그대로 따랐다.\n\n여기서 가장 흥미로웠던 점은 따로 있었다.\n나는 디자인 시스템을 찾아다니지 않았다. AI가 디자인 시스템을 읽고 있었다.\n앞으로 디자이너는 무엇을 해야 하는가?\nAI는 앞으로 더 똑똑해질 것이다.\n\n화면을 생성하고,\n프로토타입을 만들고,\n코드를 작성하는 일은 점점 더 자동화될 것이다.\n\n그럴수록 디자이너에게 요구되는 역량은 더욱 선명해진다.\n\n사용자의 행동을 이해하는 능력.\n비즈니스와 기술 사이에서 균형을 찾는 능력.\n복잡한 문제를 단순하게 정의하는 능력.\n그리고 좋은 의사결정의 기준을 만드는 능력.\n\n나는 앞으로 디자이너를 '화면을 만드는 사람'이라고 부르지 않을 것 같다.\n\n디자이너는 제품이 어떤 방향으로 성장해야 하는지를 함께 결정하는 사람이다.\n픽셀을 설계하는 사람이 아니라 의사결정을 설계하는 사람이다.\n\nAI는 디자이너를 대체하지 않는다.\n대신 화면만 만들던 디자이너의 역할은 빠르게 줄어들 것이다.\n\n그리고 사람을 이해하고, 문제를 정의하며, AI가 따를 수 있는 좋은 규칙을 만드는 디자이너의 가치는 이전보다 훨씬 커질 것이다.\n\n어쩌면 AI 시대에 가장 중요한 디자인 툴은 Figma도, Cursor도 아닐지 모른다.\n사용자와 비즈니스, 그리고 기술 사이에서 올바른 질문을 던질 수 있는 사고방식.\n나는 그것이 앞으로 디자이너의 가장 강력한 경쟁력이 될 것이라고 믿는다.\nAI는 앞으로 더 똑똑해질 것이다.\n\n화면을 생성하고,\n프로토타입을 만들고,\n코드를 작성하는 일은 점점 더 자동화될 것이다.\n\n그럴수록 디자이너에게 요구되는 역량은 더욱 선명해진다.\n\n사용자의 행동을 이해하는 능력.\n비즈니스와 기술 사이에서 균형을 찾는 능력.\n복잡한 문제를 단순하게 정의하는 능력.\n그리고 좋은 의사결정의 기준을 만드는 능력.\n\n나는 앞으로 디자이너를 '화면을 만드는 사람'이라고 부르지 않을 것 같다.\n\n디자이너는 제품이 어떤 방향으로 성장해야 하는지를 함께 결정하는 사람이다.\n픽셀을 설계하는 사람이 아니라 의사결정을 설계하는 사람이다.\n\nAI는 디자이너를 대체하지 않는다.\n대신 화면만 만들던 디자이너의 역할은 빠르게 줄어들 것이다.\n\n그리고 사람을 이해하고, 문제를 정의하며, AI가 따를 수 있는 좋은 규칙을 만드는 디자이너의 가치는 이전보다 훨씬 커질 것이다.\n\n어쩌면 AI 시대에 가장 중요한 디자인 툴은 Figma도, Cursor도 아닐지 모른다.\n사용자와 비즈니스, 그리고 기술 사이에서 올바른 질문을 던질 수 있는 사고방식.\n나는 그것이 앞으로 디자이너의 가장 강력한 경쟁력이 될 것이라고 믿는다.",
+    "draft": false
+  },
+  {
+    "id": "thinking-2",
+    "title": "좋은 제품은 화면보다 문제 정의에서 시작된다.",
+    "category": "디자인 생각",
+    "meta": "Product Design",
+    "text": "좋은 제품은 화면보다 문제 정의에서 시작된다.\n우리는 너무 빨리 해결책부터 만든다.\n프로젝트를 시작하면 가장 먼저 오가는 대화는 대부분 해결책에 관한 이야기다.\n\n\"버튼을 더 크게 만들어 주세요.\"\n\"홈 화면을 조금 더 직관적으로 바꿔볼까요?\"\n\"이 기능도 추가하면 좋을 것 같습니다.\"\n\n하지만 흥미롭게도 이 질문들에는 빠져 있는 것이 하나 있다.\n\n\"우리는 지금 어떤 문제를 해결하려는 걸까?\"\n\n디자인은 흔히 화면을 만드는 일로 이해된다.\n하지만 실제 Product Design은 화면을 그리는 일보다 문제를 정의하는 일에 훨씬 더 많은 시간을 사용한다.\n\n좋은 제품은 해결책을 빨리 만드는 팀이 아니라, 올바른 문제를 발견하는 팀이 만든다.\n\n반대로 잘못 정의된 문제는 아무리 뛰어난 UI와 아름다운 인터랙션도 실패하게 만든다.\n\n그래서 나는 프로젝트를 시작하면 Figma보다 먼저 질문을 적기 시작한다.\n\n사용자는 왜 이 행동을 하는가?\n왜 이 기능을 사용하지 않는가?\n왜 고객은 이 시점에서 이탈하는가?\n\n그리고 가장 중요한 질문.\n\n\"정말 이 문제가 맞는가?\"\n프로젝트를 시작하면 가장 먼저 오가는 대화는 대부분 해결책에 관한 이야기다.\n\n\"버튼을 더 크게 만들어 주세요.\"\n\"홈 화면을 조금 더 직관적으로 바꿔볼까요?\"\n\"이 기능도 추가하면 좋을 것 같습니다.\"\n\n하지만 흥미롭게도 이 질문들에는 빠져 있는 것이 하나 있다.\n\n\"우리는 지금 어떤 문제를 해결하려는 걸까?\"\n\n디자인은 흔히 화면을 만드는 일로 이해된다.\n하지만 실제 Product Design은 화면을 그리는 일보다 문제를 정의하는 일에 훨씬 더 많은 시간을 사용한다.\n\n좋은 제품은 해결책을 빨리 만드는 팀이 아니라, 올바른 문제를 발견하는 팀이 만든다.\n\n반대로 잘못 정의된 문제는 아무리 뛰어난 UI와 아름다운 인터랙션도 실패하게 만든다.\n\n그래서 나는 프로젝트를 시작하면 Figma보다 먼저 질문을 적기 시작한다.\n\n사용자는 왜 이 행동을 하는가?\n왜 이 기능을 사용하지 않는가?\n왜 고객은 이 시점에서 이탈하는가?\n\n그리고 가장 중요한 질문.\n\n\"정말 이 문제가 맞는가?\"\nAirbnb는 UI를 바꾸지 않았다.\n2009년, Airbnb는 심각한 문제를 겪고 있었다.\n\n웹사이트는 완성되어 있었고 예약 기능도 정상적으로 동작했다.\n하지만 예약률은 기대만큼 오르지 않았다.\n\n보통이라면 많은 팀이 UI를 개선하기 시작했을 것이다.\n\n회원가입 과정을 줄이고,\nCTA 버튼을 더 눈에 띄게 만들고,\n레이아웃을 바꾸는 방향을 고민했을 것이다.\n\n하지만 Airbnb는 조금 다른 선택을 했다.\n\n창업자들은 직접 호스트를 만나러 갔다.\n숙소를 방문하고,\n사용자를 인터뷰하고,\n예약 데이터를 분석했다.\n\n그 결과 의외의 사실을 발견했다.\n\n문제는 웹사이트가 아니었다.\n\n문제는 숙소 사진이었다.\n\n어두운 조명,\n낮은 해상도,\n신뢰감을 주지 못하는 사진이 사용자의 예약을 망설이게 만들고 있었다.\n\nAirbnb는 UI보다 먼저 사진을 바꾸기로 결정했다.\n직접 전문 사진작가를 섭외해 호스트의 숙소를 촬영하기 시작했고, 이후 예약률은 크게 증가했다.\n\n이 사례가 지금도 Product Design의 대표적인 사례로 언급되는 이유는 단순하다.\n\n문제를 다시 정의했기 때문이다.\n\n예약률을 높이는 방법은 웹사이트를 다시 디자인하는 것이 아니라 사용자가 신뢰할 수 있는 정보를 제공하는 것이었다.\n\n좋은 디자인은 화면 안에서만 이루어지지 않는다.\n때로는 화면 밖에서 시작된다.\n2009년, Airbnb는 심각한 문제를 겪고 있었다.\n\n웹사이트는 완성되어 있었고 예약 기능도 정상적으로 동작했다.\n하지만 예약률은 기대만큼 오르지 않았다.\n\n보통이라면 많은 팀이 UI를 개선하기 시작했을 것이다.\n\n회원가입 과정을 줄이고,\nCTA 버튼을 더 눈에 띄게 만들고,\n레이아웃을 바꾸는 방향을 고민했을 것이다.\n\n하지만 Airbnb는 조금 다른 선택을 했다.\n\n창업자들은 직접 호스트를 만나러 갔다.\n숙소를 방문하고,\n사용자를 인터뷰하고,\n예약 데이터를 분석했다.\n\n그 결과 의외의 사실을 발견했다.\n\n문제는 웹사이트가 아니었다.\n\n문제는 숙소 사진이었다.\n\n어두운 조명,\n낮은 해상도,\n신뢰감을 주지 못하는 사진이 사용자의 예약을 망설이게 만들고 있었다.\n\nAirbnb는 UI보다 먼저 사진을 바꾸기로 결정했다.\n직접 전문 사진작가를 섭외해 호스트의 숙소를 촬영하기 시작했고, 이후 예약률은 크게 증가했다.\n\n이 사례가 지금도 Product Design의 대표적인 사례로 언급되는 이유는 단순하다.\n\n문제를 다시 정의했기 때문이다.\n\n예약률을 높이는 방법은 웹사이트를 다시 디자인하는 것이 아니라 사용자가 신뢰할 수 있는 정보를 제공하는 것이었다.\n\n좋은 디자인은 화면 안에서만 이루어지지 않는다.\n때로는 화면 밖에서 시작된다.\n문제를 다시 정의하면 비즈니스도 함께 바뀐다.\nNetflix 역시 비슷한 경험을 했다.\n\n과거 Netflix는 5점 별점 시스템을 운영했다.\n사용자가 별점을 많이 남길수록 추천 알고리즘도 더 정확해질 것이라고 생각했다.\n\n논리적으로는 맞는 이야기였다.\n하지만 데이터는 다른 이야기를 하고 있었다.\n\n생각보다 많은 사용자가 별점을 남기지 않았다.\n\n왜일까?\n\n사용자 인터뷰를 통해 이유를 찾을 수 있었다.\n\n별 다섯 개 중 몇 점을 줘야 하는지 고민하는 과정 자체가 귀찮았던 것이다.\n\nNetflix는 문제를 다시 정의했다.\n\n문제는 추천 알고리즘이 아니었다.\n\n문제는 '평가 참여율'이었다.\n\n그래서 별점을 과감히 없애고 👍 / 👎 시스템으로 단순화했다.\n\n평가에 대한 심리적 부담은 줄어들었고,\n더 많은 사용자가 콘텐츠를 평가하기 시작했다.\n\n여기서 중요한 점은 하나다.\n\n좋은 제품은 사용자의 문제만 해결하지 않는다.\n비즈니스 문제도 함께 해결한다.\n\n사용자는 더 쉽게 의견을 남기게 되었고,\nNetflix는 더 많은 데이터를 확보했으며,\n추천 품질 역시 지속적으로 개선될 수 있었다.\n\n좋은 문제 정의는 언제나 사용자와 비즈니스가 만나는 지점에서 시작된다.\nNetflix 역시 비슷한 경험을 했다.\n\n과거 Netflix는 5점 별점 시스템을 운영했다.\n사용자가 별점을 많이 남길수록 추천 알고리즘도 더 정확해질 것이라고 생각했다.\n\n논리적으로는 맞는 이야기였다.\n하지만 데이터는 다른 이야기를 하고 있었다.\n\n생각보다 많은 사용자가 별점을 남기지 않았다.\n\n왜일까?\n\n사용자 인터뷰를 통해 이유를 찾을 수 있었다.\n\n별 다섯 개 중 몇 점을 줘야 하는지 고민하는 과정 자체가 귀찮았던 것이다.\n\nNetflix는 문제를 다시 정의했다.\n\n문제는 추천 알고리즘이 아니었다.\n\n문제는 '평가 참여율'이었다.\n\n그래서 별점을 과감히 없애고 👍 / 👎 시스템으로 단순화했다.\n\n평가에 대한 심리적 부담은 줄어들었고,\n더 많은 사용자가 콘텐츠를 평가하기 시작했다.\n\n여기서 중요한 점은 하나다.\n\n좋은 제품은 사용자의 문제만 해결하지 않는다.\n비즈니스 문제도 함께 해결한다.\n\n사용자는 더 쉽게 의견을 남기게 되었고,\nNetflix는 더 많은 데이터를 확보했으며,\n추천 품질 역시 지속적으로 개선될 수 있었다.\n\n좋은 문제 정의는 언제나 사용자와 비즈니스가 만나는 지점에서 시작된다.\n스타트업에서 가장 어려운 일은 화면을 그리는 것이 아니었다.\n7년 동안 여러 스타트업에서 제품을 만들며 가장 많이 들었던 말은 이런 이야기였다.\n\n\"경쟁사에도 있으니까 우리도 넣어야 합니다.\"\n\"대표님이 이 기능을 원하세요.\"\n\"고객이 요청했습니다.\"\n\"개발이 가능하다고 합니다.\"\n\n처음에는 이런 요청을 그대로 화면으로 옮기는 것이 디자이너의 역할이라고 생각했다.\n\n하지만 프로젝트를 반복할수록 하나의 질문을 먼저 던지게 되었다.\n\n\"우리는 지금 어떤 문제를 해결하려는 걸까?\"\n\n놀랍게도 많은 기능은 이 질문 하나를 통과하지 못했다.\n\n사용자가 원한 것이 아니라 특정 고객 한 명의 의견이었던 경우도 있었고,\nUI가 아니라 운영 정책이 문제였던 경우도 있었다.\n\n새로운 기능을 만드는 것보다 안내 문장을 수정하는 것이 훨씬 효과적인 경우도 있었다.\n\n그때 깨달았다.\n\n디자인은 기능을 추가하는 일이 아니다.\n\n사용자의 고민을 줄이고,\n비즈니스 목표를 달성하는 가장 효율적인 방법을 찾는 일이다.\n\n좋은 디자이너는 화면을 많이 만드는 사람이 아니라,\n불필요한 화면을 만들지 않는 사람이다.\n7년 동안 여러 스타트업에서 제품을 만들며 가장 많이 들었던 말은 이런 이야기였다.\n\n\"경쟁사에도 있으니까 우리도 넣어야 합니다.\"\n\"대표님이 이 기능을 원하세요.\"\n\"고객이 요청했습니다.\"\n\"개발이 가능하다고 합니다.\"\n\n처음에는 이런 요청을 그대로 화면으로 옮기는 것이 디자이너의 역할이라고 생각했다.\n\n하지만 프로젝트를 반복할수록 하나의 질문을 먼저 던지게 되었다.\n\n\"우리는 지금 어떤 문제를 해결하려는 걸까?\"\n\n놀랍게도 많은 기능은 이 질문 하나를 통과하지 못했다.\n\n사용자가 원한 것이 아니라 특정 고객 한 명의 의견이었던 경우도 있었고,\nUI가 아니라 운영 정책이 문제였던 경우도 있었다.\n\n새로운 기능을 만드는 것보다 안내 문장을 수정하는 것이 훨씬 효과적인 경우도 있었다.\n\n그때 깨달았다.\n\n디자인은 기능을 추가하는 일이 아니다.\n\n사용자의 고민을 줄이고,\n비즈니스 목표를 달성하는 가장 효율적인 방법을 찾는 일이다.\n\n좋은 디자이너는 화면을 많이 만드는 사람이 아니라,\n불필요한 화면을 만들지 않는 사람이다.\nAI가 아껴준 시간은 어디에 써야 할까?\nAI는 놀라운 속도로 해결책을 만들어낸다.\n\n몇 줄의 프롬프트만으로 와이어프레임을 만들고,\n컴포넌트를 생성하며,\nHTML과 CSS를 작성하고,\n프로토타입까지 완성한다.\n\n예전에는 화면 하나를 만드는 데 하루가 걸렸다면, 이제는 몇 분이면 충분한 시대가 되었다.\n\n많은 사람들은 이것을 '생산성이 높아졌다'고 이야기한다.\n\n나는 조금 다르게 생각한다.\n\nAI가 만들어준 것은 단순히 시간이 아니다.\n생각할 수 있는 시간을 되돌려 준 것이다.\n\n그렇다면 디자이너는 그 시간을 어디에 사용해야 할까?\n\n더 많은 화면을 만드는 데 사용할 수도 있다.\n더 많은 기능을 추가하는 데 사용할 수도 있다.\n\n하지만 나는 그 시간을 문제를 더 깊게 이해하는 데 사용해야 한다고 생각한다.\n\n사용자를 더 많이 만나고,\n데이터를 더 깊게 분석하고,\n비즈니스 목표를 이해하고,\n개발자와 더 많은 대화를 나누는 것.\n\nAI는 제작 시간을 줄여주었다.\n그 덕분에 디자이너는 제품을 더 오래 고민할 수 있게 되었다.\n\n결국 AI의 가장 큰 가치는 화면을 대신 만들어주는 것이 아니다.\n\n디자이너가 더 중요한 일에 집중할 수 있도록 시간을 돌려주는 것이다.\n\n앞으로 Product Designer의 경쟁력은 얼마나 빨리 화면을 만드는가가 아니라,\n그렇게 확보한 시간을 어디에 사용하는가에서 결정될 것이다.\n\n나는 그 답이 문제 정의라고 믿는다.\nAI는 놀라운 속도로 해결책을 만들어낸다.\n\n몇 줄의 프롬프트만으로 와이어프레임을 만들고,\n컴포넌트를 생성하며,\nHTML과 CSS를 작성하고,\n프로토타입까지 완성한다.\n\n예전에는 화면 하나를 만드는 데 하루가 걸렸다면, 이제는 몇 분이면 충분한 시대가 되었다.\n\n많은 사람들은 이것을 '생산성이 높아졌다'고 이야기한다.\n\n나는 조금 다르게 생각한다.\n\nAI가 만들어준 것은 단순히 시간이 아니다.\n생각할 수 있는 시간을 되돌려 준 것이다.\n\n그렇다면 디자이너는 그 시간을 어디에 사용해야 할까?\n\n더 많은 화면을 만드는 데 사용할 수도 있다.\n더 많은 기능을 추가하는 데 사용할 수도 있다.\n\n하지만 나는 그 시간을 문제를 더 깊게 이해하는 데 사용해야 한다고 생각한다.\n\n사용자를 더 많이 만나고,\n데이터를 더 깊게 분석하고,\n비즈니스 목표를 이해하고,\n개발자와 더 많은 대화를 나누는 것.\n\nAI는 제작 시간을 줄여주었다.\n그 덕분에 디자이너는 제품을 더 오래 고민할 수 있게 되었다.\n\n결국 AI의 가장 큰 가치는 화면을 대신 만들어주는 것이 아니다.\n\n디자이너가 더 중요한 일에 집중할 수 있도록 시간을 돌려주는 것이다.\n\n앞으로 Product Designer의 경쟁력은 얼마나 빨리 화면을 만드는가가 아니라,\n그렇게 확보한 시간을 어디에 사용하는가에서 결정될 것이다.\n\n나는 그 답이 문제 정의라고 믿는다.\n좋은 제품은 정답이 아니라 질문에서 시작된다.\n많은 사람들이 디자인을 해결책을 만드는 직업이라고 생각한다.\n\n하지만 내가 경험한 디자인은 조금 달랐다.\n\n좋은 디자인은 언제나 질문에서 시작됐다.\n\n사용자는 왜 이탈하는가.\n왜 이 기능을 사용하지 않는가.\n왜 우리는 이것을 만들려고 하는가.\n그리고 이 문제를 해결하는 것이 정말 비즈니스에도 도움이 되는가.\n\n이 질문이 명확해지는 순간 해결책은 놀라울 정도로 단순해진다.\n\nAI는 앞으로 더 빠르게 화면을 만들 것이다.\n하지만 어떤 문제를 해결해야 하는지 정의하는 일은 여전히 사람의 몫이다.\n\n그래서 나는 Product Designer의 가장 중요한 역량은 UI를 설계하는 능력이 아니라,\n사용자와 비즈니스가 함께 성공할 수 있는 문제를 정의하는 능력이라고 믿는다.\n\n좋은 제품은 언제나 화면보다 먼저, 올바른 질문에서 시작된다.\n많은 사람들이 디자인을 해결책을 만드는 직업이라고 생각한다.\n\n하지만 내가 경험한 디자인은 조금 달랐다.\n\n좋은 디자인은 언제나 질문에서 시작됐다.\n\n사용자는 왜 이탈하는가.\n왜 이 기능을 사용하지 않는가.\n왜 우리는 이것을 만들려고 하는가.\n그리고 이 문제를 해결하는 것이 정말 비즈니스에도 도움이 되는가.\n\n이 질문이 명확해지는 순간 해결책은 놀라울 정도로 단순해진다.\n\nAI는 앞으로 더 빠르게 화면을 만들 것이다.\n하지만 어떤 문제를 해결해야 하는지 정의하는 일은 여전히 사람의 몫이다.\n\n그래서 나는 Product Designer의 가장 중요한 역량은 UI를 설계하는 능력이 아니라,\n사용자와 비즈니스가 함께 성공할 수 있는 문제를 정의하는 능력이라고 믿는다.\n\n좋은 제품은 언제나 화면보다 먼저, 올바른 질문에서 시작된다.",
+    "draft": false
+  },
+  {
+    "id": "thinking-3",
+    "title": "좋은 UX는 보이지 않는다.",
+    "category": "디자인 생각",
+    "meta": "UX",
+    "text": "좋은 UX는 보이지 않는다.\n좋은 UX는 칭찬받지 않는다.\n누군가 제품을 사용하고 나서 이렇게 말하는 경우는 많지 않다.\n\n\"회원가입 UX가 정말 좋았어요.\"\n\"결제 플로우가 감동적이었어요.\"\n\"이 화면의 Information Architecture가 정말 훌륭하네요.\"\n\n사용자는 이런 말을 하지 않는다.\n그저 원하는 일을 끝내고 제품을 닫는다.\n\n반대로 좋지 않은 경험은 아주 오래 기억한다.\n\n로그인이 되지 않는 순간.\n버튼을 찾지 못하는 순간.\n결제가 실패하는 순간.\n어디를 눌러야 할지 몰라 멈춰 서는 순간.\n\n좋은 UX는 존재감이 없다.\n사용자가 제품보다 자신의 목적에 집중할 수 있도록 만들기 때문이다.\n\nUX는 눈에 띄는 경험이 아니라, 생각하지 않아도 되는 경험을 만드는 일이다.\n누군가 제품을 사용하고 나서 이렇게 말하는 경우는 많지 않다.\n\n\"회원가입 UX가 정말 좋았어요.\"\n\"결제 플로우가 감동적이었어요.\"\n\"이 화면의 Information Architecture가 정말 훌륭하네요.\"\n\n사용자는 이런 말을 하지 않는다.\n그저 원하는 일을 끝내고 제품을 닫는다.\n\n반대로 좋지 않은 경험은 아주 오래 기억한다.\n\n로그인이 되지 않는 순간.\n버튼을 찾지 못하는 순간.\n결제가 실패하는 순간.\n어디를 눌러야 할지 몰라 멈춰 서는 순간.\n\n좋은 UX는 존재감이 없다.\n사용자가 제품보다 자신의 목적에 집중할 수 있도록 만들기 때문이다.\n\nUX는 눈에 띄는 경험이 아니라, 생각하지 않아도 되는 경험을 만드는 일이다.\n최고의 UX는 사용자가 고민하지 않는다.\nApple의 Face ID는 좋은 예다.\n\n우리는 하루에도 수십 번 스마트폰의 잠금을 해제한다.\n하지만 Face ID를 사용할 때마다 기술을 의식하지는 않는다.\n\n기술은 복잡하다.\n하지만 경험은 단순하다.\n\nAmazon의 One-Click 구매도 마찬가지다.\n결제 과정에서 사용자가 고민해야 하는 단계를 최대한 제거했다.\n\n좋은 UX는 기능을 추가하는 것이 아니라,\n사용자가 고민해야 하는 순간을 하나씩 제거하는 과정이다.\nApple의 Face ID는 좋은 예다.\n\n우리는 하루에도 수십 번 스마트폰의 잠금을 해제한다.\n하지만 Face ID를 사용할 때마다 기술을 의식하지는 않는다.\n\n기술은 복잡하다.\n하지만 경험은 단순하다.\n\nAmazon의 One-Click 구매도 마찬가지다.\n결제 과정에서 사용자가 고민해야 하는 단계를 최대한 제거했다.\n\n좋은 UX는 기능을 추가하는 것이 아니라,\n사용자가 고민해야 하는 순간을 하나씩 제거하는 과정이다.\nUX는 인지부하를 줄이는 디자인이다.\n사람은 생각보다 많은 것을 기억하지 못한다.\n\n심리학에서는 이를 인지부하(Cognitive Load)라고 부른다.\n\n선택지가 많아질수록 결정은 어려워지고,\n정보가 많아질수록 이해는 느려진다.\n\n토스가 많은 사람들에게 직관적으로 느껴졌던 이유도 여기에 있다.\n복잡한 금융 서비스를 단순하게 만든 것이 아니라,\n복잡한 선택을 제거했기 때문이다.\n\n좋은 UX는 화면을 단순하게 만드는 것이 아니다.\n사용자의 머릿속을 단순하게 만드는 일이다.\n사람은 생각보다 많은 것을 기억하지 못한다.\n\n심리학에서는 이를 인지부하(Cognitive Load)라고 부른다.\n\n선택지가 많아질수록 결정은 어려워지고,\n정보가 많아질수록 이해는 느려진다.\n\n토스가 많은 사람들에게 직관적으로 느껴졌던 이유도 여기에 있다.\n복잡한 금융 서비스를 단순하게 만든 것이 아니라,\n복잡한 선택을 제거했기 때문이다.\n\n좋은 UX는 화면을 단순하게 만드는 것이 아니다.\n사용자의 머릿속을 단순하게 만드는 일이다.\n스타트업에서 가장 많이 했던 일은 화면을 지우는 일이었다.\n내가 스타트업에서 가장 많이 했던 일은 새로운 화면을 만드는 것이 아니라,\n화면을 삭제하고,\n버튼을 줄이고,\n설명을 없애고,\n선택지를 줄이는 일이었다.\n\n기능은 많아졌지만 사용자는 더 헷갈렸다.\n\n그때 깨달았다.\n\n사용자가 원하는 것은 더 많은 기능이 아니라,\n더 적은 고민이라는 것을.\n\nUX의 역할은 기능을 설명하는 것이 아니라,\n설명이 필요 없도록 만드는 것이다.\n내가 스타트업에서 가장 많이 했던 일은 새로운 화면을 만드는 것이 아니라,\n화면을 삭제하고,\n버튼을 줄이고,\n설명을 없애고,\n선택지를 줄이는 일이었다.\n\n기능은 많아졌지만 사용자는 더 헷갈렸다.\n\n그때 깨달았다.\n\n사용자가 원하는 것은 더 많은 기능이 아니라,\n더 적은 고민이라는 것을.\n\nUX의 역할은 기능을 설명하는 것이 아니라,\n설명이 필요 없도록 만드는 것이다.\nAI 시대에도 UX는 사라지지 않는다.\nAI는 이제 화면을 생성할 수 있다.\n몇 줄의 프롬프트만으로 UI와 코드까지 만든다.\n\n하지만 AI가 생성하는 것은 화면이다.\n경험은 아니다.\n\n좋은 UX는 버튼의 위치보다,\n사용자가 왜 이 버튼을 눌러야 하는지,\n무엇을 기대하는지,\n어떤 순서로 행동하는지가 더 중요하다.\n\nAI는 수많은 UI를 만들 수 있다.\n하지만 사용자가 생각해야 하는 순간을 줄이는 일은 여전히 사람의 몫이다.\nAI는 이제 화면을 생성할 수 있다.\n몇 줄의 프롬프트만으로 UI와 코드까지 만든다.\n\n하지만 AI가 생성하는 것은 화면이다.\n경험은 아니다.\n\n좋은 UX는 버튼의 위치보다,\n사용자가 왜 이 버튼을 눌러야 하는지,\n무엇을 기대하는지,\n어떤 순서로 행동하는지가 더 중요하다.\n\nAI는 수많은 UI를 만들 수 있다.\n하지만 사용자가 생각해야 하는 순간을 줄이는 일은 여전히 사람의 몫이다.\n최고의 UX는 설명이 필요 없다.\n좋은 UX는 화려하지 않다.\n\n사용자는 그것을 기억하지도 않는다.\n왜냐하면 UX가 아니라 자신의 목적에 집중했기 때문이다.\n\n디자인은 사용자가 제품을 보게 만드는 일이 아니다.\n제품을 잊게 만드는 일이다.\n\n나는 앞으로도 새로운 기능을 추가하기보다,\n사용자가 생각해야 하는 순간을 하나씩 줄이는 디자이너가 되고 싶다.\n\n좋은 UX는 보이지 않는다.\n하지만 사용자가 아무런 불편 없이 목적을 이루는 순간,\n그 경험은 분명히 존재한다.\n좋은 UX는 화려하지 않다.\n\n사용자는 그것을 기억하지도 않는다.\n왜냐하면 UX가 아니라 자신의 목적에 집중했기 때문이다.\n\n디자인은 사용자가 제품을 보게 만드는 일이 아니다.\n제품을 잊게 만드는 일이다.\n\n나는 앞으로도 새로운 기능을 추가하기보다,\n사용자가 생각해야 하는 순간을 하나씩 줄이는 디자이너가 되고 싶다.\n\n좋은 UX는 보이지 않는다.\n하지만 사용자가 아무런 불편 없이 목적을 이루는 순간,\n그 경험은 분명히 존재한다.",
+    "draft": false
+  },
+  {
+    "id": "thinking-4",
+    "title": "디자인 시스템은 컴포넌트 모음이 아니다.",
+    "category": "디자인 생각",
+    "meta": "Design Systems",
+    "text": "디자인 시스템은 컴포넌트 모음이 아니다.\n우리는 왜 디자인 시스템을 만들기 시작했을까?\n디자인 시스템은 처음부터 디자이너를 위한 도구는 아니었다.\n\n조직이 성장하면서 발생하는 문제를 해결하기 위한 방법이었다.\n\n제품이 커질수록 같은 버튼이 조금씩 달라지기 시작한다.\n\n어떤 화면은 Radius가 8px이고,\n어떤 화면은 12px이며,\n같은 Primary Button인데도 색상이 조금씩 다르다.\n\n처음에는 작은 차이처럼 보인다.\n\n하지만 제품이 성장할수록 그 작은 차이는 유지보수 비용이 되고,\n사용자 경험의 일관성을 무너뜨린다.\n\n그래서 디자인 시스템이 등장했다.\n\n컴포넌트를 재사용하고,\n디자인 품질을 일정하게 유지하며,\n더 빠르게 제품을 만들기 위해서다.\n\n하지만 시간이 지나면서 우리는 디자인 시스템을 조금 단순하게 이해하기 시작했다.\n\nButton.\nInput.\nCard.\nModal.\n\n디자인 시스템을 컴포넌트 라이브러리와 같은 의미로 사용하기 시작한 것이다.\n\n하지만 컴포넌트는 결과다.\n\n디자인 시스템의 본질은 좋은 의사결정을 반복하기 위한 기준이다.\n디자인 시스템은 처음부터 디자이너를 위한 도구는 아니었다.\n\n조직이 성장하면서 발생하는 문제를 해결하기 위한 방법이었다.\n\n제품이 커질수록 같은 버튼이 조금씩 달라지기 시작한다.\n\n어떤 화면은 Radius가 8px이고,\n어떤 화면은 12px이며,\n같은 Primary Button인데도 색상이 조금씩 다르다.\n\n처음에는 작은 차이처럼 보인다.\n\n하지만 제품이 성장할수록 그 작은 차이는 유지보수 비용이 되고,\n사용자 경험의 일관성을 무너뜨린다.\n\n그래서 디자인 시스템이 등장했다.\n\n컴포넌트를 재사용하고,\n디자인 품질을 일정하게 유지하며,\n더 빠르게 제품을 만들기 위해서다.\n\n하지만 시간이 지나면서 우리는 디자인 시스템을 조금 단순하게 이해하기 시작했다.\n\nButton.\nInput.\nCard.\nModal.\n\n디자인 시스템을 컴포넌트 라이브러리와 같은 의미로 사용하기 시작한 것이다.\n\n하지만 컴포넌트는 결과다.\n\n디자인 시스템의 본질은 좋은 의사결정을 반복하기 위한 기준이다.\n대부분의 디자인 시스템은 왜 오래가지 못할까?\n많은 회사들이 디자인 시스템을 만든다.\n\n하지만 몇 년이 지나면 대부분 비슷한 문제를 겪는다.\n\n새로운 컴포넌트는 계속 추가되고,\n예외 상황은 점점 늘어나며,\n결국 \"이번 화면만 조금 다르게 갑시다.\"라는 말이 반복된다.\n\n왜 이런 일이 생길까?\n\n나는 이유가 하나라고 생각한다.\n\n우리는 컴포넌트는 관리했지만,\n의도(Intent)는 관리하지 않았기 때문이다.\n\nButton은 정의되어 있다.\n\n하지만 왜 Radius가 12px인지,\n왜 이 색상을 사용하는지,\n왜 여백을 이렇게 유지하는지,\n왜 이 타이포그래피를 선택했는지는 기록되지 않는다.\n\n결국 사람은 규칙보다 화면을 따라 하기 시작한다.\n\n좋은 디자인 시스템은 컴포넌트를 복사하는 시스템이 아니라,\n의사결정의 이유를 공유하는 시스템이어야 한다.\n많은 회사들이 디자인 시스템을 만든다.\n\n하지만 몇 년이 지나면 대부분 비슷한 문제를 겪는다.\n\n새로운 컴포넌트는 계속 추가되고,\n예외 상황은 점점 늘어나며,\n결국 \"이번 화면만 조금 다르게 갑시다.\"라는 말이 반복된다.\n\n왜 이런 일이 생길까?\n\n나는 이유가 하나라고 생각한다.\n\n우리는 컴포넌트는 관리했지만,\n의도(Intent)는 관리하지 않았기 때문이다.\n\nButton은 정의되어 있다.\n\n하지만 왜 Radius가 12px인지,\n왜 이 색상을 사용하는지,\n왜 여백을 이렇게 유지하는지,\n왜 이 타이포그래피를 선택했는지는 기록되지 않는다.\n\n결국 사람은 규칙보다 화면을 따라 하기 시작한다.\n\n좋은 디자인 시스템은 컴포넌트를 복사하는 시스템이 아니라,\n의사결정의 이유를 공유하는 시스템이어야 한다.\nAI는 Figma를 이해하지 않는다. 의도를 이해한다.\n최근 포트폴리오 웹사이트를 AI와 함께 만들면서 흥미로운 경험을 했다.\n\n처음에는 Figma 파일만 전달하면 충분할 것이라고 생각했다.\n\n하지만 결과는 기대와 달랐다.\n\nAI는 화면을 비슷하게 만들 수는 있었지만,\n디자인이 가진 미묘한 리듬과 계층 구조는 제대로 이해하지 못했다.\n\n그래서 방식을 바꿨다.\n\n컴포넌트를 설명하는 대신,\n디자인의 의도를 문서로 정리하기 시작했다.\n\n예를 들면 이런 방식이다.\n\nAbout Screen Prompt\n\nHeadline\nSchibsted Grotesk Regular\n48 / 60\n#6D6D6D\n\nHeadline Accent\nSchibsted Grotesk Semibold\n48 / 60\n#000000\n\nSection Title\nSchibsted Grotesk Semibold\n28 / 30\n\nStatistics\nSchibsted Grotesk Semibold\n70 / 86\n\nGrid\nPadding 28\nRadius 10\nDivider 1px\n\nArticle\nPretendard Medium\n16 / 28\n\nRules\n\nMaintain generous whitespace.\nKeep visual rhythm.\nNever reduce hierarchy.\n\n흥미로운 점은 여기에 Button도 없고,\nCard도 없으며,\nComponent 이름도 없다는 것이다.\n\n대신 디자인을 구성하는 기준과 원칙만 존재한다.\n\nAI는 이 문서를 읽고 Figma와 거의 동일한 분위기의 결과물을 만들어냈다.\n\n그 순간 깨달았다.\n\nAI는 디자인을 보는 것이 아니라,\n디자인의 의도를 읽고 있었던 것이다.\n최근 포트폴리오 웹사이트를 AI와 함께 만들면서 흥미로운 경험을 했다.\n\n처음에는 Figma 파일만 전달하면 충분할 것이라고 생각했다.\n\n하지만 결과는 기대와 달랐다.\n\nAI는 화면을 비슷하게 만들 수는 있었지만,\n디자인이 가진 미묘한 리듬과 계층 구조는 제대로 이해하지 못했다.\n\n그래서 방식을 바꿨다.\n\n컴포넌트를 설명하는 대신,\n디자인의 의도를 문서로 정리하기 시작했다.\n\n예를 들면 이런 방식이다.\n\nAbout Screen Prompt\n\nHeadline\nSchibsted Grotesk Regular\n48 / 60\n#6D6D6D\n\nHeadline Accent\nSchibsted Grotesk Semibold\n48 / 60\n#000000\n\nSection Title\nSchibsted Grotesk Semibold\n28 / 30\n\nStatistics\nSchibsted Grotesk Semibold\n70 / 86\n\nGrid\nPadding 28\nRadius 10\nDivider 1px\n\nArticle\nPretendard Medium\n16 / 28\n\nRules\n\nMaintain generous whitespace.\nKeep visual rhythm.\nNever reduce hierarchy.\n\n흥미로운 점은 여기에 Button도 없고,\nCard도 없으며,\nComponent 이름도 없다는 것이다.\n\n대신 디자인을 구성하는 기준과 원칙만 존재한다.\n\nAI는 이 문서를 읽고 Figma와 거의 동일한 분위기의 결과물을 만들어냈다.\n\n그 순간 깨달았다.\n\nAI는 디자인을 보는 것이 아니라,\n디자인의 의도를 읽고 있었던 것이다.\nAI 시대의 디자인 시스템은 번역 계층이 된다.\n예전에는 디자이너와 개발자가 같은 화면을 보며 작업했다.\n\nFigma\n↓\nDeveloper\n↓\nProduct\n\n하지만 AI가 개발 과정에 들어오기 시작하면서 새로운 단계가 생겼다.\n\nFigma\n↓\nAI Translation Layer\n↓\nAI\n↓\nProduction\n\nAI는 픽셀을 해석하지 않는다.\n\n문장을 해석한다.\n규칙을 해석한다.\n디자인 원칙을 해석한다.\n\n그래서 앞으로 중요한 것은 컴포넌트를 얼마나 많이 만들어 두었는지가 아니다.\n\n디자인을 AI가 이해할 수 있는 언어로 얼마나 잘 번역했는가이다.\n\n나는 이것이 앞으로 디자인 시스템의 새로운 역할이라고 생각한다.\n예전에는 디자이너와 개발자가 같은 화면을 보며 작업했다.\n\nFigma\n↓\nDeveloper\n↓\nProduct\n\n하지만 AI가 개발 과정에 들어오기 시작하면서 새로운 단계가 생겼다.\n\nFigma\n↓\nAI Translation Layer\n↓\nAI\n↓\nProduction\n\nAI는 픽셀을 해석하지 않는다.\n\n문장을 해석한다.\n규칙을 해석한다.\n디자인 원칙을 해석한다.\n\n그래서 앞으로 중요한 것은 컴포넌트를 얼마나 많이 만들어 두었는지가 아니다.\n\n디자인을 AI가 이해할 수 있는 언어로 얼마나 잘 번역했는가이다.\n\n나는 이것이 앞으로 디자인 시스템의 새로운 역할이라고 생각한다.\n디자인 시스템의 Source of Truth도 바뀌고 있다.\n오랫동안 Figma는 디자인의 Source of Truth였다.\n\n디자이너는 Figma를 수정했고,\n개발자는 Figma를 보며 구현했다.\n\n하지만 AI Native Workflow에서는 조금 다른 변화가 일어나고 있다.\n\n디자인 원칙은 문서로 정의되고,\nDesign Token은 코드에서 관리되며,\nAI는 그 규칙을 읽고 화면을 생성한다.\n\n즉,\n\nSource of Truth가 화면에서\n디자인 언어로 이동하고 있는 것이다.\n\n앞으로 Product Designer의 역할은 컴포넌트를 많이 만드는 사람이 아니라,\n사람과 AI 모두가 이해할 수 있는 디자인 언어를 설계하는 사람에 더 가까워질 것이다.\n오랫동안 Figma는 디자인의 Source of Truth였다.\n\n디자이너는 Figma를 수정했고,\n개발자는 Figma를 보며 구현했다.\n\n하지만 AI Native Workflow에서는 조금 다른 변화가 일어나고 있다.\n\n디자인 원칙은 문서로 정의되고,\nDesign Token은 코드에서 관리되며,\nAI는 그 규칙을 읽고 화면을 생성한다.\n\n즉,\n\nSource of Truth가 화면에서\n디자인 언어로 이동하고 있는 것이다.\n\n앞으로 Product Designer의 역할은 컴포넌트를 많이 만드는 사람이 아니라,\n사람과 AI 모두가 이해할 수 있는 디자인 언어를 설계하는 사람에 더 가까워질 것이다.\n디자인 시스템의 본질은 컴포넌트가 아니다.\nAI는 버튼을 만들 수 있다.\n\n카드를 만들 수 있다.\n\n심지어 하나의 화면도 만들 수 있다.\n\n하지만 어떤 원칙으로 만들어야 하는지는 스스로 결정하지 못한다.\n\n그 기준을 만드는 것이 디자인 시스템이다.\n\n그리고 그 기준은 더 이상 Figma 안에만 존재하지 않는다.\n\n문서가 될 수도 있고,\n코드가 될 수도 있으며,\nAI가 읽을 수 있는 하나의 언어가 될 수도 있다.\n\n나는 앞으로 디자인 시스템이 컴포넌트 라이브러리에서\n사람과 AI가 함께 이해하는 공통 언어로 진화할 것이라고 믿는다.\n\n좋은 디자인 시스템은 같은 버튼을 반복해서 만드는 것이 아니라,\n같은 철학을 반복해서 구현할 수 있도록 만드는 시스템이기 때문이다.\nAI는 버튼을 만들 수 있다.\n\n카드를 만들 수 있다.\n\n심지어 하나의 화면도 만들 수 있다.\n\n하지만 어떤 원칙으로 만들어야 하는지는 스스로 결정하지 못한다.\n\n그 기준을 만드는 것이 디자인 시스템이다.\n\n그리고 그 기준은 더 이상 Figma 안에만 존재하지 않는다.\n\n문서가 될 수도 있고,\n코드가 될 수도 있으며,\nAI가 읽을 수 있는 하나의 언어가 될 수도 있다.\n\n나는 앞으로 디자인 시스템이 컴포넌트 라이브러리에서\n사람과 AI가 함께 이해하는 공통 언어로 진화할 것이라고 믿는다.\n\n좋은 디자인 시스템은 같은 버튼을 반복해서 만드는 것이 아니라,\n같은 철학을 반복해서 구현할 수 있도록 만드는 시스템이기 때문이다.",
+    "draft": false
+  },
+  {
+    "id": "thinking-5",
+    "title": "복잡함을 단순하게 만드는 디자인.",
+    "category": "디자인 생각",
+    "meta": "Design Thinking",
+    "text": "복잡함을 단순하게 만드는 디자인\n사람들은 기능을 원하는 것이 아니다.\n프로젝트를 진행하다 보면 자주 듣는 요청이 있다.\n\n\"이 기능도 추가하면 좋을 것 같습니다.\"\n\"경쟁사에도 있으니까 우리도 넣어야 하지 않을까요?\"\n\"사용자가 선택할 수 있도록 옵션을 더 늘려주세요.\"\n\n언뜻 보면 모두 맞는 이야기처럼 들린다.\n\n하지만 흥미로운 사실이 있다.\n\n사람들은 기능을 좋아하는 것이 아니다.\n\n자신의 문제를 해결해 주는 것을 좋아한다.\n\n사용자는 더 많은 버튼을 원하지 않는다.\n더 많은 메뉴도 원하지 않는다.\n더 많은 설정도 원하지 않는다.\n\n그저 원하는 일을 가장 빠르고 쉽게 끝내고 싶을 뿐이다.\n\n좋은 디자인은 기능을 추가하는 일이 아니라,\n사용자의 목적까지 가는 거리를 줄이는 일이다.\n프로젝트를 진행하다 보면 자주 듣는 요청이 있다.\n\n\"이 기능도 추가하면 좋을 것 같습니다.\"\n\"경쟁사에도 있으니까 우리도 넣어야 하지 않을까요?\"\n\"사용자가 선택할 수 있도록 옵션을 더 늘려주세요.\"\n\n언뜻 보면 모두 맞는 이야기처럼 들린다.\n\n하지만 흥미로운 사실이 있다.\n\n사람들은 기능을 좋아하는 것이 아니다.\n\n자신의 문제를 해결해 주는 것을 좋아한다.\n\n사용자는 더 많은 버튼을 원하지 않는다.\n더 많은 메뉴도 원하지 않는다.\n더 많은 설정도 원하지 않는다.\n\n그저 원하는 일을 가장 빠르고 쉽게 끝내고 싶을 뿐이다.\n\n좋은 디자인은 기능을 추가하는 일이 아니라,\n사용자의 목적까지 가는 거리를 줄이는 일이다.\n단순함은 아무것도 없는 상태가 아니다.\n많은 사람들이 단순한 디자인을 보고 이렇게 말한다.\n\n\"이건 너무 심플해서 만들기 쉬웠겠네요.\"\n\n하지만 실제로는 정반대다.\n\n복잡한 화면은 기능을 계속 추가하면 된다.\n\n단순한 화면은 무엇을 남기고 무엇을 버릴지 끊임없이 결정해야 한다.\n\nLinear를 처음 사용했을 때 많은 사람들이 놀랐던 이유도 여기에 있다.\n\n기능은 충분히 많다.\n하지만 복잡하지 않다.\n\n왜냐하면 사용자가 지금 당장 필요하지 않은 정보는 과감하게 뒤로 숨겼기 때문이다.\n\n좋은 디자인은 정보를 줄이는 것이 아니다.\n\n사용자가 지금 생각하지 않아도 되는 것을 제거하는 일이다.\n\n단순함은 비어 있는 화면이 아니다.\n의도가 명확한 화면이다.\n많은 사람들이 단순한 디자인을 보고 이렇게 말한다.\n\n\"이건 너무 심플해서 만들기 쉬웠겠네요.\"\n\n하지만 실제로는 정반대다.\n\n복잡한 화면은 기능을 계속 추가하면 된다.\n\n단순한 화면은 무엇을 남기고 무엇을 버릴지 끊임없이 결정해야 한다.\n\nLinear를 처음 사용했을 때 많은 사람들이 놀랐던 이유도 여기에 있다.\n\n기능은 충분히 많다.\n하지만 복잡하지 않다.\n\n왜냐하면 사용자가 지금 당장 필요하지 않은 정보는 과감하게 뒤로 숨겼기 때문이다.\n\n좋은 디자인은 정보를 줄이는 것이 아니다.\n\n사용자가 지금 생각하지 않아도 되는 것을 제거하는 일이다.\n\n단순함은 비어 있는 화면이 아니다.\n의도가 명확한 화면이다.\n좋은 디자이너는 추가보다 제거를 더 많이 한다.\n스타트업에서 제품을 만들며 가장 많이 했던 일은 새로운 기능을 추가하는 것이 아니었다.\n\n오히려 그 반대였다.\n\n버튼을 하나 없애고,\n단계를 하나 줄이고,\n설명을 삭제하고,\n선택지를 줄였다.\n\n처음에는 불안했다.\n\n기능이 줄어들면 제품의 가치도 함께 줄어드는 것이 아닐까 생각했다.\n\n하지만 실제 사용자 테스트는 다른 결과를 보여주었다.\n\n설명이 줄어들수록 이해는 빨라졌고,\n선택지가 줄어들수록 의사결정도 빨라졌다.\n\n그때 깨달았다.\n\n사용자는 기능을 배우기 위해 서비스를 사용하는 것이 아니다.\n\n자신의 목적을 이루기 위해 서비스를 사용한다.\n\n좋은 디자인은 기능을 설명하는 것이 아니라,\n기능을 설명하지 않아도 되는 상태를 만드는 일이다.\n스타트업에서 제품을 만들며 가장 많이 했던 일은 새로운 기능을 추가하는 것이 아니었다.\n\n오히려 그 반대였다.\n\n버튼을 하나 없애고,\n단계를 하나 줄이고,\n설명을 삭제하고,\n선택지를 줄였다.\n\n처음에는 불안했다.\n\n기능이 줄어들면 제품의 가치도 함께 줄어드는 것이 아닐까 생각했다.\n\n하지만 실제 사용자 테스트는 다른 결과를 보여주었다.\n\n설명이 줄어들수록 이해는 빨라졌고,\n선택지가 줄어들수록 의사결정도 빨라졌다.\n\n그때 깨달았다.\n\n사용자는 기능을 배우기 위해 서비스를 사용하는 것이 아니다.\n\n자신의 목적을 이루기 위해 서비스를 사용한다.\n\n좋은 디자인은 기능을 설명하는 것이 아니라,\n기능을 설명하지 않아도 되는 상태를 만드는 일이다.\nAI는 복잡한 화면도 쉽게 만든다.\nAI는 놀라운 속도로 화면을 생성한다.\n\n프롬프트 하나만 입력하면 수십 개의 화면을 몇 초 만에 만들어 낸다.\n\n하지만 여기서 흥미로운 문제가 하나 생긴다.\n\n화면을 만드는 비용이 거의 0에 가까워질수록,\n기능을 추가하는 유혹은 더 커진다.\n\n\"이것도 넣을까?\"\n\"저 기능도 추가할까?\"\n\"AI가 금방 만들어주는데 그냥 넣자.\"\n\n하지만 좋은 제품은 추가된 기능의 개수로 평가되지 않는다.\n\n얼마나 많은 기능을 만들었는지가 아니라,\n얼마나 많은 고민을 제거했는지가 더 중요하다.\n\nAI는 화면을 쉽게 만든다.\n\n그래서 앞으로 디자이너에게 더 중요한 능력은\n무엇을 만들 것인가가 아니라,\n\n무엇을 만들지 않을 것인가를 결정하는 능력이 될 것이다.\nAI는 놀라운 속도로 화면을 생성한다.\n\n프롬프트 하나만 입력하면 수십 개의 화면을 몇 초 만에 만들어 낸다.\n\n하지만 여기서 흥미로운 문제가 하나 생긴다.\n\n화면을 만드는 비용이 거의 0에 가까워질수록,\n기능을 추가하는 유혹은 더 커진다.\n\n\"이것도 넣을까?\"\n\"저 기능도 추가할까?\"\n\"AI가 금방 만들어주는데 그냥 넣자.\"\n\n하지만 좋은 제품은 추가된 기능의 개수로 평가되지 않는다.\n\n얼마나 많은 기능을 만들었는지가 아니라,\n얼마나 많은 고민을 제거했는지가 더 중요하다.\n\nAI는 화면을 쉽게 만든다.\n\n그래서 앞으로 디자이너에게 더 중요한 능력은\n무엇을 만들 것인가가 아니라,\n\n무엇을 만들지 않을 것인가를 결정하는 능력이 될 것이다.\n복잡함을 없애는 것은 용기가 필요한 일이다.\n무언가를 추가하는 것은 쉽다.\n\n하지만 제거하는 것은 어렵다.\n\n누군가는 그 기능을 원했을 수도 있고,\n대표의 아이디어일 수도 있으며,\n몇 달 동안 개발한 결과물일 수도 있다.\n\n그래서 많은 제품이 점점 복잡해진다.\n\n좋은 디자이너는 화면을 더 화려하게 만드는 사람이 아니다.\n\n사용자가 꼭 필요한 것만 남길 수 있도록 설득하는 사람이다.\n\n때로는 버튼 하나를 지우는 것이,\n새로운 기능 열 개를 만드는 것보다 더 큰 가치를 만든다.\n\n단순함은 게으름의 결과가 아니다.\n\n수많은 선택 끝에 남겨진 결과다.\n무언가를 추가하는 것은 쉽다.\n\n하지만 제거하는 것은 어렵다.\n\n누군가는 그 기능을 원했을 수도 있고,\n대표의 아이디어일 수도 있으며,\n몇 달 동안 개발한 결과물일 수도 있다.\n\n그래서 많은 제품이 점점 복잡해진다.\n\n좋은 디자이너는 화면을 더 화려하게 만드는 사람이 아니다.\n\n사용자가 꼭 필요한 것만 남길 수 있도록 설득하는 사람이다.\n\n때로는 버튼 하나를 지우는 것이,\n새로운 기능 열 개를 만드는 것보다 더 큰 가치를 만든다.\n\n단순함은 게으름의 결과가 아니다.\n\n수많은 선택 끝에 남겨진 결과다.\n좋은 디자인은 제거의 기술이다.\n나는 디자인을 화면을 꾸미는 일이라고 생각하지 않는다.\n\n복잡한 문제를 이해하고,\n그 안에서 정말 필요한 것만 남기는 과정이라고 생각한다.\n\n좋은 제품은 기능이 많은 제품이 아니다.\n\n사용자가 가장 적게 고민하는 제품이다.\n\nAI는 앞으로도 수많은 화면을 만들어 줄 것이다.\n\n하지만 어떤 기능을 제거해야 하는지,\n어떤 정보는 보여주지 않아야 하는지,\n어떤 선택은 사용자가 하지 않아도 되는지는 여전히 사람이 결정해야 한다.\n\n좋은 디자이너는 화면을 많이 만드는 사람이 아니다.\n\n사용자가 생각해야 하는 순간을 하나씩 지워가는 사람이다.\n\n결국 좋은 디자인의 목표는 복잡한 것을 만드는 것이 아니라,\n복잡한 것을 단순하게 만드는 것이다.\n나는 디자인을 화면을 꾸미는 일이라고 생각하지 않는다.\n\n복잡한 문제를 이해하고,\n그 안에서 정말 필요한 것만 남기는 과정이라고 생각한다.\n\n좋은 제품은 기능이 많은 제품이 아니다.\n\n사용자가 가장 적게 고민하는 제품이다.\n\nAI는 앞으로도 수많은 화면을 만들어 줄 것이다.\n\n하지만 어떤 기능을 제거해야 하는지,\n어떤 정보는 보여주지 않아야 하는지,\n어떤 선택은 사용자가 하지 않아도 되는지는 여전히 사람이 결정해야 한다.\n\n좋은 디자이너는 화면을 많이 만드는 사람이 아니다.\n\n사용자가 생각해야 하는 순간을 하나씩 지워가는 사람이다.\n\n결국 좋은 디자인의 목표는 복잡한 것을 만드는 것이 아니라,\n복잡한 것을 단순하게 만드는 것이다.",
+    "draft": false
+  },
+  {
+    "id": "thinking-6",
+    "title": "7년 동안 스타트업에서 배운 것들.",
+    "category": "디자인 생각",
+    "meta": "Career",
+    "text": "7년 동안 스타트업에서 배운 것들\n좋은 제품은 혼자 만들 수 없다.\n처음 디자이너가 되었을 때는 좋은 디자인만 하면 좋은 제품이 만들어질 것이라고 생각했다.\n\n더 예쁜 화면.\n더 좋은 인터랙션.\n더 완성도 높은 UI.\n\n그것이 디자이너의 가장 중요한 역할이라고 믿었다.\n\n하지만 스타트업에서 여러 제품을 만들면서 가장 먼저 깨달은 것은 전혀 다른 사실이었다.\n\n좋은 제품은 혼자 만들 수 없다.\n\nPM은 비즈니스를 이해하고,\n개발자는 기술적 제약을 이해하며,\n디자이너는 사용자를 이해한다.\n\n좋은 제품은 이 세 가지 관점이 만나는 지점에서 만들어진다.\n\n디자인은 혼자 잘하는 사람이 아니라,\n좋은 의사결정을 함께 만드는 사람이어야 한다.\n처음 디자이너가 되었을 때는 좋은 디자인만 하면 좋은 제품이 만들어질 것이라고 생각했다.\n\n더 예쁜 화면.\n더 좋은 인터랙션.\n더 완성도 높은 UI.\n\n그것이 디자이너의 가장 중요한 역할이라고 믿었다.\n\n하지만 스타트업에서 여러 제품을 만들면서 가장 먼저 깨달은 것은 전혀 다른 사실이었다.\n\n좋은 제품은 혼자 만들 수 없다.\n\nPM은 비즈니스를 이해하고,\n개발자는 기술적 제약을 이해하며,\n디자이너는 사용자를 이해한다.\n\n좋은 제품은 이 세 가지 관점이 만나는 지점에서 만들어진다.\n\n디자인은 혼자 잘하는 사람이 아니라,\n좋은 의사결정을 함께 만드는 사람이어야 한다.\n정답보다 질문이 더 중요했다.\n프로젝트를 진행하면서 가장 많이 했던 일은 화면을 그리는 것이 아니었다.\n\n회의였다.\n\n왜 이 기능이 필요한지,\n왜 사용자가 불편해하는지,\n왜 지금 이 문제를 해결해야 하는지 끊임없이 질문했다.\n\n신기하게도 질문이 명확해질수록 디자인은 점점 쉬워졌다.\n\n반대로 문제 정의가 흐릿한 프로젝트는 아무리 많은 화면을 만들어도 방향을 잃었다.\n\n좋은 디자이너는 답을 가장 빨리 만드는 사람이 아니다.\n\n좋은 질문을 가장 먼저 던지는 사람이다.\n프로젝트를 진행하면서 가장 많이 했던 일은 화면을 그리는 것이 아니었다.\n\n회의였다.\n\n왜 이 기능이 필요한지,\n왜 사용자가 불편해하는지,\n왜 지금 이 문제를 해결해야 하는지 끊임없이 질문했다.\n\n신기하게도 질문이 명확해질수록 디자인은 점점 쉬워졌다.\n\n반대로 문제 정의가 흐릿한 프로젝트는 아무리 많은 화면을 만들어도 방향을 잃었다.\n\n좋은 디자이너는 답을 가장 빨리 만드는 사람이 아니다.\n\n좋은 질문을 가장 먼저 던지는 사람이다.\n협업의 방식도 바뀌고 있다.\n스타트업에서 일하면서 가장 많이 배운 것 중 하나는 협업이었다.\n\n좋은 아이디어보다,\n좋은 커뮤니케이션이 더 중요하다는 것을 배웠다.\n\n디자이너는 PM과 이야기했고,\n개발자와 스펙을 맞췄으며,\nQA와 버그를 확인하고,\n마케팅과 브랜드를 논의했다.\n\n하나의 화면이 출시되기까지 수많은 사람의 손을 거쳤다.\n\n하지만 AI가 등장하면서 이 구조에도 변화가 생기기 시작했다.\n\n예전에는 디자이너가 화면을 설계하고,\n개발자가 구현하는 과정이 명확하게 나누어져 있었다.\n\n지금은 조금 다르다.\n\nAI는 디자인을 코드로 변환하고,\n프로토타입을 만들며,\n간단한 기능까지 구현한다.\n\n덕분에 디자이너는 이전보다 훨씬 독립적으로 제품을 만들 수 있게 되었다.\n\n혼자 아이디어를 검증하고,\nMVP를 만들고,\n실제 사용자 테스트까지 진행할 수 있는 시대가 열린 것이다.\n\n그렇다고 협업이 사라지는 것은 아니다.\n\n오히려 협업의 목적이 바뀌고 있다.\n\n예전에는 화면을 전달하기 위해 협업했다면,\n앞으로는 더 좋은 의사결정을 하기 위해 협업하게 될 것이다.\n\nAI가 제작을 담당할수록,\n사람은 방향을 결정하는 일에 더 많은 시간을 쓰게 된다.\n\n디자이너는 개발자에게 화면을 설명하는 사람이 아니라,\nPM, 개발자, AI와 함께 제품의 방향을 설계하는 사람이 되어가고 있다.\n\nAI는 역할을 없애지 않았다.\n역할의 경계를 흐리게 만들었다.\n\n협업은 줄어드는 것이 아니다.\n더 높은 수준으로 이동하고 있다.\n스타트업에서 일하면서 가장 많이 배운 것 중 하나는 협업이었다.\n\n좋은 아이디어보다,\n좋은 커뮤니케이션이 더 중요하다는 것을 배웠다.\n\n디자이너는 PM과 이야기했고,\n개발자와 스펙을 맞췄으며,\nQA와 버그를 확인하고,\n마케팅과 브랜드를 논의했다.\n\n하나의 화면이 출시되기까지 수많은 사람의 손을 거쳤다.\n\n하지만 AI가 등장하면서 이 구조에도 변화가 생기기 시작했다.\n\n예전에는 디자이너가 화면을 설계하고,\n개발자가 구현하는 과정이 명확하게 나누어져 있었다.\n\n지금은 조금 다르다.\n\nAI는 디자인을 코드로 변환하고,\n프로토타입을 만들며,\n간단한 기능까지 구현한다.\n\n덕분에 디자이너는 이전보다 훨씬 독립적으로 제품을 만들 수 있게 되었다.\n\n혼자 아이디어를 검증하고,\nMVP를 만들고,\n실제 사용자 테스트까지 진행할 수 있는 시대가 열린 것이다.\n\n그렇다고 협업이 사라지는 것은 아니다.\n\n오히려 협업의 목적이 바뀌고 있다.\n\n예전에는 화면을 전달하기 위해 협업했다면,\n앞으로는 더 좋은 의사결정을 하기 위해 협업하게 될 것이다.\n\nAI가 제작을 담당할수록,\n사람은 방향을 결정하는 일에 더 많은 시간을 쓰게 된다.\n\n디자이너는 개발자에게 화면을 설명하는 사람이 아니라,\nPM, 개발자, AI와 함께 제품의 방향을 설계하는 사람이 되어가고 있다.\n\nAI는 역할을 없애지 않았다.\n역할의 경계를 흐리게 만들었다.\n\n협업은 줄어드는 것이 아니다.\n더 높은 수준으로 이동하고 있다.\nAI는 디자이너의 역할을 더 선명하게 만들었다.\nAI는 화면을 만들 수 있다.\n\n코드를 작성할 수 있다.\n\n프로토타입도 생성한다.\n\n처음에는 디자이너의 역할이 줄어들 것이라고 생각했다.\n\n하지만 실제로 AI와 함께 제품을 만들면서 느낀 것은 정반대였다.\n\nAI는 제작을 빠르게 만들었다.\n\n대신 사람은 더 중요한 일을 해야 했다.\n\n문제를 정의하고,\n우선순위를 결정하며,\n비즈니스와 사용자의 균형을 맞추는 일.\n\nAI가 발전할수록 디자이너의 역할은 줄어드는 것이 아니라,\n더 본질적인 영역으로 이동하고 있었다.\nAI는 화면을 만들 수 있다.\n\n코드를 작성할 수 있다.\n\n프로토타입도 생성한다.\n\n처음에는 디자이너의 역할이 줄어들 것이라고 생각했다.\n\n하지만 실제로 AI와 함께 제품을 만들면서 느낀 것은 정반대였다.\n\nAI는 제작을 빠르게 만들었다.\n\n대신 사람은 더 중요한 일을 해야 했다.\n\n문제를 정의하고,\n우선순위를 결정하며,\n비즈니스와 사용자의 균형을 맞추는 일.\n\nAI가 발전할수록 디자이너의 역할은 줄어드는 것이 아니라,\n더 본질적인 영역으로 이동하고 있었다.\n결국 제품은 사람이 만든다.\n좋은 제품에는 공통점이 하나 있었다.\n\n뛰어난 디자이너가 있어서도 아니고,\n좋은 개발자가 있어서도 아니었다.\n\n서로를 존중하는 팀이었다.\n\n디자인은 설득이었고,\n개발은 협력이었으며,\n기획은 타협이었다.\n\n누군가 이기는 프로젝트보다,\n모두가 같은 문제를 바라보는 프로젝트가 훨씬 좋은 결과를 만들었다.\n\n좋은 제품은 좋은 문화에서 나온다.\n\n그리고 좋은 문화는 결국 사람에게서 시작된다.\n좋은 제품에는 공통점이 하나 있었다.\n\n뛰어난 디자이너가 있어서도 아니고,\n좋은 개발자가 있어서도 아니었다.\n\n서로를 존중하는 팀이었다.\n\n디자인은 설득이었고,\n개발은 협력이었으며,\n기획은 타협이었다.\n\n누군가 이기는 프로젝트보다,\n모두가 같은 문제를 바라보는 프로젝트가 훨씬 좋은 결과를 만들었다.\n\n좋은 제품은 좋은 문화에서 나온다.\n\n그리고 좋은 문화는 결국 사람에게서 시작된다.\n나는 앞으로도 사람을 위한 제품을 만들고 싶다.\n7년 동안 스타트업에서 수많은 제품을 만들었다.\n\n성공한 프로젝트도 있었고,\n실패한 프로젝트도 있었다.\n\n하지만 시간이 지나도 변하지 않은 것이 하나 있다.\n\n좋은 제품은 기술에서 시작되지 않는다.\n\n화면에서도 시작되지 않는다.\n\n사람을 이해하려는 태도에서 시작된다.\n\nAI는 앞으로도 계속 발전할 것이다.\n\n도구는 계속 바뀔 것이다.\n\n하지만 사용자를 이해하고,\n팀과 함께 문제를 해결하며,\n복잡한 것을 단순하게 만드는 일은 여전히 사람의 역할이다.\n\n그래서 나는 앞으로도 화면을 만드는 디자이너가 아니라,\n사람을 이해하는 Product Designer로 성장하고 싶다.\n\n기술은 변하지만,\n좋은 제품의 시작은 언제나 사람이라고 믿기 때문이다.\n7년 동안 스타트업에서 수많은 제품을 만들었다.\n\n성공한 프로젝트도 있었고,\n실패한 프로젝트도 있었다.\n\n하지만 시간이 지나도 변하지 않은 것이 하나 있다.\n\n좋은 제품은 기술에서 시작되지 않는다.\n\n화면에서도 시작되지 않는다.\n\n사람을 이해하려는 태도에서 시작된다.\n\nAI는 앞으로도 계속 발전할 것이다.\n\n도구는 계속 바뀔 것이다.\n\n하지만 사용자를 이해하고,\n팀과 함께 문제를 해결하며,\n복잡한 것을 단순하게 만드는 일은 여전히 사람의 역할이다.\n\n그래서 나는 앞으로도 화면을 만드는 디자이너가 아니라,\n사람을 이해하는 Product Designer로 성장하고 싶다.\n\n기술은 변하지만,\n좋은 제품의 시작은 언제나 사람이라고 믿기 때문이다.",
+    "draft": false
+  }
+]

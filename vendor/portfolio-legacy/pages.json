@@ -1,0 +1,72 @@
+[
+  {
+    "id": "soma-ai",
+    "path": "projects/soma.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/projects/soma.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "c41add75df500d52034a854ee3b415b6921c22133b3ee0aaa54e4948d0cbe68e"
+  },
+  {
+    "id": "tada-rider",
+    "path": "projects/tada-rider-app.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/projects/tada-rider-app.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "f87d73c4cd6f7aaaff6cf5cc1b82c4a0d941f35ebe6b9bbd360bd0dffa6449cf"
+  },
+  {
+    "id": "tada-driver",
+    "path": "projects/tada-driver-app.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/projects/tada-driver-app.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "5c11a9d388a5d0d674171e86fd4a2fe2841e727152e62b4168901c106ee6be0e"
+  },
+  {
+    "id": "monthly-kitchen",
+    "path": "projects/monthly kitchen.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/projects/monthly%20kitchen.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "f5ea7ff72aada8bfbe22f328e1f60bcba9d0c08261ee0ade4a7f5f1428289b29"
+  },
+  {
+    "id": "thinking-1",
+    "path": "thinking detail/thinking detail_1.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/thinking%20detail/thinking%20detail_1.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "fcec49bacc7c15dab4897479858757dc262b0e4bdce6fe41b1cb1e7623dbff99"
+  },
+  {
+    "id": "thinking-2",
+    "path": "thinking detail/thinking detail_2.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/thinking%20detail/thinking%20detail_2.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "c27371265142a5f57e4ab7436496a981b83691a3d94c1cd33136f2f19b5d9324"
+  },
+  {
+    "id": "thinking-3",
+    "path": "thinking detail/thinking detail_3.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/thinking%20detail/thinking%20detail_3.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "a8a37e8ba1d8b3508948653a62514ce9ab095d6cc7c30d60ed0bc361706a663b"
+  },
+  {
+    "id": "thinking-4",
+    "path": "thinking detail/thinking detail_4.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/thinking%20detail/thinking%20detail_4.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "585216827b8b9d3ee118887a679e9cf25c82297dfd27052fa58974023c6f4d37"
+  },
+  {
+    "id": "thinking-5",
+    "path": "thinking detail/thinking detail_5.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/thinking%20detail/thinking%20detail_5.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "8f08b1934cebbf0d45c7176c64c3253636ac744af9084142707eebeed822cc50"
+  },
+  {
+    "id": "thinking-6",
+    "path": "thinking detail/thinking detail_6.html",
+    "url": "https://portfolio2026-six-orcin.vercel.app/thinking%20detail/thinking%20detail_6.html",
+    "repositorySnapshotMatched": true,
+    "sha256": "90102e916d263bbb6b2063245c3602f827a5219fcb2ed1eca10dd68fb8229385"
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "purpose": "Workflow tool logos; marks belong to their respective owners. No affiliation implied.",
+  "output": "30×30 RGBA PNG, transparent square canvas, original artwork proportions preserved.",
+  "assets": [
+    {
+      "path": "/assets/workflow-tools/figma.png",
+      "source": "https://github.com/pheralb/svgl/blob/main/static/library/figma.svg",
+      "sha256": "bd106de64e58bf4f50e2ccfddcd2723db8d1b078e10494211ce038140a165873",
+      "bytes": 1515,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/astryx.png",
+      "source": "https://astryx.atmeta.com/favicon.svg",
+      "sha256": "4ae351b9f9ce4145f759f2417d0abaad7ff3262930757b7f6c213c480ab22f3a",
+      "bytes": 1192,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/react.png",
+      "source": "https://react.dev/",
+      "sha256": "af62d3aa4030382259ed24e6f2586491de24eafbec08fa5ea72d9a060eb203a1",
+      "bytes": 2061,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/github.png",
+      "source": "https://github.com/logos",
+      "sha256": "d9f2b96f73b80acd7abea31f5f88605ca6946d226f39de67c872e0d3008674ce",
+      "bytes": 879,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/github-dark.png",
+      "source": "https://github.com/logos",
+      "sha256": "8030a18956c334e31db5ce920213e9e679883b79d9e05bb137c62fb26c76f46c",
+      "bytes": 960,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/vercel.png",
+      "source": "https://vercel.com/geist/brands/assets/vercel-symbol-black.svg",
+      "sha256": "22714af660b9da33cba0fc3ce7e85de6dbb8132858e85ccce1954d858e0f4af5",
+      "bytes": 486,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/vercel-dark.png",
+      "source": "https://vercel.com/geist/brands/assets/vercel-symbol-black.svg",
+      "sha256": "84589b8b01ade69491fb8d9d533d4ceee4663d1545ed69b13ecdb7933fe00eed",
+      "bytes": 549,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/chatgpt.png",
+      "source": "https://developers.openai.com/codex/",
+      "sha256": "00862c1c7c334a1ae1b0098fc43c3126634b160353372c1efeacf6ca1abfea83",
+      "bytes": 1072,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/chatgpt-dark.png",
+      "source": "https://developers.openai.com/codex/",
+      "sha256": "cecb4535a4b2fee606bb8a4d8619bc620a283cf7893b31f8ceffc62bb87bf9e7",
+      "bytes": 1192,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/shadcn.png",
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/v4/components/icons.tsx",
+      "sha256": "f022b2b003e72acec253428b9267cffe8e773c0922081786c7c624f6f24ce870",
+      "bytes": 519,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/shadcn-dark.png",
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/v4/components/icons.tsx",
+      "sha256": "05e0b0fa7eed39c8bfe8d65ebc0b5e2bf16b50fd63d269c6f3e335a77d7a8b37",
+      "bytes": 532,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/codex.png",
+      "source": "https://github.com/lobehub/lobe-icons/blob/master/packages/static-png/light/codex.png",
+      "sha256": "177b2e8e848b1a74c6672c1e4af5c0aeed4f6e39038b1306b31cf23922944727",
+      "bytes": 829,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/codex-dark.png",
+      "source": "https://github.com/lobehub/lobe-icons/blob/master/packages/static-png/dark/codex.png",
+      "sha256": "10e975f0907f616fde9a57a78f4f5caa3cc76decf7af952da7cad017e9516bb6",
+      "bytes": 937,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    },
+    {
+      "path": "/assets/workflow-tools/typescript.png",
+      "source": "https://www.typescriptlang.org/branding/typescript-design-assets.zip",
+      "sha256": "5ea1c61d1c3e6134d7f4858acc064cb4fcd59079bef059a2fb5758d28dfee9f5",
+      "bytes": 1367,
+      "width": 30,
+      "height": 30,
+      "transparent": true
+    }
+  ]
+}

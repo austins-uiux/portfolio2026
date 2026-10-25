@@ -1,0 +1,73 @@
+/* Semantic tokens read from the supplied Figma variables. */
+:root {
+  color-scheme: light;
+  --color-surface: #ffffff;
+  --color-hero-bg: #0a304b;
+  --color-hero-text: #ffffff;
+  --color-header-glass: rgb(255 255 255 / 78%);
+  --color-surface-muted: #f5f6f8;
+  --color-brand-subtle: #e2f3ff;
+  --color-chat-prompt: #e3f4ff;
+  --color-placeholder: #718097;
+  --color-text: #000000;
+  --color-text-secondary: #718097;
+  --color-text-supporting: #47556e;
+  --color-text-placeholder: #98a2b3;
+  --color-border: #e6ebf2;
+  --color-border-strong: #d9e0eb;
+  --color-accent: #148ddf;
+  --color-icon: #171717;
+  /* Requested global type increase; base Figma token names stay intact. */
+  --font-size-offset: 2px;
+  --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans CJK KR', sans-serif;
+  --font-8: 8px;
+  --font-10: 10px;
+  --font-12: 12px;
+  --font-14: 14px;
+  --font-16: 16px;
+  --font-18: 18px;
+  --font-24: 24px;
+  --font-30: 30px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-40: 40px;
+  --space-50: 50px;
+  --space-60: 60px;
+  --radius-small: 4px;
+  --radius-nav: 6px;
+  --radius-input: 10px;
+  --radius-bubble: 12px;
+  --radius-card: 14px;
+  --radius-pill: 100px;
+  --sidebar-width: 220px;
+  --sidebar-collapsed-width: 61px;
+  --topbar-height: 54px;
+  --content-width: 840px;
+  --chat-width: 334px;
+  --ease-slide: cubic-bezier(.22, 1, .36, 1);
+  --duration-slide: 420ms;
+  --duration-fast: 160ms;
+  --shadow-popover: 0 10px 40px rgb(27 45 74 / 10%);
+}
+
+/* Dark is the default; explicit visitor preferences are retained. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-hero-bg: #000000;
+  --color-surface: #11151b;
+  --color-header-glass: rgb(17 21 27 / 76%);
+  --color-surface-muted: #1d242d;
+  --color-brand-subtle: #152c3e;
+  --color-chat-prompt: #17364d;
+  --color-placeholder: #526278;
+  --color-text: #edf1f6;
+  --color-text-secondary: #9baabe;
+  --color-text-supporting: #b5c1d2;
+  --color-text-placeholder: #8d9aab;
+  --color-border: #28313d;
+  --color-border-strong: #374455;
+  --color-icon: #edf1f6;
+}
