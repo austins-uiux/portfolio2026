@@ -41,6 +41,7 @@ textarea { resize: none; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
 
-.chat-open-button .icon--spark { animation: chat-open-spin 2s linear infinite; }
-@keyframes chat-open-spin { to { transform: rotate(360deg); } }
+.chat-open-button .icon--spark { animation: chat-open-spin 3s cubic-bezier(.65, 0, .35, 1) infinite; }
+/* Each cycle holds for two seconds, then completes one eased turn in one second. */
+@keyframes chat-open-spin { 0%, 66.666667% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .chat-open-button .icon--spark { animation: none; } }

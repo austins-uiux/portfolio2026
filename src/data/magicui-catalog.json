@@ -135,11 +135,6 @@
     "docs": "https://magicui.design/docs/components/aurora-text"
   },
   {
-    "id": "video-text",
-    "name": "Video Text",
-    "docs": "https://magicui.design/docs/components/video-text"
-  },
-  {
     "id": "number-ticker",
     "name": "Number Ticker",
     "docs": "https://magicui.design/docs/components/number-ticker"

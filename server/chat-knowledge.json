@@ -800,14 +800,6 @@
     "draft": false
   },
   {
-    "id": "interaction-video-text",
-    "title": "Video Text",
-    "category": "인터렉션 랩",
-    "meta": "Magic UI · 텍스트",
-    "text": "Video Text\n영상이 글자 안에 비쳐 보이는 효과입니다.",
-    "draft": false
-  },
-  {
     "id": "interaction-number-ticker",
     "title": "Number Ticker",
     "category": "인터렉션 랩",
@@ -1204,7 +1196,7 @@
     "title": "Layout",
     "category": "디자인 시스템",
     "meta": "레이아웃 · 파운데이션",
-    "text": "레이아웃\n사이드바, 헤더, 콘텐츠 너비와 반응형 그리드. 목록 콘텐츠는 최대 840px로 가운데 정렬합니다. 상세는 783px, 카드 간격은 24px입니다. 모바일에서는 좌우 20px 여백을 확보하고 사이드바를 오프캔버스로 전환합니다. --sidebar-width 220px 220px --sidebar-collapsed-width 61px 61px --topbar-height 54px 54px --content-width 840px 840px --chat-width 334px 334px",
+    "text": "레이아웃\n사이드바, 헤더, 콘텐츠 너비와 반응형 그리드. 목록 콘텐츠는 최대 840px로 가운데 정렬합니다. 상세는 783px, 카드 간격은 24px입니다. 모바일에서는 좌우 20px 여백을 확보하고 사이드바를 오프캔버스로 전환합니다. --sidebar-width 250px 250px --sidebar-collapsed-width 61px 61px --topbar-height 54px 54px --content-width 840px 840px --chat-width 334px 334px",
     "draft": false
   },
   {

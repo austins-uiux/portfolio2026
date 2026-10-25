@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 DOCS='https://magicui.design/docs/components'
 REGISTRY='https://magicui.design/r/'
 # Explicitly excluded from this portfolio; keep removed examples out on refresh.
-EXCLUDED={'bento-grid','globe','dotted-map','cool-mode'}
+EXCLUDED={'bento-grid','globe','dotted-map','cool-mode','video-text'}
 spec=importlib.util.spec_from_file_location('magic_adapters', ROOT/'scripts/magicui-adapters.py')
 adapters=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(adapters)
