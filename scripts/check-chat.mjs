@@ -39,7 +39,7 @@ assert.equal(good.status,200);assert.equal(good.headers.get('cache-control'),'no
 let merged;
 await configured({fetch:async(url,init)=>{merged=JSON.parse(init.body).contents;return success();}})(request([{role:'assistant',content:'drop'},{role:'user',content:'failed'},{role:'user',content:'new question'}]));
 assert.equal(merged.length,1);assert(merged[0].parts[0].text.includes('new question'));checks++;
-for(const [status,expected,code] of [[400,503,'PROVIDER_CONFIGURATION'],[401,503,'PROVIDER_CONFIGURATION'],[403,503,'PROVIDER_CONFIGURATION'],[404,503,'PROVIDER_CONFIGURATION'],[429,429,'QUOTA_EXCEEDED'],[500,502,'PROVIDER_UNAVAILABLE']]) await expectCode(configured({fetch:async()=>new Response('test-key-not-a-real-secret upstream details',{status})}),request(),expected,code);
+for(const [status,expected,code] of [[402,503,'CREDITS_EXHAUSTED'],[400,503,'PROVIDER_CONFIGURATION'],[401,503,'PROVIDER_CONFIGURATION'],[403,503,'PROVIDER_CONFIGURATION'],[404,503,'PROVIDER_CONFIGURATION'],[429,429,'QUOTA_EXCEEDED'],[500,502,'PROVIDER_UNAVAILABLE']]) await expectCode(configured({fetch:async()=>new Response('test-key-not-a-real-secret upstream details',{status})}),request(),expected,code);
 await expectCode(configured({fetch:async()=>Response.json({promptFeedback:{blockReason:'SAFETY'}})}),request(),422,'BLOCKED');
 await expectCode(configured({fetch:async()=>Response.json({candidates:[{finishReason:'MAX_TOKENS'}]})}),request(),502,'INCOMPLETE_RESPONSE');
 await expectCode(configured({fetch:async()=>Response.json({candidates:[{finishReason:'STOP',content:{parts:[{text:'not json'}]}}]})}),request(),502,'INVALID_RESPONSE');

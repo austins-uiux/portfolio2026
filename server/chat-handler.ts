@@ -87,6 +87,7 @@ export function createChatHandler(deps:Dependencies={}) {
             ? diagnostic.error.message.split(key).join('[REDACTED]').replace(/AIza[\w-]+/g,'[REDACTED]').replace(/https?:\/\/\S+/g,'[URL]').slice(0,600)
             : 'No JSON error detail';
           console.warn('[gemini-provider]', JSON.stringify({ status: result.status, code: diagnostic?.error?.status, reason }));
+          if(result.status===402) throw new ChatFailure(503,'CREDITS_EXHAUSTED','현재 AI 서비스를 이용할 수 없어요. 운영자 확인 후 다시 이용해 주세요.');
           if(result.status===429) throw new ChatFailure(429,'QUOTA_EXCEEDED','AI 사용 한도에 도달했어요. 잠시 후 다시 시도해 주세요.',60);
           if([400,401,403,404].includes(result.status)) throw new ChatFailure(503,'PROVIDER_CONFIGURATION','AI 연결 설정을 확인 중이에요. 잠시 후 다시 방문해 주세요.');
           throw new ChatFailure(502,'PROVIDER_UNAVAILABLE','AI 응답이 지연되고 있어요. 잠시 후 다시 시도해 주세요.');
