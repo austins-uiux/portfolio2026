@@ -72,8 +72,6 @@ export function UxCaseDetail({ id }: { id: string }) {
       </section>)}
     </div>
 
-    <p className="ux-article-disclaimer">이 글은 공개된 UI 화면을 분석한 개인 UX 리디자인 탐색입니다. UT Lab의 수치는 규칙 기반 합성 시뮬레이션으로, 실제 사용자 조사나 전환 성과를 나타내지 않습니다.</p>
-
     <nav className="entry-pager" aria-label="다른 UX 개선 사례"><div>{previous && <AppLink href={`/project/${previous.id}`}><small>이전 사례</small><span>← {previous.title}</span></AppLink>}</div><div>{next && <AppLink href={`/project/${next.id}`}><small>다음 사례</small><span>{next.title} →</span></AppLink>}</div></nav>
   </article>;
 }

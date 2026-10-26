@@ -33,7 +33,7 @@ export function UxSimulationPanel({ study }: { study: UxCase }) {
     </div>
 
     <Tabs defaultValue="summary" className="ux-sim-tabs">
-      <TabsList variant="line" className="ux-sim-tab-list" aria-label="시뮬레이션 결과 보기">
+      <TabsList className="ux-sim-tab-list" aria-label="시뮬레이션 결과 보기">
         <TabsTrigger value="summary">결과 요약</TabsTrigger>
         <TabsTrigger value="factors">마찰 요인</TabsTrigger>
         <TabsTrigger value="insight">UX 인사이트</TabsTrigger>
@@ -66,6 +66,5 @@ export function UxSimulationPanel({ study }: { study: UxCase }) {
       </TabsContent>
     </Tabs>
 
-    <div className="ux-sim-footer">실제 사용자 테스트·A/B 실험 결과가 아닌, 가설 검토용 합성 데이터입니다.</div>
   </div>;
 }

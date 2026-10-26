@@ -35,18 +35,18 @@
 .ux-article-section li::marker { color:var(--color-accent); }
 .ux-article-hypothesis { margin:2px 0 5px; border-left:3px solid var(--color-accent); padding:5px 0 5px 21px; font-size:18px; line-height:1.8; font-weight:650; color:var(--color-text); word-break:keep-all; }
 /* Embedded UT Lab: shared brand mark and the Component Lab's accessible Tabs. */
-.ux-sim { border:1px solid var(--color-border); border-radius:var(--radius-card); background:var(--color-surface); overflow:hidden; }
-.ux-sim-header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 22px; border-bottom:1px solid var(--color-border); }
+.ux-sim { --ux-sim-pad:24px; padding:var(--ux-sim-pad); border:1px solid var(--color-border); border-radius:var(--radius-card); background:var(--color-surface); overflow:hidden; }
+.ux-sim-header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:0 0 20px; border-bottom:1px solid var(--color-border); }
 .ux-sim-brand { gap:12px; }
 .ux-sim-version { font-size:11px; line-height:18px; color:var(--color-text-secondary); white-space:nowrap; }
 .ux-sim-tabs { gap:0; }
-.ux-sim-tab-list { width:100%; height:auto; justify-content:flex-start; gap:8px; padding:13px 22px 0; border-radius:0; overflow-x:auto; }
-.ux-sim-tab-list [data-slot='tabs-trigger'] { flex:0 0 auto; height:32px; min-width:0; padding:5px 13px; border:1px solid var(--color-border); border-radius:var(--radius-pill); background:transparent; color:var(--color-text-secondary); font-size:12px; line-height:20px; font-weight:600; transition:color var(--duration-fast),background var(--duration-fast),border-color var(--duration-fast); }
-.ux-sim-tab-list [data-slot='tabs-trigger']:hover { color:var(--color-text); border-color:var(--color-border-strong); }
-.ux-sim-tab-list [data-slot='tabs-trigger'][data-state='active'] { color:var(--color-accent); background:var(--color-brand-subtle); border-color:var(--color-accent); }
+.ux-sim-tab-list { display:flex; width:100%; height:auto; justify-content:flex-start; gap:9px; padding:20px 0 0; border-radius:0; background:transparent; overflow-x:auto; }
+.ux-sim .ux-sim-tab-list button[data-slot='tabs-trigger'] { flex:0 0 auto; height:34px; min-width:0; padding:6px 14px; border:1px solid var(--color-border-strong); border-radius:var(--radius-pill); box-shadow:none; background:var(--color-surface); color:var(--color-text); font-size:12px; line-height:20px; font-weight:500; transition:color var(--duration-fast),background var(--duration-fast),border-color var(--duration-fast); }
+.ux-sim .ux-sim-tab-list button[data-slot='tabs-trigger']:hover { color:var(--color-accent); border-color:var(--color-accent); }
+.ux-sim .ux-sim-tab-list button[data-slot='tabs-trigger'][data-state='active'] { color:#fff; background:var(--color-accent); border-color:var(--color-accent); }
 .ux-sim-tab-list [data-slot='tabs-trigger']::after { display:none; }
 .ux-sim-tab-list [data-slot='tabs-trigger']:focus-visible { outline:2px solid var(--color-accent); outline-offset:2px; }
-.ux-sim-content { min-width:0; min-height:173px; padding:24px 22px 20px; }
+.ux-sim-content { min-width:0; min-height:173px; padding:24px 0 0; }
 .ux-sim-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
 .ux-sim-metric { display:flex; flex-direction:column; gap:11px; min-width:0; padding:17px 16px; border:1px solid var(--color-border); border-radius:var(--radius-nav); background:var(--color-surface-muted); }
 .ux-sim-metric > span { font-size:12px; line-height:18px; color:var(--color-text-secondary); }
@@ -66,7 +66,6 @@
 .ux-sim-observations > div + div { padding-left:18px; border-left:1px solid var(--color-border); }
 .ux-sim-observation-label { display:block; margin-bottom:10px; font-size:12px; font-weight:650; color:var(--color-accent); }
 .ux-article-section .ux-sim-observations p { font-size:13px; line-height:1.75; color:var(--color-text-supporting); }
-.ux-sim-footer { padding:13px 22px; border-top:1px solid var(--color-border); font-size:11px; line-height:1.65; color:var(--color-text-secondary); }
 .ux-figma-embed { margin:13px 0 0; border:1px solid var(--color-border); border-radius:var(--radius-card); overflow:hidden; background:var(--color-surface); }
 .ux-figma-embed-bar { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:14px 18px; border-bottom:1px solid var(--color-border); }
 .ux-figma-embed-label { display:inline-flex; align-items:center; gap:9px; color:var(--color-text); font-size:13px; font-weight:650; }
@@ -78,7 +77,6 @@
 .ux-figma-embed-symbol { display:grid; place-items:center; width:60px; height:60px; border:1px solid var(--color-border-strong); border-radius:16px; color:var(--color-text-secondary); background:var(--color-surface); margin-bottom:5px; }
 .ux-figma-embed-placeholder strong { font-size:16px; font-weight:650; color:var(--color-text); }
 .ux-article-section .ux-figma-embed-placeholder p { max-width:360px; font-size:13px; line-height:1.7; color:var(--color-text-secondary); }
-.ux-article-disclaimer { margin-top:70px; border-top:1px solid var(--color-border); padding-top:20px; font-size:12px; line-height:1.9; color:var(--color-text-secondary); }
 .ux-article .entry-pager { margin-top:34px; }
 @media(max-width:760px) {
   .ux-article { padding-bottom:72px; }
@@ -91,12 +89,12 @@
   .ux-article-section h2 { font-size:23px; }
   .ux-article-section p,.ux-article-section li { font-size:15px; }
   .ux-article-hypothesis { font-size:17px; }
-  .ux-sim-header { padding:16px; }
-  .ux-sim-tab-list { padding:12px 16px 0; }
-  .ux-sim-content { padding:18px 16px; }
+  .ux-sim { --ux-sim-pad:16px; }
+  .ux-sim-header { padding:0 0 16px; }
+  .ux-sim-tab-list { padding:16px 0 0; }
+  .ux-sim-content { padding:18px 0 0; }
   .ux-sim-metric { padding:14px 12px; }
   .ux-sim-metric strong { font-size:24px; }
-  .ux-sim-footer { padding:12px 16px; }
   .ux-figma-embed iframe { height:350px; }
   .ux-figma-embed-placeholder { min-height:300px; }
 }
