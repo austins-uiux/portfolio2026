@@ -1,5 +1,5 @@
 import { Brand, sidebarLogoScale } from '../Brand';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../lab-ui/tabs';
+import { Tabs as TabsPrimitive } from 'radix-ui';
 import type { UxCase } from '../../data/ux-cases';
 
 /** Editorial interpretations of screen observations, not synthetic persona quotes. */
@@ -32,23 +32,23 @@ export function UxSimulationPanel({ study }: { study: UxCase }) {
       <span className="ux-sim-version">규칙 기반 시뮬레이션</span>
     </div>
 
-    <Tabs defaultValue="summary" className="ux-sim-tabs">
-      <TabsList className="ux-sim-tab-list" aria-label="시뮬레이션 결과 보기">
-        <TabsTrigger value="summary">결과 요약</TabsTrigger>
-        <TabsTrigger value="factors">마찰 요인</TabsTrigger>
-        <TabsTrigger value="insight">UX 인사이트</TabsTrigger>
-      </TabsList>
+    <TabsPrimitive.Root defaultValue="summary" className="ux-sim-tabs">
+      <TabsPrimitive.List className="ux-sim-tab-list" aria-label="시뮬레이션 결과 보기">
+        <TabsPrimitive.Trigger value="summary" className="ux-sim-chip">결과 요약</TabsPrimitive.Trigger>
+        <TabsPrimitive.Trigger value="factors" className="ux-sim-chip">마찰 요인</TabsPrimitive.Trigger>
+        <TabsPrimitive.Trigger value="insight" className="ux-sim-chip">UX 인사이트</TabsPrimitive.Trigger>
+      </TabsPrimitive.List>
 
-      <TabsContent value="summary" className="ux-sim-content">
+      <TabsPrimitive.Content value="summary" className="ux-sim-content">
         <div className="ux-sim-metrics">
           <div className="ux-sim-metric"><span>가상 페르소나</span><strong>{report.personaCount}<small>명</small></strong></div>
           <div className="ux-sim-metric"><span>평균 마찰 점수</span><strong>{report.avgFriction}<small>/100</small></strong></div>
           <div className="ux-sim-metric"><span>주저로 분류</span><strong>{report.counts.hesitate}<small>/{report.personaCount}명</small></strong></div>
         </div>
         <p className="ux-sim-caption">규칙에 따라 완료 {report.counts.complete}명 · 주저 {report.counts.hesitate}명 · 이탈 {report.counts.drop}명으로 분류됐어요.</p>
-      </TabsContent>
+      </TabsPrimitive.Content>
 
-      <TabsContent value="factors" className="ux-sim-content">
+      <TabsPrimitive.Content value="factors" className="ux-sim-content">
         <div className="ux-sim-factors">
           {report.factors.slice(0, 3).map((factor, index) => <div className="ux-sim-factor" key={factor.key}>
             <div className="ux-sim-factor-label"><span><span className="ux-sim-rank">0{index + 1}</span>{factor.name}</span><strong>{factor.count}명</strong></div>
@@ -56,15 +56,15 @@ export function UxSimulationPanel({ study }: { study: UxCase }) {
           </div>)}
         </div>
         <p className="ux-sim-caption">각 인물의 주요 마찰 요인 1개를 기준으로 집계했어요. 상위 3개 항목을 표시합니다.</p>
-      </TabsContent>
+      </TabsPrimitive.Content>
 
-      <TabsContent value="insight" className="ux-sim-content">
+      <TabsPrimitive.Content value="insight" className="ux-sim-content">
         {observation && <div className="ux-sim-observations">
           <div><span className="ux-sim-observation-label">화면에서 관찰한 문제</span><p>{observation.issue}</p></div>
           <div><span className="ux-sim-observation-label">우선 개선 가설</span><p>{observation.direction}</p></div>
         </div>}
-      </TabsContent>
-    </Tabs>
+      </TabsPrimitive.Content>
+    </TabsPrimitive.Root>
 
   </div>;
 }

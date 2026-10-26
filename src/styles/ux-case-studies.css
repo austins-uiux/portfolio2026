@@ -41,11 +41,10 @@
 .ux-sim-version { font-size:11px; line-height:18px; color:var(--color-text-secondary); white-space:nowrap; }
 .ux-sim-tabs { gap:0; }
 .ux-sim-tab-list { display:flex; width:100%; height:auto; justify-content:flex-start; gap:9px; padding:20px 0 0; border-radius:0; background:transparent; overflow-x:auto; }
-.ux-sim .ux-sim-tab-list button[data-slot='tabs-trigger'] { flex:0 0 auto; height:34px; min-width:0; padding:6px 14px; border:1px solid var(--color-border-strong); border-radius:var(--radius-pill); box-shadow:none; background:var(--color-surface); color:var(--color-text); font-size:12px; line-height:20px; font-weight:500; transition:color var(--duration-fast),background var(--duration-fast),border-color var(--duration-fast); }
-.ux-sim .ux-sim-tab-list button[data-slot='tabs-trigger']:hover { color:var(--color-accent); border-color:var(--color-accent); }
-.ux-sim .ux-sim-tab-list button[data-slot='tabs-trigger'][data-state='active'] { color:#fff; background:var(--color-accent); border-color:var(--color-accent); }
-.ux-sim-tab-list [data-slot='tabs-trigger']::after { display:none; }
-.ux-sim-tab-list [data-slot='tabs-trigger']:focus-visible { outline:2px solid var(--color-accent); outline-offset:2px; }
+.ux-sim-chip { flex:0 0 auto; height:34px; min-width:0; padding:6px 14px; border:1px solid var(--color-border-strong); border-radius:var(--radius-pill); background:var(--color-surface); color:var(--color-text); font-size:12px; line-height:20px; font-weight:500; white-space:nowrap; transition:color var(--duration-fast),background var(--duration-fast),border-color var(--duration-fast); }
+.ux-sim-chip:hover { color:var(--color-accent); border-color:var(--color-accent); }
+.ux-sim-chip[data-state='active'] { color:#fff; background:var(--color-accent); border-color:var(--color-accent); }
+.ux-sim-chip:focus-visible { outline:2px solid var(--color-accent); outline-offset:2px; }
 .ux-sim-content { min-width:0; min-height:173px; padding:24px 0 0; }
 .ux-sim-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
 .ux-sim-metric { display:flex; flex-direction:column; gap:11px; min-width:0; padding:17px 16px; border:1px solid var(--color-border); border-radius:var(--radius-nav); background:var(--color-surface-muted); }
