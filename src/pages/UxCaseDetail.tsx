@@ -4,6 +4,13 @@ import { categoryEntries } from '../data/portfolio';
 import { getUxCase } from '../data/ux-cases';
 import { uxEditorial } from '../data/ux-editorial';
 
+const originalFlowSizes: Record<string, [number, number]> = {
+  'naver-cart': [2047, 872],
+  'tripstore-comparison': [2048, 714],
+  'venti-delivery-map': [2048, 1434],
+  'flitto-membership': [2047, 1074],
+};
+
 /** Minimal long-form template that follows the site's design tokens. */
 export function UxCaseDetail({ id }: { id: string }) {
   const study = getUxCase(id);
@@ -15,6 +22,8 @@ export function UxCaseDetail({ id }: { id: string }) {
   const previous = entries[index - 1];
   const next = entries[index + 1];
   const image = `/assets/ux-cases/${id.split('-')[0]}-concept.svg`;
+  const originalFlow = `/assets/ux-cases/${id.split('-')[0]}-original-flow.webp`;
+  const [originalWidth, originalHeight] = originalFlowSizes[id];
 
   return <article className="detail-page entry-detail ux-article content-container">
     <header className="detail-heading ux-article-header">
@@ -29,6 +38,13 @@ export function UxCaseDetail({ id }: { id: string }) {
     </header>
 
     <p className="ux-article-introduction">{article.introduction}</p>
+
+    <figure className="ux-article-source">
+      <a href={originalFlow} target="_blank" rel="noopener noreferrer" aria-label={`${study.app}의 원본 UI Flow 이미지 새 창에서 보기`}>
+        <img src={originalFlow} width={originalWidth} height={originalHeight} alt={`${study.app}에서 분석한 실제 UI Flow 화면들`} decoding="async" />
+      </a>
+      <figcaption>분석에 사용한 UI Flow 화면 · 이미지를 클릭하면 원본 크기로 볼 수 있어요.</figcaption>
+    </figure>
 
     <div className="ux-article-body">
       {article.sections.map((section, sectionIndex) => <section className="ux-article-section" key={section.heading} aria-labelledby={`ux-article-section-${sectionIndex}`}>
