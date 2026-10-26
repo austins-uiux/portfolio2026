@@ -4,6 +4,7 @@ import { categoryEntries } from '../data/portfolio';
 import { getUxCase } from '../data/ux-cases';
 import { uxEditorial } from '../data/ux-editorial';
 import { getFigmaEmbedUrl, uxFigmaUrls } from '../data/ux-figma';
+import { UxSimulationPanel } from '../components/ut/UxSimulationPanel';
 
 const originalFlowSizes: Record<string, [number, number]> = {
   'naver-cart': [2047, 872],
@@ -51,6 +52,7 @@ export function UxCaseDetail({ id }: { id: string }) {
     <div className="ux-article-body">
       {article.sections.map((section, sectionIndex) => <section className="ux-article-section" key={section.heading} aria-labelledby={`ux-article-section-${sectionIndex}`}>
         <h2 id={`ux-article-section-${sectionIndex}`}>{section.heading}</h2>
+        {section.heading === '시뮬레이터로 먼저 찔러본 결과' && <UxSimulationPanel study={study} />}
         {section.paragraphs?.map((paragraph, i) => <p key={`p-${i}`}>{paragraph}</p>)}
         {section.bullets && <ul>{section.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}</ul>}
         {section.afterBullets?.map((paragraph, i) => <p key={`after-${i}`}>{paragraph}</p>)}
