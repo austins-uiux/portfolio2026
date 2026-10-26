@@ -38,7 +38,7 @@ export interface UxCase {
 const folder = '/assets/ux-cases';
 export const uxCases: UxCase[] = [
   {
-    id: 'naver-cart', app: '네이버플러스 스토어', category: '쇼핑', icon: `${folder}/naver-icon.svg`,
+    id: 'naver-cart', app: '네이버 플러스 스토어', category: '쇼핑', icon: `${folder}/naver-figma-icon.png`,
     eyebrow: '01 / SHOPPING EXPERIENCE', title: '장바구니에서 최종 금액을 계산하게 만들지 않기',
     lede: '선택한 상품, 판매자별 배송, 주문 예상 금액. 장바구니에 정보는 충분하지만 사용자가 실제로 확인하려는 질문은 하나일 수 있습니다. “그래서 지금 얼마를 내는 거지?”',
     problem: '여러 판매자의 상품을 담은 장바구니에서 배송비와 할인 조건을 포함한 실제 지출 금액을 예측하기 어려울 수 있다.',
@@ -70,7 +70,7 @@ export const uxCases: UxCase[] = [
     report: naverReport,
   },
   {
-    id: 'tripstore-comparison', app: '트립스토어', category: '여행', icon: `${folder}/tripstore-icon.svg`,
+    id: 'tripstore-comparison', app: '트립스토어', category: '여행', icon: `${folder}/tripstore-figma-icon.png`,
     eyebrow: '02 / TRAVEL PLANNING', title: '숙소 세 곳을 비교하다 다시 검색창으로 돌아가는 이유',
     lede: '숙소 비교의 목적은 정보를 더 많이 보는 것이 아니라 차이를 더 빨리 이해하는 것입니다. 선택한 숙소 사이에 비교 기준이 일관되지 않으면 결정은 다시 탐색으로 돌아갑니다.',
     problem: '선택한 숙소의 가격·조건·위치를 나란히 확인하는 과정에서 서로 다른 정보량과 화면 폭이 직접적인 비교를 어렵게 만들 수 있다.',
@@ -102,7 +102,7 @@ export const uxCases: UxCase[] = [
     report: tripstoreReport,
   },
   {
-    id: 'venti-delivery-map', app: '더벤티', category: 'F&B 배달', icon: `${folder}/venti-icon.svg`,
+    id: 'venti-delivery-map', app: '더벤티', category: 'F&B 배달', icon: `${folder}/venti-figma-icon.png`,
     eyebrow: '03 / LOCATION-BASED ORDER', title: '가까운 매장 세 곳이 전부 주문불가였을 때',
     lede: '지도에서 매장을 찾을 때 거리만으로는 충분하지 않습니다. 사용자의 목적은 핀을 고르는 일이 아니라 지금 실제로 배달받을 수 있는 매장을 선택하는 일입니다.',
     problem: '지도에 표시된 다수의 매장 중 배달 가능 여부와 거리를 함께 판단하는 과정에서 선택과 탐색이 길어질 수 있다.',
@@ -134,7 +134,7 @@ export const uxCases: UxCase[] = [
     report: ventiReport,
   },
   {
-    id: 'flitto-membership', app: '플리토', category: 'AI 서비스', icon: `${folder}/flitto-icon.svg`,
+    id: 'flitto-membership', app: '플리토', category: 'AI 서비스', icon: `${folder}/flitto-figma-icon.png`,
     eyebrow: '04 / REWARD & MOTIVATION', title: '다음 등급까지 뭘 얼마나 더 해야 하는지 알려주기',
     lede: '멤버십 등급이 많고 기준이 자세하더라도 사용자가 “내가 무엇을 얼마나 더 해야 하나?”에 답하지 못하면 안내는 동기로 연결되지 않습니다.',
     problem: '여러 유형의 배지와 Gold·Silver·Bronze 조건이 긴 목록으로 안내되어 개인의 현재 상태와 다음 목표를 연결하기 어려울 수 있다.',
@@ -177,7 +177,7 @@ export const uxEntries: PortfolioEntry[] = uxCases.map(item => ({
   detailTitle: item.title,
   summary: uxEditorial[item.id].introduction,
   cover: { src: `${folder}/${item.id.split('-')[0]}-concept.svg`, alt: `${item.app}의 UI 개선 방향을 시각화한 콘셉트 이미지`, width: 1672, height: 941 },
-  thumbnail: { src: `${folder}/${item.id.split('-')[0]}-concept.svg`, alt: `${item.app} UX 개선 컨셉`, width: 1672, height: 941 },
+  thumbnail: { src: `${folder}/${item.id.split('-')[0]}-thumbnail.svg`, alt: `${item.app} 개선 전후 모바일 화면을 중앙에 배치한 시각화`, width: 1672, height: 941 },
   sections: uxEditorial[item.id].sections.map(section => ({
     heading: section.heading,
     body: [...(section.paragraphs ?? []), ...(section.bullets ?? []), ...(section.afterBullets ?? []), section.quote ?? '', ...(section.steps ?? [])].join(' '),
