@@ -17,7 +17,7 @@ const server = await createServer({ root, configFile: false, resolve: { alias: {
 
 function head(metadata, textPath) {
   const tags = [
-    ['name', 'description', metadata.description], ['name', 'robots', metadata.indexable ? 'index,follow' : 'noindex,follow'],
+    ['name', 'description', metadata.description], ['name', 'robots', 'noindex,nofollow,noarchive'],
     ['property', 'og:title', metadata.title], ['property', 'og:description', metadata.description],
     ['property', 'og:url', metadata.canonical], ['property', 'og:type', metadata.type],
     ['property', 'og:site_name', 'A+studio'], ['property', 'og:locale', 'ko_KR'],
@@ -54,7 +54,8 @@ try {
     const textPath = metadata.indexable ? `/content/${name}.md` : undefined;
     // Search depends on the visitor's query and remains client-rendered/noindex.
     const body = route === '/search' ? '' : await render(route);
-    const html = template.replace(/<title>[\s\S]*?<\/title>/, head(metadata, textPath))
+    const html = template.replace(/\s*<meta name="robots" content="[^"]*"\s*\/>/, '')
+      .replace(/<title>[\s\S]*?<\/title>/, head(metadata, textPath))
       .replace(/\s*<meta name="description" content="[^"]*"\s*\/>/, '')
       .replace('<div id="root"></div>', `<div id="root" data-initial-location="${escape(route)}">${body}</div>`);
     const file = path.join(dist, `${name}.html`);
@@ -67,9 +68,9 @@ try {
       manifest.push({ route, file: `${name}.html`, textPath, title: metadata.title, image: metadata.image });
     }
   }
-  await writeFile(path.join(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${manifest.map(page => `<url><loc>${escape(siteOrigin + page.route)}</loc></url>`).join('\n')}\n</urlset>\n`);
-  await writeFile(path.join(dist, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${siteOrigin}/sitemap.xml\n`);
+  // Crawlers must be able to read the noindex directive; Disallow would hide it.
+  await writeFile(path.join(dist, 'robots.txt'), 'User-agent: *\nAllow: /\n');
   await writeFile(path.join(dist, 'llms.txt'), `# A+studio\n\nAustin의 AI 네이티브 프로덕트 디자인 포트폴리오. 아래 문서는 실제 공개 페이지에서 생성한 본문입니다. 이미지의 내용과 움직임을 텍스트만으로 관찰했다고 주장하지 마세요. shadcn/ui와 Magic UI 예시는 외부 라이브러리 기반이며 UT Lab의 합성 페르소나는 실제 사용자 조사가 아닙니다.\n\n## Pages\n\n${manifest.map(page => `- [${page.title}](${siteOrigin}${page.textPath}): ${siteOrigin}${page.route}`).join('\n')}\n`);
   await writeFile(path.join(dist, 'prerender-manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
-  console.log(`Prerendered ${manifest.length} public pages, their Markdown documents, sitemap, and a real 404 page.`);
+  console.log(`Prerendered ${manifest.length} unindexed pages, their Markdown documents, robots guidance, and a real 404 page.`);
 } finally { await server.close(); }

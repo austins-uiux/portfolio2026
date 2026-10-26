@@ -19,6 +19,7 @@ for (const page of pages) {
     assert.equal((html.match(new RegExp(`property="${property}"`, 'g')) ?? []).length, 1, `${property}: ${page.route}`);
   }
   assert.equal((html.match(/name="description"/g) ?? []).length, 1, `Duplicate description: ${page.route}`);
+  assert.equal((html.match(/name="robots" content="noindex,nofollow,noarchive"/g) ?? []).length, 1, `Missing noindex: ${page.route}`);
   assert(html.includes(`href="${origin}${page.route}"`), `Wrong canonical: ${page.route}`);
   const image = path.join(dist, new URL(page.image).pathname.slice(1));
   assert((await stat(image)).size > 0, `Missing social image: ${page.image}`);
@@ -31,10 +32,11 @@ const color = await readFile(path.join(dist, 'project/foundation-1.html'), 'utf8
 assert(color.includes('--color-accent') && color.includes('#148ddf'), 'Color tokens missing from initial response');
 const interaction = await readFile(path.join(dist, 'work/interaction-lab.html'), 'utf8');
 assert(!interaction.includes('data-component="video-text"'));
-const sitemap = await readFile(path.join(dist, 'sitemap.xml'), 'utf8');
-assert.equal((sitemap.match(/<loc>/g) ?? []).length, pages.length);
-assert(!sitemap.includes('/search') && !sitemap.includes('soma-ux') && !sitemap.includes('archive-'));
-assert((await readFile(path.join(dist, '404.html'), 'utf8')).includes('noindex,follow'));
-assert((await readFile(path.join(dist, 'search.html'), 'utf8')).includes('noindex,follow'));
+const robots = await readFile(path.join(dist, 'robots.txt'), 'utf8');
+assert(robots.includes('Allow: /') && !robots.includes('Disallow:'), 'Crawlers must see noindex rules');
+assert(!robots.includes('Sitemap:'), 'Search sitemap must not be advertised');
+await assert.rejects(readFile(path.join(dist, 'sitemap.xml'), 'utf8'), { code: 'ENOENT' });
+assert((await readFile(path.join(dist, '404.html'), 'utf8')).includes('noindex,nofollow,noarchive'));
+assert((await readFile(path.join(dist, 'search.html'), 'utf8')).includes('noindex,nofollow,noarchive'));
 assert((await readFile(path.join(dist, 'llms.txt'), 'utf8')).includes('/content/work/design-system.md'));
-console.log(`Static delivery checks passed: ${pages.length} pages contain body HTML, unique metadata, valid images and text documents; sitemap and 404 verified.`);
+console.log(`Static delivery checks passed: ${pages.length} pages contain body HTML, noindex metadata, valid images and text documents; robots and 404 verified.`);

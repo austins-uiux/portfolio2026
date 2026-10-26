@@ -42,7 +42,7 @@ export function App({ initialLocation = '/' }: { initialLocation?: string }) {
   useEffect(() => {
     const metadata = getPageMetadata(location.pathname + location.search);
     document.title = metadata.title;
-    const values = { description: metadata.description, 'og:title': metadata.title, 'og:description': metadata.description, 'og:url': metadata.canonical, 'og:image': metadata.image, 'og:image:alt': metadata.imageAlt, 'og:type': metadata.type, robots: metadata.indexable ? 'index,follow' : 'noindex,follow' };
+    const values = { description: metadata.description, 'og:title': metadata.title, 'og:description': metadata.description, 'og:url': metadata.canonical, 'og:image': metadata.image, 'og:image:alt': metadata.imageAlt, 'og:type': metadata.type, robots: 'noindex,nofollow,noarchive' };
     for (const [name, content] of Object.entries(values)) {
       const meta = document.querySelector<HTMLMetaElement>(`meta[name="${name}"],meta[property="${name}"]`);
       if (meta) meta.content = content;
