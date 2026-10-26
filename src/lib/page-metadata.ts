@@ -18,7 +18,7 @@ export function getPageMetadata(href: string) {
   if (category?.id === 'ai-workflow' && url.searchParams.has('flow')) canonical.searchParams.set('flow', getWorkflow(url.searchParams.get('flow')).id);
   return {
     title: `${title} — A+studio`, description, canonical: canonical.href,
-    image: `${siteOrigin}/assets/social/${entry?.kind ? `${entry.id}.jpg` : 'cover.png'}`,
+    image: entry?.category === 'ux' && entry.thumbnail ? `${siteOrigin}${entry.thumbnail.src}` : `${siteOrigin}/assets/social/${entry?.kind ? `${entry.id}.jpg` : 'cover.png'}`,
     imageAlt: entry?.kind ? `${entry.title} — Austin의 A+studio 포트폴리오` : 'A+studio — Austin, AI Native Product Designer',
     type: entry?.kind === 'article' ? 'article' : 'website',
     indexable: home || !!entry || !!category,

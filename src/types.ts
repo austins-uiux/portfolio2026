@@ -32,6 +32,7 @@ export interface PortfolioEntry {
   author?: { name: string; role: string };
   cover?: ContentImage;
   thumbnail?: ContentImage;
+  uxApp?: { name: string; category: string; icon: string };
   foundation?: 'Color' | 'Typography' | 'Shape' | 'Icons' | 'Components';
   sections: ContentSection[];
   listed?: boolean;

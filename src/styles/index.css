@@ -7,6 +7,7 @@
 @import "./global.css" layer(portfolio);
 @import "./layout.css" layer(portfolio);
 @import "./pages.css" layer(portfolio);
+@import "./ux-case-studies.css" layer(portfolio);
 @import "./chat.css" layer(portfolio);
 @import "./lab.css";
 @import "./magic-animations.css";

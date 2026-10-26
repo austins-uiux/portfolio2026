@@ -9,6 +9,7 @@ import { usePersistentState } from './hooks/usePersistentState';
 import { AppLink, navigate, useLocation } from './lib/router';
 import { CategoryPage } from './pages/CategoryPage';
 import { DetailPage } from './pages/DetailPage';
+import { UxCaseDetail } from './pages/UxCaseDetail';
 import { HomePage } from './pages/HomePage';
 import { SearchPage } from './pages/SearchPage';
 import { AiWorkflowPage } from './pages/AiWorkflowPage';
@@ -61,7 +62,7 @@ export function App({ initialLocation = '/' }: { initialLocation?: string }) {
     <div className="workspace" inert={chatOpen || mobileOpen}>
       <Topbar onChatOpen={() => { setMobileOpen(false); setChatOpen(true); }} onMenuOpen={() => setMobileOpen(true)} theme={theme} onThemeToggle={() => setTheme(value => value === 'light' ? 'dark' : 'light')} locationKey={location.href} />
       <main id="main-content" tabIndex={-1}>
-        {isHome ? <HomePage /> : isWorkflow ? <AiWorkflowPage flowId={legacyFlow?.id ?? location.searchParams.get('flow')} /> : category?.id === 'component-lab' || entry?.category === 'component-lab' ? <Suspense fallback={null}><ComponentLabPage key={location.pathname} componentId={entry?.id.replace('component-', '')} theme={theme} /></Suspense> : category?.id === 'interaction-lab' || entry?.category === 'interaction-lab' ? <Suspense fallback={null}><InteractionLabPage key={location.pathname} interactionId={entry?.id.replace('interaction-', '')} theme={theme} onThemeChange={setTheme} /></Suspense> : category?.id === 'design-system' || entry?.category === 'design-system' ? <Suspense fallback={null}><DesignSystemPage key={location.pathname} documentId={entry?.id} /></Suspense> : category ? <CategoryPage key={category.id} category={category} /> : entry ? <DetailPage entry={entry} /> : isSearch ? <SearchPage query={location.searchParams.get('q') ?? ''} /> : <div className="listing-page content-container"><EmptyState title="페이지를 찾을 수 없습니다."><p>주소를 확인하거나 홈에서 다시 시작해 주세요.</p><AppLink href="/" className="text-link">홈으로 돌아가기 →</AppLink></EmptyState></div>}
+        {isHome ? <HomePage /> : isWorkflow ? <AiWorkflowPage flowId={legacyFlow?.id ?? location.searchParams.get('flow')} /> : category?.id === 'component-lab' || entry?.category === 'component-lab' ? <Suspense fallback={null}><ComponentLabPage key={location.pathname} componentId={entry?.id.replace('component-', '')} theme={theme} /></Suspense> : category?.id === 'interaction-lab' || entry?.category === 'interaction-lab' ? <Suspense fallback={null}><InteractionLabPage key={location.pathname} interactionId={entry?.id.replace('interaction-', '')} theme={theme} onThemeChange={setTheme} /></Suspense> : category?.id === 'design-system' || entry?.category === 'design-system' ? <Suspense fallback={null}><DesignSystemPage key={location.pathname} documentId={entry?.id} /></Suspense> : category ? <CategoryPage key={category.id} category={category} /> : entry?.category === 'ux' ? <UxCaseDetail key={entry.id} id={entry.id} /> : entry ? <DetailPage entry={entry} /> : isSearch ? <SearchPage query={location.searchParams.get('q') ?? ''} /> : <div className="listing-page content-container"><EmptyState title="페이지를 찾을 수 없습니다."><p>주소를 확인하거나 홈에서 다시 시작해 주세요.</p><AppLink href="/" className="text-link">홈으로 돌아가기 →</AppLink></EmptyState></div>}
       </main>
       <Footer />
     </div>

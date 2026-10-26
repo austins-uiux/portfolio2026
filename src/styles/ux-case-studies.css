@@ -1,0 +1,153 @@
+/* The original A+studio card and detail templates remain the foundation. */
+.category-ux .project-card .project-thumbnail { aspect-ratio: 1672 / 941; height:auto; flex:0 0 auto; overflow:hidden; }
+.category-ux .project-card .project-thumbnail img { transition:transform 350ms ease; }
+.category-ux .project-card:hover .project-thumbnail img { transform:scale(1.035); }
+.category-ux .project-card-body { align-items:flex-start; min-height:136px; }
+.category-ux .project-label { gap:15px; }
+.category-ux .project-label h2 { font-size:calc(17px + var(--font-size-offset)); line-height:1.5; word-break:keep-all; }
+.ux-card-app { display:flex; align-items:center; flex-wrap:wrap; gap:8px; font-size:calc(11px + var(--font-size-offset)); line-height:20px; color:var(--color-text-secondary); font-weight:500; }
+.ux-card-app img { width:24px; height:24px; object-fit:contain; border-radius:6px; }
+.ux-card-app-category { display:inline-flex; align-items:center; min-height:22px; padding:2px 8px; border:1px solid var(--color-border-strong); border-radius:var(--radius-pill); font-size:11px; line-height:16px; }
+
+.ux-study { --ux-success:#299d82; --ux-warning:#e2a33c; --ux-danger:#db6c6e; gap:44px; padding-bottom:140px; }
+.ux-study .detail-heading { gap:17px; border-bottom:none; padding-bottom:0; }
+.ux-study .entry-back { display:inline-flex; align-items:center; gap:8px; margin-bottom:14px; }
+.ux-study-kicker { display:block; color:var(--color-accent); font-size:11px; line-height:1.5; letter-spacing:.12em; font-weight:750; }
+.ux-study .detail-heading h1 { font-size:clamp(30px,3.3vw,43px); line-height:1.32; letter-spacing:-.045em; word-break:keep-all; }
+.ux-study-byline { display:flex; flex-wrap:wrap; align-items:center; gap:10px; font-size:13px; line-height:24px; color:var(--color-text-secondary); }
+.ux-study-byline img { width:24px; height:24px; border-radius:6px; }
+.ux-study-byline > span:nth-child(2) { color:var(--color-text); font-weight:650; }
+.ux-study-byline-sep { width:3px; height:3px; background:var(--color-text-secondary); border-radius:50%; margin-inline:3px; }
+.ux-study-category { display:inline-flex; padding:0 9px; align-items:center; border:1px solid var(--color-border-strong); border-radius:999px; font-size:11px; }
+.ux-study .detail-heading .ux-study-lede { font-size:17px; line-height:1.85; font-weight:400; color:var(--color-text-supporting); margin-top:10px; }
+.ux-study-hero,.ux-study-source,.ux-study-concept { margin:0; }
+.ux-study-hero img,.ux-study-concept img { width:100%; height:auto; display:block; border-radius:var(--radius-card); border:1px solid var(--color-border); }
+.ux-study figcaption { display:flex; align-items:center; gap:7px; margin-top:11px; font-size:12px; color:var(--color-text-secondary); line-height:1.7; }
+.ux-study-overview { display:grid; grid-template-columns:1fr; border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border); }
+.ux-study-overview > div { display:grid; grid-template-columns:93px minmax(0,1fr); gap:18px; padding:16px 0; align-items:start; }
+.ux-study-overview > div + div { border-top:1px solid var(--color-border); }
+.ux-study-overview span { font-size:11px; color:var(--color-text-secondary); font-weight:700; letter-spacing:.1em; }
+.ux-study-overview strong { font-size:13px; font-weight:500; line-height:1.8; color:var(--color-text-supporting); }
+.ux-study-toc { display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:16px; border:1px solid var(--color-border); border-radius:var(--radius-card); background:var(--color-surface-muted); }
+.ux-study-toc > span { flex-basis:100%; color:var(--color-text-secondary); font-size:12px; font-weight:700; margin-bottom:4px; }
+.ux-study-toc a { padding:7px 11px; border-radius:999px; background:var(--color-surface); border:1px solid var(--color-border); color:var(--color-text-supporting); font-size:12px; transition:border-color var(--duration-fast); }
+.ux-study-toc a:hover { border-color:var(--color-accent); }
+.ux-study-section { display:flex; flex-direction:column; gap:24px; scroll-margin-top:95px; padding-top:31px; border-top:1px solid var(--color-border); }
+.ux-study-section-title { display:flex; flex-direction:column; gap:14px; }
+.ux-study-section-title h2 { font-size:clamp(24px,2.65vw,31px); line-height:1.43; letter-spacing:-.035em; font-weight:750; word-break:keep-all; }
+.ux-study-section-title p { font-size:15px; font-weight:400; line-height:1.9; color:var(--color-text-supporting); word-break:keep-all; }
+.ux-study-source { border:1px solid var(--color-border); padding:16px; border-radius:var(--radius-card); background:var(--color-surface-muted); }
+.ux-study-source a { display:block; width:100%; overflow:hidden; cursor:zoom-in; }
+.ux-study-source img { display:block; width:100%; height:auto; border-radius:7px; }
+.ux-study-source-draft { display:flex; min-height:210px; align-items:center; justify-content:center; flex-direction:column; text-align:center; gap:11px; padding:25px; }
+.ux-study-source-draft > svg { color:var(--color-accent); }
+.ux-study-source-draft > strong { font-size:15px; }
+.ux-study-source-draft > p { font-size:12px; max-width:360px; line-height:1.8; color:var(--color-text-secondary); }
+.ux-study-source figcaption { margin-top:12px; justify-content:flex-start; }
+.ux-study-observations { border:1px solid var(--color-border); border-radius:var(--radius-card); overflow:hidden; }
+.ux-study-observations > div { display:grid; grid-template-columns:41px 1fr; gap:15px; padding:22px; }
+.ux-study-observations > div + div { border-top:1px solid var(--color-border); }
+.ux-study-item-index { color:var(--color-accent); font-size:12px; font-weight:750; }
+.ux-study-observations h3 { font-size:16px; font-weight:700; line-height:1.5; margin-bottom:7px; }
+.ux-study-observations p { font-size:14px; color:var(--color-text-supporting); line-height:1.8; }
+.ux-study-evidence-note,.ux-study-method-note { display:flex; align-items:flex-start; gap:13px; padding:18px 20px; border:1px solid var(--color-border); border-radius:var(--radius-card); background:var(--color-surface-muted); }
+.ux-study-evidence-note svg,.ux-study-method-note svg { flex-shrink:0; color:var(--color-accent); margin-top:3px; }
+.ux-study-evidence-note p,.ux-study-method-note span { font-size:13px; line-height:1.8; color:var(--color-text-supporting); }
+.ux-study-method-note > div { display:flex; flex-direction:column; gap:7px; }
+.ux-study-method-note strong { font-size:13px; line-height:1.6; }
+.ux-study-thesis { padding:28px 30px; border-left:3px solid var(--color-accent); background:var(--color-brand-subtle); }
+.ux-study-thesis > span,.ux-study-task > span,.ux-study-conclusion > span { display:block; margin-bottom:12px; font-size:11px; font-weight:750; color:var(--color-accent); letter-spacing:.1em; }
+.ux-study-thesis p { font-size:clamp(18px,2.2vw,23px); line-height:1.6; font-weight:650; word-break:keep-all; }
+.ux-study-task { border:1px solid var(--color-border); border-radius:var(--radius-card); padding:22px 25px; }
+.ux-study-task p { line-height:1.8; font-size:15px; color:var(--color-text-supporting); }
+.ux-study-kpi-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.ux-study-kpi { display:flex; flex-direction:column; justify-content:space-between; gap:8px; padding:20px; border:1px solid var(--color-border); background:var(--color-surface); border-radius:var(--radius-card); }
+.ux-study-kpi > span:first-child { font-size:12px; font-weight:650; color:var(--color-text-secondary); }
+.ux-study-kpi > strong { font-size:clamp(26px,3vw,37px); font-weight:750; font-variant-numeric:tabular-nums; line-height:1.3; }
+.ux-study-kpi strong small { font-size:12px; font-weight:500; color:var(--color-text-secondary); margin-left:4px; }
+.ux-study-kpi > span:last-child { font-size:11px; color:var(--color-text-secondary); line-height:1.6; }
+.ux-study-graph-grid { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+.ux-study-panel { padding:21px; border:1px solid var(--color-border); border-radius:var(--radius-card); min-height:227px; }
+.ux-study-panel-heading { display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px; align-items:center; margin-bottom:25px; }
+.ux-study-panel-heading h3 { font-size:14px; font-weight:700; }
+.ux-study-panel-heading > span { color:var(--color-text-secondary); font-size:11px; }
+.ux-study-stacked { height:13px; width:100%; display:flex; border-radius:999px; overflow:hidden; background:var(--color-border); }
+.ux-study-legend { display:flex; flex-direction:column; gap:13px; margin-top:22px; padding:0; list-style:none; }
+.ux-study-legend li { display:flex; gap:9px; align-items:flex-start; }
+.ux-study-dot { margin-top:5px; width:9px; height:9px; flex-shrink:0; border-radius:100%; }
+.ux-study-legend li > div { display:flex; justify-content:space-between; align-items:start; width:100%; gap:5px; }
+.ux-study-legend strong { display:flex; gap:6px; align-items:center; font-size:12px; font-weight:550; }
+.ux-study-legend strong b { font-weight:750; }
+.ux-study-legend small { color:var(--color-text-secondary); font-size:10px; text-align:right; }
+.ux-study-bars { display:flex; flex-direction:column; gap:18px; }
+.ux-study-bar-row > div:first-child { display:flex; justify-content:space-between; gap:8px; font-size:12px; margin-bottom:9px; }
+.ux-study-bar-row b { font-variant-numeric:tabular-nums; }
+.ux-study-bar-row small { color:var(--color-text-secondary); font-size:10px; font-weight:400; }
+.ux-study-bar-track { height:9px; border-radius:999px; background:var(--color-brand-subtle); overflow:hidden; }
+.ux-study-bar-track > span { height:100%; display:block; border-radius:999px; background:var(--color-accent); }
+.ux-study-subheading { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:10px; }
+.ux-study-subheading h3 { font-size:18px; }
+.ux-study-subheading span { font-size:11px; color:var(--color-text-secondary); }
+.ux-study-vocs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.ux-study-voc { display:flex; flex-direction:column; gap:16px; margin:0; padding:19px; border:1px solid var(--color-border); border-radius:var(--radius-card); background:var(--color-surface); }
+.ux-study-voc-header { display:flex; align-items:center; gap:9px; }
+.ux-study-avatar { display:grid; place-items:center; width:34px; height:34px; flex:0 0 34px; border-radius:50%; background:var(--color-brand-subtle); color:var(--color-accent); font-size:11px; font-weight:700; }
+.ux-study-voc-header > div { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.ux-study-voc-header strong { font-size:11px; font-weight:700; }
+.ux-study-voc-header div span { font-size:10px; color:var(--color-text-secondary); }
+.ux-study-voc > p { font-size:13px; line-height:1.8; color:var(--color-text-supporting); flex:1; }
+.ux-study-voc > small { align-self:start; font-size:10px; color:var(--color-accent); padding:5px 8px; border:1px solid var(--color-border); border-radius:999px; }
+.ux-study-footnote { font-size:12px; line-height:1.8; color:var(--color-text-secondary); }
+.ux-study-findings { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.ux-study-findings > div { padding:19px; background:var(--color-surface-muted); border-radius:var(--radius-card); }
+.ux-study-finding-number { color:var(--color-accent); font-size:11px; font-weight:750; margin-bottom:17px; }
+.ux-study-findings h3 { font-size:15px; line-height:1.6; font-weight:700; margin-bottom:9px; word-break:keep-all; }
+.ux-study-findings p { font-size:12px; line-height:1.85; color:var(--color-text-supporting); }
+.ux-study-decisions { display:flex; flex-direction:column; gap:16px; }
+.ux-study-decision { border:1px solid var(--color-border); border-radius:var(--radius-card); overflow:hidden; }
+.ux-study-decision-title { padding:20px 22px; border-bottom:1px solid var(--color-border); display:flex; align-items:baseline; gap:13px; }
+.ux-study-decision-title span { font-size:10px; color:var(--color-accent); font-weight:750; }
+.ux-study-decision-title h3 { font-size:16px; font-weight:700; }
+.ux-study-before-after { display:grid; grid-template-columns:1fr 24px 1fr; gap:15px; align-items:center; padding:19px 22px; }
+.ux-study-before-after > div { display:flex; flex-direction:column; gap:8px; min-height:75px; }
+.ux-study-before-after > div > span { font-size:10px; font-weight:750; color:var(--color-text-secondary); }
+.ux-study-before-after > div:last-child > span { color:var(--color-accent); }
+.ux-study-before-after p { font-size:13px; line-height:1.7; }
+.ux-study-transition-icon { color:var(--color-accent); }
+.ux-study-why { display:flex; align-items:flex-start; gap:8px; padding:13px 22px; background:var(--color-surface-muted); font-size:12px; line-height:1.7; color:var(--color-text-supporting); }
+.ux-study-why svg { flex-shrink:0; color:var(--color-accent); margin-top:2px; }
+.ux-study-concept figcaption { display:flex; flex-wrap:wrap; }
+.ux-study-concept figcaption span { color:var(--color-accent); font-size:10px; letter-spacing:.09em; font-weight:750; }
+.ux-study-validation { border:1px solid var(--color-border); border-radius:var(--radius-card); overflow:hidden; }
+.ux-study-validation > div { display:grid; grid-template-columns:40px 1fr; gap:10px; padding:22px; }
+.ux-study-validation > div + div { border-top:1px solid var(--color-border); }
+.ux-study-validation > div > span { color:var(--color-accent); font-size:12px; font-weight:750; }
+.ux-study-validation h3 { font-size:15px; font-weight:700; line-height:1.7; margin-bottom:8px; }
+.ux-study-validation p { font-size:13px; color:var(--color-text-supporting); line-height:1.8; }
+.ux-study-validation small { display:block; font-size:11px; margin-top:9px; color:var(--color-text-secondary); }
+.ux-study-conclusion { padding:28px 30px; border:1px solid var(--color-border-strong); border-radius:var(--radius-card); }
+.ux-study-conclusion p { font-size:17px; font-weight:550; line-height:1.9; word-break:keep-all; }
+@media(max-width:760px) {
+  .ux-study { gap:30px; }
+  .ux-study .detail-heading h1 { font-size:30px; }
+  .ux-study-section { padding-top:25px; }
+  .ux-study-graph-grid,.ux-study-vocs,.ux-study-findings { grid-template-columns:1fr; }
+  .ux-study-kpi-grid { gap:8px; }
+  .ux-study-kpi { padding:13px; }
+  .ux-study-kpi > strong { font-size:25px; }
+  .ux-study-kpi > span:last-child { font-size:10px; }
+  .ux-study-vocs { gap:9px; }
+  .ux-study-before-after { grid-template-columns:1fr; gap:10px; }
+  .ux-study-transition-icon { transform:rotate(90deg); }
+  .ux-study-before-after > div { min-height:0; }
+}
+@media(max-width:480px) {
+  .category-ux .project-card-body { min-height:125px; }
+  .ux-study .detail-heading .ux-study-lede { font-size:15px; }
+  .ux-study-section-title h2 { font-size:23px; }
+  .ux-study-overview > div { grid-template-columns:60px minmax(0,1fr); gap:9px; }
+  .ux-study-kpi-grid { grid-template-columns:1fr 1fr; }
+  .ux-study-kpi:last-child { grid-column:1 / -1; }
+  .ux-study-kpi { gap:4px; }
+  .ux-study-decision-title { align-items:flex-start; flex-direction:column; gap:7px; }
+}
