@@ -56,7 +56,7 @@
 /* Dark is the default; explicit visitor preferences are retained. */
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --color-hero-bg: #000000;
+  --color-hero-bg: #11151b;
   --color-surface: #11151b;
   --color-header-glass: rgb(17 21 27 / 76%);
   --color-surface-muted: #1d242d;
