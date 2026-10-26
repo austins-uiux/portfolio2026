@@ -12,6 +12,7 @@ import { ComponentDemo } from '../components/lab/ComponentDemo';
 import { ComponentSource } from '../components/lab/ComponentSource';
 import { Button } from '../components/lab-ui/button';
 import { Toaster } from '../components/lab-ui/sonner';
+import { ClientOnly } from '../components/ClientOnly';
 
 class DemoBoundary extends Component<
   { children: ReactNode },
@@ -115,7 +116,7 @@ export default function ComponentLabPage({
               </div>
               <div className={`lab-demo lab-demo--detail lab-demo--${item.id}`}>
                 <DemoBoundary key={revision}>
-                  <ComponentDemo id={item.id} expanded />
+                  <ClientOnly><ComponentDemo id={item.id} expanded /></ClientOnly>
                 </DemoBoundary>
               </div>
             </section>

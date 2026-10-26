@@ -1,12 +1,9 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Analytics } from '@vercel/analytics/react';
-import { App } from './App';
+import { Root } from './Root';
 import './styles/index.css';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-    <Analytics />
-  </React.StrictMode>,
-);
+const container = document.getElementById('root')!;
+const initialLocation = container.dataset.initialLocation ?? window.location.pathname + window.location.search;
+const app = <Root initialLocation={initialLocation} />;
+if (container.hasChildNodes()) ReactDOM.hydrateRoot(container, app);
+else ReactDOM.createRoot(container).render(app);

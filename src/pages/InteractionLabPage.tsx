@@ -14,6 +14,7 @@ import { InteractionThemeContext } from '../components/interaction/InteractionTh
 import { InteractionSource } from '../components/interaction/InteractionSource';
 import { Button } from '../components/lab-ui/button';
 import { Toaster } from '../components/lab-ui/sonner';
+import { ClientOnly } from '../components/ClientOnly';
 
 class DemoBoundary extends Component<
   { children: ReactNode },
@@ -125,7 +126,7 @@ export default function InteractionLabPage({
               >
                 <DemoBoundary key={revision}>
                   <MotionConfig reducedMotion="user">
-                    <InteractionDemo id={item.id} expanded />
+                    <ClientOnly><InteractionDemo id={item.id} expanded /></ClientOnly>
                   </MotionConfig>
                 </DemoBoundary>
               </div>

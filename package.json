@@ -19,7 +19,9 @@
     "predev": "node scripts/build-chat-context.mjs",
     "prebuild": "node scripts/build-chat-context.mjs && node scripts/check-chat-build.mjs",
     "prebuild:preview": "node scripts/build-chat-context.mjs",
-    "check:chat": "node scripts/build-chat-context.mjs && node --experimental-strip-types scripts/check-chat.mjs && node scripts/check-chat-build.mjs"
+    "check:chat": "node scripts/build-chat-context.mjs && node --experimental-strip-types scripts/check-chat.mjs && node scripts/check-chat-build.mjs",
+    "postbuild": "node scripts/prerender.mjs && node scripts/check-prerender.mjs",
+    "check:prerender": "node scripts/check-prerender.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

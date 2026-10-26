@@ -16,10 +16,11 @@ export function navigate(href: string, options?: { replace?: boolean }) {
   window.dispatchEvent(new Event('app:navigate'));
 }
 
-export function useLocation() {
-  const location = useSyncExternalStore(subscribe, snapshot, () => '/');
+export function useLocation(initialLocation = '/') {
+  const location = useSyncExternalStore(subscribe, snapshot, () => initialLocation);
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }); }, [location]);
-  return new URL(location, window.location.origin === 'null' ? 'https://preview.local' : window.location.origin);
+  const origin = typeof window === 'undefined' ? 'https://portfolio2026-six-orcin.vercel.app' : window.location.origin;
+  return new URL(location, origin === 'null' ? 'https://preview.local' : origin);
 }
 
 export function AppLink({ href = '/', onClick, ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) {

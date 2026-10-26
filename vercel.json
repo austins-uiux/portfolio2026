@@ -3,5 +3,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "functions": { "api/chat.ts": { "maxDuration": 30 } },
-  "rewrites": [{ "source": "/((?!api(?:/|$)|assets/).*)", "destination": "/index.html" }]
+  "cleanUrls": true,
+  "trailingSlash": false
 }

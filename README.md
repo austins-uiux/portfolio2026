@@ -274,3 +274,14 @@ TypeScript 검사와 프로덕션 빌드, 브라우저에서 홈·8개 목록·�
 - 홈 썸네일은 TADA Rider 첫 상세 이미지, UT Lab의 실제 Before/After 예시, 도구 로고 3×3, Card 예시, Dia Text Reveal 모션, Color 아트워크, ‘좋은 UX는 보이지 않는다’ 썸네일을 사용합니다.
 - Card·Color·Dia 모션·UT After 예시는 각 페이지와 공유 컴포넌트로 관리합니다. 홈 Dia 모션은 화면 근처에서만 마운트하며 모션 줄이기 설정을 따릅니다. 홈 카드 전체 링크 안에는 중첩 버튼을 두지 않습니다.
 - 도구 로고 14개 파일(테마별 대체 포함)은 실제 30×30 RGBA PNG이며 워크플로우 행의 간격은 8px입니다.
+
+
+## 초기 HTML과 링크 공유
+
+- `npm run build`는 Vite 번들 생성 후 공개 경로 전체를 React 서버 렌더러로 미리 렌더링합니다. 본문·문서·토큰·이미지 주소·코드는 초기 HTML에 들어가며 브라우저에서는 `hydrateRoot`로 기존 HTML에 동작을 연결합니다.
+- 검색 결과는 방문자의 검색어에 따라 바뀌므로 클라이언트에서 렌더링하고 `noindex` 처리합니다. 비공개 아카이브와 보관된 UX 카드에는 정적 페이지를 생성하지 않습니다.
+- `vercel.json`의 `cleanUrls`가 `/work/design-system`을 해당 HTML에 연결합니다. API는 기존 Vercel Function을 사용하며 없는 URL은 404를 반환합니다. 전체 경로를 홈으로 보내던 SPA rewrite를 다시 추가하면 안 됩니다.
+- 페이지마다 제목·설명·canonical·Open Graph와 1200×630 공유 이미지를 제공합니다. Twitter 계정 연결과 Twitter 전용 메타 태그는 사용하지 않습니다.
+- `/sitemap.xml`, `/robots.txt`, `/llms.txt`, `/content/index.md`와 페이지별 `/content/<경로>.md`는 빌드 시 생성됩니다. 텍스트 문서는 실제 `<main>`에서 추출하며, 이미지 속 정보나 모션을 분석한 결과가 아닙니다.
+- `public/assets/social/cover.svg`는 공통 공유 이미지의 편집 가능한 원본입니다. 프로젝트·글의 JPG는 각 페이지의 실제 썸네일을 1200×630 캔버스에 맞춘 공유용 사본입니다. 원본 포트폴리오 이미지는 유지합니다.
+- `npm run check:prerender`는 모든 공개 페이지의 본문, 중복 메타 태그, canonical, 이미지 파일, 텍스트 문서, sitemap과 404 처리를 검사합니다. 새 공개 경로와 내용도 다음 빌드에서 자동 반영됩니다.

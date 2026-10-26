@@ -13,13 +13,14 @@ import { HomePage } from './pages/HomePage';
 import { SearchPage } from './pages/SearchPage';
 import { AiWorkflowPage } from './pages/AiWorkflowPage';
 import { workflowFromEntryId, workflowHref } from './data/ai-workflow';
+import { getPageMetadata } from './lib/page-metadata';
 
 const ComponentLabPage = lazy(() => import('./pages/ComponentLabPage'));
 const InteractionLabPage = lazy(() => import('./pages/InteractionLabPage'));
 const DesignSystemPage = lazy(() => import('./pages/DesignSystemPage'));
 
-export function App() {
-  const location = useLocation();
+export function App({ initialLocation = '/' }: { initialLocation?: string }) {
+  const location = useLocation(initialLocation);
   const [collapsed, setCollapsed] = usePersistentState('aplus:sidebar-collapsed', false);
   const [theme, setTheme] = usePersistentState<'light' | 'dark'>('aplus:theme', 'dark', value => value === 'light' || value === 'dark');
   const [chatOpen, setChatOpen] = useState(false);
@@ -37,6 +38,17 @@ export function App() {
   useEffect(() => { document.documentElement.dataset.theme = theme; document.documentElement.classList.toggle('dark', theme === 'dark'); const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]'); if (meta) meta.content = theme === 'dark' ? '#11151b' : '#ffffff'; }, [theme]);
   useEffect(() => { if (legacyFlow) navigate(workflowHref(legacyFlow.id), { replace: true }); }, [legacyFlow]);
   useEffect(() => { document.title = `${title} — A+studio`; setMobileOpen(false); }, [location.href, title]);
+  useEffect(() => {
+    const metadata = getPageMetadata(location.pathname + location.search);
+    document.title = metadata.title;
+    const values = { description: metadata.description, 'og:title': metadata.title, 'og:description': metadata.description, 'og:url': metadata.canonical, 'og:image': metadata.image, 'og:image:alt': metadata.imageAlt, 'og:type': metadata.type, robots: metadata.indexable ? 'index,follow' : 'noindex,follow' };
+    for (const [name, content] of Object.entries(values)) {
+      const meta = document.querySelector<HTMLMetaElement>(`meta[name="${name}"],meta[property="${name}"]`);
+      if (meta) meta.content = content;
+    }
+    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (canonical) canonical.href = metadata.canonical;
+  }, [location.href]);
   useEffect(() => {
     const media = window.matchMedia('(min-width: 761px)');
     const resize = () => { if (media.matches) setMobileOpen(false); };
