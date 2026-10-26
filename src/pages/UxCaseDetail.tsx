@@ -1,8 +1,9 @@
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Frame } from 'lucide-react';
 import { AppLink } from '../lib/router';
 import { categoryEntries } from '../data/portfolio';
 import { getUxCase } from '../data/ux-cases';
 import { uxEditorial } from '../data/ux-editorial';
+import { getFigmaEmbedUrl, uxFigmaUrls } from '../data/ux-figma';
 
 const originalFlowSizes: Record<string, [number, number]> = {
   'naver-cart': [2047, 872],
@@ -21,9 +22,10 @@ export function UxCaseDetail({ id }: { id: string }) {
   const index = entries.findIndex(entry => entry.id === id);
   const previous = entries[index - 1];
   const next = entries[index + 1];
-  const image = `/assets/ux-cases/${id.split('-')[0]}-concept.svg`;
   const originalFlow = `/assets/ux-cases/${id.split('-')[0]}-original-flow.webp`;
   const [originalWidth, originalHeight] = originalFlowSizes[id];
+  const figmaLink = uxFigmaUrls[id]?.trim() ?? '';
+  const figmaEmbed = getFigmaEmbedUrl(figmaLink);
 
   return <article className="detail-page entry-detail ux-article content-container">
     <header className="detail-heading ux-article-header">
@@ -54,10 +56,17 @@ export function UxCaseDetail({ id }: { id: string }) {
         {section.afterBullets?.map((paragraph, i) => <p key={`after-${i}`}>{paragraph}</p>)}
         {section.quote && <blockquote className="ux-article-hypothesis">{section.quote}</blockquote>}
         {section.steps?.map((step, i) => <p key={`step-${i}`}>{step}</p>)}
-        {sectionIndex === 2 && <figure className="ux-article-visual">
-          <img src={image} width="1672" height="941" loading="lazy" decoding="async" alt={`${study.app}의 Before/After 화면설계 콘셉트`} />
-          <figcaption>화면설계 방향을 보여주는 1차 콘셉트 이미지입니다. 실제 앱 화면 및 검증된 개선 결과가 아닙니다.</figcaption>
-        </figure>}
+        {sectionIndex === 2 && <div className="ux-figma-embed" aria-label={`${study.app} Figma 디자인 작업물`}>
+          <div className="ux-figma-embed-bar">
+            <span className="ux-figma-embed-label"><Frame size={17} aria-hidden="true" /> Figma 작업물</span>
+            {figmaEmbed ? <a href={figmaLink} target="_blank" rel="noopener noreferrer">Figma에서 열기 <ArrowUpRight size={16} aria-hidden="true" /></a> : <span className="ux-figma-embed-pending">링크 연결 예정</span>}
+          </div>
+          {figmaEmbed ? <iframe src={figmaEmbed} title={`${study.app} Figma 작업물 미리보기`} loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" /> : <div className="ux-figma-embed-placeholder">
+            <span className="ux-figma-embed-symbol"><Frame size={28} strokeWidth={1.5} aria-hidden="true" /></span>
+            <strong>디자인 작업물을 준비 중이에요.</strong>
+            <p>Figma 링크가 연결되면 이곳에서 화면과 인터랙션을 직접 살펴볼 수 있어요.</p>
+          </div>}
+        </div>}
       </section>)}
     </div>
 
