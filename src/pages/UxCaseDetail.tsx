@@ -1,4 +1,5 @@
-import { ArrowLeft, ArrowUpRight, Frame } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Frame, X } from 'lucide-react';
+import { Dialog as DialogPrimitive } from 'radix-ui';
 import { AppLink } from '../lib/router';
 import { categoryEntries } from '../data/portfolio';
 import { getUxCase } from '../data/ux-cases';
@@ -43,10 +44,28 @@ export function UxCaseDetail({ id }: { id: string }) {
     <p className="ux-article-introduction">{article.introduction}</p>
 
     <figure className="ux-article-source">
-      <a href={originalFlow} target="_blank" rel="noopener noreferrer" aria-label={`${study.app}의 원본 UI Flow 이미지 새 창에서 보기`}>
-        <img src={originalFlow} width={originalWidth} height={originalHeight} alt={`${study.app}에서 분석한 실제 UI Flow 화면들`} decoding="async" />
-      </a>
-      <figcaption>분석에 사용한 UI Flow 화면 · 이미지를 클릭하면 원본 크기로 볼 수 있어요.</figcaption>
+      <DialogPrimitive.Root>
+        <DialogPrimitive.Trigger asChild>
+          <button type="button" className="ux-flow-trigger" aria-label={`${study.app}의 UI Flow 이미지 확대해서 보기`}>
+            <img src={originalFlow} width={originalWidth} height={originalHeight} alt={`${study.app}에서 분석한 실제 UI Flow 화면들`} decoding="async" />
+          </button>
+        </DialogPrimitive.Trigger>
+        <DialogPrimitive.Portal>
+          <DialogPrimitive.Overlay className="ux-flow-overlay" />
+          <DialogPrimitive.Content className="ux-flow-modal" aria-describedby={undefined}>
+            <div className="ux-flow-modal-header">
+              <DialogPrimitive.Title>{study.app} · UI Flow</DialogPrimitive.Title>
+              <DialogPrimitive.Close asChild>
+                <button type="button" className="ux-flow-modal-close" aria-label="이미지 확대 창 닫기"><X size={20} aria-hidden="true" /></button>
+              </DialogPrimitive.Close>
+            </div>
+            <div className="ux-flow-modal-body">
+              <img src={originalFlow} width={originalWidth} height={originalHeight} alt={`${study.app}의 UI Flow 원본 이미지 확대 보기`} />
+            </div>
+          </DialogPrimitive.Content>
+        </DialogPrimitive.Portal>
+      </DialogPrimitive.Root>
+      <figcaption>분석에 사용한 UI Flow 화면 · 이미지를 클릭하면 크게 볼 수 있어요.</figcaption>
     </figure>
 
     <div className="ux-article-body">
