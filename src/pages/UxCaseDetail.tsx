@@ -71,12 +71,37 @@ export function UxCaseDetail({ id }: { id: string }) {
     <div className="ux-article-body">
       {article.sections.map((section, sectionIndex) => <section className="ux-article-section" key={section.heading} aria-labelledby={`ux-article-section-${sectionIndex}`}>
         <h2 id={`ux-article-section-${sectionIndex}`}>{section.heading}</h2>
+        {id === 'naver-cart' && section.heading === '그래서 바꾼 것' && <DialogPrimitive.Root>
+          <DialogPrimitive.Trigger asChild>
+            <button type="button" className="ux-flow-trigger" aria-label="네이버플러스 스토어 장바구니 Before 및 Iteration 01부터 03까지의 디자인 이미지 확대해서 보기">
+              <img src="/assets/ux-cases/naver-cart-iterations.png" width={2048} height={1125} alt="네이버플러스 스토어 장바구니 Before, Iteration 01, Iteration 02, 최종안 Iteration 03 비교" loading="lazy" decoding="async" style={{ display: 'block', width: '100%', height: 'auto' }} />
+            </button>
+          </DialogPrimitive.Trigger>
+          <DialogPrimitive.Portal>
+            <DialogPrimitive.Overlay className="ux-flow-overlay" />
+            <DialogPrimitive.Content className="ux-flow-modal" aria-describedby={undefined}>
+              <div className="ux-flow-modal-header">
+                <DialogPrimitive.Title>네이버플러스 스토어 · 디자인 Iteration 01–03</DialogPrimitive.Title>
+                <DialogPrimitive.Close asChild>
+                  <button type="button" className="ux-flow-modal-close" aria-label="이미지 확대 창 닫기"><X size={20} aria-hidden="true" /></button>
+                </DialogPrimitive.Close>
+              </div>
+              <div className="ux-flow-modal-body">
+                <img src="/assets/ux-cases/naver-cart-iterations.png" width={2048} height={1125} alt="네이버플러스 스토어 장바구니 UI 디자인 Before부터 최종안 Iteration 03까지 확대 보기" />
+              </div>
+            </DialogPrimitive.Content>
+          </DialogPrimitive.Portal>
+        </DialogPrimitive.Root>}
         {section.heading === '시뮬레이터로 먼저 찔러본 결과' && <UxSimulationPanel study={study} />}
         {section.paragraphs?.map((paragraph, i) => <p key={`p-${i}`}>{paragraph}</p>)}
         {section.bullets && <ul>{section.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}</ul>}
         {section.afterBullets?.map((paragraph, i) => <p key={`after-${i}`}>{paragraph}</p>)}
         {section.quote && <blockquote className="ux-article-hypothesis">{section.quote}</blockquote>}
         {section.steps?.map((step, i) => <p key={`step-${i}`}>{step}</p>)}
+        {section.iterations?.map(iteration => <div key={iteration.heading} className="ux-article-section" style={{ gap: '14px', marginTop: '8px' }}>
+          <h3 style={{ margin: 0, fontSize: '20px', lineHeight: 1.55, letterSpacing: '-.02em', fontWeight: 700 }}>{iteration.heading}</h3>
+          {iteration.paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+        </div>)}
         {sectionIndex === 2 && <div className="ux-figma-embed" aria-label={`${study.app} Figma 디자인 작업물`}>
           <div className="ux-figma-embed-bar">
             <span className="ux-figma-embed-label"><Frame size={17} aria-hidden="true" /> Figma 작업물</span>
