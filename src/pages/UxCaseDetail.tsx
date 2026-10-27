@@ -92,6 +92,27 @@ export function UxCaseDetail({ id }: { id: string }) {
             </DialogPrimitive.Content>
           </DialogPrimitive.Portal>
         </DialogPrimitive.Root>}
+        {id === 'tripstore-comparison' && section.heading === '그래서 바꾼 것' && <DialogPrimitive.Root>
+          <DialogPrimitive.Trigger asChild>
+            <button type="button" className="ux-flow-trigger" aria-label="트립스토어 숙소 비교 Before와 After 디자인 이미지 확대해서 보기">
+              <img src="/assets/ux-cases/tripstore-before-after.png" width={1832} height={2048} alt="트립스토어 숙소 비교 화면 Before 4개와 After 3개 시안 비교" loading="lazy" decoding="async" style={{ display: 'block', width: '100%', height: 'auto' }} />
+            </button>
+          </DialogPrimitive.Trigger>
+          <DialogPrimitive.Portal>
+            <DialogPrimitive.Overlay className="ux-flow-overlay" />
+            <DialogPrimitive.Content className="ux-flow-modal" aria-describedby={undefined}>
+              <div className="ux-flow-modal-header">
+                <DialogPrimitive.Title>트립스토어 · 숙소 비교 Before / After</DialogPrimitive.Title>
+                <DialogPrimitive.Close asChild>
+                  <button type="button" className="ux-flow-modal-close" aria-label="이미지 확대 창 닫기"><X size={20} aria-hidden="true" /></button>
+                </DialogPrimitive.Close>
+              </div>
+              <div className="ux-flow-modal-body">
+                <img src="/assets/ux-cases/tripstore-before-after.png" width={1832} height={2048} alt="트립스토어 숙소 비교 UI Before와 After 전체 시안 확대 보기" />
+              </div>
+            </DialogPrimitive.Content>
+          </DialogPrimitive.Portal>
+        </DialogPrimitive.Root>}
         {section.heading === '시뮬레이터로 먼저 찔러본 결과' && <UxSimulationPanel study={study} />}
         {section.paragraphs?.map((paragraph, i) => <p key={`p-${i}`}>{paragraph}</p>)}
         {section.bullets && <ul>{section.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}</ul>}
