@@ -81,7 +81,7 @@ export function UxCaseDetail({ id }: { id: string }) {
             <DialogPrimitive.Overlay className="ux-flow-overlay" />
             <DialogPrimitive.Content className="ux-flow-modal" aria-describedby={undefined}>
               <div className="ux-flow-modal-header">
-                <DialogPrimitive.Title>{translate("네이버플러스 스토어 · 디자인 Iteration 01–03")}</DialogPrimitive.Title>
+                <DialogPrimitive.Title>{translate("네이버플러스 스토어 · 디자인 Iteration 01~03")}</DialogPrimitive.Title>
                 <DialogPrimitive.Close asChild>
                   <button type="button" className="ux-flow-modal-close" aria-label={translate("이미지 확대 창 닫기")}><X size={20} aria-hidden="true" /></button>
                 </DialogPrimitive.Close>

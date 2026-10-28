@@ -1,4 +1,4 @@
-import { translate } from '../i18n';
+import { getLocale, translate } from '../i18n';
 import { getCategory, getEntry } from '../data/portfolio';
 import { getWorkflow, workflowFromEntryId } from '../data/ai-workflow';
 
@@ -18,9 +18,9 @@ export function getPageMetadata(href: string) {
   const canonical = new URL(url.pathname, siteOrigin);
   if (category?.id === 'ai-workflow' && url.searchParams.has('flow')) canonical.searchParams.set('flow', getWorkflow(url.searchParams.get('flow')).id);
   return {
-    title: `${translate(title)} — A+studio`, description, canonical: canonical.href,
+    title: `${translate(title)}${getLocale() === 'ko' ? ': ' : ' '}A+studio`, description, canonical: canonical.href,
     image: entry?.category === 'ux' && entry.thumbnail ? `${siteOrigin}${entry.thumbnail.src}` : `${siteOrigin}/assets/social/${entry?.kind ? `${entry.id}.jpg` : 'cover.png'}`,
-    imageAlt: entry?.kind ? `${entry.title} — Austin의 A+studio 포트폴리오` : 'A+studio — Austin, AI Native Product Designer',
+    imageAlt: entry?.kind ? `${entry.title}: Austin의 A+studio 포트폴리오` : 'A+studio Austin, AI Native Product Designer',
     type: entry?.kind === 'article' ? 'article' : 'website',
     indexable: home || !!entry || !!category,
   };

@@ -100,7 +100,7 @@ import { useInteractionTheme } from './InteractionTheme';
 const scene = '/assets/interaction-scene.svg';
 const video = '/assets/interaction-loop.mp4';
 const socialText =
-  '작은 모션을 연결해 명확한 경험을 만듭니다. — 로컬 샘플 게시글';
+  '작은 모션을 연결해 명확한 경험을 만듭니다: 로컬 샘플 게시글';
 const sampleTweet: Tweet = {
   __typename: 'Tweet',
   id_str: '0',

@@ -15,7 +15,7 @@ export function SystemPreview({ id, compact = false }: { id: SystemId; compact?:
     const size=cssValue(role.file,role.selector,'font-size');
     const weight=cssValue(role.file,role.selector,'font-weight');
     const line=cssValue(role.file,role.selector,'line-height');
-    return <div key={role.label}><div className="ds-type-meta"><span>{localize(role.label)}</span><code>{finalFontSize(size)} / {weight==='—'?'400':weight} / {line==='—'?'상속':line}</code></div><p style={{fontSize:size,fontWeight:weight==='—'?400:weight,lineHeight:line==='—'?1.5:line}}>{localize(phrase || 'A+studio')}</p></div>;
+    return <div key={role.label}><div className="ds-type-meta"><span>{localize(role.label)}</span><code>{finalFontSize(size)} / {weight==='-'?'400':weight} / {line==='-'?'상속':line}</code></div><p style={{fontSize:size,fontWeight:weight==='-'?400:weight,lineHeight:line==='-'?1.5:line}}>{localize(phrase || 'A+studio')}</p></div>;
   }))}</div></div>;
   if (id === 'spacing') return <div className="ds-space-art">{localize(tokensFor(id).filter(t=>!compact||Number.parseInt(t.value)<=40).map(t=><div key={t.name}><code>{t.value}</code><i style={{width:compact?`calc(${t.value} * 2)`: `min(100%, calc(${t.value} * 5))`}} /></div>))}</div>;
   if (id === 'radius') return <div className="ds-radius-art">{localize(tokensFor(id).filter(t=>!compact||['--radius-small','--radius-input','--radius-card','--radius-pill'].includes(t.name)).map(t=><div key={t.name}><i style={{borderRadius:t.value}} /><code>{t.value}</code>{localize(!compact&&<span>{localize(t.name.replace('--radius-',''))}</span>)}</div>))}</div>;

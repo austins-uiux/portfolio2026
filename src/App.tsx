@@ -42,7 +42,7 @@ export function App({ initialLocation = '/' }: { initialLocation?: string }) {
   const title = isWorkflow ? 'AI 워크플로우' : entry?.detailTitle ?? entry?.title ?? category?.title ?? (isSearch ? '검색 결과' : isHome ? 'Austin의 AI Agentic 포트폴리오' : '페이지를 찾을 수 없습니다');
   useEffect(() => { document.documentElement.dataset.theme = theme; document.documentElement.classList.toggle('dark', theme === 'dark'); const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]'); if (meta) meta.content = theme === 'dark' ? '#11151b' : '#ffffff'; }, [theme]);
   useEffect(() => { if (legacyFlow) navigate(workflowHref(legacyFlow.id), { replace: true }); }, [legacyFlow]);
-  useEffect(() => { document.title = `${translate(title)} — A+studio`; setMobileOpen(false); }, [location.href, title, locale]);
+  useEffect(() => { document.title = `${translate(title)}${locale === 'ko' ? ': ' : ' '}A+studio`; setMobileOpen(false); }, [location.href, title, locale]);
   useEffect(() => {
     const metadata = getPageMetadata(location.pathname + location.search);
     document.title = translate(metadata.title);

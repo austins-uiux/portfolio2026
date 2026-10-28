@@ -84,6 +84,6 @@
 .language-toggle-glyph { font-size: 15px; font-weight: 600; line-height: 1; letter-spacing: -.05em; }
 .language-toggle { flex: 0 0 auto; }
 html[lang="en"] .hero p { max-width: 620px; margin-inline: auto; text-wrap: balance; }
-html[lang="en"] .hero p br, html[lang="en"] .home-intro p br { display: none; }
+html[lang="en"] .hero p br { display: none; }
 html[lang="en"] .nav-label { letter-spacing: -.02em; }
 @media (max-width: 480px) { .topbar-utilities { gap: 1px; } .topbar .search-wrap { min-width: 0; flex: 1; } .topbar .search-field input { min-width: 0; width: 100%; } }

@@ -89,7 +89,7 @@ export default function UtLabModal({open,onClose}:{open:boolean;onClose:()=>void
   }
   function downloadReport() {
     if(!report) return;
-    const data={title:'A+studio UT Lab — Synthetic Research Report',disclaimer:'Simulated hypotheses, not observed user research results.',inputs:{problem:report.scenario,category:report.category,subcategory:report.subcategory,imageNames:images.filter(Boolean).map(image=>image!.name)},...report};
+    const data={title:'A+studio UT Lab Synthetic Research Report',disclaimer:'Simulated hypotheses, not observed user research results.',inputs:{problem:report.scenario,category:report.category,subcategory:report.subcategory,imageNames:images.filter(Boolean).map(image=>image!.name)},...report};
     const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'}));
     const link=document.createElement('a');link.href=url;link.download=`aplus-ut-lab-report-${report.createdAt.slice(0,10)}.json`;link.click();window.setTimeout(()=>URL.revokeObjectURL(url),2000);
   }

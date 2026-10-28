@@ -93,7 +93,7 @@ export function cssValue(file: keyof typeof sources, selector: string, property:
     const match = rule[2].match(new RegExp('(?:^|;)\\s*'+property+'\\s*:\\s*([^;]+)'));
     if (match) return match[1].trim();
   }
-  return '—';
+  return '-';
 }
 export const typeRoles = [
   { label:'페이지 제목',selector:'.page-heading h1',file:'pages.css' },
