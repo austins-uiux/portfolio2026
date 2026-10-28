@@ -12,7 +12,10 @@ export function CategoryPage({ category }: { category: Category }) {
   const [filter, setFilter] = useState<typeof filters[number] | null>(null);
   const [utOpen, setUtOpen] = useState(false), [utMounted, setUtMounted] = useState(false);
   const closeUt = useCallback(() => setUtOpen(false), []);
-  const items = categoryEntries(category.id).filter(item => !filter || item.foundation === filter);
+  const items = categoryEntries(category.id).filter(item =>
+    (category.id !== 'ux' || item.id !== 'flitto-membership') &&
+    (!filter || item.foundation === filter),
+  );
   return <div className={`listing-page content-container listing-page--${category.layout} category-${category.id}`} data-figma-node={category.figmaNode}>
     <header className={`page-heading${category.id === 'ux' ? ' page-heading--with-cta' : ''}`}><SectionMark /><h1 tabIndex={-1}>{category.title}</h1><p>{category.description}</p>{category.id === 'ux' && <button type="button" className="ut-lab-cta" aria-haspopup="dialog" onClick={() => { setUtMounted(true); setUtOpen(true); }}>UT Lab <ArrowUpRight size={14}/></button>}</header>
     {category.layout === 'foundation-list' && <div className="foundation-filters" role="group" aria-label="디자인 시스템 분류">{filters.map((label, index) => <button key={label} type="button" className={(filter === label || !filter && index === 0) ? 'is-selected' : ''} aria-pressed={filter === label || !filter && index === 0} onClick={() => setFilter(current => current === label ? null : label)}>{label}</button>)}</div>}
