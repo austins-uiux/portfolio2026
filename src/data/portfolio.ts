@@ -39,7 +39,7 @@ function entry(id: string, category: CategoryId, title: string, meta = 'UI/UX ·
 /** Migrated content shares the same routes and templates as the original draft. */
 export const entries: PortfolioEntry[] = [
   ...(importedContent as PortfolioEntry[]).filter(item => item.category === 'featured'),
-  // 기존에 보관했던 UX 카드 디자인을 재사용해, 실서비스 UI 관찰 기반의 4개 가상 UT 사례를 노출합니다.
+  // 기존에 보관했던 UX 카드 디자인을 재사용해, 실서비스 UI 관찰 기반의 3개 가상 UT 사례를 노출합니다.
   ...uxEntries,
   ...workflows.map(flow => ({ ...entry(`workflow-${flow.id}`, 'ai-workflow', flow.label, flow.title), summary: flow.description, sections: flow.steps.map(step => ({ heading: step.title, body: step.body })) })),
   ...labComponents.map(item => ({ ...entry(`component-${item.id}`, 'component-lab', item.name, `shadcn/ui · ${item.group}`), sections: [{ heading: item.name, body: item.description }] })),

@@ -2,7 +2,6 @@ import type { PortfolioEntry } from '../types';
 import naverReport from './ux-reports/naver.json';
 import tripstoreReport from './ux-reports/tripstore.json';
 import ventiReport from './ux-reports/venti.json';
-import flittoReport from './ux-reports/flitto.json';
 import { uxEditorial } from './ux-editorial';
 
 type Outcome = 'complete' | 'hesitate' | 'drop';
@@ -133,38 +132,7 @@ export const uxCases: UxCase[] = [
     conceptCaption: '주문 가능 필터·상태별 핀·목록 연동을 표현한 AI 콘셉트 이미지입니다. 실제 더벤티 화면의 수정본은 아닙니다.',
     report: ventiReport,
   },
-  {
-    id: 'flitto-membership', app: '플리토', category: 'AI 서비스', icon: `${folder}/flitto-logo-144.png`,
-    eyebrow: '04 / REWARD & MOTIVATION', title: '다음 등급까지 뭘 얼마나 더 해야 하는지 알려주기',
-    lede: '멤버십 등급이 많고 기준이 자세하더라도 사용자가 “내가 무엇을 얼마나 더 해야 하나?”에 답하지 못하면 안내는 동기로 연결되지 않습니다.',
-    problem: '여러 유형의 배지와 Gold·Silver·Bronze 조건이 긴 목록으로 안내되어 개인의 현재 상태와 다음 목표를 연결하기 어려울 수 있다.',
-    observation: '제공된 UI에서 활동 페이지의 배지 카드와 0.0% 진행 상태, “배지 획득 및 승급조건 보기” 액션, 긴 조건 안내 시트를 확인했습니다. 배지 종류에 따라 채택 포인트·번역 건수·기부 등의 조건과 단위가 다릅니다.',
-    observations: [
-      { label: '서로 다른 계산 단위', detail: '채택·번역·기부 등 배지마다 누적 기준과 단위가 달라 이해에 시간이 필요합니다.' },
-      { label: '사용자 상태의 연결 부족', detail: '일부 배지의 0.0% 또는 “-”와 긴 승급 조건을 머릿속으로 연결해야 할 수 있습니다.' },
-      { label: '조건 안내의 긴 목록', detail: '자신과 관련된 다음 등급이 아닌 모든 배지의 조건을 탐색해야 하는 구조입니다.' },
-    ],
-    hypothesis: '현재 등급·누적 상태·다음 등급까지 남은 수치를 하나로 연결하면 목표 이해와 다음 행동 선택을 도울 수 있을 것이다.',
-    mission: '특정 배지를 선택하고 현재 상태에서 다음 등급까지 필요한 조건을 확인한 후 수행 가능한 다음 행동을 설명하기.',
-    findings: [
-      { title: '조건은 있지만 개인화된 다음 목표는 약함', detail: '절대 기준을 읽은 뒤 자신의 누적치를 빼서 남은 요구량을 계산해야 할 수 있습니다.' },
-      { title: '배지 체계의 학습 부담', detail: '모든 등급의 조건을 한 번에 제공하면 초보 사용자는 우선순위를 정하기 어렵습니다.' },
-      { title: '행동과 보상의 거리', detail: '“어떤 활동을 하면 다음 단계에 가까워지는가”가 안내의 핵심이어야 합니다.' },
-    ],
-    decisions: [
-      { title: '나의 다음 단계부터', from: '모든 Gold·Silver·Bronze 조건 열람', to: '현재 등급·다음 목표·남은 수치를 우선 표시', why: '사용자의 진척도를 스스로 환산하지 않도록 합니다.' },
-      { title: '배지별 정보 접기', from: '긴 전체 조건 목록', to: '현재 관련 배지를 상단 배치하고 세부 등급 조건은 펼쳐 보기', why: '초보자에게 필요한 정보량을 제한합니다.' },
-      { title: '다음 행동 안내', from: '조건만 읽고 안내 종료', to: '번역 요청·기여 등의 가능한 행동으로 연결하는 CTA', why: '정보 확인을 실제 행동의 출발점으로 만듭니다.' },
-    ],
-    validation: [
-      { question: '사용자가 다음 등급과 남은 요구량을 정확히 설명하는가?', method: '정보 탐색 UT / 계산 없이 응답하게 하기', metric: '정답률 · 조건 이해 시간' },
-      { question: '어떤 행동이 승급에 영향을 주는지 이해하는가?', method: '시나리오 기반 사고 발화', metric: '올바른 다음 행동 선택률' },
-      { question: '보상 구조가 실제 활동을 늘리는가?', method: '실서비스에서 장기 실험을 별도로 설계', metric: '활동 재방문률 · 유효 기여 횟수' },
-    ],
-    closing: '등급 안내에서 중요한 정보는 모든 사용자가 언젠가 도달할 최고 등급보다 “지금 나의 다음 단계”입니다. 개인화된 진행감과 설명 가능한 보상이 결합되어야 합니다.',
-    conceptCaption: '다음 등급으로의 진행률과 남은 조건을 보여주는 방향으로 생성한 아이디어 이미지입니다. 실제 플리토 서비스 개선 결과가 아닙니다.',
-    report: flittoReport,
-  },
+
 ];
 
 export const uxEntries: PortfolioEntry[] = uxCases.map(item => ({

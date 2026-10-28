@@ -11,7 +11,6 @@ const originalFlowSizes: Record<string, [number, number]> = {
   'naver-cart': [2047, 872],
   'tripstore-comparison': [2048, 714],
   'venti-delivery-map': [2048, 1434],
-  'flitto-membership': [2047, 1074],
 };
 
 /** Minimal long-form template that follows the site's design tokens. */
