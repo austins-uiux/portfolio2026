@@ -59,5 +59,12 @@ assert(chatKnowledge.every(d=>!d.id.startsWith('archive-')&&!d.text.includes('�
 assert(retrieveContext([{role:'user',content:'TADA Driver의 CPF 정책'}]).selected.some(d=>d.id==='tada-driver'));checks++;
 assert(retrieveContext([{role:'user',content:'디자인 시스템 컬러 토큰'}]).selected.some(d=>d.id==='foundation-1'));checks++;
 const config=JSON.parse(await readFile(new URL('../vercel.json',import.meta.url),'utf8'));
-const rewrite=new RegExp('^'+config.rewrites[0].source+'$');assert(!rewrite.test('/api/chat'));assert(!rewrite.test('/assets/logo.svg'));assert(rewrite.test('/project/tada-rider'));checks++;
+// Clean URLs resolve generated HTML while Vercel retains the /api/chat function route.
+assert.equal(config.cleanUrls,true);assert.equal(config.functions['api/chat.ts'].maxDuration,30);checks++;
+for (const [language, expected] of [['en', 'Default to English'], ['ko', '기본 한국어']]) {
+  let instruction;
+  const handler=configured({fetch:async(url,init)=>{instruction=JSON.parse(init.body).systemInstruction.parts[0].text;return success();}});
+  const req=request(); req.headers.set('X-Aplus-Language',language);
+  assert.equal((await handler(req)).status,200);assert(instruction.includes(expected));checks++;
+}
 console.log(`Chat checks passed: ${checks} cases (mocked Gemini transport; no real API calls).`);

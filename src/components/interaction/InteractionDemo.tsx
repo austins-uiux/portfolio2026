@@ -1,3 +1,4 @@
+import { translate, translateText, localize } from '../../i18n';
 import { useRef, useState, type ReactNode } from 'react';
 import {
   Code2,
@@ -139,10 +140,10 @@ function Surface({
   children: ReactNode;
   className?: string;
 }) {
-  return <div className={`magic-surface ${className}`}>{children}</div>;
+  return <div className={`magic-surface ${className}`}>{localize(children)}</div>;
 }
 function CenterLabel({ children }: { children: ReactNode }) {
-  return <div className="magic-center-label">{children}</div>;
+  return <div className="magic-center-label">{localize(children)}</div>;
 }
 function CursorExample({ smooth = false }: { smooth?: boolean }) {
   const [active, setActive] = useState(false);
@@ -154,8 +155,8 @@ function CursorExample({ smooth = false }: { smooth?: boolean }) {
         onPointerLeave={() => setActive(false)}
       >
         <MousePointer2 />
-        <span>이 영역에서 마우스를 움직여보세요</span>
-        {smooth ? (
+        <span>{translate("이 영역에서 마우스를 움직여보세요")}</span>
+        {localize(smooth ? (
           active && (
             <SmoothCursor
               cursor={<MousePointer2 fill="#148DDF" color="white" size={30} />}
@@ -165,7 +166,7 @@ function CursorExample({ smooth = false }: { smooth?: boolean }) {
           <Pointer>
             <MousePointer2 fill="#148DDF" color="white" size={28} />
           </Pointer>
-        )}
+        ))}
       </div>
     </Surface>
   );
@@ -177,25 +178,22 @@ function ScrollExample({ reveal = false }: { reveal?: boolean }) {
       ref={ref}
       className="magic-scroll-area"
       tabIndex={0}
-      aria-label="예시 안에서 스크롤"
+      aria-label={translate("예시 안에서 스크롤")}
     >
       <ScrollProgress
         scrollContainer={ref}
         className="sticky top-0 h-1 bg-primary"
       />
-      {reveal ? (
-        <TextReveal scrollContainer={ref} className="h-[400px]">
-          Scroll to reveal. 작은 모션이 경험을 바꿉니다.
-        </TextReveal>
+      {localize(reveal ? (
+        <TextReveal scrollContainer={ref} className="h-[400px]">{translate(" Scroll to reveal. 작은 모션이 경험을 바꿉니다. ")}</TextReveal>
       ) : (
         <div className="space-y-8 p-5">
-          {Array.from({ length: 6 }, (_, i) => (
+          {localize(Array.from({ length: 6 }, (_, i) => (
             <p key={i} className="text-sm">
-              0{i + 1} · 이 영역을 스크롤해 보세요.
-            </p>
-          ))}
+              0{localize(i + 1)}{translate(" · 이 영역을 스크롤해 보세요. ")}</p>
+          )))}
         </div>
-      )}
+      ))}
     </div>
   );
 }
@@ -248,9 +246,7 @@ function ConfettiExample() {
             origin: { y: 0.65 },
           })
         }
-      >
-        축하하기
-        <Sparkles />
+      >{translate(" 축하하기 ")}<Sparkles />
       </Button>
     </Surface>
   );
@@ -266,24 +262,24 @@ export function InteractionDemo({
   const { theme, onThemeChange } = useInteractionTheme();
   const [value, setValue] = useState(65);
   const [replay, setReplay] = useState(0);
-  const notify = () => toast('인터랙션 버튼을 눌렀어요.');
+  const notify = () => toast(translate('인터랙션 버튼을 눌렀어요.'));
   switch (id) {
     case 'marquee':
       return (
         <div className="w-full overflow-hidden">
           <Marquee pauseOnHover className="[--duration:14s]">
-            {['Design', 'Build', 'Explore', 'A+studio'].map((s) => (
+            {localize(['Design', 'Build', 'Explore', 'A+studio'].map((s) => (
               <div className="magic-pill" key={s}>
-                {s}
+                {localize(s)}
               </div>
-            ))}
+            )))}
           </Marquee>
           <Marquee pauseOnHover reverse className="[--duration:18s]">
-            {['Interaction', 'Motion', 'React'].map((s) => (
+            {localize(['Interaction', 'Motion', 'React'].map((s) => (
               <div className="magic-pill" key={s}>
-                {s}
+                {localize(s)}
               </div>
-            ))}
+            )))}
           </Marquee>
         </div>
       );
@@ -312,7 +308,7 @@ export function InteractionDemo({
     case 'animated-list':
       return (
         <AnimatedList delay={1300} className="w-full gap-2">
-          {[
+          {localize([
             '새 아이디어가 도착했어요',
             '컴포넌트 검토 완료',
             '프로젝트 준비 완료',
@@ -321,10 +317,10 @@ export function InteractionDemo({
               <span className="magic-node">
                 <Check size={15} />
               </span>
-              <span>{s}</span>
-              <small>0{i + 1}</small>
+              <span>{localize(s)}</span>
+              <small>0{localize(i + 1)}</small>
             </div>
-          ))}
+          )))}
         </AnimatedList>
       );
     case 'dock':
@@ -334,12 +330,12 @@ export function InteractionDemo({
           iconMagnification={48}
           className="h-16 border bg-card px-2"
         >
-          {[Home, Palette, Code2, Sparkles].map((Icon, i) => (
+          {localize([Home, Palette, Code2, Sparkles].map((Icon, i) => (
             <DockIcon key={i}>
               <button
                 type="button"
                 aria-label={
-                  ['홈 아이콘', '디자인 아이콘', '코드 아이콘', 'AI 아이콘'][i]
+                  translateText(['홈 아이콘', '디자인 아이콘', '코드 아이콘', 'AI 아이콘'][i])
                 }
                 className="flex size-full items-center justify-center rounded-full bg-secondary"
                 onClick={notify}
@@ -347,7 +343,7 @@ export function InteractionDemo({
                 <Icon size={18} />
               </button>
             </DockIcon>
-          ))}
+          )))}
         </Dock>
       );
     case 'tweet-card':
@@ -393,7 +389,7 @@ export function InteractionDemo({
         <Lens lensSize={100} zoomFactor={1.7}>
           <img
             src={scene}
-            alt="확대할 A+studio 그래픽"
+            alt={translate("확대할 A+studio 그래픽")}
             className="w-full rounded-lg"
           />
         </Lens>
@@ -407,7 +403,7 @@ export function InteractionDemo({
         <div className="relative w-full overflow-hidden rounded-lg">
           <img
             src={scene}
-            alt="블러가 점차 적용되는 그래픽"
+            alt={translate("블러가 점차 적용되는 그래픽")}
             className="w-full"
           />
           <ProgressiveBlur height="70%" position="bottom" />
@@ -446,9 +442,7 @@ export function InteractionDemo({
           gradientTo="#78d4ff"
         >
           <CenterLabel>
-            <Sparkles />
-            마우스를 움직여보세요
-          </CenterLabel>
+            <Sparkles />{translate(" 마우스를 움직여보세요 ")}</CenterLabel>
         </MagicCard>
       );
     case 'glare-hover':
@@ -491,7 +485,7 @@ export function InteractionDemo({
             theme={theme}
             onThemeChange={onThemeChange}
             className="magic-theme-toggle"
-            aria-label="애니메이션으로 테마 전환"
+            aria-label={translate("애니메이션으로 테마 전환")}
           />
           <span className="text-xs text-muted-foreground">Light ↔ Dark</span>
         </div>
@@ -506,9 +500,7 @@ export function InteractionDemo({
             variant="ghost"
             size="sm"
             onClick={() => setReplay((v) => v + 1)}
-          >
-            다시 재생
-          </Button>
+          >{translate(" 다시 재생 ")}</Button>
         </div>
       );
     case 'text-animate':
@@ -602,19 +594,17 @@ export function InteractionDemo({
               className="text-2xl font-semibold"
               baseVelocity={3}
             >
-              Design • Build • Explore •{' '}
+              Design • Build • Explore •{localize(' ')}
             </ScrollVelocityRow>
             <ScrollVelocityRow
               className="text-xl text-primary"
               baseVelocity={3}
               direction={-1}
             >
-              A+studio • Motion •{' '}
+              A+studio • Motion •{localize(' ')}
             </ScrollVelocityRow>
           </ScrollVelocityContainer>
-          <p className="mt-3 text-center text-xs text-muted-foreground">
-            페이지 스크롤에 반응해요
-          </p>
+          <p className="mt-3 text-center text-xs text-muted-foreground">{translate(" 페이지 스크롤에 반응해요 ")}</p>
         </div>
       );
     case 'sparkles-text':
@@ -639,14 +629,14 @@ export function InteractionDemo({
         <div className="relative flex h-40 w-full items-center justify-center">
           <Sparkles className="text-primary" />
           <SpinningText radius={4} className="text-xs" duration={18}>
-            A+studio • Design in motion •{' '}
+            A+studio • Design in motion •{localize(' ')}
           </SpinningText>
         </div>
       );
     case 'highlighter':
       return (
         <p className="text-center text-xl font-semibold">
-          Design with{' '}
+          Design with{localize(' ')}
           <Highlighter action="underline" color="#148ddf">
             intention.
           </Highlighter>
@@ -908,9 +898,7 @@ export function InteractionDemo({
             size="sm"
             variant="ghost"
             onClick={() => setValue((v) => (v + 15) % 105)}
-          >
-            진행률 변경
-          </Button>
+          >{translate(" 진행률 변경 ")}</Button>
         </div>
       );
     case 'backlight':
@@ -934,6 +922,6 @@ export function InteractionDemo({
         </Surface>
       );
     default:
-      return <p>등록되지 않은 인터랙션입니다.</p>;
+      return <p>{translate("등록되지 않은 인터랙션입니다.")}</p>;
   }
 }

@@ -59,7 +59,7 @@
 @media (max-width: 760px) {
   .app-shell, .app-shell.sidebar-collapsed { --current-sidebar-width: 0px; }
   .workspace { margin-left: 0; }
-  .topbar { left: 0; padding-inline: 12px; grid-template-columns: 32px minmax(80px, 292px) 104px; gap: 8px; justify-content: space-between; }
+  .topbar { left: 0; padding-inline: 12px; grid-template-columns: 32px minmax(0, 292px) max-content; gap: 8px; justify-content: space-between; }
   .topbar-utilities { gap: 2px; }
   .search-field { width: 100%; }
   .sidebar { transform: translateX(-100%); transition: transform var(--duration-slide) var(--ease-slide); width: 260px; gap: 20px; z-index: 52; }
@@ -80,3 +80,10 @@
   .sidebar { overflow-y: auto; }
   .sidebar-spacer { min-height: 20px; }
 }
+
+.language-toggle-glyph { font-size: 15px; font-weight: 600; line-height: 1; letter-spacing: -.05em; }
+.language-toggle { flex: 0 0 auto; }
+html[lang="en"] .hero p { max-width: 620px; margin-inline: auto; text-wrap: balance; }
+html[lang="en"] .hero p br, html[lang="en"] .home-intro p br { display: none; }
+html[lang="en"] .nav-label { letter-spacing: -.02em; }
+@media (max-width: 480px) { .topbar-utilities { gap: 1px; } .topbar .search-wrap { min-width: 0; flex: 1; } .topbar .search-field input { min-width: 0; width: 100%; } }

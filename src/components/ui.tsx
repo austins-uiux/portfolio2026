@@ -1,3 +1,4 @@
+import { translateText, localize } from '../i18n';
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import type { IconName } from '../types';
 
@@ -16,11 +17,11 @@ export function Icon({ name, className = '' }: { name: IconName; className?: str
 }
 
 export function IconButton({ label, children, className = '', ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { label: string; children: ReactNode }) {
-  return <button type="button" {...props} className={`icon-button ${className}`} aria-label={label} title={label}>{children}</button>;
+  return <button type="button" {...props} className={`icon-button ${className}`} aria-label={translateText(label)} title={translateText(label)}>{localize(children)}</button>;
 }
 
 export function SectionMark() { return <img className="section-mark" src="/assets/home-Frame3.svg" width="24" height="24" alt="" aria-hidden="true" />; }
 
 export function EmptyState({ title, children }: { title: string; children?: ReactNode }) {
-  return <div className="empty-state"><SectionMark /><h2>{title}</h2>{children}</div>;
+  return <div className="empty-state"><SectionMark /><h2>{localize(title)}</h2>{localize(children)}</div>;
 }

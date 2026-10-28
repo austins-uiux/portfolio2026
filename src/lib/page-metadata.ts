@@ -1,3 +1,4 @@
+import { translate } from '../i18n';
 import { getCategory, getEntry } from '../data/portfolio';
 import { getWorkflow, workflowFromEntryId } from '../data/ai-workflow';
 
@@ -12,12 +13,12 @@ export function getPageMetadata(href: string) {
   const flow = entry ? workflowFromEntryId(entry.id) : category?.id === 'ai-workflow' ? getWorkflow(url.searchParams.get('flow')) : undefined;
   const home = url.pathname === '/';
   const search = url.pathname === '/search';
-  const title = flow ? `AI 워크플로우 · ${flow.label}` : entry?.detailTitle ?? entry?.title ?? category?.title ?? (home ? 'Austin의 AI Agentic 포트폴리오' : search ? '검색 결과' : '페이지를 찾을 수 없습니다');
-  const description = (flow?.description ?? entry?.summary ?? (entry ? `${entry.title}. ${entry.meta}. ${entry.sections[0]?.body || getCategory(entry.category)?.description || defaultDescription}` : category?.description ?? defaultDescription)).replace(/\s+/g, ' ').trim().slice(0, 180);
+  const title = flow ? `${translate('AI 워크플로우')} · ${translate(flow.label)}` : entry?.detailTitle ?? entry?.title ?? category?.title ?? (home ? 'Austin의 AI Agentic 포트폴리오' : search ? '검색 결과' : '페이지를 찾을 수 없습니다');
+  const description = translate((flow?.description ?? entry?.summary ?? (entry ? `${entry.title}. ${entry.meta}. ${entry.sections[0]?.body || getCategory(entry.category)?.description || defaultDescription}` : category?.description ?? defaultDescription))).replace(/\s+/g, ' ').trim().slice(0, 180);
   const canonical = new URL(url.pathname, siteOrigin);
   if (category?.id === 'ai-workflow' && url.searchParams.has('flow')) canonical.searchParams.set('flow', getWorkflow(url.searchParams.get('flow')).id);
   return {
-    title: `${title} — A+studio`, description, canonical: canonical.href,
+    title: `${translate(title)} — A+studio`, description, canonical: canonical.href,
     image: entry?.category === 'ux' && entry.thumbnail ? `${siteOrigin}${entry.thumbnail.src}` : `${siteOrigin}/assets/social/${entry?.kind ? `${entry.id}.jpg` : 'cover.png'}`,
     imageAlt: entry?.kind ? `${entry.title} — Austin의 A+studio 포트폴리오` : 'A+studio — Austin, AI Native Product Designer',
     type: entry?.kind === 'article' ? 'article' : 'website',

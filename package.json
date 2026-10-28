@@ -21,7 +21,8 @@
     "prebuild:preview": "node scripts/build-chat-context.mjs",
     "check:chat": "node scripts/build-chat-context.mjs && node --experimental-strip-types scripts/check-chat.mjs && node scripts/check-chat-build.mjs",
     "postbuild": "node scripts/prerender.mjs && node scripts/check-prerender.mjs",
-    "check:prerender": "node scripts/check-prerender.mjs"
+    "check:prerender": "node scripts/check-prerender.mjs",
+    "check:i18n": "node scripts/check-i18n.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

@@ -1,3 +1,4 @@
+import { translate } from '../i18n';
 import { labComponents } from './component-lab';
 import { interactionComponents } from './interaction-lab';
 import { systemDocs, systemEntryId, tokensFor } from './design-system';
@@ -62,5 +63,5 @@ export const categoryEntries = (id: CategoryId) => entries.filter(item => item.c
 export function searchEntries(query: string): PortfolioEntry[] {
   const words = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   if (!words.length) return [];
-  return entries.filter(item => words.every(word => `${item.title} ${item.detailTitle ?? ''} ${item.meta} ${item.summary ?? ''} ${getCategory(item.category)?.title} ${item.facts?.map(fact=>fact.value).join(' ') ?? ''} ${item.sections.map(section=>`${section.heading} ${section.body}`).join(' ')}`.toLocaleLowerCase().includes(word)));
+  return entries.filter(item => words.every(word => { const original = `${item.title} ${item.detailTitle ?? ''} ${item.meta} ${item.summary ?? ''} ${getCategory(item.category)?.title} ${item.facts?.map(fact=>fact.value).join(' ') ?? ''} ${item.sections.map(section=>`${section.heading} ${section.body}`).join(' ')}`; return `${original} ${translate(original, 'en')} ${translate(item.title, 'en')} ${translate(item.summary ?? '', 'en')} ${translate(getCategory(item.category)?.title ?? '', 'en')}`.toLocaleLowerCase().includes(word); }));
 }

@@ -1,3 +1,4 @@
+import { translate, localize } from '../../i18n';
 import { useId, useState } from 'react';
 import { StudioCardExample } from './StudioCardExample';
 import {
@@ -14,7 +15,8 @@ import {
   Terminal,
 } from 'lucide-react';
 import { toast } from 'sonner';
-import { ko } from 'date-fns/locale';
+import { ko, enUS } from 'date-fns/locale';
+import { getLocale } from '../../i18n';
 import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
 import * as Accordion from '../lab-ui/accordion';
 import * as Alert from '../lab-ui/alert';
@@ -162,45 +164,42 @@ function DemoTable({ interactive = false }: { interactive?: boolean }) {
     );
   return (
     <div className="w-full space-y-3">
-      {interactive && (
+      {localize(interactive && (
         <Input
-          aria-label="테이블 필터"
-          placeholder="컴포넌트 필터…"
+          aria-label={translate("테이블 필터")}
+          placeholder={translate("컴포넌트 필터…")}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-      )}
+      ))}
       <Table.Table>
         <Table.TableHeader>
           <Table.TableRow>
             <Table.TableHead>
-              {interactive ? (
-                <button type="button" onClick={() => setAscending((v) => !v)}>
-                  이름 {ascending ? '↑' : '↓'}
+              {localize(interactive ? (
+                <button type="button" onClick={() => setAscending((v) => !v)}>{translate(" 이름 ")}{localize(ascending ? '↑' : '↓')}
                 </button>
               ) : (
                 '컴포넌트'
-              )}
+              ))}
             </Table.TableHead>
-            <Table.TableHead>상태</Table.TableHead>
+            <Table.TableHead>{translate("상태")}</Table.TableHead>
           </Table.TableRow>
         </Table.TableHeader>
         <Table.TableBody>
-          {rows.map((r) => (
+          {localize(rows.map((r) => (
             <Table.TableRow key={r.name}>
-              <Table.TableCell>{r.name}</Table.TableCell>
+              <Table.TableCell>{localize(r.name)}</Table.TableCell>
               <Table.TableCell>
-                <Badge variant="secondary">{r.state}</Badge>
+                <Badge variant="secondary">{localize(r.state)}</Badge>
               </Table.TableCell>
+            </Table.TableRow>
+          )))}
+          {localize(!rows.length && (
+            <Table.TableRow>
+              <Table.TableCell colSpan={2}>{translate(" 검색 결과가 없습니다. ")}</Table.TableCell>
             </Table.TableRow>
           ))}
-          {!rows.length && (
-            <Table.TableRow>
-              <Table.TableCell colSpan={2}>
-                검색 결과가 없습니다.
-              </Table.TableCell>
-            </Table.TableRow>
-          )}
         </Table.TableBody>
       </Table.Table>
     </div>
@@ -225,20 +224,12 @@ export function ComponentDemo({
       return (
         <Accordion.Accordion type="single" collapsible className="w-full">
           <Accordion.AccordionItem value="one" className="py-[10px]">
-            <Accordion.AccordionTrigger className="px-[10px]">
-              어떤 컴포넌트인가요?
-            </Accordion.AccordionTrigger>
-            <Accordion.AccordionContent className="px-[10px]">
-              내용을 접고 펼칠 수 있는 아코디언입니다.
-            </Accordion.AccordionContent>
+            <Accordion.AccordionTrigger className="px-[10px]">{translate(" 어떤 컴포넌트인가요? ")}</Accordion.AccordionTrigger>
+            <Accordion.AccordionContent className="px-[10px]">{translate(" 내용을 접고 펼칠 수 있는 아코디언입니다. ")}</Accordion.AccordionContent>
           </Accordion.AccordionItem>
           <Accordion.AccordionItem value="two" className="py-[10px]">
-            <Accordion.AccordionTrigger className="px-[10px]">
-              키보드도 지원하나요?
-            </Accordion.AccordionTrigger>
-            <Accordion.AccordionContent className="px-[10px]">
-              Tab과 Enter로 탐색하고 열 수 있어요.
-            </Accordion.AccordionContent>
+            <Accordion.AccordionTrigger className="px-[10px]">{translate(" 키보드도 지원하나요? ")}</Accordion.AccordionTrigger>
+            <Accordion.AccordionContent className="px-[10px]">{translate(" Tab과 Enter로 탐색하고 열 수 있어요. ")}</Accordion.AccordionContent>
           </Accordion.AccordionItem>
         </Accordion.Accordion>
       );
@@ -246,36 +237,26 @@ export function ComponentDemo({
       return (
         <Alert.Alert>
           <Info />
-          <Alert.AlertTitle>변경 사항을 확인하세요</Alert.AlertTitle>
-          <Alert.AlertDescription>
-            저장하기 전에 입력한 내용을 검토해 주세요.
-          </Alert.AlertDescription>
+          <Alert.AlertTitle>{translate("변경 사항을 확인하세요")}</Alert.AlertTitle>
+          <Alert.AlertDescription>{translate(" 저장하기 전에 입력한 내용을 검토해 주세요. ")}</Alert.AlertDescription>
         </Alert.Alert>
       );
     case 'alert-dialog':
       return (
         <AlertDialog.AlertDialog>
           <AlertDialog.AlertDialogTrigger asChild>
-            <Button variant="outline">확인 창 열기</Button>
+            <Button variant="outline">{translate("확인 창 열기")}</Button>
           </AlertDialog.AlertDialogTrigger>
           <AlertDialog.AlertDialogContent>
             <AlertDialog.AlertDialogHeader>
-              <AlertDialog.AlertDialogTitle>
-                초안을 삭제할까요?
-              </AlertDialog.AlertDialogTitle>
-              <AlertDialog.AlertDialogDescription>
-                갤러리 동작 예시입니다. 실제 데이터는 삭제되지 않습니다.
-              </AlertDialog.AlertDialogDescription>
+              <AlertDialog.AlertDialogTitle>{translate(" 초안을 삭제할까요? ")}</AlertDialog.AlertDialogTitle>
+              <AlertDialog.AlertDialogDescription>{translate(" 갤러리 동작 예시입니다. 실제 데이터는 삭제되지 않습니다. ")}</AlertDialog.AlertDialogDescription>
             </AlertDialog.AlertDialogHeader>
             <AlertDialog.AlertDialogFooter>
-              <AlertDialog.AlertDialogCancel>
-                취소
-              </AlertDialog.AlertDialogCancel>
+              <AlertDialog.AlertDialogCancel>{translate(" 취소 ")}</AlertDialog.AlertDialogCancel>
               <AlertDialog.AlertDialogAction
-                onClick={() => toast('초안 삭제 동작을 확인했어요.')}
-              >
-                삭제
-              </AlertDialog.AlertDialogAction>
+                onClick={() => toast(translate('초안 삭제 동작을 확인했어요.'))}
+              >{translate(" 삭제 ")}</AlertDialog.AlertDialogAction>
             </AlertDialog.AlertDialogFooter>
           </AlertDialog.AlertDialogContent>
         </AlertDialog.AlertDialog>
@@ -301,20 +282,18 @@ export function ComponentDemo({
             <Attachment.AttachmentTitle>
               design-tokens.json
             </Attachment.AttachmentTitle>
-            <Attachment.AttachmentDescription>
-              JSON · 2.4 KB · 예시 파일
-            </Attachment.AttachmentDescription>
+            <Attachment.AttachmentDescription>{translate(" JSON · 2.4 KB · 예시 파일 ")}</Attachment.AttachmentDescription>
           </Attachment.AttachmentContent>
         </Attachment.Attachment>
       );
     case 'avatar':
       return (
         <div className="flex items-center gap-3">
-          {['A+', 'AL', 'UI'].map((s, i) => (
+          {localize(['A+', 'AL', 'UI'].map((s, i) => (
             <Avatar.Avatar key={s} className={i === 0 ? 'size-12' : 'size-9'}>
-              <Avatar.AvatarFallback>{s}</Avatar.AvatarFallback>
+              <Avatar.AvatarFallback>{localize(s)}</Avatar.AvatarFallback>
             </Avatar.Avatar>
-          ))}
+          )))}
         </div>
       );
     case 'badge':
@@ -337,13 +316,11 @@ export function ComponentDemo({
                     ? '#/'
                     : '/'
                 }
-              >
-                홈
-              </Breadcrumb.BreadcrumbLink>
+              >{translate(" 홈 ")}</Breadcrumb.BreadcrumbLink>
             </Breadcrumb.BreadcrumbItem>
             <Breadcrumb.BreadcrumbSeparator />
             <Breadcrumb.BreadcrumbItem>
-              <Breadcrumb.BreadcrumbPage>컴포넌트 랩</Breadcrumb.BreadcrumbPage>
+              <Breadcrumb.BreadcrumbPage>{translate("컴포넌트 랩")}</Breadcrumb.BreadcrumbPage>
             </Breadcrumb.BreadcrumbItem>
           </Breadcrumb.BreadcrumbList>
         </Breadcrumb.Breadcrumb>
@@ -352,27 +329,27 @@ export function ComponentDemo({
       return (
         <Bubble.BubbleGroup className="w-full">
           <Bubble.Bubble variant="muted">
-            <Bubble.BubbleContent>어떤 UI가 필요하세요?</Bubble.BubbleContent>
+            <Bubble.BubbleContent>{translate("어떤 UI가 필요하세요?")}</Bubble.BubbleContent>
           </Bubble.Bubble>
           <Bubble.Bubble align="end">
-            <Bubble.BubbleContent>읽기 편한 대화 UI요.</Bubble.BubbleContent>
+            <Bubble.BubbleContent>{translate("읽기 편한 대화 UI요.")}</Bubble.BubbleContent>
           </Bubble.Bubble>
         </Bubble.BubbleGroup>
       );
     case 'button':
       return (
         <div className="flex flex-wrap items-center justify-center gap-2">
-          <Button onClick={() => toast('Primary 버튼을 눌렀어요.')}>
+          <Button onClick={() => toast(translate('Primary 버튼을 눌렀어요.'))}>
             Primary
           </Button>
           <Button
             variant="outline"
-            onClick={() => toast('Outline 버튼을 눌렀어요.')}
+            onClick={() => toast(translate('Outline 버튼을 눌렀어요.'))}
           >
             Outline
           </Button>
           <Button disabled>Disabled</Button>
-          {expanded && (
+          {localize(expanded && (
             <>
               <Button variant="secondary">Secondary</Button>
               <Button variant="destructive">Destructive</Button>
@@ -380,7 +357,7 @@ export function ComponentDemo({
               <Button size="lg">Large</Button>
               <Button variant="ghost">Ghost</Button>
             </>
-          )}
+          ))}
         </div>
       );
     case 'button-group':
@@ -389,15 +366,15 @@ export function ComponentDemo({
           <Button
             variant="outline"
             onClick={() => setValue((v) => Math.max(0, v - 1))}
-            aria-label="수량 줄이기"
+            aria-label={translate("수량 줄이기")}
           >
             −
           </Button>
-          <ButtonGroup.ButtonGroupText>{value}</ButtonGroup.ButtonGroupText>
+          <ButtonGroup.ButtonGroupText>{localize(value)}</ButtonGroup.ButtonGroupText>
           <Button
             variant="outline"
             onClick={() => setValue((v) => v + 1)}
-            aria-label="수량 늘리기"
+            aria-label={translate("수량 늘리기")}
           >
             +
           </Button>
@@ -406,7 +383,7 @@ export function ComponentDemo({
     case 'calendar':
       return (
         <Calendar
-          locale={ko}
+          locale={getLocale() === 'en' ? enUS : ko}
           mode="single"
           selected={date}
           onSelect={setDate}
@@ -414,18 +391,18 @@ export function ComponentDemo({
         />
       );
     case 'card':
-      return <StudioCardExample onAction={() => toast('카드의 액션 버튼을 눌렀어요.')} />;
+      return <StudioCardExample onAction={() => toast(translate('카드의 액션 버튼을 눌렀어요.'))} />;
     case 'carousel':
       return (
         <Carousel.Carousel
           className={expanded ? 'w-full max-w-[320px]' : 'w-full max-w-[140px]'}
         >
           <Carousel.CarouselContent>
-            {[1, 2, 3].map((n) => (
+            {localize([1, 2, 3].map((n) => (
               <Carousel.CarouselItem key={n}>
-                <div className="lab-art h-28 rounded-lg">0{n}</div>
+                <div className="lab-art h-28 rounded-lg">0{localize(n)}</div>
               </Carousel.CarouselItem>
-            ))}
+            )))}
           </Carousel.CarouselContent>
           <Carousel.CarouselPrevious />
           <Carousel.CarouselNext />
@@ -463,11 +440,11 @@ export function ComponentDemo({
               checked={checked}
               onCheckedChange={(v) => setChecked(v === true)}
             />
-            <Label htmlFor={uid}>이용 약관에 동의합니다</Label>
+            <Label htmlFor={uid}>{translate("이용 약관에 동의합니다")}</Label>
           </div>
           <div className="flex items-center gap-2">
             <Checkbox disabled id={uid + 'disabled'} />
-            <Label htmlFor={uid + 'disabled'}>선택 불가</Label>
+            <Label htmlFor={uid + 'disabled'}>{translate("선택 불가")}</Label>
           </div>
         </div>
       );
@@ -484,7 +461,7 @@ export function ComponentDemo({
           </CodeBlock.CodeBlockHeader>
           <CodeBlock.CodeBlockContent>
             <CodeBlock.CodeBlockLine>
-              {'const studio = "A+studio";'}
+              {localize('const studio = "A+studio";')}
             </CodeBlock.CodeBlockLine>
           </CodeBlock.CodeBlockContent>
         </CodeBlock.CodeBlock>
@@ -493,9 +470,7 @@ export function ComponentDemo({
       return (
         <Collapsible.Collapsible className="w-full">
           <Collapsible.CollapsibleTrigger asChild>
-            <Button variant="outline" className="w-full">
-              파일 목록 펼치기
-            </Button>
+            <Button variant="outline" className="w-full">{translate(" 파일 목록 펼치기 ")}</Button>
           </Collapsible.CollapsibleTrigger>
           <Collapsible.CollapsibleContent>
             <div className="mt-3 rounded-lg border p-3 text-sm">
@@ -512,17 +487,17 @@ export function ComponentDemo({
       return (
         <Combobox.Combobox items={['React', 'Vue', 'Svelte', 'Angular']}>
           <Combobox.ComboboxInput
-            placeholder="프레임워크 검색"
-            aria-label="프레임워크 검색"
+            placeholder={translate("프레임워크 검색")}
+            aria-label={translate("프레임워크 검색")}
           />
           <Combobox.ComboboxContent>
-            <Combobox.ComboboxEmpty>결과가 없습니다.</Combobox.ComboboxEmpty>
+            <Combobox.ComboboxEmpty>{translate("결과가 없습니다.")}</Combobox.ComboboxEmpty>
             <Combobox.ComboboxList>
-              {(item: string) => (
+              {localize((item: string) => (
                 <Combobox.ComboboxItem key={item} value={item}>
-                  {item}
+                  {localize(item)}
                 </Combobox.ComboboxItem>
-              )}
+              ))}
             </Combobox.ComboboxList>
           </Combobox.ComboboxContent>
         </Combobox.Combobox>
@@ -530,19 +505,16 @@ export function ComponentDemo({
     case 'command':
       return (
         <Command.Command className="rounded-lg border">
-          <Command.CommandInput placeholder="명령 검색…" />
+          <Command.CommandInput placeholder={translate("명령 검색…")} />
           <Command.CommandList>
-            <Command.CommandEmpty>검색 결과가 없습니다.</Command.CommandEmpty>
+            <Command.CommandEmpty>{translate("검색 결과가 없습니다.")}</Command.CommandEmpty>
             <Command.CommandGroup heading="빠른 실행">
-              <Command.CommandItem onSelect={() => toast('검색 명령 실행')}>
-                <Search />
-                검색
-              </Command.CommandItem>
+              <Command.CommandItem onSelect={() => toast(translate('검색 명령 실행'))}>
+                <Search />{translate(" 검색 ")}</Command.CommandItem>
               <Command.CommandItem
-                onSelect={() => toast('새 프로젝트 명령 실행')}
+                onSelect={() => toast(translate('새 프로젝트 명령 실행'))}
               >
-                <Plus />새 프로젝트
-              </Command.CommandItem>
+                <Plus />{translate("새 프로젝트 ")}</Command.CommandItem>
             </Command.CommandGroup>
           </Command.CommandList>
         </Command.Command>
@@ -550,24 +522,16 @@ export function ComponentDemo({
     case 'context-menu':
       return (
         <ContextMenu.ContextMenu>
-          <ContextMenu.ContextMenuTrigger className="w-full rounded-lg border border-dashed p-10 text-center text-sm">
-            여기서 우클릭
-            <br />
-            <span className="text-muted-foreground">
-              또는 메뉴 키 / 길게 누르기
-            </span>
+          <ContextMenu.ContextMenuTrigger className="w-full rounded-lg border border-dashed p-10 text-center text-sm">{translate(" 여기서 우클릭 ")}<br />
+            <span className="text-muted-foreground">{translate(" 또는 메뉴 키 / 길게 누르기 ")}</span>
           </ContextMenu.ContextMenuTrigger>
           <ContextMenu.ContextMenuContent>
             <ContextMenu.ContextMenuItem
-              onSelect={() => toast('복사 동작을 선택했어요.')}
-            >
-              복사
-            </ContextMenu.ContextMenuItem>
+              onSelect={() => toast(translate('복사 동작을 선택했어요.'))}
+            >{translate(" 복사 ")}</ContextMenu.ContextMenuItem>
             <ContextMenu.ContextMenuItem
-              onSelect={() => toast('붙여넣기 동작을 선택했어요.')}
-            >
-              붙여넣기
-            </ContextMenu.ContextMenuItem>
+              onSelect={() => toast(translate('붙여넣기 동작을 선택했어요.'))}
+            >{translate(" 붙여넣기 ")}</ContextMenu.ContextMenuItem>
           </ContextMenu.ContextMenuContent>
         </ContextMenu.ContextMenu>
       );
@@ -578,12 +542,12 @@ export function ComponentDemo({
         <Popover.Popover>
           <Popover.PopoverTrigger asChild>
             <Button variant="outline">
-              {date ? date.toLocaleDateString('ko-KR') : '날짜 선택'}
+              {localize(date ? date.toLocaleDateString('ko-KR') : '날짜 선택')}
             </Button>
           </Popover.PopoverTrigger>
           <Popover.PopoverContent className="w-auto p-0">
             <Calendar
-              locale={ko}
+              locale={getLocale() === 'en' ? enUS : ko}
               mode="single"
               selected={date}
               onSelect={setDate}
@@ -595,22 +559,18 @@ export function ComponentDemo({
       return (
         <Dialog.Dialog>
           <Dialog.DialogTrigger asChild>
-            <Button variant="outline">프로필 편집</Button>
+            <Button variant="outline">{translate("프로필 편집")}</Button>
           </Dialog.DialogTrigger>
           <Dialog.DialogContent>
             <Dialog.DialogHeader>
-              <Dialog.DialogTitle>프로필 편집</Dialog.DialogTitle>
-              <Dialog.DialogDescription>
-                갤러리 예시입니다. 입력은 서버에 저장되지 않습니다.
-              </Dialog.DialogDescription>
+              <Dialog.DialogTitle>{translate("프로필 편집")}</Dialog.DialogTitle>
+              <Dialog.DialogDescription>{translate(" 갤러리 예시입니다. 입력은 서버에 저장되지 않습니다. ")}</Dialog.DialogDescription>
             </Dialog.DialogHeader>
-            <Label htmlFor={uid}>이름</Label>
+            <Label htmlFor={uid}>{translate("이름")}</Label>
             <Input id={uid} defaultValue="Austin" />
             <Dialog.DialogFooter>
               <Dialog.DialogClose asChild>
-                <Button onClick={() => toast('프로필 저장 동작을 확인했어요.')}>
-                  저장
-                </Button>
+                <Button onClick={() => toast(translate('프로필 저장 동작을 확인했어요.'))}>{translate(" 저장 ")}</Button>
               </Dialog.DialogClose>
             </Dialog.DialogFooter>
           </Dialog.DialogContent>
@@ -620,16 +580,15 @@ export function ComponentDemo({
       return (
         <DirectionProvider dir={checked ? 'rtl' : 'ltr'}>
           <div className="w-full space-y-3">
-            <Button variant="outline" onClick={() => setChecked((v) => !v)}>
-              방향 전환: {checked ? 'RTL' : 'LTR'}
+            <Button variant="outline" onClick={() => setChecked((v) => !v)}>{translate(" 방향 전환: ")}{localize(checked ? 'RTL' : 'LTR')}
             </Button>
             <div
               dir={checked ? 'rtl' : 'ltr'}
               className="flex items-center gap-2 rounded-lg border p-3"
             >
-              <span>시작</span>
+              <span>{translate("시작")}</span>
               <ChevronRight className={checked ? 'rotate-180' : ''} />
-              <span>끝</span>
+              <span>{translate("끝")}</span>
             </div>
           </div>
         </DirectionProvider>
@@ -638,26 +597,24 @@ export function ComponentDemo({
       return (
         <Drawer.Drawer>
           <Drawer.DrawerTrigger asChild>
-            <Button variant="outline">아래에서 열기</Button>
+            <Button variant="outline">{translate("아래에서 열기")}</Button>
           </Drawer.DrawerTrigger>
           <Drawer.DrawerContent>
             <div className="mx-auto w-full max-w-sm p-6">
               <Drawer.DrawerHeader>
-                <Drawer.DrawerTitle>목표 설정</Drawer.DrawerTitle>
-                <Drawer.DrawerDescription>
-                  슬라이더로 목표를 조정해 보세요.
-                </Drawer.DrawerDescription>
+                <Drawer.DrawerTitle>{translate("목표 설정")}</Drawer.DrawerTitle>
+                <Drawer.DrawerDescription>{translate(" 슬라이더로 목표를 조정해 보세요. ")}</Drawer.DrawerDescription>
               </Drawer.DrawerHeader>
               <Slider
                 value={[value]}
                 onValueChange={(v) => setValue(v[0])}
                 max={100}
-                aria-label="목표"
+                aria-label={translate("목표")}
               />
-              <p className="my-4 text-center">{value}%</p>
+              <p className="my-4 text-center">{localize(value)}%</p>
               <Drawer.DrawerFooter>
                 <Drawer.DrawerClose asChild>
-                  <Button>완료</Button>
+                  <Button>{translate("완료")}</Button>
                 </Drawer.DrawerClose>
               </Drawer.DrawerFooter>
             </div>
@@ -668,23 +625,17 @@ export function ComponentDemo({
       return (
         <DropdownMenu.DropdownMenu>
           <DropdownMenu.DropdownMenuTrigger asChild>
-            <Button variant="outline">메뉴 열기</Button>
+            <Button variant="outline">{translate("메뉴 열기")}</Button>
           </DropdownMenu.DropdownMenuTrigger>
           <DropdownMenu.DropdownMenuContent>
-            <DropdownMenu.DropdownMenuLabel>
-              프로젝트
-            </DropdownMenu.DropdownMenuLabel>
+            <DropdownMenu.DropdownMenuLabel>{translate(" 프로젝트 ")}</DropdownMenu.DropdownMenuLabel>
             <DropdownMenu.DropdownMenuSeparator />
             <DropdownMenu.DropdownMenuItem
-              onSelect={() => toast('편집을 선택했어요.')}
-            >
-              편집
-            </DropdownMenu.DropdownMenuItem>
+              onSelect={() => toast(translate('편집을 선택했어요.'))}
+            >{translate(" 편집 ")}</DropdownMenu.DropdownMenuItem>
             <DropdownMenu.DropdownMenuItem
-              onSelect={() => toast('공유를 선택했어요.')}
-            >
-              공유
-            </DropdownMenu.DropdownMenuItem>
+              onSelect={() => toast(translate('공유를 선택했어요.'))}
+            >{translate(" 공유 ")}</DropdownMenu.DropdownMenuItem>
           </DropdownMenu.DropdownMenuContent>
         </DropdownMenu.DropdownMenu>
       );
@@ -695,49 +646,43 @@ export function ComponentDemo({
             <Empty.EmptyMedia variant="icon">
               <Search />
             </Empty.EmptyMedia>
-            <Empty.EmptyTitle>아직 프로젝트가 없어요</Empty.EmptyTitle>
-            <Empty.EmptyDescription>
-              새 프로젝트로 첫 작업을 시작해 보세요.
-            </Empty.EmptyDescription>
+            <Empty.EmptyTitle>{translate("아직 프로젝트가 없어요")}</Empty.EmptyTitle>
+            <Empty.EmptyDescription>{translate(" 새 프로젝트로 첫 작업을 시작해 보세요. ")}</Empty.EmptyDescription>
           </Empty.EmptyHeader>
         </Empty.Empty>
       );
     case 'field':
       return (
         <Field.Field>
-          <Field.FieldLabel htmlFor={uid}>이메일</Field.FieldLabel>
+          <Field.FieldLabel htmlFor={uid}>{translate("이메일")}</Field.FieldLabel>
           <Input id={uid} type="email" placeholder="hello@aplus.studio" />
-          <Field.FieldDescription>
-            프로젝트 소식을 받을 주소예요.
-          </Field.FieldDescription>
+          <Field.FieldDescription>{translate(" 프로젝트 소식을 받을 주소예요. ")}</Field.FieldDescription>
         </Field.Field>
       );
     case 'hover-card':
       return (
         <HoverCard.HoverCard openDelay={150}>
           <HoverCard.HoverCardTrigger asChild>
-            <Button variant="link">@Austin · 마우스를 올려보세요</Button>
+            <Button variant="link">{translate("@Austin · 마우스를 올려보세요")}</Button>
           </HoverCard.HoverCardTrigger>
           <HoverCard.HoverCardContent>
             <p className="font-semibold">Austin Lee</p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              AI 네이티브 프로덕트 디자이너
-            </p>
+            <p className="mt-2 text-sm text-muted-foreground">{translate(" AI 네이티브 프로덕트 디자이너 ")}</p>
           </HoverCard.HoverCardContent>
         </HoverCard.HoverCard>
       );
     case 'input':
       return (
         <div className="w-full space-y-3">
-          <Input aria-label="기본 입력" placeholder="이름을 입력하세요" />
-          <Input disabled aria-label="비활성 입력" placeholder="Disabled" />
-          {expanded && (
+          <Input aria-label={translate("기본 입력")} placeholder={translate("이름을 입력하세요")} />
+          <Input disabled aria-label={translate("비활성 입력")} placeholder="Disabled" />
+          {localize(expanded && (
             <Input
               aria-invalid="true"
-              aria-label="오류 입력"
-              placeholder="오류 상태"
+              aria-label={translate("오류 입력")}
+              placeholder={translate("오류 상태")}
             />
-          )}
+          ))}
         </div>
       );
     case 'input-group':
@@ -747,8 +692,8 @@ export function ComponentDemo({
             <Search />
           </InputGroup.InputGroupAddon>
           <InputGroup.InputGroupInput
-            placeholder="프로젝트 검색…"
-            aria-label="입력 그룹 검색"
+            placeholder={translate("프로젝트 검색…")}
+            aria-label={translate("입력 그룹 검색")}
           />
           <InputGroup.InputGroupAddon align="inline-end">
             <Kbd>⌘ K</Kbd>
@@ -757,11 +702,11 @@ export function ComponentDemo({
       );
     case 'input-otp':
       return (
-        <InputOTP.InputOTP maxLength={4} aria-label="4자리 인증번호">
+        <InputOTP.InputOTP maxLength={4} aria-label={translate("4자리 인증번호")}>
           <InputOTP.InputOTPGroup>
-            {[0, 1, 2, 3].map((index) => (
+            {localize([0, 1, 2, 3].map((index) => (
               <InputOTP.InputOTPSlot index={index} key={index} />
-            ))}
+            )))}
           </InputOTP.InputOTPGroup>
         </InputOTP.InputOTP>
       );
@@ -772,15 +717,15 @@ export function ComponentDemo({
             <FileText />
           </Item.ItemMedia>
           <Item.ItemContent>
-            <Item.ItemTitle>디자인 시스템</Item.ItemTitle>
+            <Item.ItemTitle>{translate("디자인 시스템")}</Item.ItemTitle>
             <Item.ItemDescription>Tokens & components</Item.ItemDescription>
           </Item.ItemContent>
           <Item.ItemActions>
             <Button
               size="icon-sm"
               variant="ghost"
-              aria-label="항목 열기"
-              onClick={() => toast('항목 액션을 눌렀어요.')}
+              aria-label={translate("항목 열기")}
+              onClick={() => toast(translate('항목 액션을 눌렀어요.'))}
             >
               <ChevronRight />
             </Button>
@@ -798,7 +743,7 @@ export function ComponentDemo({
     case 'label':
       return (
         <div className="w-full space-y-2">
-          <Label htmlFor={uid}>프로젝트 이름</Label>
+          <Label htmlFor={uid}>{translate("프로젝트 이름")}</Label>
           <Input id={uid} placeholder="A+studio" />
         </div>
       );
@@ -809,10 +754,10 @@ export function ComponentDemo({
             <Marker.MarkerIcon>
               <Check />
             </Marker.MarkerIcon>
-            <Marker.MarkerContent>저장이 완료되었어요</Marker.MarkerContent>
+            <Marker.MarkerContent>{translate("저장이 완료되었어요")}</Marker.MarkerContent>
           </Marker.Marker>
           <Marker.Marker variant="separator">
-            <Marker.MarkerContent>오늘</Marker.MarkerContent>
+            <Marker.MarkerContent>{translate("오늘")}</Marker.MarkerContent>
           </Marker.Marker>
         </div>
       );
@@ -820,26 +765,20 @@ export function ComponentDemo({
       return (
         <Menubar.Menubar>
           <Menubar.MenubarMenu>
-            <Menubar.MenubarTrigger>파일</Menubar.MenubarTrigger>
+            <Menubar.MenubarTrigger>{translate("파일")}</Menubar.MenubarTrigger>
             <Menubar.MenubarContent>
               <Menubar.MenubarItem
-                onSelect={() => toast('새 파일을 선택했어요.')}
-              >
-                새 파일
-              </Menubar.MenubarItem>
-              <Menubar.MenubarItem onSelect={() => toast('저장을 선택했어요.')}>
-                저장
-              </Menubar.MenubarItem>
+                onSelect={() => toast(translate('새 파일을 선택했어요.'))}
+              >{translate(" 새 파일 ")}</Menubar.MenubarItem>
+              <Menubar.MenubarItem onSelect={() => toast(translate('저장을 선택했어요.'))}>{translate(" 저장 ")}</Menubar.MenubarItem>
             </Menubar.MenubarContent>
           </Menubar.MenubarMenu>
           <Menubar.MenubarMenu>
-            <Menubar.MenubarTrigger>편집</Menubar.MenubarTrigger>
+            <Menubar.MenubarTrigger>{translate("편집")}</Menubar.MenubarTrigger>
             <Menubar.MenubarContent>
               <Menubar.MenubarItem
-                onSelect={() => toast('실행 취소를 선택했어요.')}
-              >
-                실행 취소
-              </Menubar.MenubarItem>
+                onSelect={() => toast(translate('실행 취소를 선택했어요.'))}
+              >{translate(" 실행 취소 ")}</Menubar.MenubarItem>
             </Menubar.MenubarContent>
           </Menubar.MenubarMenu>
         </Menubar.Menubar>
@@ -851,11 +790,9 @@ export function ComponentDemo({
           <Message.MessageContent>
             <Message.MessageHeader>Austin</Message.MessageHeader>
             <Bubble.Bubble variant="muted">
-              <Bubble.BubbleContent>
-                좋은 디자인은 작은 디테일에서 시작돼요.
-              </Bubble.BubbleContent>
+              <Bubble.BubbleContent>{translate(" 좋은 디자인은 작은 디테일에서 시작돼요. ")}</Bubble.BubbleContent>
             </Bubble.Bubble>
-            <Message.MessageFooter>지금</Message.MessageFooter>
+            <Message.MessageFooter>{translate("지금")}</Message.MessageFooter>
           </Message.MessageContent>
         </Message.Message>
       );
@@ -866,18 +803,16 @@ export function ComponentDemo({
             <MessageScroller.MessageScroller>
               <MessageScroller.MessageScrollerViewport>
                 <MessageScroller.MessageScrollerContent>
-                  {Array.from({ length: 8 }, (_, i) => (
+                  {localize(Array.from({ length: 8 }, (_, i) => (
                     <MessageScroller.MessageScrollerItem key={i}>
                       <Bubble.Bubble
                         variant={i % 2 ? 'default' : 'muted'}
                         align={i % 2 ? 'end' : 'start'}
                       >
-                        <Bubble.BubbleContent>
-                          메시지 {i + 1} · 스크롤해 보세요
-                        </Bubble.BubbleContent>
+                        <Bubble.BubbleContent>{translate(" 메시지 ")}{localize(i + 1)}{translate(" · 스크롤해 보세요 ")}</Bubble.BubbleContent>
                       </Bubble.Bubble>
                     </MessageScroller.MessageScrollerItem>
-                  ))}
+                  )))}
                 </MessageScroller.MessageScrollerContent>
               </MessageScroller.MessageScrollerViewport>
               <MessageScroller.MessageScrollerButton />
@@ -887,16 +822,10 @@ export function ComponentDemo({
       );
     case 'native-select':
       return (
-        <NativeSelect.NativeSelect aria-label="프로젝트 유형" defaultValue="">
-          <NativeSelect.NativeSelectOption value="" disabled>
-            프로젝트 유형 선택
-          </NativeSelect.NativeSelectOption>
-          <NativeSelect.NativeSelectOption value="web">
-            웹사이트
-          </NativeSelect.NativeSelectOption>
-          <NativeSelect.NativeSelectOption value="app">
-            모바일 앱
-          </NativeSelect.NativeSelectOption>
+        <NativeSelect.NativeSelect aria-label={translate("프로젝트 유형")} defaultValue="">
+          <NativeSelect.NativeSelectOption value="" disabled>{translate(" 프로젝트 유형 선택 ")}</NativeSelect.NativeSelectOption>
+          <NativeSelect.NativeSelectOption value="web">{translate(" 웹사이트 ")}</NativeSelect.NativeSelectOption>
+          <NativeSelect.NativeSelectOption value="app">{translate(" 모바일 앱 ")}</NativeSelect.NativeSelectOption>
         </NativeSelect.NativeSelect>
       );
     case 'navigation-menu':
@@ -904,20 +833,14 @@ export function ComponentDemo({
         <NavigationMenu.NavigationMenu>
           <NavigationMenu.NavigationMenuList>
             <NavigationMenu.NavigationMenuItem>
-              <NavigationMenu.NavigationMenuTrigger>
-                둘러보기
-              </NavigationMenu.NavigationMenuTrigger>
+              <NavigationMenu.NavigationMenuTrigger>{translate(" 둘러보기 ")}</NavigationMenu.NavigationMenuTrigger>
               <NavigationMenu.NavigationMenuContent>
                 <div className="w-44 p-2">
                   <NavigationMenu.NavigationMenuLink asChild>
-                    <button onClick={() => toast('소개 메뉴를 눌렀어요.')}>
-                      소개
-                    </button>
+                    <button onClick={() => toast(translate('소개 메뉴를 눌렀어요.'))}>{translate(" 소개 ")}</button>
                   </NavigationMenu.NavigationMenuLink>
                   <NavigationMenu.NavigationMenuLink asChild>
-                    <button onClick={() => toast('프로젝트 메뉴를 눌렀어요.')}>
-                      프로젝트
-                    </button>
+                    <button onClick={() => toast(translate('프로젝트 메뉴를 눌렀어요.'))}>{translate(" 프로젝트 ")}</button>
                   </NavigationMenu.NavigationMenuLink>
                 </div>
               </NavigationMenu.NavigationMenuContent>
@@ -939,7 +862,7 @@ export function ComponentDemo({
                 aria-disabled={page === 1}
               />
             </Pagination.PaginationItem>
-            {[1, 2, 3].map((n) => (
+            {localize([1, 2, 3].map((n) => (
               <Pagination.PaginationItem key={n}>
                 <Pagination.PaginationLink
                   href="#"
@@ -949,10 +872,10 @@ export function ComponentDemo({
                     setPage(n);
                   }}
                 >
-                  {n}
+                  {localize(n)}
                 </Pagination.PaginationLink>
               </Pagination.PaginationItem>
-            ))}
+            )))}
             <Pagination.PaginationItem>
               <Pagination.PaginationNext
                 href="#"
@@ -970,13 +893,13 @@ export function ComponentDemo({
       return (
         <Popover.Popover>
           <Popover.PopoverTrigger asChild>
-            <Button variant="outline">설정 열기</Button>
+            <Button variant="outline">{translate("설정 열기")}</Button>
           </Popover.PopoverTrigger>
           <Popover.PopoverContent>
             <div className="space-y-3">
-              <h3 className="font-semibold">알림 설정</h3>
+              <h3 className="font-semibold">{translate("알림 설정")}</h3>
               <div className="flex items-center justify-between gap-4">
-                <Label htmlFor={uid}>이메일 알림</Label>
+                <Label htmlFor={uid}>{translate("이메일 알림")}</Label>
                 <Switch id={uid} />
               </div>
             </div>
@@ -986,13 +909,12 @@ export function ComponentDemo({
     case 'progress':
       return (
         <div className="w-full space-y-3">
-          <Progress value={value} aria-label="진행률" />
+          <Progress value={value} aria-label={translate("진행률")} />
           <Button
             variant="outline"
             size="sm"
             onClick={() => setValue((v) => (v + 20) % 120)}
-          >
-            진행률 변경 · {value}%
+          >{translate(" 진행률 변경 · ")}{localize(value)}%
           </Button>
         </div>
       );
@@ -1001,12 +923,12 @@ export function ComponentDemo({
     case 'radio-group':
       return (
         <RadioGroup.RadioGroup defaultValue="standard" className="w-full gap-3">
-          {['standard', 'compact'].map((v, i) => (
+          {localize(['standard', 'compact'].map((v, i) => (
             <div className="flex items-center gap-2" key={v}>
               <RadioGroup.RadioGroupItem id={uid + v} value={v} />
-              <Label htmlFor={uid + v}>{i ? 'Compact' : 'Standard'}</Label>
+              <Label htmlFor={uid + v}>{localize(i ? 'Compact' : 'Standard')}</Label>
             </div>
-          ))}
+          )))}
         </RadioGroup.RadioGroup>
       );
     case 'resizable':
@@ -1028,23 +950,22 @@ export function ComponentDemo({
       return (
         <ScrollArea className="h-40 w-full rounded-lg border">
           <div className="space-y-3 p-4">
-            {Array.from({ length: 12 }, (_, i) => (
-              <p key={i} className="border-b pb-2 text-sm">
-                컴포넌트 항목 {i + 1}
+            {localize(Array.from({ length: 12 }, (_, i) => (
+              <p key={i} className="border-b pb-2 text-sm">{translate(" 컴포넌트 항목 ")}{localize(i + 1)}
               </p>
-            ))}
+            )))}
           </div>
         </ScrollArea>
       );
     case 'select':
       return (
         <Select.Select>
-          <Select.SelectTrigger className="w-full" aria-label="역할 선택">
-            <Select.SelectValue placeholder="역할을 선택하세요" />
+          <Select.SelectTrigger className="w-full" aria-label={translate("역할 선택")}>
+            <Select.SelectValue placeholder={translate("역할을 선택하세요")} />
           </Select.SelectTrigger>
           <Select.SelectContent>
-            <Select.SelectItem value="designer">디자이너</Select.SelectItem>
-            <Select.SelectItem value="developer">개발자</Select.SelectItem>
+            <Select.SelectItem value="designer">{translate("디자이너")}</Select.SelectItem>
+            <Select.SelectItem value="developer">{translate("개발자")}</Select.SelectItem>
             <Select.SelectItem value="pm">PM</Select.SelectItem>
           </Select.SelectContent>
         </Select.Select>
@@ -1052,7 +973,7 @@ export function ComponentDemo({
     case 'separator':
       return (
         <div className="w-full space-y-4">
-          <p className="text-sm">섹션 구분</p>
+          <p className="text-sm">{translate("섹션 구분")}</p>
           <Separator />
           <div className="flex h-5 items-center gap-4 text-sm">
             <span>UI</span>
@@ -1067,17 +988,15 @@ export function ComponentDemo({
       return (
         <Sheet.Sheet>
           <Sheet.SheetTrigger asChild>
-            <Button variant="outline">우측 패널 열기</Button>
+            <Button variant="outline">{translate("우측 패널 열기")}</Button>
           </Sheet.SheetTrigger>
           <Sheet.SheetContent>
             <Sheet.SheetHeader>
-              <Sheet.SheetTitle>프로젝트 설정</Sheet.SheetTitle>
-              <Sheet.SheetDescription>
-                본문 위에 표시되는 사이드 패널입니다.
-              </Sheet.SheetDescription>
+              <Sheet.SheetTitle>{translate("프로젝트 설정")}</Sheet.SheetTitle>
+              <Sheet.SheetDescription>{translate(" 본문 위에 표시되는 사이드 패널입니다. ")}</Sheet.SheetDescription>
             </Sheet.SheetHeader>
             <div className="space-y-2 p-4">
-              <Label htmlFor={uid}>프로젝트 이름</Label>
+              <Label htmlFor={uid}>{translate("프로젝트 이름")}</Label>
               <Input id={uid} defaultValue="A+studio" />
             </div>
           </Sheet.SheetContent>
@@ -1095,16 +1014,16 @@ export function ComponentDemo({
             </Sidebar.SidebarHeader>
             <Sidebar.SidebarContent>
               <Sidebar.SidebarMenu>
-                {['대시보드', '프로젝트', '설정'].map((label, i) => (
+                {localize(['대시보드', '프로젝트', '설정'].map((label, i) => (
                   <Sidebar.SidebarMenuItem key={label}>
                     <Sidebar.SidebarMenuButton
                       isActive={page === i + 1}
                       onClick={() => setPage(i + 1)}
                     >
-                      <span>{label}</span>
+                      <span>{localize(label)}</span>
                     </Sidebar.SidebarMenuButton>
                   </Sidebar.SidebarMenuItem>
-                ))}
+                )))}
               </Sidebar.SidebarMenu>
             </Sidebar.SidebarContent>
           </Sidebar.Sidebar>
@@ -1123,29 +1042,27 @@ export function ComponentDemo({
     case 'slider':
       return (
         <div className="w-full space-y-4">
-          <Label htmlFor={uid}>볼륨 · {value}%</Label>
+          <Label htmlFor={uid}>{translate("볼륨 · ")}{localize(value)}%</Label>
           <Slider
             id={uid}
             value={[value]}
             onValueChange={(v) => setValue(v[0])}
             max={100}
             step={1}
-            aria-label="볼륨"
+            aria-label={translate("볼륨")}
           />
         </div>
       );
     case 'spinner':
       return (
         <div className="flex items-center gap-3 text-muted-foreground">
-          <Spinner />
-          불러오는 중…
-        </div>
+          <Spinner />{translate(" 불러오는 중… ")}</div>
       );
     case 'switch':
       return (
         <div className="flex items-center gap-3">
           <Switch id={uid} checked={checked} onCheckedChange={setChecked} />
-          <Label htmlFor={uid}>알림 {checked ? '켜짐' : '꺼짐'}</Label>
+          <Label htmlFor={uid}>{translate("알림 ")}{localize(checked ? '켜짐' : '꺼짐')}</Label>
         </div>
       );
     case 'table':
@@ -1154,29 +1071,25 @@ export function ComponentDemo({
       return (
         <Tabs.Tabs defaultValue="design" className="w-full">
           <Tabs.TabsList>
-            <Tabs.TabsTrigger value="design">디자인</Tabs.TabsTrigger>
-            <Tabs.TabsTrigger value="code">코드</Tabs.TabsTrigger>
+            <Tabs.TabsTrigger value="design">{translate("디자인")}</Tabs.TabsTrigger>
+            <Tabs.TabsTrigger value="code">{translate("코드")}</Tabs.TabsTrigger>
           </Tabs.TabsList>
-          <Tabs.TabsContent value="design" className="p-3 text-sm">
-            토큰과 컴포넌트로 일관된 경험을 만듭니다.
-          </Tabs.TabsContent>
-          <Tabs.TabsContent value="code" className="p-3 text-sm">
-            React + TypeScript로 구현합니다.
-          </Tabs.TabsContent>
+          <Tabs.TabsContent value="design" className="p-3 text-sm">{translate(" 토큰과 컴포넌트로 일관된 경험을 만듭니다. ")}</Tabs.TabsContent>
+          <Tabs.TabsContent value="code" className="p-3 text-sm">{translate(" React + TypeScript로 구현합니다. ")}</Tabs.TabsContent>
         </Tabs.Tabs>
       );
     case 'textarea':
       return (
         <div className="w-full space-y-2">
           <Textarea
-            placeholder="프로젝트를 소개해 주세요"
-            aria-label="프로젝트 소개"
+            placeholder={translate("프로젝트를 소개해 주세요")}
+            aria-label={translate("프로젝트 소개")}
             value={text}
             maxLength={120}
             onChange={(e) => setText(e.target.value)}
           />
           <p className="text-right text-xs text-muted-foreground">
-            {text.length}/120
+            {localize(text.length)}/120
           </p>
         </div>
       );
@@ -1186,35 +1099,31 @@ export function ComponentDemo({
           <Button
             variant="outline"
             onClick={() =>
-              toast.success('저장 완료', {
-                description: '작업 내용이 저장되었어요. (데모)',
+              toast.success(translate('저장 완료'), {
+                description: translate('작업 내용이 저장되었어요. (데모)'),
               })
             }
-          >
-            성공 알림
-          </Button>
+          >{translate(" 성공 알림 ")}</Button>
           <Button
             variant="outline"
             onClick={() =>
-              toast.error('저장 실패', {
-                description: '잠시 후 다시 시도해 주세요. (데모)',
+              toast.error(translate('저장 실패'), {
+                description: translate('잠시 후 다시 시도해 주세요. (데모)'),
               })
             }
-          >
-            오류 알림
-          </Button>
+          >{translate(" 오류 알림 ")}</Button>
         </div>
       );
     case 'toggle':
       return (
         <Toggle
-          aria-label="즐겨찾기"
+          aria-label={translate("즐겨찾기")}
           pressed={checked}
           onPressedChange={setChecked}
           variant="outline"
         >
           <Star />
-          {checked ? '선택됨' : '즐겨찾기'}
+          {localize(checked ? '선택됨' : '즐겨찾기')}
         </Toggle>
       );
     case 'toggle-group':
@@ -1224,13 +1133,13 @@ export function ComponentDemo({
           defaultValue="left"
           variant="outline"
         >
-          <ToggleGroup.ToggleGroupItem value="left" aria-label="왼쪽 정렬">
+          <ToggleGroup.ToggleGroupItem value="left" aria-label={translate("왼쪽 정렬")}>
             Left
           </ToggleGroup.ToggleGroupItem>
-          <ToggleGroup.ToggleGroupItem value="center" aria-label="가운데 정렬">
+          <ToggleGroup.ToggleGroupItem value="center" aria-label={translate("가운데 정렬")}>
             Center
           </ToggleGroup.ToggleGroupItem>
-          <ToggleGroup.ToggleGroupItem value="right" aria-label="오른쪽 정렬">
+          <ToggleGroup.ToggleGroupItem value="right" aria-label={translate("오른쪽 정렬")}>
             Right
           </ToggleGroup.ToggleGroupItem>
         </ToggleGroup.ToggleGroup>
@@ -1243,12 +1152,12 @@ export function ComponentDemo({
               <Button
                 variant="outline"
                 size="icon"
-                aria-label="다운로드 도움말"
+                aria-label={translate("다운로드 도움말")}
               >
                 <Download />
               </Button>
             </Tooltip.TooltipTrigger>
-            <Tooltip.TooltipContent>파일 다운로드</Tooltip.TooltipContent>
+            <Tooltip.TooltipContent>{translate("파일 다운로드")}</Tooltip.TooltipContent>
           </Tooltip.Tooltip>
         </Tooltip.TooltipProvider>
       );
@@ -1259,7 +1168,7 @@ export function ComponentDemo({
             <Trace.TraceIcon>
               <Check />
             </Trace.TraceIcon>
-            <Trace.TraceTitle>요청 분석 완료</Trace.TraceTitle>
+            <Trace.TraceTitle>{translate("요청 분석 완료")}</Trace.TraceTitle>
             <Trace.TraceDescription>0.2s</Trace.TraceDescription>
           </Trace.TraceLine>
           <Trace.TraceCollapsible>
@@ -1268,12 +1177,10 @@ export function ComponentDemo({
                 <Trace.TraceIcon>
                   <Terminal />
                 </Trace.TraceIcon>
-                <Trace.TraceTitle>컴포넌트 검색</Trace.TraceTitle>
+                <Trace.TraceTitle>{translate("컴포넌트 검색")}</Trace.TraceTitle>
               </Trace.TraceLine>
             </Trace.TraceCollapsibleTrigger>
-            <Trace.TraceCollapsibleContent>
-              Button, Input, Card를 찾았어요.
-            </Trace.TraceCollapsibleContent>
+            <Trace.TraceCollapsibleContent>{translate(" Button, Input, Card를 찾았어요. ")}</Trace.TraceCollapsibleContent>
           </Trace.TraceCollapsible>
         </Trace.Trace>
       );
@@ -1283,16 +1190,14 @@ export function ComponentDemo({
           <h3 className="text-2xl font-bold tracking-tight">
             Design with intent.
           </h3>
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            작은 디테일을 연결해 명확한 사용자 경험을 만듭니다.
-          </p>
+          <p className="text-sm leading-relaxed text-muted-foreground">{translate(" 작은 디테일을 연결해 명확한 사용자 경험을 만듭니다. ")}</p>
           <blockquote className="border-l-2 pl-3 text-sm">
             From idea to experience.
           </blockquote>
         </div>
       );
     default:
-      return <p>등록되지 않은 컴포넌트입니다.</p>;
+      return <p>{translate("등록되지 않은 컴포넌트입니다.")}</p>;
   }
 }
 
@@ -1301,10 +1206,8 @@ function QuestionnaireDemo() {
   return done ? (
     <div className="space-y-3 text-center">
       <Check className="mx-auto text-primary" />
-      <p>응답을 확인했어요.</p>
-      <Button variant="outline" size="sm" onClick={() => setDone(false)}>
-        다시 선택
-      </Button>
+      <p>{translate("응답을 확인했어요.")}</p>
+      <Button variant="outline" size="sm" onClick={() => setDone(false)}>{translate(" 다시 선택 ")}</Button>
     </div>
   ) : (
     <Questionnaire.Questionnaire
@@ -1314,22 +1217,14 @@ function QuestionnaireDemo() {
       }}
     >
       <Questionnaire.QuestionnaireItem name="role" required>
-        <Questionnaire.QuestionnaireTitle>
-          어떤 역할인가요?
-        </Questionnaire.QuestionnaireTitle>
+        <Questionnaire.QuestionnaireTitle>{translate(" 어떤 역할인가요? ")}</Questionnaire.QuestionnaireTitle>
         <Questionnaire.QuestionnaireChoices>
-          <Questionnaire.QuestionnaireChoice value="designer">
-            디자이너
-          </Questionnaire.QuestionnaireChoice>
-          <Questionnaire.QuestionnaireChoice value="developer">
-            개발자
-          </Questionnaire.QuestionnaireChoice>
+          <Questionnaire.QuestionnaireChoice value="designer">{translate(" 디자이너 ")}</Questionnaire.QuestionnaireChoice>
+          <Questionnaire.QuestionnaireChoice value="developer">{translate(" 개발자 ")}</Questionnaire.QuestionnaireChoice>
         </Questionnaire.QuestionnaireChoices>
         <Questionnaire.QuestionnaireError />
         <Questionnaire.QuestionnaireActions>
-          <Questionnaire.QuestionnaireSubmit>
-            완료
-          </Questionnaire.QuestionnaireSubmit>
+          <Questionnaire.QuestionnaireSubmit>{translate(" 완료 ")}</Questionnaire.QuestionnaireSubmit>
         </Questionnaire.QuestionnaireActions>
       </Questionnaire.QuestionnaireItem>
     </Questionnaire.Questionnaire>

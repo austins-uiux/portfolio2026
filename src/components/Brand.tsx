@@ -1,3 +1,4 @@
+import { translateText } from '../i18n';
 /** Preserve the original blue plus; switch only the letter colors by theme. */
 const variants = {
   sidebar: { light: '/assets/home-Brand.svg', dark: '/assets/home-Brand-dark.svg', width: 82.5, height: 15.16, alt: 'A+studio' },
@@ -12,7 +13,7 @@ export const heroLogoScale = 1.2;
 export function Brand({ variant, className = '', scale = 1 }: { variant: keyof typeof variants; className?: string; scale?: number }) {
   const { light, dark, width, height, alt } = variants[variant];
   return <span className={`brand-image ${className}`}>
-    <img className="brand-light" src={light} width={width * scale} height={height * scale} alt={alt} draggable="false" />
-    <img className="brand-dark" src={dark} width={width * scale} height={height * scale} alt={alt} draggable="false" />
+    <img className="brand-light" src={light} width={width * scale} height={height * scale} alt={translateText(alt)} draggable="false" />
+    <img className="brand-dark" src={dark} width={width * scale} height={height * scale} alt={translateText(alt)} draggable="false" />
   </span>;
 }

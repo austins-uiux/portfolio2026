@@ -1,3 +1,4 @@
+import { translate, translateText, localize } from '../../i18n';
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react';
 import { Button } from '../lab-ui/button';
@@ -53,20 +54,20 @@ export function ComponentSource({ id }: { id: string }) {
     }
   }
   return (
-    <section className="lab-source" aria-label={`${component.name} 코드`}>
+    <section className="lab-source" aria-label={translateText(`${component.name} 코드`)}>
       <Tabs value={selected} onValueChange={setSelected}>
         <div className="lab-source-toolbar">
           <TabsList>
-            <TabsTrigger value="example">사용 예시</TabsTrigger>
-            {files.map((file) => (
+            <TabsTrigger value="example">{translate("사용 예시")}</TabsTrigger>
+            {localize(files.map((file) => (
               <TabsTrigger key={file.name} value={file.name}>
-                {file.name}
+                {localize(file.name)}
               </TabsTrigger>
-            ))}
+            )))}
           </TabsList>
           <Button size="sm" variant="ghost" onClick={() => void copy()}>
-            {copied ? <Check /> : <Copy />}
-            {copied ? '복사됨' : '복사'}
+            {localize(copied ? <Check /> : <Copy />)}
+            {localize(copied ? '복사됨' : '복사')}
           </Button>
         </div>
         <TabsContent value={selected}>
@@ -75,11 +76,8 @@ export function ComponentSource({ id }: { id: string }) {
           </pre>
         </TabsContent>
       </Tabs>
-      {error && <p role="status">{error}</p>}
-      <p className="lab-source-note">
-        미리보기에 사용한 JSX와 이 프로젝트에 포함된 컴포넌트 소스입니다. 예시의
-        상태·콜백·import는 실행 코드와 함께 전체 소스에서 확인할 수 있어요.
-      </p>
+      {localize(error && <p role="status">{localize(error)}</p>)}
+      <p className="lab-source-note">{translate(" 미리보기에 사용한 JSX와 이 프로젝트에 포함된 컴포넌트 소스입니다. 예시의 상태·콜백·import는 실행 코드와 함께 전체 소스에서 확인할 수 있어요. ")}</p>
     </section>
   );
 }

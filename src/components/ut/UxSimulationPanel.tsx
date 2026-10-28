@@ -1,3 +1,4 @@
+import { translate, translateText, localize } from '../../i18n';
 import { Brand, sidebarLogoScale } from '../Brand';
 import { Tabs as TabsPrimitive } from 'radix-ui';
 import type { UxCase } from '../../data/ux-cases';
@@ -26,43 +27,43 @@ export function UxSimulationPanel({ study }: { study: UxCase }) {
   const { report } = study;
   const observation = observations[study.id];
 
-  return <div className="ux-sim" aria-label={`${study.app} UT Lab 규칙 기반 시뮬레이션 결과`}>
+  return <div className="ux-sim" aria-label={translateText(`${study.app} UT Lab 규칙 기반 시뮬레이션 결과`)}>
     <div className="ux-sim-header">
       <div className="ut-brand ux-sim-brand"><Brand variant="sidebar" scale={sidebarLogoScale} /><span className="ut-brand-badge">UT Lab</span></div>
-      <span className="ux-sim-version">규칙 기반 시뮬레이션</span>
+      <span className="ux-sim-version">{translate("규칙 기반 시뮬레이션")}</span>
     </div>
 
     <TabsPrimitive.Root defaultValue="summary" className="ux-sim-tabs">
-      <TabsPrimitive.List className="ux-sim-tab-list" aria-label="시뮬레이션 결과 보기">
-        <TabsPrimitive.Trigger value="summary" className="ux-sim-chip">결과 요약</TabsPrimitive.Trigger>
-        <TabsPrimitive.Trigger value="factors" className="ux-sim-chip">마찰 요인</TabsPrimitive.Trigger>
-        <TabsPrimitive.Trigger value="insight" className="ux-sim-chip">UX 인사이트</TabsPrimitive.Trigger>
+      <TabsPrimitive.List className="ux-sim-tab-list" aria-label={translate("시뮬레이션 결과 보기")}>
+        <TabsPrimitive.Trigger value="summary" className="ux-sim-chip">{translate("결과 요약")}</TabsPrimitive.Trigger>
+        <TabsPrimitive.Trigger value="factors" className="ux-sim-chip">{translate("마찰 요인")}</TabsPrimitive.Trigger>
+        <TabsPrimitive.Trigger value="insight" className="ux-sim-chip">{translate("UX 인사이트")}</TabsPrimitive.Trigger>
       </TabsPrimitive.List>
 
       <TabsPrimitive.Content value="summary" className="ux-sim-content">
         <div className="ux-sim-metrics">
-          <div className="ux-sim-metric"><span>가상 페르소나</span><strong>{report.personaCount}<small>명</small></strong></div>
-          <div className="ux-sim-metric"><span>평균 마찰 점수</span><strong>{report.avgFriction}<small>/100</small></strong></div>
-          <div className="ux-sim-metric"><span>주저로 분류</span><strong>{report.counts.hesitate}<small>/{report.personaCount}명</small></strong></div>
+          <div className="ux-sim-metric"><span>{translate("가상 페르소나")}</span><strong>{localize(report.personaCount)}<small>{translate("명")}</small></strong></div>
+          <div className="ux-sim-metric"><span>{translate("평균 마찰 점수")}</span><strong>{localize(report.avgFriction)}<small>/100</small></strong></div>
+          <div className="ux-sim-metric"><span>{translate("주저로 분류")}</span><strong>{localize(report.counts.hesitate)}<small>/{localize(report.personaCount)}{translate("명")}</small></strong></div>
         </div>
-        <p className="ux-sim-caption">규칙에 따라 완료 {report.counts.complete}명 · 주저 {report.counts.hesitate}명 · 이탈 {report.counts.drop}명으로 분류됐어요.</p>
+        <p className="ux-sim-caption">{translate(`규칙에 따라 완료 ${report.counts.complete}명 · 주저 ${report.counts.hesitate}명 · 이탈 ${report.counts.drop}명으로 분류됐어요.`)}</p>
       </TabsPrimitive.Content>
 
       <TabsPrimitive.Content value="factors" className="ux-sim-content">
         <div className="ux-sim-factors">
-          {report.factors.slice(0, 3).map((factor, index) => <div className="ux-sim-factor" key={factor.key}>
-            <div className="ux-sim-factor-label"><span><span className="ux-sim-rank">0{index + 1}</span>{factor.name}</span><strong>{factor.count}명</strong></div>
-            <div className="ux-sim-track" aria-label={`${factor.name}: ${report.personaCount}명 중 ${factor.count}명`} role="img"><span style={{ width: `${(factor.count / report.personaCount) * 100}%` }} /></div>
-          </div>)}
+          {localize(report.factors.slice(0, 3).map((factor, index) => <div className="ux-sim-factor" key={factor.key}>
+            <div className="ux-sim-factor-label"><span><span className="ux-sim-rank">0{localize(index + 1)}</span>{localize(factor.name)}</span><strong>{localize(factor.count)}{translate("명")}</strong></div>
+            <div className="ux-sim-track" aria-label={translateText(`${factor.name}: ${report.personaCount}명 중 ${factor.count}명`)} role="img"><span style={{ width: `${(factor.count / report.personaCount) * 100}%` }} /></div>
+          </div>))}
         </div>
-        <p className="ux-sim-caption">각 인물의 주요 마찰 요인 1개를 기준으로 집계했어요. 상위 3개 항목을 표시합니다.</p>
+        <p className="ux-sim-caption">{translate("각 인물의 주요 마찰 요인 1개를 기준으로 집계했어요. 상위 3개 항목을 표시합니다.")}</p>
       </TabsPrimitive.Content>
 
       <TabsPrimitive.Content value="insight" className="ux-sim-content">
-        {observation && <div className="ux-sim-observations">
-          <div><span className="ux-sim-observation-label">화면에서 관찰한 문제</span><p>{observation.issue}</p></div>
-          <div><span className="ux-sim-observation-label">우선 개선 가설</span><p>{observation.direction}</p></div>
-        </div>}
+        {localize(observation && <div className="ux-sim-observations">
+          <div><span className="ux-sim-observation-label">{translate("화면에서 관찰한 문제")}</span><p>{localize(observation.issue)}</p></div>
+          <div><span className="ux-sim-observation-label">{translate("우선 개선 가설")}</span><p>{localize(observation.direction)}</p></div>
+        </div>)}
       </TabsPrimitive.Content>
     </TabsPrimitive.Root>
 
