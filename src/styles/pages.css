@@ -10,7 +10,7 @@
 .hero p { max-width: 423px; color: var(--color-hero-text); font-size: calc(16px + var(--font-size-offset)); line-height: 26px; text-align: center; font-weight: 400; }
 .hero-aurora-fallback .brand-light { display:none; }
 .hero-aurora-fallback .brand-dark { display:block; }
-.home-overview { padding-block:90px; }
+.home-overview { padding-block:90px 190px; }
 .home-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .home-intro { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .home-intro h2 { font-size: calc(24px + var(--font-size-offset)); font-weight: 700; line-height: 36px; letter-spacing: -.25px; }
@@ -135,7 +135,7 @@
   .hero { gap:28px; padding-block:147.5px; }
   .hero p { font-size: calc(13px + var(--font-size-offset)); line-height: 24px; }
   .hero p br:nth-child(2) { display: none; }
-  .home-overview { padding-block: 66px 78px; }
+  .home-overview { padding-block: 66px 178px; }
   .home-grid { gap: 16px; }
   .home-intro { padding-bottom: 12px; }
   .home-intro h2 { font-size: calc(24px + var(--font-size-offset)); line-height: 36px; }
