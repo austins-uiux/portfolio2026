@@ -12,7 +12,7 @@ export const site = {
   owner: 'Austin',
   role: 'AI 네이티브 프로덕트 디자이너',
   github: 'https://github.com/austins-uiux',
-  credits: 'Built with ChatGPT + Gemini + Codex + Figma AI + React +Typescript + shadcn/ui + GitHub + Vercel',
+  credits: 'Built with ChatGPT + Gemini(API) + Codex + Figma AI + React + Typescript + shadcn/ui + Astryx + GitHub + Vercel',
 };
 
 export const categories: Category[] = [
