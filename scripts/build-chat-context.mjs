@@ -7,7 +7,7 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const server = await createServer({ root, configFile: false, optimizeDeps: { noDiscovery: true, include: [] }, server: { middlewareMode: true }, appType: 'custom' });
 try {
   const { entries, categories } = await server.ssrLoadModule('/src/data/portfolio.ts');
-  const docs = entries.filter(e => e.category !== 'archive' && e.listed !== false).map(e => {
+  const docs = entries.filter(e => e.category !== 'archive' && e.category !== 'design-trend' && e.listed !== false).map(e => {
     const category = categories.find(c => c.id === e.category);
     const sections = e.sections.flatMap(s => {
       if (s.heading === '본문 타이틀' || s.body === '본문글 텍스트') return [];

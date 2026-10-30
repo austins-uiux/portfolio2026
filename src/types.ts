@@ -1,5 +1,5 @@
 export type CategoryId = 'featured' | 'ux' | 'ai-workflow' | 'component-lab' | 'interaction-lab' | 'design-system' | 'archive' | 'thinking' | 'design-trend';
-export type IconName = 'home' | 'featured' | 'ux' | 'ai' | 'component' | 'interaction' | 'system' | 'archive' | 'thinking' | 'collapse' | 'expand' | 'search' | 'sun' | 'github' | 'spark' | 'arrow' | 'close' | 'send' | 'external';
+export type IconName = 'home' | 'featured' | 'ux' | 'ai' | 'component' | 'interaction' | 'system' | 'archive' | 'thinking' | 'flame' | 'collapse' | 'expand' | 'search' | 'sun' | 'github' | 'spark' | 'arrow' | 'close' | 'send' | 'external';
 
 export interface Category {
   id: CategoryId;

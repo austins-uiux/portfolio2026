@@ -25,7 +25,7 @@ export const categories: Category[] = [
   { id: 'design-system', title: '디자인 시스템', description: '토큰과 컴포넌트, 일관된 경험을 만드는 설계 규칙을 정리합니다.', icon: 'system', layout: 'foundation-list', figmaNode: '29:1532' },
   // 프로젝트 아카이브 임시 숨김: 카테고리·entries의 보관 주석을 해제하고 Sidebar 그룹에 archive를 추가하면 복원됩니다.
   // { id: 'archive', title: '프로젝트 아카이브', description: '다양한 분야와 플랫폼에서 진행한 프로젝트를 한곳에 모았습니다.', icon: 'archive', layout: 'grid-3', figmaNode: '29:1668' },
-  { id: 'design-trend', title: '디자인 트렌드', description: 'AI와 프로덕트 디자인의 변화를 살펴보고, 실무에 적용할 관점을 정리합니다.', icon: 'thinking', layout: 'text-list', figmaNode: '' },
+  { id: 'design-trend', title: '디자인 트렌드', description: 'AI와 프로덕트 디자인의 변화를 살펴보고, 실무에 적용할 관점을 정리합니다.', icon: 'flame', layout: 'text-list', figmaNode: '' },
   { id: 'thinking', title: '디자인 생각', description: '제품과 AI, 디자인을 바라보는 관점과 선택의 이유를 기록합니다.', icon: 'thinking', layout: 'text-list', figmaNode: '29:1798' },
 ];
 
@@ -50,7 +50,7 @@ export const entries: PortfolioEntry[] = [
   // 프로젝트 아카이브 콘텐츠 보관 — 메뉴·홈·검색·직접 URL에서 비노출.
   // ...Array.from({ length: 9 }, (_, i) => entry(`archive-${i + 1}`, 'archive', i % 3 === 2 ? 'TADA Rider' : 'SOMA AI', i % 3 === 2 ? 'UI/UX · B2C Mobility · 2025' : undefined)),
   ...(importedContent as PortfolioEntry[]).filter(item => item.category === 'thinking'),
-  { id: 'trend-vibe-coding-refinement', category: 'design-trend', kind: 'article', title: '바이브 코딩 이후, 완성도를 다듬는 일', meta: 'AI Product Design · 수동 큐레이션', summary: 'AI로 빠르게 만든 앱을 실제로 사용하기 좋은 제품으로 다듬으려면 무엇을 살펴봐야 할까요?', sourceUrl: 'https://www.threads.com/@jaimintf/post/DfFdYJbDx6K', sourceLabel: '출처: Threads · @jaimintf', sections: [
+  { id: 'trend-vibe-coding-refinement', category: 'design-trend', kind: 'article', title: '바이브 코딩 이후, 완성도를 다듬는 일', meta: 'AI Product Design', summary: 'AI로 빠르게 만든 앱을 실제로 사용하기 좋은 제품으로 다듬으려면 무엇을 살펴봐야 할까요?', sourceUrl: 'https://www.threads.com/@jaimintf/post/DfFdYJbDx6K', sourceLabel: '출처: Threads · @jaimintf', sections: [
     { heading: '공유된 글에서', body: 'Threads 작성자 @jaimintf는 바이브 코딩으로 만든 앱의 완성도를 다듬는다는 짧은 메시지를 공유했어요. 게시물의 영상과 세부 설명은 확인할 수 없어, 아래 내용은 그 문장에서 출발한 해석이에요.' },
     { heading: 'A+ 관점의 AI 분석', body: 'AI는 화면을 빠르게 만들 수 있지만, 첫 결과가 곧 완성된 경험은 아니에요. 실제 사용 흐름을 따라가며 정보의 우선순위, 화면 간 일관성, 버튼의 상태와 오류 상황을 점검할 필요가 있어요.' },
     { heading: '디자이너가 할 일', body: '어디가 어색한지 판단하고, 바꿀 이유와 기준을 구체화하는 과정이 중요해요. 시각적인 정돈뿐 아니라 사용자가 다음 행동을 이해하고 과업을 끝낼 수 있는지도 함께 확인해야 해요. 이 내용은 원문에 대한 검증된 결과가 아니라 디자인 관점의 제안이에요.' },
@@ -70,5 +70,5 @@ export const categoryEntries = (id: CategoryId) => entries.filter(item => item.c
 export function searchEntries(query: string): PortfolioEntry[] {
   const words = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   if (!words.length) return [];
-  return entries.filter(item => words.every(word => { const original = `${item.title} ${item.detailTitle ?? ''} ${item.meta} ${item.summary ?? ''} ${getCategory(item.category)?.title} ${item.facts?.map(fact=>fact.value).join(' ') ?? ''} ${item.sections.map(section=>`${section.heading} ${section.body}`).join(' ')}`; return `${original} ${translate(original, 'en')} ${translate(item.title, 'en')} ${translate(item.summary ?? '', 'en')} ${translate(getCategory(item.category)?.title ?? '', 'en')}`.toLocaleLowerCase().includes(word); }));
+  return entries.filter(item => item.category !== 'design-trend' && words.every(word => { const original = `${item.title} ${item.detailTitle ?? ''} ${item.meta} ${item.summary ?? ''} ${getCategory(item.category)?.title} ${item.facts?.map(fact=>fact.value).join(' ') ?? ''} ${item.sections.map(section=>`${section.heading} ${section.body}`).join(' ')}`; return `${original} ${translate(original, 'en')} ${translate(item.title, 'en')} ${translate(item.summary ?? '', 'en')} ${translate(getCategory(item.category)?.title ?? '', 'en')}`.toLocaleLowerCase().includes(word); }));
 }
