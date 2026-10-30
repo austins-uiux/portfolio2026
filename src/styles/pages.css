@@ -15,7 +15,8 @@
 .home-intro { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .home-intro h2 { font-size: calc(24px + var(--font-size-offset)); font-weight: 700; line-height: 36px; letter-spacing: -.25px; }
 .home-chat-cta { margin-top: 8px; min-height: 44px; padding: 10px 18px; border: 1.5px solid var(--color-text); border-radius: 6px; background: transparent; color: var(--color-text); font-size: calc(12px + var(--font-size-offset)); font-weight: 600; cursor: pointer; transition: background-color var(--duration-fast), border-color var(--duration-fast), color var(--duration-fast); }
-.home-chat-cta:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+[data-theme='dark'] .home-chat-cta { color: #fff; border-color: #fff; }
+.home-chat-cta:hover, [data-theme='dark'] .home-chat-cta:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
 .home-chat-cta:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
 .home-intro p { font-size: calc(12px + var(--font-size-offset)); font-weight: 500; line-height: 20px; }
 .overview-card { min-width:0; display:flex; flex-direction:column; border-radius:var(--radius-card); overflow:hidden; background:var(--color-brand-subtle); transition:box-shadow var(--duration-fast),transform var(--duration-fast); }
