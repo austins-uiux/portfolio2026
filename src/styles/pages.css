@@ -162,3 +162,5 @@
   .overview-card--featured { grid-column:auto; }
   .hero p { max-width: 320px; }
 }
+
+.project-card--philosophy .project-label p { align-self: flex-start; padding: 1px 8px; border: 1px solid var(--color-border); border-radius: 999px; }
