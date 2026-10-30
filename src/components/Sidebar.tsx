@@ -25,7 +25,7 @@ export function Sidebar({ active, collapsed, onToggle, mobileOpen, onMobileClose
   const groups: { label: string; ids: (CategoryId | 'home')[] }[] = [
     { label: '주 메뉴', ids: ['home', 'featured', 'ux', 'ai-workflow'] },
     { label: '디자인 자료', ids: ['design-system', 'component-lab', 'interaction-lab'] },
-    { label: '디자인 생각', ids: ['thinking'] },
+    { label: '디자인 생각', ids: ['thinking', 'design-trend'] },
     // 프로젝트 아카이브 복원 시 원하는 그룹에 'archive'를 추가하세요.
   ];
   return <>

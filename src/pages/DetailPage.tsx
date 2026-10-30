@@ -40,6 +40,7 @@ export function DetailPage({ entry }: { entry: PortfolioEntry }) {
       {localize(section.image && !(firstImage && entry.kind === 'project' && sectionIndex === 0) ? <EntryImage image={section.image} eager={sectionIndex === 0 && !firstImage} /> : !ready && <div className="detail-media" />)}
       <SectionCopy section={section} index={sectionIndex} />
     </section>))}
+    {entry.sourceUrl && <section className="detail-section"><div className="detail-copy"><h2>{translate('원문 보기')}</h2><p><a className="text-link" href={entry.sourceUrl} target="_blank" rel="noopener noreferrer">{localize(entry.sourceLabel ?? 'Threads')} ↗</a></p></div></section>}
     {localize(ready && <nav className="entry-pager" aria-label={translateText(`${category.title} 다른 글`)}><div>{localize(previous && <AppLink href={`/project/${previous.id}`}><small>{translate("이전")}</small><span>← {localize(previous.title)}</span></AppLink>)}</div><div>{localize(next && <AppLink href={`/project/${next.id}`}><small>{translate("다음")}</small><span>{localize(next.title)} →</span></AppLink>)}</div></nav>)}
   </article>;
 }

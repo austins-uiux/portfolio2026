@@ -1,4 +1,4 @@
-export type CategoryId = 'featured' | 'ux' | 'ai-workflow' | 'component-lab' | 'interaction-lab' | 'design-system' | 'archive' | 'thinking';
+export type CategoryId = 'featured' | 'ux' | 'ai-workflow' | 'component-lab' | 'interaction-lab' | 'design-system' | 'archive' | 'thinking' | 'design-trend';
 export type IconName = 'home' | 'featured' | 'ux' | 'ai' | 'component' | 'interaction' | 'system' | 'archive' | 'thinking' | 'collapse' | 'expand' | 'search' | 'sun' | 'github' | 'spark' | 'arrow' | 'close' | 'send' | 'external';
 
 export interface Category {
@@ -35,6 +35,8 @@ export interface PortfolioEntry {
   uxApp?: { name: string; category: string; icon: string };
   foundation?: 'Color' | 'Typography' | 'Shape' | 'Icons' | 'Components';
   sections: ContentSection[];
+  sourceUrl?: string;
+  sourceLabel?: string;
   listed?: boolean;
 }
 
